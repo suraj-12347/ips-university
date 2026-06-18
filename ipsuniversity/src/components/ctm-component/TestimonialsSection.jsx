@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
 
   return (
     <section
-      className="relative py-15 overflow-hidden mt-30"
+      className="relative py-15 overflow-hidden mt-20 bg-center"
       style={{
         backgroundImage: `url(${tree})`,
         backgroundSize: "cover",
@@ -56,7 +56,7 @@ const TestimonialsSection = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/10 backdrop-blur-[3px] z-0"></div>
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-[3px] z-0 "></div>
        {/* Bottom White Gradient */}
       <div
         className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"

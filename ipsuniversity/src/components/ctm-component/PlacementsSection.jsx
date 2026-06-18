@@ -44,7 +44,7 @@ const placements = [
 const PlacementsSection = () => {
   return (
    <section
-  className="relative py-12 md:py-15 overflow-hidden mt-10 md:mt-20"
+  className="relative py-12 md:py-15 overflow-hidden mt-20 md:mt-20"
   style={{
     backgroundImage: `url(${tree})`,
     backgroundSize: "cover",
@@ -54,7 +54,7 @@ const PlacementsSection = () => {
 >
 
   <div
-        className="absolute bottom-0 left-0 w-full h-[80%] z-[2]"
+        className="absolute -bottom-1 left-0 w-full h-[80%] z-[2]"
         style={{
           background:
             "linear-gradient(to top, #fff 1%, rgba(255,255,255,0) 60.44%)",
@@ -69,7 +69,7 @@ const PlacementsSection = () => {
         }}
       /> */}
   {/* White Overlay */}
-  <div className="absolute inset-0  bg-white/20 backdrop-blur-[2px] z-0"></div>
+  <div className="absolute inset-0  bg-white/40 backdrop-blur-[2px] z-0"></div>
 
   <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
     

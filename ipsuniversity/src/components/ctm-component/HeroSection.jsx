@@ -5,7 +5,7 @@ import ctmmain from "../../images1/ipsmain2.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[60vh] sm:h-[75vh] md:h-[95vh] -mt-10">
+    <section className="relative h-[60vh] sm:h-[75vh] md:h-[95vh] -md:mt-10 -mt-25 mb-80 md:mb-0">
 
      {/* <div
         className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"
@@ -18,14 +18,14 @@ const HeroSection = () => {
       <img
         src={ctmdashboard}
         alt=""
-        className="w-full h-full  object-cover md:object-center object-left"
+        className="w-full md:h-full h-[100vh] object-cover md:object-center object-left "
         
       />
 
       <div className="absolute top-10 flex items-center">
         <div className="max-w-7xl mx-auto px-6 text-white">
          <h1
-  className="text-2xl md:text-5xl font-bold  text-[var(--forest)] mt-5"
+  className="text-3xl md:text-5xl font-bold  text-[var(--forest)] mt-25 md:mt-5"
   style={{
     fontFamily: '"Noto Serif", serif',
     fontOpticalSizing: "auto",
@@ -37,7 +37,7 @@ const HeroSection = () => {
   School of 
 </h1>
  <h1
-  className="text-2xl md:text-7xl font-bold mb-6 text-[var(--forest)]"
+  className="text-6xl md:text-7xl font-bold mb-6 text-[var(--forest)]"
   style={{
     fontFamily: '"Noto Serif", serif',
     fontOpticalSizing: "auto",
