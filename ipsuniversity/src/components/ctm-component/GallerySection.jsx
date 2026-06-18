@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import rajusir from '../../images1/rajusir.jpg'
-import directersir from '../../images1/directersir.jpg'
-import dj from '../../images1/dj.jpg'
+import rajusir from '../../images1/rajusir.JPG'
+import directersir from '../../images1/directersir.JPG'
+import dj from '../../images1/dj.JPG'
 import mrfr from '../../images1/mrfr.jpeg'
 import skmic from '../../images1/skmic.jpeg'
 import neeraj from '../../images1/neeraj2.jpeg'
