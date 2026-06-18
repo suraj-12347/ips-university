@@ -1,0 +1,49 @@
+{
+  "lang": "Eng",
+
+  "aboutUniversity": { "label": "About University", "link": "/about" },
+  "admissions2025": { "label": "Admissions 2025–26", "link": "/admissions" },
+  "allProgrammes": { "label": "All Programmes", "link": "/programmes" },
+  "placements": { "label": "Placements & T&P", "link": "/placements" },
+  "research": { "label": "Research & R&D", "link": "/research" },
+  "alumni": { "label": "Alumni Portal", "link": "/alumni" },
+  "downloads": { "label": "Downloads", "link": "/downloads" },
+
+  "engineering": { "label": "School of Engineering", "link": "/academics/engineering" },
+  "management": { "label": "School of Management", "link": "/academics/management" },
+  "pharmacy": { "label": "School of Pharmacy", "link": "/academics/pharmacy" },
+  "education": { "label": "School of Education", "link": "/academics/education" },
+  "sciences": { "label": "School of Sciences", "link": "/academics/sciences" },
+  "doctoral": { "label": "Doctoral Studies", "link": "/academics/doctoral" },
+
+  "quickLinks": "Quick Links",
+  "academics": "Academics",
+  "contactUs": "Contact Us",
+
+  "subscribe": "Subscribe →",
+  "emailPlaceholder": "Enter your email",
+
+  "privacy": { "label": "Privacy Policy", "link": "/privacy" },
+  "terms": { "label": "Terms of Use", "link": "/terms" },
+  "sitemap": { "label": "Sitemap", "link": "/sitemap" },
+  "grievance": { "label": "Grievance", "link": "/grievance" },
+
+  "rights": "All Rights Reserved.",
+
+  "footerAbout":
+    "Institute of Professional Studies (IPS University)...",
+
+  "enquiry": "Enquiry",
+  "enquiryDesc": "Explore world-class education...",
+  "placementAssist": "100% Placement Assistance",
+  "aicte": "AICTE Approved Courses",
+  "campus": "80 Acres Smart Campus",
+  "getStarted": "Get Started",
+  "formDesc": "Fill your details...",
+  "fullName": "Full Name",
+  "mobile": "Mobile Number",
+  "email": "Email Address",
+  "selectCourse": "Select Course",
+  "message": "Your Message",
+  "submit": "Submit Enquiry"
+}

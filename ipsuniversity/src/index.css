@@ -1,0 +1,143 @@
+/* main.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+
+
+:root {
+  --forest: #3a6d33;
+  --grass: #578B07;
+  --leaf: #ecf39e;
+  --moss:rgba(20, 83, 45, 0.7);
+  --white: #ffffff;
+  --inset:rgba(20, 83, 45, 0.45);
+}
+/*--inset:rgba(20, 83, 45, 0.5);
+--inset:rgba(0, 0, 0, 0.45);
+*/
+
+:root {
+  --forest: #3a6d33;
+  --grass: #578B07;
+  --leaf: #ecf39e;
+  --moss:rgba(0, 0,0, 0.7);
+  --white: #ffffff;
+  --inset:rgba(0, 0, 0, 0.45);
+}
+
+.red {
+  --forest: #7b001c;
+  --grass: #AE152D;
+  --leaf: #ecf39e;
+  --moss:rgba(0, 0,0, 0.7);
+  --white: #ffffff;
+  --inset:rgba(0, 0, 0, 0.45);
+  --e-global-color-primary: #AE152D;
+    --e-global-color-secondary: #111111;
+    --e-global-color-text: #696969;
+    --e-global-color-accent: #AE152D;
+    --e-global-typography-primary-font-weight: 700;
+    --e-global-typography-secondary-font-weight: 400;
+    --e-global-typography-text-font-weight: 400;
+    --e-global-typography-accent-font-weight: 500;
+} 
+
+.purple {
+  --forest: #7b2d8b;
+  --grass: #7b2d8b;
+  --moss:rgba(0, 0,0, 0.7);
+  --white: #ffffff;
+  --inset:rgba(0, 0, 0, 0.45);
+}
+
+.blue {
+  --forest: #0f172a;
+  --grass: #2563eb;
+ --moss:rgba(0, 0,0, 0.7);
+  --white: #ffffff;
+  --inset:rgba(0, 0, 0, 0.45);
+}
+
+/* ORANGE */
+.orange {
+  --forest: #7c2d12;
+  --grass: #ea580c;
+  --leaf: #ffedd5;
+  --moss: #fb923c;
+  --white: #ffffff;
+}
+
+/* DARK */
+.dark {
+  --forest: #111827;
+  --grass: #374151;
+  --leaf: #d1d5db;
+  --moss: #6b7280;
+  --white: #ffffff;
+}
+
+
+/* :root {
+  --forest: #3a6d33;
+  --grass: #578B07;;
+  --leaf: #ecf39e;
+  --moss: #90a955;
+  --white: #ffffff;
+}  */
+    
+
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p, ul, ol,a,td, table {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+
+@media(max-width:720px){
+  .chat-btn:disabled {
+    background-color: #ccc; /* Gray */
+    color: #666;
+    cursor: not-allowed; /* Show 'not allowed' cursor */
+    opacity: 0.6; /* Slightly transparent */
+}
+
+    
+  
+
+}
+
+
+.scrollb::-webkit-scrollbar {
+  display: none;
+}
+
+
+.logo{
+  font-family: '';
+
+}
+
+/* GLOBAL SCROLLBAR */
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #d9d9d9;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: var(--forest);
+  border-radius: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}

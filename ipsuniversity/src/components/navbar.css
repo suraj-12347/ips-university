@@ -1,0 +1,174 @@
+/* navbar.css */
+
+/* navbar.css */
+
+.navbar {
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+ 
+ 
+}
+/* Desktop Nav */
+
+.nav-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  size: 18px;
+}
+
+.nav-link{
+    height: 40px;
+    width: 100%;
+
+    text-decoration: none;
+   
+    font-weight: 400;
+    font-size: 16px;
+   font-family: Manrope, sans-serif;
+  font-optical-sizing: auto;
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+
+  z-index: 1;
+ color: var(--white);
+ /* color: #fff; */
+
+ width: 100px;
+ 
+    
+
+
+
+}
+.nav-link::after{
+    content: "";
+   
+    background-color: var(--white);
+    /* background-color: #fff; */
+    position: absolute;
+    inset: 0;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+    z-index: -1;
+    opacity: 0;
+ transition: 0.3s;
+
+   
+   
+    
+
+}
+
+.nav-link:hover::after,
+.nav-link.active::after{
+    opacity: 1;
+}
+.nav-link:hover,
+.nav-link.active{
+    color: var(--grass);
+    /* color: #000; */
+}
+
+
+
+/* Mega Menu */
+
+.mega-drop {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 650px;
+
+  padding: 24px;
+
+  background: white;
+
+  border-top: 4px solid var(--grass);
+  border-radius: 0 0 14px 14px;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  gap: 28px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: all 0.25s ease;
+}
+
+.nav-item:hover .mega-drop {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-title {
+  color: var(--forest);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid rgba(49, 87, 44, 0.12);
+}
+
+.mega-drop a {
+  display: block;
+
+  padding: 7px 0;
+
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.mega-drop a:hover {
+  color: var(--grass);
+  padding-left: 6px;
+}
+
+/* Mobile */
+
+.mobile-link {
+  padding: 14px 0;
+
+  color: var(--forest);
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(49, 87, 44, 0.08);
+
+  transition: all 0.2s ease;
+}
+
+.mobile-link:hover {
+  color: var(--grass);
+  padding-left: 4px;
+}

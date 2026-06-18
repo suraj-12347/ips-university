@@ -1,0 +1,281 @@
+// Navbar.jsx
+
+import React, { useState } from "react";
+import logo2 from "../images/logo2.png";
+import Give from "./Give";
+
+const navLinks = [
+  {
+    name: "Home",
+    href: "#",
+  },
+
+  {
+    name: "About Us",
+    href: "#about",
+
+    megaMenu: {
+      University: [
+        "Overview",
+        "Vision & Mission",
+        "Why IPS University",
+        "Message Board",
+      ],
+
+      Campus: [
+        "Infrastructure",
+        "Library",
+        "Hostel",
+        "Sports",
+      ],
+
+      Leadership: [
+        "Chancellor",
+        "Vice Chancellor",
+        "Directors",
+      ],
+    },
+  },
+
+  {
+    name: "Schools",
+    href: "#schools",
+
+    megaMenu: {
+      Engineering: [
+        "Computer Science",
+        "Mechanical",
+        "Civil",
+        "Electronics",
+      ],
+
+      Management: [
+        "MBA",
+        "BBA",
+        "Finance",
+        "Marketing",
+      ],
+
+      Other: [
+        "Pharmacy",
+        "Law",
+        "Design",
+      ],
+    },
+  },
+
+  {
+    name: "Programmes",
+    href: "#programmes",
+
+    megaMenu: {
+      Undergraduate: [
+        "B.Tech",
+        "BCA",
+        "BBA",
+        "B.Com",
+      ],
+
+      Postgraduate: [
+        "MBA",
+        "M.Tech",
+        "MCA",
+      ],
+
+      Other: [
+        "Diploma",
+        "Certifications",
+      ],
+    },
+  },
+
+  {
+    name: "Admissions",
+    href: "#admissions",
+
+    megaMenu: {
+      Apply: [
+        "Apply Online",
+        "Scholarships",
+        "Eligibility",
+      ],
+
+      Process: [
+        "Admission Process",
+        "Fee Structure",
+        "Documents Required",
+      ],
+
+      Support: [
+        "FAQs",
+        "Counselling",
+        "Help Desk",
+      ],
+    },
+  },
+
+  {
+    name: "Research",
+    href: "#research",
+
+    megaMenu: {
+      Innovation: [
+        "Patents",
+        "Projects",
+        "Research Labs",
+      ],
+
+      Publications: [
+        "Journals",
+        "Articles",
+        "Conference Papers",
+      ],
+
+      Collaboration: [
+        "Industry Tie-ups",
+        "International Research",
+      ],
+    },
+  },
+
+  {
+    name: "Student Zone",
+    href: "#students",
+
+    megaMenu: {
+      Activities: [
+        "Clubs",
+        "Events",
+        "Competitions",
+      ],
+
+      Career: [
+        "Placements",
+        "Internships",
+        "Training",
+      ],
+
+      Campus: [
+        "Hostel Life",
+        "Sports",
+        "Student Support",
+      ],
+    },
+  },
+];
+
+const Navbar2 = () => {
+  const [active, setActive] = useState("Home");
+
+  return (
+    <header className="w-full fixed top-0 left-0 z-50 overflow-visible">
+      
+      <div className="w-full flex items-center justify-between px-8 py-5">
+
+        {/* ================= LEFT SECTION ================= */}
+        <div className="flex items-center gap-14 w-full">
+
+          {/* LOGO */}
+          <div className="shrink-0">
+            <img
+              src={logo2}
+              alt="logo"
+              className="h-20 object-contain"
+            />
+          </div>
+
+          {/* ================= NAVBAR ================= */}
+           <ul className="flex items-center justify-center ml-20 gap-[1px] h-full flex-1 z-10 mb-10 w-full min-w-0">
+
+            <li>
+              <a
+                href="#"
+                onClick={() => setActive("home")}
+                className={`nav-link whitespace-nowrap ${active === "home" ? "active" : ""}`}
+              >
+                Home
+              </a>
+            </li>
+
+            <li className="group relative">
+              <a
+                href="#about"
+                onClick={() => setActive("about")}
+                className={`nav-link whitespace-nowrap ${active === "about" ? "active" : ""}`}
+              >
+                About Us
+              </a>
+
+              <div className="mega-drop z-[1000]">
+                <div>
+                  <h4 className="mega-title">University</h4>
+                  <a href="#">Overview</a>
+                  <a href="#">Vision & Mission</a>
+                  <a href="#">Why IPS University</a>
+                  <a href="#">Message Board</a>
+                </div>
+              </div>
+            </li>
+
+            <li className="group relative">
+              <a
+                href="#schools"
+                onClick={() => setActive("schools")}
+                className={`nav-link whitespace-nowrap ${active === "schools" ? "active" : ""}`}
+              >
+                Schools
+              </a>
+            </li>
+
+            <li className="group relative">
+              <a
+                href="#"
+                onClick={() => setActive("programmes")}
+                className={`nav-link whitespace-nowrap ${active === "programmes" ? "active" : ""}`}
+              >
+                Programmes
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                onClick={() => setActive("admissions")}
+                className={`nav-link whitespace-nowrap ${active === "admissions" ? "active" : ""}`}
+              >
+                Admissions
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                onClick={() => setActive("research")}
+                className={`nav-link whitespace-nowrap ${active === "research" ? "active" : ""}`}
+              >
+                Research
+              </a>
+            </li>
+
+            {/* FIXED */}
+            <li>
+              <a
+                href="#"
+                onClick={() => setActive("students")}
+                className={`nav-link whitespace-nowrap ${active === "students" ? "active" : ""}`}
+              >
+                Student Zone
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        {/* ================= RIGHT SECTION ================= */}
+        <Give />
+      </div>
+    </header>
+  );
+};
+
+export default Navbar2;
