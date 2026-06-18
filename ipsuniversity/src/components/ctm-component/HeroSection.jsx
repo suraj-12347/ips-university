@@ -18,7 +18,7 @@ const HeroSection = () => {
       <img
         src={ctmdashboard}
         alt=""
-        className="w-full h-full  object-cover"
+        className="w-full h-full  object-cover md:object-center object-left"
         
       />
 
