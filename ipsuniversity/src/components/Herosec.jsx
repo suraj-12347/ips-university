@@ -2,23 +2,32 @@
 
 import React from "react";
 import { Play } from "lucide-react";
-import ipsvideo from "../images1/ips_theme_video.mp4";
 
 const Herosec = () => {
   return (
-    <section className="relative w-full h-[82vh] overflow-hidden">
+    <section className="relative w-full min-h-[82vh] overflow-hidden">
       
       {/* Background Video */}
-    <div className="absolute inset-0 overflow-hidden">
-  <video
-    className="w-full h-full object-cover"
-    src={ipsvideo}
-    autoPlay
-    loop
-    muted
-    playsInline
-  />
-</div>
+      <div className="absolute inset-0 overflow-hidden">
+        <iframe
+          className="
+            absolute
+            top-1/2
+            left-1/2
+            w-[177.77vh]
+            h-[56.25vw]
+            min-w-full
+            min-h-full
+            -translate-x-1/2
+            -translate-y-1/2
+            pointer-events-none
+          "
+          src="https://www.youtube.com/embed/l_H_84lP8g8?autoplay=1&mute=1&loop=1&playlist=l_H_84lP8g8&controls=0&showinfo=0&rel=0&modestbranding=1"
+          title="Background Video"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+        />
+      </div>
 
       {/* Dark Overlay */}
       
@@ -32,8 +41,8 @@ const Herosec = () => {
         }}
       />
 
-      {/* Explore Button Center */}
-      <div className="absolute bottom-10 md:bottom-8 left-1/2 -translate-x-1/2 z-[5] ">
+      {/* Explore Button */}
+      <div className="absolute bottom-10 md:bottom-8 left-1/2 -translate-x-1/2 z-[5]">
         <a
           href="#about"
           className="
@@ -47,7 +56,6 @@ const Herosec = () => {
             uppercase
             text-[11px]
             font-semibold
-            
           "
         >
           <div
@@ -69,7 +77,9 @@ const Herosec = () => {
               shadow-xl
             "
           >
-            <span className="text-[20px] animate-bounce text-[var(--forest)]">↓</span>
+            <span className="text-[20px] animate-bounce text-[var(--forest)]">
+              ↓
+            </span>
           </div>
 
           <span className="group-hover:tracking-[5px] transition-all duration-500 text-[var(--forest)]">
@@ -79,7 +89,7 @@ const Herosec = () => {
       </div>
 
       {/* Right Bottom Buttons */}
-      <div className="relative z-[3] flex flex-col justify-end items-end w-full h-full px-4 md:px-8 pb-8">
+      <div className="relative z-[5] flex flex-col justify-end items-end w-full h-[82vh] px-4 md:px-8 pb-8">
         <div className="hidden md:flex items-center gap-4">
           
           {/* Apply Button */}

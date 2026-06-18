@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import DotedRing2 from "./DotedRing2";
 import React, { useRef, useState } from "react";
-import rajusir from '../images1/rajusir.jpg'
+import rajusir from '../images1/rajusir.JPG'
 import directersir from '../images1/directersir.jpg'
 import dj from '../images1/dj.jpg'
 import mrfr from '../images1/mrfr.jpeg'

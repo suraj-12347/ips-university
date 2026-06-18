@@ -9,7 +9,7 @@ import TestimonialsSection from "../components/ctm-component/TestimonialsSection
 import RecruitersSection from "../components/ctm-component/RecruitersSection";
 import AboutSection from "../components/ctm-component/AboutSection2";
 import Footer from "../components/Footer";
-import Chatbot from "../components/Chatbot";
+import Chatbot from "../components/ChatBot";
 
 const CtmMainPage = () => {
   return (

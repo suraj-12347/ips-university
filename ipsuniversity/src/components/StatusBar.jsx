@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import edubuilding from "../images1/edubuild.jpg";
+import edubuilding from "../images1/edubuild.JPG";
 
 /* DATA */
 const statsData = [

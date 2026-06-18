@@ -1,7 +1,7 @@
 // LatestBanner.jsx
 
 import React from "react";
-import edubuilding from "../images1/edubuild.jpg";
+import edubuilding from "../images1/edubuild.JPG";
 
 const updates = [
   "📢 Admission Open 2025-26 — For free online registration form click here",
