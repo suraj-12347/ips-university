@@ -11,7 +11,7 @@ import LatestBanner from '../components/LatestBanner'
 import NoticeSection3 from '../components/NoticeSection3'
 import Navbar4 from '../components/Navbar4'
 import EnquiryPopup from '../components/EnquiryPopup'
-import GalleryCarousel from '../components/GalleryCarousel'
+
 import ReviewCard1 from '../components/student-rev/ReviewCard'
 import ReviewCard2 from '../components/student-rev/ReviewCard2'
 import ReviewCard3 from '../components/student-rev/ReviewCard3'
@@ -42,7 +42,7 @@ const Page1 = () => {
 
     <NoticeSection3/>
     <EnquiryPopup/>
-    <GalleryCarousel/>
+    {/* <GalleryCarousel/> */}
 
     
     <StudentReviews2/>   
