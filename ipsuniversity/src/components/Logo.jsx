@@ -62,7 +62,7 @@ const Logo = () => {
 
   return (
     <div className='flex w-10 md:w-30 items-center  justify-start'>
-         <a href="/page2" className="flex items-center shrink-0 mb-5">
+         <a href="/" className="flex items-center shrink-0 mb-5">
            <img
             src={themeLogos[theme]}
             alt="logo"

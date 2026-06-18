@@ -50,9 +50,21 @@ const AboutDepartment = () => {
   },
 ];
   return (
-    <section className="  bg-white mb-20">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+  <section
+  className="relative pb-20 py-2 overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://static.vecteezy.com/system/resources/thumbnails/049/606/376/small/lush-green-tree-branches-against-a-bright-white-sky-background-in-a-sunny-day-photo.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* White Overlay */}
+  <div className="absolute inset-0 bg-white/50 backdrop-blur-[3px]"></div>
 
+  {/* Main Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         {/* Heading */}
         <div className="text-center mb-2 md:mb-4">
           {/* <span className="text-xs md:text-sm tracking-[3px] md:tracking-[4px] uppercase text-[var(--forest)] font-semibold">
