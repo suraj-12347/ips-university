@@ -75,16 +75,16 @@ const MilestonesAchievementsSection = () => {
 
   return (
     <section
-      className="relative py-24 px-4 md:px-8 overflow-hidden"
+      className="relative py-5 px-4 md:px-8 overflow-hidden bg-white"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1800&q=80')",
+          "url('https://i.pinimg.com/736x/5b/f3/38/5bf338b5a9755400d669323410428b10.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#16332acc] to-[#16332af5]" />
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-[4px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
@@ -92,7 +92,7 @@ const MilestonesAchievementsSection = () => {
           <p
             className="uppercase tracking-[3px] text-sm font-semibold"
             style={{
-              color: "#e9a13b",
+              color: "var(--forest)",
               fontFamily: "Outfit, sans-serif",
             }}
           >
@@ -100,8 +100,9 @@ const MilestonesAchievementsSection = () => {
           </p>
 
           <h2
-            className="mt-3 text-4xl md:text-6xl text-white"
+            className="mt-3 text-4xl md:text-6xl"
             style={{
+              color: "var(--forest)",
               fontFamily: "Fraunces, serif",
             }}
           >
@@ -109,9 +110,8 @@ const MilestonesAchievementsSection = () => {
           </h2>
 
           <p
-            className="max-w-3xl mx-auto mt-5 leading-8"
+            className="max-w-3xl mx-auto mt-5 leading-8 text-gray-700"
             style={{
-              color: "#e3f0e1",
               fontFamily: "Outfit, sans-serif",
             }}
           >
@@ -128,17 +128,18 @@ const MilestonesAchievementsSection = () => {
             return (
               <div
                 key={index}
-                className="text-center rounded-[18px] border border-white/20 bg-white/10 backdrop-blur-xl p-6"
+                className="text-center rounded-[18px] bg-white border border-gray-200 p-6 shadow-lg"
               >
                 <Icon
                   size={34}
-                  color="#e9a13b"
+                  color="var(--forest)"
                   className="mx-auto mb-4"
                 />
 
                 <h3
-                  className="text-4xl text-white"
+                  className="text-4xl"
                   style={{
+                    color: "var(--forest)",
                     fontFamily: "Fraunces, serif",
                   }}
                 >
@@ -146,9 +147,8 @@ const MilestonesAchievementsSection = () => {
                 </h3>
 
                 <p
-                  className="mt-2 text-sm"
+                  className="mt-2 text-sm text-gray-700"
                   style={{
-                    color: "#e3f0e1",
                     fontFamily: "Outfit, sans-serif",
                   }}
                 >
@@ -162,8 +162,9 @@ const MilestonesAchievementsSection = () => {
         {/* Timeline */}
         <div className="mb-20">
           <h3
-            className="text-3xl text-white mb-10 text-center"
+            className="text-3xl mb-10 text-center"
             style={{
+              color: "var(--forest)",
               fontFamily: "Fraunces, serif",
             }}
           >
@@ -171,24 +172,21 @@ const MilestonesAchievementsSection = () => {
           </h3>
 
           <div className="relative">
-            <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-[#e9a13b]/40 hidden md:block"></div>
+            <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-[var(--forest)] opacity-20 hidden md:block"></div>
 
             <div className="space-y-8">
               {milestones.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative md:pl-20"
-                >
-                  <div className="hidden md:flex absolute left-0 top-4 w-12 h-12 rounded-full bg-[#e9a13b] items-center justify-center">
-                    <Star size={18} color="#16332a" />
+                <div key={index} className="relative md:pl-20">
+                  <div className="hidden md:flex absolute left-0 top-4 w-12 h-12 rounded-full bg-[var(--forest)] items-center justify-center">
+                    <Star size={18} color="#ffffff" />
                   </div>
 
-                  <div className="rounded-[18px] border border-white/20 bg-white/10 backdrop-blur-xl p-6">
+                  <div className="rounded-[18px] border border-gray-200 bg-white shadow-lg p-6">
                     <span
                       className="inline-block px-3 py-1 rounded-full text-sm mb-3"
                       style={{
-                        background: "rgba(233,161,59,.12)",
-                        color: "#e9a13b",
+                        background: "rgba(22,51,42,.08)",
+                        color: "var(--forest)",
                         fontFamily: "Outfit, sans-serif",
                       }}
                     >
@@ -196,8 +194,9 @@ const MilestonesAchievementsSection = () => {
                     </span>
 
                     <h4
-                      className="text-2xl text-white mb-3"
+                      className="text-2xl mb-3"
                       style={{
+                        color: "var(--forest)",
                         fontFamily: "Fraunces, serif",
                       }}
                     >
@@ -205,9 +204,8 @@ const MilestonesAchievementsSection = () => {
                     </h4>
 
                     <p
-                      className="leading-7"
+                      className="leading-7 text-gray-700"
                       style={{
-                        color: "#e3f0e1",
                         fontFamily: "Outfit, sans-serif",
                       }}
                     >
@@ -222,15 +220,14 @@ const MilestonesAchievementsSection = () => {
 
         {/* Key Highlights */}
         <div className="grid lg:grid-cols-2 gap-8 mb-20">
-          <div
-            className="rounded-[22px] p-8 border border-white/20 bg-white/10 backdrop-blur-xl"
-          >
+          <div className="rounded-[22px] p-8 border border-gray-200 bg-white shadow-lg">
             <div className="flex items-center gap-3 mb-6">
-              <Award size={30} color="#e9a13b" />
+              <Award size={30} color="var(--forest)" />
 
               <h3
-                className="text-3xl text-white"
+                className="text-3xl"
                 style={{
+                  color: "var(--forest)",
                   fontFamily: "Fraunces, serif",
                 }}
               >
@@ -246,13 +243,13 @@ const MilestonesAchievementsSection = () => {
                 >
                   <CheckCircle2
                     size={18}
-                    color="#e9a13b"
+                    color="var(--forest)"
                     className="mt-1"
                   />
 
                   <p
+                    className="text-gray-700"
                     style={{
-                      color: "#e3f0e1",
                       fontFamily: "Outfit, sans-serif",
                     }}
                   >
@@ -263,15 +260,14 @@ const MilestonesAchievementsSection = () => {
             </div>
           </div>
 
-          <div
-            className="rounded-[22px] p-8 border border-white/20 bg-white/10 backdrop-blur-xl"
-          >
+          <div className="rounded-[22px] p-8 border border-gray-200 bg-white shadow-lg">
             <div className="flex items-center gap-3 mb-6">
-              <Building2 size={30} color="#e9a13b" />
+              <Building2 size={30} color="var(--forest)" />
 
               <h3
-                className="text-3xl text-white"
+                className="text-3xl"
                 style={{
+                  color: "var(--forest)",
                   fontFamily: "Fraunces, serif",
                 }}
               >
@@ -280,9 +276,8 @@ const MilestonesAchievementsSection = () => {
             </div>
 
             <p
-              className="leading-8"
+              className="leading-8 text-gray-700"
               style={{
-                color: "#e3f0e1",
                 fontFamily: "Outfit, sans-serif",
               }}
             >
@@ -295,11 +290,11 @@ const MilestonesAchievementsSection = () => {
             </p>
 
             <div className="mt-8 flex items-center gap-3">
-              <Medal size={24} color="#e9a13b" />
+              <Medal size={24} color="var(--forest)" />
 
               <span
                 style={{
-                  color: "#e9a13b",
+                  color: "var(--forest)",
                   fontFamily: "Outfit, sans-serif",
                 }}
               >
@@ -311,39 +306,35 @@ const MilestonesAchievementsSection = () => {
 
         {/* Bottom CTA */}
         <div
-          className="rounded-[24px] p-10 text-center"
-          style={{
-            background:
-              "linear-gradient(135deg,#16332a 0%,#1f4d3a 100%)",
-          }}
-        >
-          <ArrowUpRight
-            size={42}
-            color="#e9a13b"
-            className="mx-auto mb-4"
-          />
+  className="rounded-[24px] p-10 text-center bg-white border border-gray-200 shadow-lg"
+>
+  <ArrowUpRight
+    size={42}
+    color="var(--forest)"
+    className="mx-auto mb-4"
+  />
 
-          <h3
-            className="text-3xl text-white"
-            style={{
-              fontFamily: "Fraunces, serif",
-            }}
-          >
-            Inspiring The Next Generation
-          </h3>
+  <h3
+    className="text-3xl"
+    style={{
+      color: "var(--forest)",
+      fontFamily: "Fraunces, serif",
+    }}
+  >
+    Inspiring The Next Generation
+  </h3>
 
-          <p
-            className="max-w-3xl mx-auto mt-4 leading-8"
-            style={{
-              color: "#e3f0e1",
-              fontFamily: "Outfit, sans-serif",
-            }}
-          >
-            Building a future where innovation, knowledge and
-            professional excellence empower students to become leaders
-            in technology and society.
-          </p>
-        </div>
+  <p
+    className="max-w-3xl mx-auto mt-4 leading-8 text-gray-700"
+    style={{
+      fontFamily: "Outfit, sans-serif",
+    }}
+  >
+    Building a future where innovation, knowledge and
+    professional excellence empower students to become leaders
+    in technology and society.
+  </p>
+</div>
       </div>
     </section>
   );

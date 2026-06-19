@@ -79,24 +79,24 @@ const AcademicResearchSection = () => {
 
   return (
     <section
-      className="relative py-24 px-4 md:px-8 overflow-hidden"
+      className="relative py-5 px-4 md:px-8 overflow-hidden"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1800&q=80')",
+          "url('https://i.pinimg.com/736x/34/c8/90/34c890dc90be9b4e422c835900161b36.jpg')",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "bottom",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#f7f9f5]/90 to-[#f7f9f5]/95" />
+       <div className="absolute inset-0 bg-white/60 backdrop-blur-[3px]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <p
-            className="uppercase tracking-[3px] text-sm font-semibold"
+            className="uppercase tracking-[3px] text-sm font-semibold text-[var(--forest)]"
             style={{
-              color: "#c97f22",
+              
               fontFamily: "Outfit, sans-serif",
             }}
           >
@@ -104,9 +104,9 @@ const AcademicResearchSection = () => {
           </p>
 
           <h2
-            className="mt-3 text-4xl md:text-6xl"
+            className="mt-3 text-4xl md:text-6xl text-[var(--forest)]"
             style={{
-              color: "#16332a",
+             
               fontFamily: "Fraunces, serif",
             }}
           >
@@ -114,9 +114,9 @@ const AcademicResearchSection = () => {
           </h2>
 
           <p
-            className="max-w-3xl mx-auto mt-5 leading-8"
+            className="max-w-3xl mx-auto mt-5 leading-8 text-gray-700"
             style={{
-              color: "#3c5448",
+              
               fontFamily: "Outfit, sans-serif",
             }}
           >
@@ -131,24 +131,22 @@ const AcademicResearchSection = () => {
           className="rounded-[24px] p-8 md:p-12 mb-16"
           style={{
             background:
-              "linear-gradient(135deg,#16332a 0%, #1f4d3a 100%)",
+              "#fff",
           }}
         >
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div
               className="w-24 h-24 rounded-3xl flex items-center justify-center"
-              style={{
-                background: "rgba(233,161,59,.12)",
-              }}
+             
             >
-              <Microscope size={48} color="#e9a13b" />
+              <Microscope size={48} className="text-[var(--forest)]"/>
             </div>
 
             <div>
               <span
-                className="uppercase tracking-[2px] text-sm"
+                className="uppercase tracking-[2px] text-sm text-[var(--forest)]"
                 style={{
-                  color: "#e9a13b",
+                  
                   fontFamily: "Outfit, sans-serif",
                 }}
               >
@@ -156,7 +154,7 @@ const AcademicResearchSection = () => {
               </span>
 
               <h3
-                className="text-3xl text-white mt-2"
+                className="text-3xl text-[var(--forest)] mt-2"
                 style={{
                   fontFamily: "Fraunces, serif",
                 }}
@@ -165,9 +163,9 @@ const AcademicResearchSection = () => {
               </h3>
 
               <p
-                className="mt-4 leading-8"
+                className="mt-4 leading-8 text-gray-700"
                 style={{
-                  color: "#e3f0e1",
+                  
                   fontFamily: "Outfit, sans-serif",
                 }}
               >
@@ -186,15 +184,15 @@ const AcademicResearchSection = () => {
               key={index}
               className="rounded-[18px] p-6 text-center backdrop-blur-xl"
               style={{
-                background: "rgba(255,255,255,0.65)",
-                border: "1px solid rgba(255,255,255,0.9)",
+                background: "rgba(255,255,255)",
+               
                 boxShadow: "0 8px 28px rgba(31,77,58,.08)",
               }}
             >
               <h3
-                className="text-4xl"
+                className="text-4xl text-[var(--forest)]"
                 style={{
-                  color: "#16332a",
+                  
                   fontFamily: "Fraunces, serif",
                 }}
               >
@@ -217,9 +215,9 @@ const AcademicResearchSection = () => {
         {/* Research Areas */}
         <div className="mb-16">
           <h3
-            className="text-3xl mb-8"
+            className="text-3xl mb-8 text-[var(--forest)]"
             style={{
-              color: "#16332a",
+             
               fontFamily: "Fraunces, serif",
             }}
           >
@@ -235,24 +233,22 @@ const AcademicResearchSection = () => {
                   key={index}
                   className="rounded-[18px] p-6 transition-all duration-300 hover:-translate-y-2"
                   style={{
-                    background: "rgba(255,255,255,0.65)",
-                    border: "1px solid rgba(255,255,255,0.9)",
+                    background: "rgba(255,255,255)",
+                   
                     boxShadow: "0 8px 28px rgba(31,77,58,.08)",
                   }}
                 >
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-5"
-                    style={{
-                      background: "rgba(201,127,34,.10)",
-                    }}
+                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 bg-[var(--forest)]/10"
+
                   >
-                    <Icon size={26} color="#c97f22" />
+                    <Icon size={26} className="text-[var(--forest)]" />
                   </div>
 
                   <h4
-                    className="text-xl mb-3"
+                    className="text-xl mb-3 text-[var(--forest)]"
                     style={{
-                      color: "#16332a",
+                      
                       fontFamily: "Fraunces, serif",
                     }}
                   >
@@ -260,9 +256,9 @@ const AcademicResearchSection = () => {
                   </h4>
 
                   <p
-                    className="text-sm leading-7"
+                    className="text-sm leading-7 text-gray-700"
                     style={{
-                      color: "#3c5448",
+                      
                       fontFamily: "Outfit, sans-serif",
                     }}
                   >
@@ -277,9 +273,9 @@ const AcademicResearchSection = () => {
         {/* Activities */}
         <div>
           <h3
-            className="text-3xl mb-8"
+            className="text-3xl mb-8 text-[var(--forest)]"
             style={{
-              color: "#16332a",
+              
               fontFamily: "Fraunces, serif",
             }}
           >
@@ -295,25 +291,23 @@ const AcademicResearchSection = () => {
                   key={index}
                   className="rounded-[18px] p-6 flex gap-5 items-start transition-all duration-300 hover:-translate-y-1"
                   style={{
-                    background: "rgba(255,255,255,0.65)",
-                    border: "1px solid rgba(255,255,255,0.9)",
+                    background: "rgba(255,255,255)",
+                   
                     boxShadow: "0 8px 28px rgba(31,77,58,.08)",
                   }}
                 >
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0"
-                    style={{
-                      background: "rgba(201,127,34,.10)",
-                    }}
+                    className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 bg-[var(--forest)]/10"
+                   
                   >
-                    <Icon size={24} color="#c97f22" />
+                    <Icon size={24} className="text-[var(--forest)]" />
                   </div>
 
                   <div>
                     <h4
-                      className="text-xl mb-2"
+                      className="text-xl mb-2 text-[var(--forest)]"
                       style={{
-                        color: "#16332a",
+                       
                         fontFamily: "Fraunces, serif",
                       }}
                     >
@@ -321,9 +315,9 @@ const AcademicResearchSection = () => {
                     </h4>
 
                     <p
-                      className="text-sm leading-7"
+                      className="text-sm leading-7 text-gray-700"
                       style={{
-                        color: "#3c5448",
+                       
                         fontFamily: "Outfit, sans-serif",
                       }}
                     >
@@ -338,20 +332,17 @@ const AcademicResearchSection = () => {
 
         {/* CTA */}
         <div
-          className="mt-16 rounded-[24px] p-8 md:p-10 text-center"
-          style={{
-            background:
-              "linear-gradient(135deg,#16332a 0%, #1f4d3a 100%)",
-          }}
+          className="mt-16 rounded-[24px] p-8 md:p-10 text-center bg-white"
+        
         >
           <ArrowUpRight
             size={40}
-            className="mx-auto mb-4"
-            color="#e9a13b"
+            className="mx-auto mb-4 text-[var(--forest)]"
+            
           />
 
           <h3
-            className="text-3xl text-white"
+            className="text-3xl text-[var(--forest)]"
             style={{
               fontFamily: "Fraunces, serif",
             }}
@@ -360,9 +351,9 @@ const AcademicResearchSection = () => {
           </h3>
 
           <p
-            className="max-w-3xl mx-auto mt-4 leading-8"
+            className="max-w-3xl mx-auto mt-4 leading-8 text-gray-700"
             style={{
-              color: "#e3f0e1",
+            
               fontFamily: "Outfit, sans-serif",
             }}
           >

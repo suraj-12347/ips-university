@@ -54,7 +54,7 @@ const Logo = () => {
       h-[60px]
       sm:h-[55px]
       md:h-[50px]
-      lg:h-[75px]
+      lg:h-[70px]
       object-contain
     "
   />
@@ -65,7 +65,7 @@ const Logo = () => {
       text-[18px]
       sm:text-[22px]
       md:text-[28px]
-      lg:text-[34px]
+     
       font-bold
       text-[var(--forest)]
       md:hidden xl:block
@@ -80,7 +80,7 @@ const Logo = () => {
       text-[12px]
       sm:text-[15px]
       md:text-[18px]
-      lg:text-[22px]
+     
       font-bold
       text-[var(--forest)]
       md:hidden xl:block

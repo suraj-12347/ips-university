@@ -54,14 +54,14 @@ const AboutDepartment = () => {
   className="relative pb-20 py-2 overflow-hidden"
   style={{
     backgroundImage:
-      "url('https://static.vecteezy.com/system/resources/thumbnails/049/606/376/small/lush-green-tree-branches-against-a-bright-white-sky-background-in-a-sunny-day-photo.jpg')",
+      "url('https://i.pinimg.com/736x/97/d2/ea/97d2ea714588e2cb6f757417c14d921f.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   }}
 >
   {/* White Overlay */}
-  <div className="absolute inset-0 bg-white/50 backdrop-blur-[3px]"></div>
+  <div className="absolute inset-0 bg-white/60 backdrop-blur-[4px]"></div>
 
   {/* Main Content */}
   <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
@@ -306,7 +306,7 @@ const AboutDepartment = () => {
 
     <div className="group overflow-hidden rounded-3xl shadow-lg">
       <img
-        src="https://images.unsplash.com/photo-1523050854058-8df90110c9f?auto=format&fit=crop&w=1000&q=80"
+        src="https://res.cloudinary.com/jerrick/image/upload/v1748346799/6835a7af4e69ad001de96094.jpg"
         alt="Smart Classroom"
         className="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
       />

@@ -4,21 +4,30 @@ import hodimg from "../../images1/soumya.jpg"; // apni image lagao
 
 const HodMessage = () => {
   return (
-    <section
-      className="relative py-14 md:py-24 overflow-hidden h-[95vh] overflow-y-auto scrollb"
+   <section
+  className="
+    relative
+    min-h-screen
+    py-5
+   
+    
+    
+    overflow-hidden
+  "
+
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1800&q=80')",
+          "url('https://i.pinimg.com/736x/fa/12/cc/fa12cc16e8d3811e36cd1ccb7338bb03.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/92"></div>
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-[3px]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         {/* Heading */}
-        <div className="text-center mb-12 md:mb-16">
+        {/* <div className="text-center mb-12 md:mb-16">
           <span className="uppercase tracking-[4px] text-[var(--forest)] text-xs md:text-sm font-semibold">
             Department Leadership
           </span>
@@ -27,11 +36,11 @@ const HodMessage = () => {
             Head Of Department
           </h2>
 
-          <p className="max-w-2xl mx-auto text-gray-600 mt-4 leading-7">
-            Leadership, vision and commitment towards academic excellence,
-            innovation and student success.
-          </p>
-        </div>
+          // <p className="max-w-2xl mx-auto text-gray-600 mt-4 leading-7">
+          //   Leadership, vision and commitment towards academic excellence,
+          //   innovation and student success.
+          // </p> 
+        </div> */}
 
         {/* Main Content */}
         <div className="grid lg:grid-cols-[320px_1fr] gap-8 items-stretch">
@@ -45,7 +54,7 @@ const HodMessage = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="bg-white/90 backdrop-blur-sm p-6 md:p-8 text-center h-full">
+            <div className="bg-white shadow-xl p-6 md:p-8 text-center h-full">
               <img
                 src={hodimg}
                 alt="HOD"

@@ -9,36 +9,47 @@ const Navbar2 = () => {
   const [active, setActive] = useState("home");
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 ">
-      <Topbar3/>
+    <nav className="fixed top-0 left-0 w-full z-50  ">
+     
+        <Topbar3/>
+      
       <div className="max-w-[1400px] -mt-20 ">
-        <div className="h-[170px] bg-white  shadow-md flex items-center px-4">
+        <div className="h-[170px] bg-white  shadow-md flex items-center px-4 w-full">
 
           {/* LOGO */}
-          <div className="flex-shrink-0 z-20 mt-20 md:mt-15 lg:mt-23">
+          <div className="flex-shrink-0 z-20 mt-20 md:mt-15 lg:mt-20 md:w-1/22 lg:w-1/6 md:hidden lg:block">
             <Logo />
+          </div>
+           <div className="hidden md:block lg:hidden flex-shrink-0 z-20 mt-20 md:mt-15 lg:mt-20 md:w-1/15 absolute -top-2 left-2  justify-start">
+            <Logo />
+            
+
+  
           </div>
 
           {/* DESKTOP MENU */}
-          <div className="hidden md:flex  justify-center px-4    ">
+          <div className="hidden md:flex  justify-center px-4 w-full   ">
             <div
               className="
                 relative
                 flex
                 items-center
+                justify-center
                 px-8
                 h-[160px]
                 rounded-full
                 overflow-visible
+                w-[90%]
+                
               "
               style={{
                 backgroundImage: `url(${edubuild3})`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "bottom",
               }}
             >
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/30 rounded-full" />
+              <div className="absolute inset-0 bg-black/40 rounded-full" />
 
               <ul className="relative z-10 flex items-center gap-1 mt-15">
 
@@ -160,12 +171,12 @@ const Navbar2 = () => {
           </div>
 
           {/* ENQUIRY BUTTON */}
-          <div className="hidden xl:flex items-center pr-3">
+          <div className="hidden xl:flex items-center pr-3 w-1/6">
             <a
               href="#"
               className="
                 h-[42px]
-                px-5
+                
                 rounded-2xl
                 text-white
                 text-sm
@@ -176,7 +187,7 @@ const Navbar2 = () => {
                 transition-all
                 duration-300
                 hover:scale-105
-                mt-23 ml-10
+                mt-20  w-full
               "
               style={{
                 background:
@@ -190,7 +201,7 @@ const Navbar2 = () => {
           {/* MOBILE MENU BTN */}
           <button
             onClick={() => setMobileMenu(!mobileMenu)}
-            className="md:hidden ml-auto mr-3 text-[var(--forest)] mt-23"
+            className="md:hidden ml-auto mr-3 text-[var(--forest)] mt-20"
           >
             {mobileMenu ? <X size={30} /> : <Menu size={30} />}
           </button>

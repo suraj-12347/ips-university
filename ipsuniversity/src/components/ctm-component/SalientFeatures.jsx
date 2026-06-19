@@ -7,7 +7,6 @@ import {
   BriefcaseBusiness,
   GraduationCap,
   Trophy,
-  Building2,
 } from "lucide-react";
 
 const SalientFeaturesSection = () => {
@@ -53,16 +52,16 @@ const SalientFeaturesSection = () => {
 
   return (
     <section
-      className="relative py-24 px-4 md:px-8 overflow-hidden"
+      className="relative py-5 px-4 md:px-8 overflow-hidden"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80')",
+          "url('https://i.pinimg.com/736x/19/83/04/19830488d0c3a602bd77659e85cb16d2.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#f7f9f5]/90 to-[#f7f9f5]/95" />
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-[4px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Heading */}
@@ -70,7 +69,7 @@ const SalientFeaturesSection = () => {
           <p
             className="uppercase tracking-[3px] text-sm font-semibold"
             style={{
-              color: "#c97f22",
+              color: "var(--forest)",
               fontFamily: "Outfit, sans-serif",
             }}
           >
@@ -80,7 +79,7 @@ const SalientFeaturesSection = () => {
           <h2
             className="mt-3 text-4xl md:text-6xl"
             style={{
-              color: "#16332a",
+              color: "var(--forest)",
               fontFamily: "Fraunces, serif",
             }}
           >
@@ -105,7 +104,7 @@ const SalientFeaturesSection = () => {
           {stats.map((item, index) => (
             <div
               key={index}
-              className="rounded-[18px] p-6 text-center backdrop-blur-xl"
+              className="rounded-[18px] p-6 text-center backdrop-blur-xl transition-all duration-300 hover:-translate-y-1"
               style={{
                 background: "rgba(255,255,255,0.65)",
                 border: "1px solid rgba(255,255,255,0.9)",
@@ -115,7 +114,7 @@ const SalientFeaturesSection = () => {
               <h3
                 className="text-3xl md:text-4xl"
                 style={{
-                  color: "#16332a",
+                  color: "var(--forest)",
                   fontFamily: "Fraunces, serif",
                 }}
               >
@@ -153,13 +152,13 @@ const SalientFeaturesSection = () => {
                 <div
                   className="w-14 h-14 rounded-xl flex items-center justify-center mb-5"
                   style={{
-                    background: "rgba(201,127,34,.10)",
+                    background: "rgba(22,51,42,0.10)",
                   }}
                 >
                   <Icon
                     size={26}
                     style={{
-                      color: "#c97f22",
+                      color: "var(--forest)",
                     }}
                   />
                 </div>
@@ -167,7 +166,7 @@ const SalientFeaturesSection = () => {
                 <h3
                   className="text-xl mb-3"
                   style={{
-                    color: "#16332a",
+                    color: "var(--forest)",
                     fontFamily: "Fraunces, serif",
                   }}
                 >
@@ -189,40 +188,36 @@ const SalientFeaturesSection = () => {
         </div>
 
         {/* Bottom Highlight */}
-        <div
-          className="mt-16 rounded-[22px] p-8 md:p-10 text-center"
-          style={{
-            background:
-              "linear-gradient(135deg,#16332a 0%, #1f4d3a 100%)",
-          }}
-        >
-          <Trophy
-            size={40}
-            className="mx-auto mb-4"
-            color="#e9a13b"
-          />
+       <div
+  className="mt-16 rounded-[22px] p-8 md:p-10 text-center bg-white border border-gray-200 shadow-lg"
+>
+  <Trophy
+    size={40}
+    className="mx-auto mb-4"
+    color="var(--forest)"
+  />
 
-          <h3
-            className="text-2xl md:text-3xl text-white"
-            style={{
-              fontFamily: "Fraunces, serif",
-            }}
-          >
-            Excellence Through Innovation
-          </h3>
+  <h3
+    className="text-2xl md:text-3xl"
+    style={{
+      color: "var(--forest)",
+      fontFamily: "Fraunces, serif",
+    }}
+  >
+    Excellence Through Innovation
+  </h3>
 
-          <p
-            className="max-w-3xl mx-auto mt-4 leading-8"
-            style={{
-              color: "#e3f0e1",
-              fontFamily: "Outfit, sans-serif",
-            }}
-          >
-            Our focus is to nurture technically competent, ethically
-            responsible and industry-ready engineers capable of addressing
-            real-world challenges through technology and innovation.
-          </p>
-        </div>
+  <p
+    className="max-w-3xl mx-auto mt-4 leading-8 text-gray-700"
+    style={{
+      fontFamily: "Outfit, sans-serif",
+    }}
+  >
+    Our focus is to nurture technically competent, ethically
+    responsible and industry-ready engineers capable of addressing
+    real-world challenges through technology and innovation.
+  </p>
+</div>
       </div>
     </section>
   );

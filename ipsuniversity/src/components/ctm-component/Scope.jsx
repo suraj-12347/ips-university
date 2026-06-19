@@ -80,23 +80,23 @@ const ScopeSection = () => {
 
   return (
     <section
-      className="relative py-20 px-4 md:px-8 bg-cover bg-center"
+      className="relative py-20 px-4 md:px-8 bg-cover "
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=1800&q=80')",
+          "url('https://i.pinimg.com/736x/dd/18/fb/dd18fbe712c646ba9e343cfc0d6889c1.jpg')",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-white/95 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-white/40 backdrop-blur-[3px]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">
-          <p className="uppercase tracking-[4px] text-amber-700 text-sm font-semibold">
+          <p className="uppercase tracking-[4px] text-[var(--forest)] text-sm font-semibold">
             Career Pathways
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-[#16332a] mt-3">
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--forest)] mt-3">
             Scope of Computer Science & Engineering
           </h2>
 
@@ -115,15 +115,15 @@ const ScopeSection = () => {
             return (
               <div
                 key={index}
-                className="bg-white/70 backdrop-blur-lg border border-white rounded-3xl p-6 shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-3xl p-6 shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-7 h-7 text-amber-700" />
+                  <div className="w-14 h-14 rounded-2xl bg-[var(--forest)]/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-7 h-7 text-[var(--forest)]" />
                   </div>
 
                   <div>
-                    <h3 className="font-bold text-[#16332a] text-lg mb-2">
+                    <h3 className="font-bold text-[var(--forest)] text-lg mb-2">
                       {item.title}
                     </h3>
 

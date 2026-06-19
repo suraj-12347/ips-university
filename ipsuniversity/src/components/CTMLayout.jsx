@@ -6,13 +6,13 @@ import Footer from "../components/Footer";
 
 const CTMLayout = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar3 />
 
-      <div className="flex">
+      <div className="flex md:mt-30 lg:mt-30 mt-30">
         <Sidebar />
 
-        <main className="flex-1 md:ml-2 h-[90vh] overflow-y-auto scrollb">
+        <main className="flex-1 h-[90vh] overflow-y-auto scrollb ">
           <Outlet />
         </main>
       </div>

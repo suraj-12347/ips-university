@@ -121,24 +121,24 @@ const ActivitiesSection = () => {
 
   return (
     <section
-      className="relative py-24 px-4 md:px-8 overflow-hidden"
+      className="relative py-5 px-4 md:px-8 overflow-hidden"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1800&q=80')",
+          "url('https://i.pinimg.com/736x/d9/18/4c/d9184c7deca1df54c402830085babf0f.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#16332acc] to-[#16332af2]" />
+     <div className="absolute inset-0 bg-white/60 backdrop-blur-[3px]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-14">
           <p
-            className="uppercase tracking-[3px] text-sm font-semibold"
+            className="uppercase tracking-[3px] text-sm font-semibold text-[var(--forest)]"
             style={{
-              color: "#e9a13b",
+             
               fontFamily: "Outfit, sans-serif",
             }}
           >
@@ -146,7 +146,7 @@ const ActivitiesSection = () => {
           </p>
 
           <h2
-            className="mt-3 text-4xl md:text-6xl text-white"
+            className="mt-3 text-4xl md:text-6xl text-[var(--forest)]"
             style={{
               fontFamily: "Fraunces, serif",
             }}
@@ -155,9 +155,9 @@ const ActivitiesSection = () => {
           </h2>
 
           <p
-            className="mt-5 max-w-3xl leading-8"
+            className="mt-5 max-w-3xl leading-8 text-gray-700"
             style={{
-              color: "#e3f0e1",
+              
               fontFamily: "Outfit, sans-serif",
             }}
           >
@@ -169,11 +169,11 @@ const ActivitiesSection = () => {
 
         {/* Recent Events */}
         <div className="flex items-center gap-3 mb-8">
-          <Flower2 size={18} color="#e9a13b" />
+          <Flower2 size={18} className="text-[var(--forest)]" />
           <span
-            className="uppercase tracking-[2px] text-sm"
+            className="uppercase tracking-[2px] text-sm text-[var(--forest)]"
             style={{
-              color: "#9bc4a4",
+              
               fontFamily: "Outfit, sans-serif",
             }}
           >
@@ -189,12 +189,12 @@ const ActivitiesSection = () => {
             return (
               <div
                 key={index}
-                className="backdrop-blur-xl rounded-[18px] border border-white/20 bg-white/10 p-6 hover:-translate-y-2 transition-all duration-300"
+                className=" rounded-[18px]   bg-white p-6 hover:-translate-y-2 transition-all duration-300 shadow-xl"
               >
                 <div
-                  className="text-xs uppercase tracking-[1.5px] font-semibold mb-3"
+                  className="text-xs uppercase tracking-[1.5px] font-semibold mb-3 text-[var(--forest)]"
                   style={{
-                    color: "#e9a13b",
+                    
                     fontFamily: "Outfit, sans-serif",
                   }}
                 >
@@ -203,7 +203,7 @@ const ActivitiesSection = () => {
                 </div>
 
                 <h3
-                  className="text-xl text-white mb-3"
+                  className="text-xl text-gray-700 mb-3"
                   style={{
                     fontFamily: "Fraunces, serif",
                   }}
@@ -212,9 +212,9 @@ const ActivitiesSection = () => {
                 </h3>
 
                 <p
-                  className="leading-7 text-sm"
+                  className="leading-7 text-sm text-gray-500"
                   style={{
-                    color: "#e3f0e1",
+                    
                     fontFamily: "Outfit, sans-serif",
                   }}
                 >
@@ -227,11 +227,11 @@ const ActivitiesSection = () => {
 
         {/* Seminars */}
         <div className="flex items-center gap-3 mb-8">
-          <Flower2 size={18} color="#e9a13b" />
+          <Flower2 size={18} className="text-[var(--forest)]"  />
           <span
-            className="uppercase tracking-[2px] text-sm"
+            className="uppercase tracking-[2px] text-sm text-[var(--forest)]"
             style={{
-              color: "#9bc4a4",
+              
               fontFamily: "Outfit, sans-serif",
             }}
           >
@@ -240,22 +240,22 @@ const ActivitiesSection = () => {
           <div className="flex-1 h-px bg-white/20" />
         </div>
 
-        <div className="backdrop-blur-xl rounded-[18px] border border-white/20 bg-white/10 p-8 mb-16">
+        <div className="backdrop-blur-xl rounded-[18px]    bg-white shadow-xl p-8 mb-16">
           <div className="grid md:grid-cols-2 gap-8">
             {[seminarsLeft, seminarsRight].map((column, idx) => (
               <div key={idx}>
                 {column.map((item, i) => (
                   <div
                     key={i}
-                    className="flex gap-4 pb-5 mb-5 border-b border-white/10"
+                    className="flex gap-4 pb-5 mb-5  -b  -white/10"
                   >
-                    <div className="w-3 h-3 rounded-full bg-[#e9a13b] mt-2 flex-shrink-0" />
+                    <div className="w-3 h-3 rounded-full bg-[var(--forest)] mt-2 flex-shrink-0" />
 
                     <div>
                       <div
-                        className="text-sm font-semibold mb-2"
+                        className="text-sm font-semibold mb-2 text-[var(--forest)]"
                         style={{
-                          color: "#e9a13b",
+                          
                           fontFamily: "Outfit, sans-serif",
                         }}
                       >
@@ -263,9 +263,9 @@ const ActivitiesSection = () => {
                       </div>
 
                       <p
-                        className="leading-7 text-sm"
+                        className="leading-7 text-sm text-gray-700"
                         style={{
-                          color: "#e3f0e1",
+                          
                           fontFamily: "Outfit, sans-serif",
                         }}
                       >
@@ -281,11 +281,11 @@ const ActivitiesSection = () => {
 
         {/* Industrial Visits */}
         <div className="flex items-center gap-3 mb-8">
-          <Flower2 size={18} color="#e9a13b" />
+          <Flower2 size={18} className="text-[var(--forest)]"  />
           <span
-            className="uppercase tracking-[2px] text-sm"
+            className="uppercase tracking-[2px] text-sm text-[var(--forest)]"
             style={{
-              color: "#9bc4a4",
+              
               fontFamily: "Outfit, sans-serif",
             }}
           >
@@ -301,12 +301,12 @@ const ActivitiesSection = () => {
             return (
               <div
                 key={index}
-                className="backdrop-blur-xl rounded-[18px] border border-white/20 bg-white/10 p-6 hover:-translate-y-2 transition-all duration-300"
+                className="backdrop-blur-xl rounded-[18px]    bg-white shadow-xl p-6 hover:-translate-y-2 transition-all duration-300"
               >
                 <div
-                  className="text-xs uppercase tracking-[1.5px] font-semibold mb-3"
+                  className="text-xs uppercase tracking-[1.5px] font-semibold mb-3 text-[var(--forest)]"
                   style={{
-                    color: "#e9a13b",
+                   
                     fontFamily: "Outfit, sans-serif",
                   }}
                 >
@@ -315,7 +315,7 @@ const ActivitiesSection = () => {
                 </div>
 
                 <h3
-                  className="text-xl text-white mb-3"
+                  className="text-xl text-garay-700 mb-3"
                   style={{
                     fontFamily: "Fraunces, serif",
                   }}
@@ -324,9 +324,9 @@ const ActivitiesSection = () => {
                 </h3>
 
                 <p
-                  className="leading-7 text-sm"
+                  className="leading-7 text-sm text-gary-600"
                   style={{
-                    color: "#e3f0e1",
+                   
                     fontFamily: "Outfit, sans-serif",
                   }}
                 >

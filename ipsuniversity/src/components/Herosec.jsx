@@ -5,7 +5,7 @@ import { Play } from "lucide-react";
 
 const Herosec = () => {
   return (
-    <section className="relative w-full min-h-[82vh] overflow-hidden mt-30 md:mt-30">
+    <section className="relative w-full min-h-[82vh] overflow-hidden mt-30 md:mt-20 lg:mt-30">
       
       {/* Background Video */}
       <div className="absolute inset-0 overflow-hidden">
