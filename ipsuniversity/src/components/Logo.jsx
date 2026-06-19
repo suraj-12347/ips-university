@@ -1,11 +1,7 @@
-import React,{useState,useEffect} from 'react'
-
+import React, { useState, useEffect } from "react";
 
 import logored from "../images1/ipslogored.png";
 import logogreen from "../images1/ipslogogreen2.png";
-import Topbar2 from "./Topbar2";
-import Topbar3 from './Topbar3'
-
 import logopurple from "../images1/ipslogopurple.png";
 import logoblue from "../images1/ipslogogreen2.png";
 import logodark from "../images1/ipslogogreen2.png";
@@ -20,31 +16,18 @@ const themeLogos = {
   orange: orange,
 };
 
-
 const Logo = () => {
- const [mobileMenu, setMobileMenu] = useState(false);
-  const [active, setActive] = useState("home");
   const [theme, setTheme] = useState("green");
 
   useEffect(() => {
     const checkTheme = () => {
       const html = document.documentElement;
 
-      if (html.classList.contains("red")) {
-        setTheme("red");
-      } 
-      else if (html.classList.contains("purple")) {
-        setTheme("purple");
-      } 
-      else if (html.classList.contains("blue")) {
-        setTheme("blue");
-      } 
-      else if (html.classList.contains("dark")) {
-        setTheme("dark");
-      } 
-      else {
-        setTheme("green");
-      }
+      if (html.classList.contains("red")) setTheme("red");
+      else if (html.classList.contains("purple")) setTheme("purple");
+      else if (html.classList.contains("blue")) setTheme("blue");
+      else if (html.classList.contains("dark")) setTheme("dark");
+      else setTheme("green");
     };
 
     checkTheme();
@@ -59,24 +42,54 @@ const Logo = () => {
     return () => observer.disconnect();
   }, []);
 
-
   return (
-    <div className='flex w-10 md:w-30 items-center  justify-start'>
-         <a href="/" className="flex items-center shrink-0 mb-5">
-           <img
-            src={themeLogos[theme]}
-            alt="logo"
-            className="md:h-[70px] h-[60px] object-contain "
-          />
-        </a>
-        <h2 className="text-3xl font-roboto font-bold text-[var(--forest)]  mb-5  mr-1 .logo ">IPS 
+    <a
+  href="/"
+  className="flex items-center justify-start shrink-0"
+>
+  <img
+    src={themeLogos[theme]}
+    alt="logo"
+    className="
+      h-[60px]
+      sm:h-[55px]
+      md:h-[50px]
+      lg:h-[75px]
+      object-contain
+    "
+  />
 
-            
-        </h2>
-        <p className='text-xl font-roboto font-bold text-[var(--forest)] mb-5 '>UNIVERSITY</p>
-      
-    </div>
-  )
-}
+  <h2
+    className="
+      ml-1
+      text-[18px]
+      sm:text-[22px]
+      md:text-[28px]
+      lg:text-[34px]
+      font-bold
+      text-[var(--forest)]
+      md:hidden xl:block
+    "
+  >
+    IPS
+  </h2>
 
-export default Logo
+  <p
+    className="
+      ml-1
+      text-[12px]
+      sm:text-[15px]
+      md:text-[18px]
+      lg:text-[22px]
+      font-bold
+      text-[var(--forest)]
+      md:hidden xl:block
+    "
+  >
+    UNIVERSITY
+  </p>
+</a>
+  );
+};
+
+export default Logo;

@@ -113,7 +113,7 @@ const TestimonialsSection = () => {
 
         {/* Avatar Carousel */}
         <div className="relative h-52 mt-2 overflow-hidden">
-          <div className="relative w-full max-w-[340px] sm:max-w-[550px] md:max-w-[750px] mx-auto h-full flex justify-center items-center pb-8">
+          <div className="relative w-full max-w-[340px] sm:max-w-[550px] md:max-w-[750px] mx-auto h-full flex justify-center items-center pb-8 ">
             {testimonials.map((item, index) => {
               const total = testimonials.length;
 
@@ -175,6 +175,8 @@ const TestimonialsSection = () => {
                       border-4
                       border-white
                       overflow-hidden
+                      
+                      
                       ${
                         diff === 0
                           ? "w-28 h-28 sm:w-32 sm:h-32"

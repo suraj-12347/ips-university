@@ -5,7 +5,7 @@ import { Play } from "lucide-react";
 
 const Herosec = () => {
   return (
-    <section className="relative w-full min-h-[82vh] overflow-hidden">
+    <section className="relative w-full min-h-[82vh] overflow-hidden mt-30 md:mt-30">
       
       {/* Background Video */}
       <div className="absolute inset-0 overflow-hidden">
@@ -42,7 +42,17 @@ const Herosec = () => {
       />
 
       {/* Explore Button */}
-      <div className="absolute bottom-10 md:bottom-8 left-1/2 -translate-x-1/2 z-[5]">
+      <div
+  className="
+    absolute
+    md:bottom-8
+    bottom-20
+    left-1/2
+    -translate-x-1/2
+    z-[99999]
+    cursor-pointer
+  "
+>
         <a
           href="#about"
           className="
@@ -56,6 +66,7 @@ const Herosec = () => {
             uppercase
             text-[11px]
             font-semibold
+           
           "
         >
           <div
@@ -75,6 +86,7 @@ const Herosec = () => {
               group-hover:scale-110
               group-hover:bg-white/20
               shadow-xl
+              -mt-40 lg:mt-0
             "
           >
             <span className="text-[20px] animate-bounce text-[var(--forest)]">

@@ -148,12 +148,12 @@ const Topbar3 = () => {
             overflow-hidden
             z-10
           "
-          style={{
-            backgroundImage: `url(${edubuild3})`,
-            backgroundSize: "contain",
-          }}
+          // style={{
+          //   backgroundImage: `url(${edubuild3})`,
+          //   backgroundSize: "contain",
+          // }}
         >
-          <div className="absolute inset-0 bg-[var(--inset)] rounded-full"></div>
+          {/* <div className="absolute inset-0 bg-[var(--inset)] rounded-full"></div> */}
 
           <a
             href="#"

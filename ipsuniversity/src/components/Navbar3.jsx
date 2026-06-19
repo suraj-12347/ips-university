@@ -1,182 +1,267 @@
-import React, { useState, useEffect } from "react";
-import "./navbar.css";
-import { Menu, X } from "lucide-react";
-import { NavLink } from "react-router-dom";
-
-
-import Topbar3 from "./Topbar3";
+import React, { useState } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import edubuild3 from "../images1/edubuild3.png";
 import Logo from "./Logo";
+import Topbar3 from "./Topbar3";
 
 const Navbar2 = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [active, setActive] = useState("home");
-  const [theme, setTheme] = useState("green");
-
-  useEffect(() => {
-    const checkTheme = () => {
-      const html = document.documentElement;
-
-      if (html.classList.contains("red")) setTheme("red");
-      else if (html.classList.contains("purple")) setTheme("purple");
-      else if (html.classList.contains("blue")) setTheme("blue");
-      else if (html.classList.contains("dark")) setTheme("dark");
-      else setTheme("green");
-    };
-
-    checkTheme();
-
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
-    <nav className="navbar fixed top-0 left-0 w-full z-50 shadow-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 ">
+      <Topbar3/>
+      <div className="max-w-[1400px] -mt-20 ">
+        <div className="h-[170px] bg-white  shadow-md flex items-center px-4">
 
-      <Topbar3 />
+          {/* LOGO */}
+          <div className="flex-shrink-0 z-20 mt-20 md:mt-15 lg:mt-23">
+            <Logo />
+          </div>
 
-      {/* MAIN */}
-      <div className="max-w-[1350px] mx-auto h-[74px] flex items-center justify-between px-4 lg:px-1 lg:pr-6 bg-[var(--white)] mt-5">
+          {/* DESKTOP MENU */}
+          <div className="hidden md:flex  justify-center px-4    ">
+            <div
+              className="
+                relative
+                flex
+                items-center
+                px-8
+                h-[160px]
+                rounded-full
+                overflow-visible
+              "
+              style={{
+                backgroundImage: `url(${edubuild3})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/30 rounded-full" />
 
-        <Logo />
+              <ul className="relative z-10 flex items-center gap-1 mt-15">
 
-        {/* DESKTOP */}
-        <div className="hidden lg:flex items-center flex-1 h-full min-w-0">
+                {/* HOME */}
+                <li>
+                  <a
+                    href="#"
+                    onClick={() => setActive("home")}
+                    className={`px-4 py-2 rounded-xl text-sm font-lg transition-all duration-300 ${
+                      active === "home"
+                        ? "bg-white text-[var(--forest)]"
+                        : "text-white hover:bg-white/15"
+                    }`}
+                  >
+                    Home
+                  </a>
+                </li>
 
-          <ul className="flex items-center justify-center ml-20 gap-[1px] h-full flex-1 z-10 mb-10 w-full min-w-0">
+                {/* ABOUT */}
+                <li className="relative group">
+                  <a
+                    href="#about"
+                    onClick={() => setActive("about")}
+                    className={`flex items-center  px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                      active === "about"
+                        ? "bg-white text-[var(--forest)]"
+                        : "text-white hover:bg-white/15"
+                    }`}
+                  >
+                    About
+                    <ChevronDown size={14} />
+                  </a>
 
-            <li>
-              <a
-                href="#"
-                onClick={() => setActive("home")}
-                className={`nav-link whitespace-nowrap ${active === "home" ? "active" : ""}`}
-              >
-                Home
-              </a>
-            </li>
+                  {/* DROPDOWN */}
+                  <div
+                    className="
+                      absolute
+                      top-full
+                      left-0
+                      mt-3
+                      w-64
+                      bg-white
+                      rounded-2xl
+                      shadow-xl
+                      p-4
+                      opacity-0
+                      invisible
+                      group-hover:opacity-100
+                      group-hover:visible
+                      transition-all
+                      duration-300
+                    "
+                  >
+                    <h4 className="font-bold text-[var(--forest)] mb-3">
+                      University
+                    </h4>
 
-            <li className="group relative">
-              <a
-                href="#about"
-                onClick={() => setActive("about")}
-                className={`nav-link whitespace-nowrap ${active === "about" ? "active" : ""}`}
-              >
-                About Us
-              </a>
+                    <div className="flex flex-col gap-2">
+                      <a
+                        href="#"
+                        className="hover:text-[var(--forest)]"
+                      >
+                        Overview
+                      </a>
 
-              <div className="mega-drop z-[1000]">
-                <div>
-                  <h4 className="mega-title">University</h4>
-                  <a href="#">Overview</a>
-                  <a href="#">Vision & Mission</a>
-                  <a href="#">Why IPS University</a>
-                  <a href="#">Message Board</a>
-                </div>
-              </div>
-            </li>
+                      <a
+                        href="#"
+                        className="hover:text-[var(--forest)]"
+                      >
+                        Vision & Mission
+                      </a>
 
-            <li className="group relative">
-              <a
-                href="#schools"
-                onClick={() => setActive("schools")}
-                className={`nav-link whitespace-nowrap ${active === "schools" ? "active" : ""}`}
-              >
-                Schools
-              </a>
-            </li>
+                      <a
+                        href="#"
+                        className="hover:text-[var(--forest)]"
+                      >
+                        Why IPS University
+                      </a>
 
-            <li className="group relative">
-              <a
-                href="#"
-                onClick={() => setActive("programmes")}
-                className={`nav-link whitespace-nowrap ${active === "programmes" ? "active" : ""}`}
-              >
-                Programmes
-              </a>
-            </li>
+                      <a
+                        href="#"
+                        className="hover:text-[var(--forest)]"
+                      >
+                        Message Board
+                      </a>
+                    </div>
+                  </div>
+                </li>
 
-            <li>
-              <a
-                href="#"
-                onClick={() => setActive("admissions")}
-                className={`nav-link whitespace-nowrap ${active === "admissions" ? "active" : ""}`}
-              >
-                Admissions
-              </a>
-            </li>
+                {/* LINKS */}
+                {[
+                 
+                  "Programmes",
+                  "Admissions",
+                  "Research",
+                  "Student Zone",
+                ].map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="
+                        px-4
+                        py-2
+                        rounded-xl
+                        text-sm
+                        font-medium
+                        text-white
+                        hover:bg-white/15
+                        transition-all
+                        duration-300
+                      "
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
-            <li>
-              <a
-                href="#"
-                onClick={() => setActive("research")}
-                className={`nav-link whitespace-nowrap ${active === "research" ? "active" : ""}`}
-              >
-                Research
-              </a>
-            </li>
-
-            {/* FIXED */}
-            <li>
-              <a
-                href="#"
-                onClick={() => setActive("students")}
-                className={`nav-link whitespace-nowrap ${active === "students" ? "active" : ""}`}
-              >
-                Student Zone
-              </a>
-            </li>
-
-          </ul>
-
-          {/* CTA */}
-          <div className="ml-auto pl-6">
+          {/* ENQUIRY BUTTON */}
+          <div className="hidden xl:flex items-center pr-3">
             <a
               href="#"
-              className="h-[42px] px-5 rounded-2xl text-white text-[13px] font-semibold flex items-center justify-center transition-all duration-300 hover:scale-[1.03] mb-3"
+              className="
+                h-[42px]
+                px-5
+                rounded-2xl
+                text-white
+                text-sm
+                font-semibold
+                flex
+                items-center
+                justify-center
+                transition-all
+                duration-300
+                hover:scale-105
+                mt-23 ml-10
+              "
               style={{
-                background: "linear-gradient(135deg,var(--forest),var(--grass))",
-                boxShadow: "0 8px 18px rgba(49,87,44,.18)",
+                background:
+                  "linear-gradient(135deg,var(--forest),var(--grass))",
               }}
             >
               Enquiry Now
             </a>
           </div>
 
+          {/* MOBILE MENU BTN */}
+          <button
+            onClick={() => setMobileMenu(!mobileMenu)}
+            className="md:hidden ml-auto mr-3 text-[var(--forest)] mt-23"
+          >
+            {mobileMenu ? <X size={30} /> : <Menu size={30} />}
+          </button>
         </div>
 
-        {/* MOBILE BTN */}
-        <button
-          onClick={() => setMobileMenu(!mobileMenu)}
-          className="lg:hidden text-[var(--forest)] mb-5"
+        {/* MOBILE MENU */}
+        <div
+          className={`
+            xl:hidden
+            overflow-hidden
+            transition-all
+            duration-300
+            bg-white
+            rounded-b-2xl
+            shadow-lg
+            ${
+              mobileMenu
+                ? "max-h-[600px] py-4"
+                : "max-h-0"
+            }
+          `}
         >
-          {mobileMenu ? <X size={30} /> : <Menu size={30} />}
-        </button>
+          <div className="flex flex-col px-5">
 
-      </div>
+            {[
+              "Home",
+              "About Us",
+              "Schools",
+              "Programmes",
+              "Admissions",
+              "Research",
+              "Student Zone",
+            ].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="
+                  py-3
+                  border-b
+                  border-gray-100
+                  hover:text-[var(--forest)]
+                  transition-all
+                "
+              >
+                {item}
+              </a>
+            ))}
 
-      {/* MOBILE MENU */}
-      <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 bg-white border-t ${
-          mobileMenu ? "max-h-[700px]" : "max-h-0"
-        }`}
-      >
-        <div className="flex flex-col px-4 py-3">
+            <a
+              href="#"
+              className="
+                mt-4
+                h-[45px]
+                rounded-xl
+                text-white
+                font-semibold
+                flex
+                items-center
+                justify-center
+              "
+              style={{
+                background:
+                  "linear-gradient(135deg,var(--forest),var(--grass))",
+              }}
+            >
+              Enquiry Now
+            </a>
 
-          <a className="mobile-link">Home</a>
-          <a className="mobile-link">About Us</a>
-          <a className="mobile-link">Schools</a>
-          <a className="mobile-link">Programmes</a>
-          <a className="mobile-link">Admissions</a>
-          <a className="mobile-link">Research</a>
-          <a className="mobile-link">Student Zone</a>
-
+          </div>
         </div>
       </div>
-
     </nav>
   );
 };

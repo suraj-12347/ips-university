@@ -292,7 +292,7 @@ const ChatBot = () => {
           onClick={() =>
             setOpen(true)
           }
-          className="fixed md:top-120 top-200 right-5 z-[999] cursor-pointer transition-all duration-300 hover:scale-[1.03]"
+          className="fixed md:top-120 top-150 right-5 z-[999] cursor-pointer transition-all duration-300 hover:scale-[1.03]"
         >
 
           <div

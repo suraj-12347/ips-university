@@ -1,239 +1,135 @@
 import React from "react";
+import { Play } from "lucide-react";
 
-import Potgr from "../images1/potgr.jpg";
-import ctm from "../images1/ctm.jpg";
+const Herosec = () => {
+  const handleScroll = () => {
+    const aboutSection = document.getElementById("about");
 
-import { Check } from "lucide-react";
-
-import DotetRing from "./DotedRing";
-
-import { useLanguage } from "../context/LanguageContext";
-
-const About4 = () => {
-
-  const { language } = useLanguage();
-
-  const content = {
-    en: {
-      about: "🌿 About Us",
-      title: "IPS UNIVERSITY",
-
-      para1:
-        "The Deendayal Krishi Avam Gramin Proudyogiki Vikas Sansthan was registered under the MP Society Registration Act by a group of philanthropically inclined individuals who decided to work together for the betterment of society.",
-
-      para2:
-        "The Institute of Professional Studies (IPS), founded in 2005, has always promoted the belief that emotional, intellectual, and physical lives are interconnected.",
-
-      feature1: "80 Acres Campus",
-      feature2: "3 Colleges",
-      feature3: "AICTE Approved",
-      feature4: "100% Placement",
-    },
-
-    hi: {
-      about: "🌿 हमारे बारे में",
-      title: "आईपीएस यूनिवर्सिटी",
-
-      para1:
-        "दीनदयाल कृषि एवं ग्रामीण प्रौद्योगिकी विकास संस्थान समाज के विकास के उद्देश्य से स्थापित किया गया था।",
-
-      para2:
-        "इंस्टीट्यूट ऑफ प्रोफेशनल स्टडीज़ (IPS), जिसकी स्थापना 2005 में हुई, भावनात्मक, बौद्धिक और शारीरिक विकास में विश्वास रखता है।",
-
-      feature1: "80 एकड़ परिसर",
-      feature2: "3 कॉलेज",
-      feature3: "AICTE स्वीकृत",
-      feature4: "100% प्लेसमेंट",
-    },
-
-    es: {
-      about: "🌿 Sobre Nosotros",
-      title: "UNIVERSIDAD IPS",
-
-      para1:
-        "El Instituto Deendayal Krishi Avam Gramin Proudyogiki Vikas fue establecido para el desarrollo de la sociedad.",
-
-      para2:
-        "El Instituto de Estudios Profesionales (IPS), fundado en 2005, promueve el desarrollo emocional, intelectual y físico.",
-
-      feature1: "Campus de 80 Acres",
-      feature2: "3 Colegios",
-      feature3: "Aprobado por AICTE",
-      feature4: "100% Colocación",
-    },
-
-    fr: {
-      about: "🌿 À Propos De Nous",
-      title: "UNIVERSITÉ IPS",
-
-      para1:
-        "L'Institut Deendayal Krishi Avam Gramin Proudyogiki Vikas a été créé pour le développement de la société.",
-
-      para2:
-        "L'Institut des Études Professionnelles (IPS), fondé en 2005, favorise le développement émotionnel, intellectuel et physique.",
-
-      feature1: "Campus de 80 Acres",
-      feature2: "3 Collèges",
-      feature3: "Approuvé par AICTE",
-      feature4: "100% Placement",
-    },
+    if (aboutSection) {
+      aboutSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
-  const t = content[language];
-
   return (
-    <section
-      id="about"
-      className="w-full min-h-[80vh] flex flex-col lg:flex-row items-center justify-center gap-10 py-16 overflow-hidden pt-35"
-    >
+    <section className="relative w-full min-h-[82vh] overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0 overflow-hidden">
+        <iframe
+          className="
+            absolute
+            top-1/2
+            left-1/2
+            w-[177.77vh]
+            h-[56.25vw]
+            min-w-full
+            min-h-full
+            -translate-x-1/2
+            -translate-y-1/2
+            pointer-events-none
+          "
+          src="https://www.youtube.com/embed/l_H_84lP8g8?autoplay=1&mute=1&loop=1&playlist=l_H_84lP8g8&controls=0&rel=0&modestbranding=1"
+          title="Background Video"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+        />
+      </div>
 
-      {/* LEFT IMAGE */}
+      {/* Bottom White Gradient */}
       <div
-        className="
-          relative
-          w-[90%]
-          sm:w-[80%]
-          lg:w-[30%]
-          h-[250px]
-          sm:h-[320px]
-          lg:h-[400px]
-          lg:rounded-r-2xl
-          bg-cover
-          bg-center
-          shadow-xl
-          hidden
-          md:block
-          -z-10
-          overflow-hidden
-        "
+        className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"
         style={{
-          backgroundImage: `url(${ctm})`,
           background:
-            "linear-gradient(135deg,var(--forest),var(--grass))",
+            "linear-gradient(to top, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
-      >
+      />
 
-        <div className="absolute -right-20 lg:-right-40 top-0 opacity-40 lg:opacity-100">
-          <DotetRing height={400} width={400} />
-        </div>
-
-      </div>
-
-      {/* CENTER CONTENT */}
-      <div
+      {/* Explore Button */}
+      <button
+        onClick={handleScroll}
         className="
-          relative
-          w-full
-          lg:w-1/2
-          px-5
-          sm:px-8
-          lg:px-4
-          text-white
-          text-left
-          z-20
+          absolute
+          bottom-10
+          md:bottom-8
+          left-1/2
+          -translate-x-1/2
+          z-[9999]
+          flex
+          flex-col
+          items-center
+          gap-2
+          cursor-pointer
+          group
         "
+        type="button"
       >
+        <div
+          className="
+            w-[65px]
+            h-[65px]
+            rounded-full
+            border
+            border-[var(--forest)]
+            bg-white/10
+            backdrop-blur-md
+            flex
+            items-center
+            justify-center
+            transition-all
+            duration-500
+            group-hover:scale-110
+            group-hover:bg-white/20
+            shadow-xl
+          "
+        >
+          <span className="text-[20px] animate-bounce text-[var(--forest)]">
+            ↓
+          </span>
+        </div>
 
-        <p className="text-sm mb-2 flex justify-start items-center gap-2 text-[var(--grass)]">
-          {t.about}
-        </p>
+        <span
+          className="
+            text-[11px]
+            font-semibold
+            uppercase
+            tracking-[3px]
+            text-[var(--forest)]
+            transition-all
+            duration-500
+            group-hover:tracking-[5px]
+          "
+        >
+          Explore
+        </span>
+      </button>
 
-        <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-[var(--forest)] leading-tight">
-          {t.title}
-        </h2>
+      {/* Right Bottom Buttons */}
+      <div className="relative z-[5] flex flex-col justify-end items-end w-full h-[82vh] px-4 md:px-8 pb-8">
+        <div className="hidden md:flex items-center gap-4">
+          <a
+            href="#"
+            className="h-[48px] px-6 rounded-xl text-white text-[12px] font-semibold flex items-center justify-center transition-all duration-300 hover:scale-[1.03] shadow-lg"
+            style={{
+              background:
+                "linear-gradient(135deg,var(--forest),var(--grass))",
+            }}
+          >
+            Apply for 2025–26 →
+          </a>
 
-        <p className="text-sm sm:text-[15px] mb-4 text-gray-600 leading-7 text-justify">
-          {t.para1}
-        </p>
-
-        <p className="text-sm sm:text-[15px] text-gray-600 leading-7 text-justify">
-          {t.para2}
-        </p>
-
-        {/* FEATURES */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
-
-          <div className="flex items-center gap-2 bg-[var(--grass)]/30 p-2 rounded-full">
-            <span className="text-[var(--grass)] bg-[var(--grass)]/20 p-1 rounded-full">
-              <Check absoluteStrokeWidth />
-            </span>
-
-            <p className="text-sm text-[var(--forest)]">
-              {t.feature1}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2 bg-[var(--grass)]/30 p-2 rounded-full">
-            <span className="text-[var(--grass)] bg-[var(--grass)]/20 p-1 rounded-full">
-              <Check absoluteStrokeWidth />
-            </span>
-
-            <p className="text-sm text-[var(--forest)]">
-              {t.feature2}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2 bg-[var(--grass)]/30 p-2 rounded-full">
-            <span className="text-[var(--grass)] bg-[var(--grass)]/20 p-1 rounded-full">
-              <Check absoluteStrokeWidth />
-            </span>
-
-            <p className="text-sm text-[var(--forest)]">
-              {t.feature3}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2 bg-[var(--grass)]/30 p-2 rounded-full">
-            <span className="text-[var(--grass)] bg-[var(--grass)]/20 p-1 rounded-full">
-              <Check absoluteStrokeWidth />
-            </span>
-
-            <p className="text-sm text-[var(--forest)]">
-              {t.feature4}
-            </p>
-          </div>
-
+          <a
+            href="#"
+            className="h-[48px] px-7 rounded-xl border border-[var(--forest)] bg-white/50 backdrop-blur-md text-[var(--forest)] text-[13px] font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:bg-white/70"
+          >
+            <Play size={16} />
+            Campus Tour
+          </a>
         </div>
       </div>
-
-      {/* RIGHT IMAGE */}
-      <div
-        className="
-          relative
-          w-[90%]
-          sm:w-[85%]
-          lg:w-[60%]
-          h-[250px]
-          sm:h-[320px]
-          lg:h-[400px]
-          md:rounded-l-2xl
-          bg-cover
-          bg-center
-          shadow-xl
-          hidden
-          xl:block
-          -z-10
-          overflow-hidden
-        "
-        style={{
-          backgroundImage: `url(${Potgr})`,
-          background:
-            "linear-gradient(135deg,var(--forest),var(--grass))",
-        }}
-      >
-
-        <div className="absolute -left-20 lg:-left-40 -top-20 lg:-top-40 opacity-40 lg:opacity-100">
-          <DotetRing height={400} width={400} />
-        </div>
-
-        <div className="absolute -right-20 lg:-right-20 top-20 opacity-40 lg:opacity-100">
-          <DotetRing height={500} width={500} />
-        </div>
-
-      </div>
-
     </section>
   );
 };
 
-export default About4;
+export default Herosec;
