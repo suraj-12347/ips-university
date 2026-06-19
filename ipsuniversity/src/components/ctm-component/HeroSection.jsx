@@ -5,7 +5,7 @@ import ctmmain from "../../images1/ipsmain2.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[60vh] sm:h-[75vh] md:h-[95vh] -md:mt-10 -mt-25 mb-80 md:mb-0">
+    <section className="relative h-[60vh] sm:h-[75vh] md:h-[95vh]  mb-80 md:mb-0">
 
      {/* <div
         className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"
