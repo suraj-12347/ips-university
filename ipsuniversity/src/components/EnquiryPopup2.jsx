@@ -28,11 +28,12 @@ const EnquiryPopup2 = () => {
           className="
             fixed
             inset-0
+            bg-black/45
             z-[999]
             flex
             items-center
             justify-center
-            backdrop-blur-sm
+            backdrop-blur-md
             px-4
             top-30
           "
@@ -59,7 +60,22 @@ const EnquiryPopup2 = () => {
             }}
           >
             {/* Overlay */}
-            <div className="absolute inset-0 bg-[var(--moss)]"></div>
+            {/* <div className="absolute inset-0 bg-[var(--moss)]"></div> */}
+             {/* <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      /> */}
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-[4px] lg:h-full h-150 "></div>
 
             {/* CLOSE BTN */}
             <button
@@ -72,12 +88,12 @@ const EnquiryPopup2 = () => {
                 w-10
                 h-10
                 rounded-full
-                bg-white/10
-                hover:bg-white/20
+                bg-[var(--forest)]/30
+                hover:bg-[var(--forest)]/40
                 flex
                 items-center
                 justify-center
-                text-white
+                text-[var(--forest)]
                 transition-all
                 cursor-pointer
               "
@@ -98,33 +114,33 @@ const EnquiryPopup2 = () => {
                 z-20
               "
             >
-              <p className="text-white/70 uppercase tracking-[4px] text-xs mb-3">
+              <p className="text-[var(--forest)]/70 uppercase tracking-[4px] text-xs mb-3">
                 IPS University
               </p>
 
-              <h2 className="text-4xl font-extrabold text-white leading-tight">
+              <h2 className="text-4xl font-extrabold text-[var(--forest)] leading-tight">
                 {t.admission}
                 <br />
                 {t.enquiry}
               </h2>
 
-              <p className="text-white/80 mt-5 leading-7 text-sm">
+              <p className="text-gray-700 mt-5 leading-7 text-sm">
                 {t.enquiryDesc}
               </p>
 
               <div className="mt-6 flex flex-col gap-3 text-sm">
-                <div className="flex items-center gap-3 text-white">
-                  <span className="w-2 h-2 rounded-full bg-white"></span>
+                <div className="flex items-center gap-3 text-gray-700">
+                  <span className="w-2 h-2 rounded-full bg-[var(--forest)]"></span>
                   <p>{t.placementAssist}</p>
                 </div>
 
-                <div className="flex items-center gap-3 text-white">
-                  <span className="w-2 h-2 rounded-full bg-white"></span>
+                <div className="flex items-center gap-3 text-gray-700">
+                  <span className="w-2 h-2 rounded-full bg-[var(--forest)]"></span>
                   <p>{t.aicte}</p>
                 </div>
 
-                <div className="flex items-center gap-3 text-white">
-                  <span className="w-2 h-2 rounded-full bg-white"></span>
+                <div className="flex items-center gap-3 text-gray-700">
+                  <span className="w-2 h-2 rounded-full bg-[var(--forest)]"></span>
                   <p>{t.campus}</p>
                 </div>
               </div>
@@ -153,11 +169,11 @@ const EnquiryPopup2 = () => {
                   p-5
                 "
               >
-                <h3 className="text-2xl font-bold text-[var(--white)]">
+                <h3 className="text-2xl font-bold text-[var(--forest)]">
                   {t.getStarted}
                 </h3>
 
-                <p className="text-white/90 text-sm mb-2">
+                <p className="text-gray-700 text-sm mb-2">
                   {t.formDesc}
                 </p>
 
@@ -169,11 +185,11 @@ const EnquiryPopup2 = () => {
                       w-full
                       h-[48px]
                       rounded-xl
-                      border
-                      border-gray-200
+                      
+                      shadow-xl
                       px-4
                       outline-none
-                      bg-white/80
+                      bg-white
                       text-[var(--forest)]
                     "
                   />
@@ -185,9 +201,8 @@ const EnquiryPopup2 = () => {
                       w-full
                       h-[48px]
                       rounded-xl
-                      border
-                      border-gray-200
-                      bg-white/80
+                     shadow-xl
+                      bg-white
                       text-[var(--forest)]
                       px-4
                       outline-none
@@ -201,11 +216,10 @@ const EnquiryPopup2 = () => {
                       w-full
                       h-[48px]
                       rounded-xl
-                      border
-                      border-gray-200
+                      shadow-xl
                       px-4
                       outline-none
-                      bg-white/80
+                      bg-white
                       text-[var(--forest)]
                     "
                   />
@@ -215,11 +229,10 @@ const EnquiryPopup2 = () => {
                       w-full
                       h-[48px]
                       rounded-xl
-                      border
-                      border-gray-200
+                      shadow-xl
                       px-4
                       outline-none
-                      bg-white/80
+                      bg-white
                       text-[var(--forest)]
                     "
                   >
@@ -240,12 +253,11 @@ const EnquiryPopup2 = () => {
                       md:col-span-2
                       w-full
                       rounded-xl
-                      border
-                      border-gray-200
+                     shadow-xl
                       p-4
                       outline-none
                       resize-none
-                      bg-white/80
+                      bg-white
                       text-[var(--forest)]
                     "
                   ></textarea>

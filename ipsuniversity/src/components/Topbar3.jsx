@@ -13,7 +13,7 @@ const Topbar3 = () => {
   const { t, setLanguage } = useLanguage();
 
   return (
-    <div className="w-full text-[var(--white)] text-[13px] font-medium z-50 ">
+    <div className="w-full text-[var(--white)] text-[13px] font-medium z-[9999] ">
       <div
         className="max-w-[1400px] relative mx-auto px-2 lg:px-4 h-[35px] flex items-center justify-between"
         style={{

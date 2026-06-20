@@ -3,6 +3,11 @@ import pharma from '../../images1/flower2.jpeg'
 import DotedRing from "../DotedRing";
 import suraj from '../../images1/suraj.jpeg'
 import neeraj from '../../images1/neeraj.jpeg'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 const reviews = [
   {
@@ -29,11 +34,47 @@ const reviews = [
     review:
       "The learning experience here feels practical instead of only theoretical. Mentorship and peer culture helped me grow personally as well.",
   },
+  {
+    id: 2,
+    name: "Neeraj",
+    course: "B-tech",
+    image:neeraj,
+    review:
+      "What I liked most was the balance between academics and extracurricular activities. The university atmosphere feels modern yet calm.",
+  },
+  {
+    id: 3,
+    name: "Rahul Verma",
+    course: "BCA",
+    image: "https://i.pravatar.cc/150?img=15",
+    review:
+      "The learning experience here feels practical instead of only theoretical. Mentorship and peer culture helped me grow personally as well.",
+  },
+  {
+    id: 2,
+    name: "Neeraj",
+    course: "B-tech",
+    image:neeraj,
+    review:
+      "What I liked most was the balance between academics and extracurricular activities. The university atmosphere feels modern yet calm.",
+  },
+  {
+    id: 3,
+    name: "Rahul Verma",
+    course: "BCA",
+    image: "https://i.pravatar.cc/150?img=15",
+    review:
+      "The learning experience here feels practical instead of only theoretical. Mentorship and peer culture helped me grow personally as well.",
+  },
 ];
 
 const StudentReviews2 = () => {
   const [showCards, setShowCards] = useState(false);
   const sectionRef = useRef(null);
+const prevRef = useRef(null);
+const nextRef = useRef(null);
+const [activeIndex, setActiveIndex] = useState(0);
+const swiperRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -99,112 +140,185 @@ const StudentReviews2 = () => {
 </div>
 
       {/* cards */}
-      <div className="mt-8 md:mt-15 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+   <div className="relative z-20 mt-10 max-w-6xl mx-auto">
 
-        {reviews.map((item, index) => (
-          <div
-            key={item.id}
-            className={`
-              bg-[var(--white)]
-              rounded-[28px]
-              hover:-translate-y-2
-              p-6 md:p-8
-              border border-[rgba(0,0,0,0.05)]
-              z-40
+  <Swiper
+    onSwiper={(swiper) => {
+      swiperRef.current = swiper;
+    }}
+    onSlideChange={(swiper) => {
+      setActiveIndex(swiper.realIndex);
+    }}
+    loop={true}
+    speed={700}
+    spaceBetween={24}
+    slidesPerView={1}
+    breakpoints={{
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }}
+  >
+    {reviews.map((item) => (
+      <SwiperSlide key={item.id} className="h-auto">
 
-              transition-all duration-[300ms]
+        <div
+          className="
+            bg-white
+            rounded-[28px]
+            p-6
+            md:p-8
+            border
+            border-gray-100
+            h-[340px]
+            flex
+            flex-col
+            shadow-lg
+            transition-all
+            duration-300
+            hover:-translate-y-2
+          "
+        >
+          {/* Profile */}
+          <div className="flex items-center gap-4">
+            <img
+              src={item.image}
+              alt={item.name}
+              className="
+                w-14
+                h-14
+                md:w-20
+                md:h-20
+                rounded-full
+                object-cover
+              "
+            />
 
-              ${
-                showCards
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 -translate-y-[90vh]"
-              }
-            `}
+            <div>
+              <h3 className="font-semibold text-[var(--forest)] text-lg">
+                {item.name}
+              </h3>
+
+              <p className="text-gray-500 text-sm">
+                {item.course}
+              </p>
+            </div>
+          </div>
+
+          <div className="h-px bg-gray-200 my-5"></div>
+
+          {/* Review */}
+          <p
+            className="
+              text-gray-600
+              text-sm
+              leading-7
+              overflow-hidden
+            "
             style={{
-              transitionDelay: `${index * 250}ms`,
-              transitionTimingFunction:
-                "cubic-bezier(0.17, 0.89, 0.32, 1.15)",
-              boxShadow: "0 10px 40px rgba(0,0,0,0.04)",
-
-              /* 🔥 PROPER LIFT EFFECT (desktop only) */
-            //   transform:
-            //     index === 1
-            //       ? "translateY(-25px)"
-            //       : index === 2
-            //       ? "translateY(-55px)"
-            //       : "translateY(0px)",
+              display: "-webkit-box",
+              WebkitLineClamp: 5,
+              WebkitBoxOrient: "vertical",
             }}
           >
-            {/* top */}
-            <div className="flex items-center gap-3 md:gap-4">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-12 md:w-20 h-12 md:h-20 rounded-full object-cover object-center"
-              />
+            {item.review}
+          </p>
 
-              <div>
-                <h3 className="text-[16px] md:text-[18px] font-semibold text-[var(--forest)]">
-                  {item.name}
-                </h3>
-
-                <p className="text-xs md:text-sm text-gray-500">
-                  {item.course}
-                </p>
-              </div>
+          <div className="mt-auto pt-6 flex items-center justify-between">
+            <div className="text-[var(--grass)]">
+              ★★★★★
             </div>
 
-            <div className="w-full h-[1px] bg-[rgba(0,0,0,0.06)] my-4 md:my-6"></div>
-
-            <p className="text-[13px] md:text-[15px] leading-6 md:leading-8 text-gray-600 text-justify">
-              {item.review}
-            </p>
-
-            <div className="mt-6 md:mt-8 flex items-center justify-between">
-              <div className="flex gap-1 text-[var(--grass)] text-sm md:text-lg">
-                ★ ★ ★ ★ ★
-              </div>
-
-              <div className="w-8 md:w-10 h-8 md:h-10 rounded-full bg-[var(--grass)]/10 flex items-center justify-center text-[var(--forest)] text-lg md:text-xl">
-                ”
-              </div>
+            <div
+              className="
+                w-10
+                h-10
+                rounded-full
+                bg-[var(--forest)]/10
+                flex
+                items-center
+                justify-center
+                text-[var(--forest)]
+                text-xl
+              "
+            >
+              ”
             </div>
- 
           </div>
-        ))}
+        </div>
 
-        
-      </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
 
+  {/* Controls */}
+  <div className="flex items-center justify-center gap-4 mt-8">
+
+    <button
+      onClick={() => swiperRef.current?.slidePrev()}
+      className="
+        w-11
+        h-11
+        rounded-full
+        bg-[var(--forest)]
+        text-white
+        flex
+        items-center
+        justify-center
+        hover:scale-105
+        transition-all
+      "
+    >
+      ←
+    </button>
+
+    {/* Pagination */}
+    <div className="flex items-center gap-2">
+      {reviews.map((_, index) => (
+        <button
+          key={index}
+          onClick={() => swiperRef.current?.slideToLoop(index)}
+          className={`
+            rounded-full
+            transition-all
+            duration-300
+            ${
+              activeIndex === index
+                ? "w-8 h-2 bg-[var(--forest)]"
+                : "w-2 h-2 bg-gray-300"
+            }
+          `}
+        />
+      ))}
+    </div>
+
+    <button
+      onClick={() => swiperRef.current?.slideNext()}
+      className="
+        w-11
+        h-11
+        rounded-full
+        bg-[var(--forest)]
+        text-white
+        flex
+        items-center
+        justify-center
+        hover:scale-105
+        transition-all
+      "
+    >
+      →
+    </button>
+
+  </div>
+
+</div>
       {/* button */}
      {/* button */}
-                <div className="mt-5 md:mt-3 flex justify-end z-20  ">
-  <button className="group flex items-center justify-center w-12 h-12 rounded-full bg-[var(--white)] hover:bg-white/70 transition-all duration-300 mb-5 z-40">
-    
-    {/* arrow */}
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      className="w-5 h-5 text-[var(--forest)] group-hover:translate-x-1 transition-transform duration-300"
-    >
-      <path
-        d="M5 12h14"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M13 6l6 6-6 6"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-
-  </button>
-</div>
+           
 
     </section>
   );

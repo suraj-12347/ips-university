@@ -17,11 +17,15 @@ import CompanySection2 from '../components/CompanySection2'
 import SocialMedia2 from '../components/SocialMedia2'
 import Brochure2 from '../components/Brochure2'
 import Footer from '../components/Footer'
+import Topbar3 from '../components/Topbar3'
 
 const Page2 = () => {
   return (
     <>
+     {/* <Topbar3/>  */}
+    
     <Navbar3/>
+   
     <Herosec/>
     <ChatBot/>
     <About3/>

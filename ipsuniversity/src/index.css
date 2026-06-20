@@ -144,40 +144,6 @@ html {
 
 
 /* Swiper Navigation */
-
-.swiper {
-  padding-bottom: 60px;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  top: 100% !important;
-  bottom: 0 !important;
-  width: 42px;
-  height: 42px;
-  border-radius: 9999px;
-  background: var(--forest);
-  color: white !important;
-}
-
-.swiper-button-prev {
-  left: calc(50% - 55px) !important;
-}
-
-.swiper-button-next {
-  right: calc(50% - 55px) !important;
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  font-size: 16px !important;
-  font-weight: bold;
-}
-
-.swiper-pagination {
-  bottom: 1px !important;
-}
-
 .schools-swiper {
   padding-bottom: 90px !important;
 }
@@ -192,34 +158,68 @@ html {
   justify-content: center;
 }
 
-/* Pagination niche */
+/* Pagination */
 .schools-swiper .swiper-pagination {
-  bottom: 0 !important;
+  bottom: 8px !important;
 }
 
-/* Arrows pagination ke upar nahi, uske side me */
+/* Buttons */
 .schools-swiper .swiper-button-prev,
 .schools-swiper .swiper-button-next {
-  top: auto !important;
-  bottom: 0 !important;
-  width: 42px;
-  height: 42px;
+  width: 48px !important;
+  height: 48px !important;
   border-radius: 9999px;
   background: var(--forest);
-  color: white !important;
-  z-index: 20;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  top: auto !important;
+  bottom: 0 !important;
+  color: var(--white) !important;
 }
 
-.schools-swiper .swiper-button-prev {
-  left: calc(50% - 80px) !important;
+/* .schools-swiper .swiper-button-prev {
+  left: calc(50% - 110px) !important;
 }
 
 .schools-swiper .swiper-button-next {
-  right: calc(50% - 80px) !important;
-}
+  right: calc(50% - 110px) !important;
+} */
 
+/* Remove Swiper default icons */
 .schools-swiper .swiper-button-prev::after,
 .schools-swiper .swiper-button-next::after {
-  font-size: 14px !important;
+  font-family: inherit !important;
+  font-size: 24px !important;
   font-weight: 700;
+}
+
+/* Custom arrows */
+.schools-swiper .swiper-button-prev::after {
+  content: "" !important;
+}
+
+.schools-swiper .swiper-button-next::after {
+  content: "" !important;
+}
+
+/* Hover */
+.schools-swiper .swiper-button-prev:hover,
+.schools-swiper .swiper-button-next:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .schools-swiper .swiper-button-prev {
+    left: calc(50% - 100px) !important;
+  }
+
+  .schools-swiper .swiper-button-next {
+    right: calc(50% - 100px) !important;
+  }
+
+  .schools-swiper .swiper-button-prev,
+  .schools-swiper .swiper-button-next {
+    width: 42px !important;
+    height: 42px !important;
+  }
 }

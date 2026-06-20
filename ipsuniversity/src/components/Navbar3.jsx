@@ -9,7 +9,7 @@ const Navbar2 = () => {
   const [active, setActive] = useState("home");
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[9999]  ">
+    <nav className="fixed top-0 left-0 w-full z-[9998]  ">
      
         <Topbar3/>
       

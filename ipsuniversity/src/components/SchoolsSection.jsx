@@ -83,11 +83,11 @@ const SchoolsSection = () => {
       className="
         relative
         w-full
-        py-10
+        py-5
         md:py-12
         overflow-hidden
         mt-20
-        px-4
+        
       "
       style={{
         backgroundImage: `url(${flower})`,
@@ -134,7 +134,7 @@ const SchoolsSection = () => {
       </div>
 
       {/* Slider */}
-      <div className="max-w-[1250px] mx-auto px-4 sm:px-8 relative">
+      <div className="max-w-[1250px] mx-auto px-2  relative">
         {/* Prev Button */}
         {/* <button
           onClick={prevSlide}
@@ -189,7 +189,7 @@ const SchoolsSection = () => {
         {/* Cards */}
 
 
-    <div className="max-w-[1250px] mx-auto px-4 sm:px-8 relative z-50 mt-10">
+    <div className="max-w-[1250px] mx-0 md:mx-auto px-4  relative z-50 mt-10">
  <Swiper
   modules={[Navigation, Pagination]}
   navigation
