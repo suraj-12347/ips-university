@@ -54,7 +54,8 @@ const Logo = () => {
       h-[60px]
       sm:h-[55px]
       md:h-[50px]
-      lg:h-[70px]
+      lg:h-[50px]
+      xl:h-[70px]
       object-contain
     "
   />
@@ -68,7 +69,7 @@ const Logo = () => {
      
       font-bold
       text-[var(--forest)]
-      md:hidden xl:block
+      md:hidden xl:block lg:block
     "
   >
     IPS
@@ -84,6 +85,7 @@ const Logo = () => {
       font-bold
       text-[var(--forest)]
       md:hidden xl:block
+      lg:block
     "
   >
     UNIVERSITY

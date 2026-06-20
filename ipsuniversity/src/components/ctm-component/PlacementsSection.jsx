@@ -134,7 +134,7 @@ const PlacementsSection = () => {
         className="
           absolute
           right-2
-          md:-right-12
+          md:-right-6
           top-1/2
           -translate-y-1/2
           p-2 md:p-3
@@ -143,6 +143,7 @@ const PlacementsSection = () => {
           z-10
           bg-white
           rounded-full
+          shadow-lg
         "
       >
         <ArrowRightToLine

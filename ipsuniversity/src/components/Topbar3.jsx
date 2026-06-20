@@ -13,9 +13,9 @@ const Topbar3 = () => {
   const { t, setLanguage } = useLanguage();
 
   return (
-    <div className="w-full bg-[var(--grass)] text-[var(--white)] text-[13px] font-medium z-50">
+    <div className="w-full text-[var(--white)] text-[13px] font-medium z-50 ">
       <div
-        className="max-w-[1350px] relative mx-auto px-4 lg:px-6 h-[35px] flex items-center justify-between"
+        className="max-w-[1400px] relative mx-auto px-2 lg:px-4 h-[35px] flex items-center justify-between"
         style={{
           backgroundImage: `url(${edubuild3})`,
           backgroundSize: "cover",
@@ -23,7 +23,7 @@ const Topbar3 = () => {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[var(--inset)]"></div>
+        <div className="absolute inset-0 bg-black/40  backdrop-blur-[1px]"></div>
 
         {/* LEFT */}
       <div className="flex items-center gap-5 z-10 flex-nowrap">

@@ -14,7 +14,7 @@ import Chatbot from "../components/ChatBot";
 const CtmMainPage = () => {
   return (
     <>
-     <div className="w-full md:mt-30 lg:mt-30 ">
+     <div className="w-full  md:mt-30 lg:mt-30 ">
        <Navbar3 />
       <HeroSection />
       <AboutSection />

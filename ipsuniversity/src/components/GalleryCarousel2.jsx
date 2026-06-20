@@ -289,7 +289,7 @@ const nextRef = useRef(null);
 
   return (
   <>
-    <section className="w-full  py-5 pb-10 mt-10 relative overflow-hidden"
+    <section className="w-full  py-5 pb-10 mt-20 relative overflow-hidden"
     style={{
               backgroundImage: `url(${pharma})`,
               backgroundSize: "cover",
@@ -297,7 +297,25 @@ const nextRef = useRef(null);
             }}
     >
 
-       <div className="absolute inset-0 bg-[var(--moss)] "></div>
+       {/* <div className="absolute inset-0 bg-[var(--moss)] "></div> */}
+
+
+        <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px]"></div>
+
 
       {/* Rings */}
       {/* <div className="absolute right-25 -top-80 rotate-180">
@@ -309,31 +327,31 @@ const nextRef = useRef(null);
       </div> */}
 
       {/* Header */}
-      <div className="flex items-center justify-between px-6 md:px-12 mb-10 relative z-10">
+      <div className="flex items-center justify-between px-6 md:px-12 mb-10 relative z-4">
 
         <div>
-          <p className="text-white/80 text-sm font-semibold tracking-[3px] uppercase">
+          <p className="text-[var(--forest)]/80 text-sm font-semibold tracking-[3px] uppercase">
             Campus Life
           </p>
 
-          <h2 className="text-3xl text-[var(--white)] md:text-5xl font-bold mt-2">
+          <h2 className="text-3xl text-[var(--forest)] md:text-5xl font-bold mt-2">
             Explore IPS Moments
           </h2>
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 40">
 
           <button
             ref={prevRef}
-            className="w-14 h-14 border text-[var(--white)] border-[var(--white)] flex items-center justify-center hover:bg-[var(--forest)] hover:text-white transition-all duration-300 mt-8"
+            className="w-14 h-14 border text-[var(--forest)] border-[var(--forest)] flex items-center justify-center hover:bg-[var(--forest)] hover:text-white transition-all duration-300 mt-8"
           >
             <ChevronLeft size={24} />
           </button>
 
           <button
             ref={nextRef}
-            className="w-14 h-14 border border-[var(--white)] text-[var(--white)] flex items-center justify-center hover:bg-[var(--forest)] hover:text-white transition-all duration-300 mt-8"
+            className="w-14 h-14 border border-[var(--forest)] text-[var(--forest)] flex items-center justify-center hover:bg-[var(--forest)] hover:text-white transition-all duration-300 mt-8"
           >
             <ChevronRight size={24} />
           </button>
@@ -363,7 +381,7 @@ const nextRef = useRef(null);
     <SwiperSlide key={slide.id}>
       
       {/* Desktop */}
-      <div className="hidden xl:flex gap-4 items-stretch w-full px-6">
+      <div className="hidden xl:flex gap-4 items-stretch w-full px-6 z-40">
 
         {/* Big Square */}
         <div

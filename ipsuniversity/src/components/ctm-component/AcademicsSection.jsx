@@ -81,14 +81,14 @@ const AcademicsSection = () => {
       }}
     >
         <div
-        className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-[2]"
         style={{
           background:
             "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
         }}
       />
        <div
-        className="absolute top-0 left-0 w-full h-[70%] z-[2]"
+        className="absolute -top-2 left-0 w-full h-[70%] z-[2]"
         style={{
           background:
             "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",

@@ -54,7 +54,7 @@ const StudentReviews2 = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full  py-5 md:py-6 px-4 md:px-8 overflow-hidden relative mt-10 z-0"
+      className="w-full  py-5 md:py-6 px-4 md:px-8 overflow-hidden relative mt-10 "
          style={{
               backgroundImage: `url(${pharma})`,
               backgroundSize: "cover",
@@ -62,7 +62,24 @@ const StudentReviews2 = () => {
             }}
     >
 
-       <div className="absolute inset-0 bg-[var(--moss)] -z-1"></div>
+       {/* <div className="absolute inset-0 bg-[var(--moss)] -z-1"></div> */}
+
+       <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-0"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px] z-0"></div>
+
          {/* <div className="absolute -right-20 lg:right-60 -top-80 opacity-40 lg:opacity-100">
           <DotedRing height={600} width={600} />
         </div>
@@ -71,15 +88,15 @@ const StudentReviews2 = () => {
         </div> */}
          
       {/* heading */}
-      <div className="text-center max-w-xl mx-auto z-40">
-        <p className="text-white/80 tracking-[5px] uppercase text-xs md:text-sm font-medium z-40">
-          Student Voice
-        </p>
+      <div className="relative z-20 text-center max-w-xl mx-auto">
+  <p className="text-[var(--forest)]/80 tracking-[5px] uppercase text-xs md:text-sm font-medium">
+    Student Voice
+  </p>
 
-        <h2 className="mt-2 md:mt-4 text-xl md:text-4xl font-semibold text-[var(--white)] leading-snug md:leading-tight z-40">
-          Experiences That Define Our Campus
-        </h2>
-      </div>
+  <h2 className="mt-2 md:mt-4 text-xl md:text-4xl font-semibold text-[var(--forest)] leading-snug md:leading-tight">
+    Experiences That Define Our Campus
+  </h2>
+</div>
 
       {/* cards */}
       <div className="mt-8 md:mt-15 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
@@ -93,6 +110,7 @@ const StudentReviews2 = () => {
               hover:-translate-y-2
               p-6 md:p-8
               border border-[rgba(0,0,0,0.05)]
+              z-40
 
               transition-all duration-[300ms]
 
@@ -161,7 +179,7 @@ const StudentReviews2 = () => {
       {/* button */}
      {/* button */}
                 <div className="mt-5 md:mt-3 flex justify-end z-20  ">
-  <button className="group flex items-center justify-center w-12 h-12 rounded-full bg-[var(--white)] hover:bg-white/70 transition-all duration-300 mb-5">
+  <button className="group flex items-center justify-center w-12 h-12 rounded-full bg-[var(--white)] hover:bg-white/70 transition-all duration-300 mb-5 z-40">
     
     {/* arrow */}
     <svg

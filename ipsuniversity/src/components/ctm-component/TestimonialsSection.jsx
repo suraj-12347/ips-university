@@ -59,17 +59,17 @@ const TestimonialsSection = () => {
       <div className="absolute inset-0 bg-white/10 backdrop-blur-[3px] z-0 "></div>
        {/* Bottom White Gradient */}
       <div
-        className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"
+        className="absolute -bottom-3 left-0 w-full h-[80%] z-[2]"
         style={{
           background:
             "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
         }}
       />
        <div
-        className="absolute top-0 left-0 w-full h-[70%] z-[2]"
+        className="absolute -top-3 left-0 w-full h-[80%] z-[2]"
         style={{
           background:
-            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+            "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
       />
 

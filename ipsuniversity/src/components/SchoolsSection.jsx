@@ -1,22 +1,28 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
-import ctm from "../images1/ctmb.jpg";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import ctm from "../images1/ctmmain.png";
 import bca from "../images1/pharmacy.jpeg";
 import mgmt from "../images1/pharmacy.jpeg";
 import pharmacy from "../images1/pharmab.jpg";
 import education from "../images1/edub.jpg";
 import physical from "../images1/pharmacy.jpeg";
-import flower from "../images1/flower.jpeg";
+import flower from "../images1/flowerrr.jpeg";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const schools = [
   {
     image: ctm,
-    name: "School of Engineering & Technology",
+    name: "School of Engineering",
     courses:
-      "B.Tech (ME, CE, CS, EE, EC) · M.Tech · Applied Sciences & Humanities",
+      "B.Tech (ME, CE, CS, EE, EC) · M.Tech · Applied Sciences & Humanities ",
     route: "/ipsctm",
   },
   {
@@ -49,6 +55,7 @@ const schools = [
 const SchoolsSection = () => {
   const navigate = useNavigate();
   const [startIndex, setStartIndex] = useState(0);
+  const [expandedCards, setExpandedCards] = useState({});
 
   const visibleCards = schools.slice(startIndex, startIndex + 3);
 
@@ -79,7 +86,7 @@ const SchoolsSection = () => {
         py-10
         md:py-12
         overflow-hidden
-        mt-10
+        mt-20
         px-4
       "
       style={{
@@ -89,22 +96,38 @@ const SchoolsSection = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[var(--moss)]/95"></div>
+       <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px]"></div>
+
+
 
       {/* Heading */}
-      <div className="relative z-40 w-full px-4">
-        <p className="text-center text-[var(--white)] font-semibold tracking-[4px] uppercase text-xs">
+      <div className="relative z-40 w-full px-4  z-20">
+        <p className="text-center text-[var(--forest)]/90 font-semibold tracking-[4px] uppercase text-xs">
           Explore
         </p>
 
-        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--white)] mt-2 leading-tight">
+        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
           Our Schools
         </h1>
       </div>
 
       {/* Description */}
       <div className="relative z-40 max-w-[850px] mx-auto px-4 mb-8">
-        <p className="text-center text-gray-300 max-w-2xl mx-auto mt-4 leading-6 text-sm">
+        <p className="text-center text-gray-700 max-w-2xl mx-auto mt-4 leading-6 text-sm">
           Specialized schools designed to deliver focused,
           industry-aligned education across diverse disciplines.
         </p>
@@ -113,7 +136,7 @@ const SchoolsSection = () => {
       {/* Slider */}
       <div className="max-w-[1250px] mx-auto px-4 sm:px-8 relative">
         {/* Prev Button */}
-        <button
+        {/* <button
           onClick={prevSlide}
           className="
             absolute
@@ -132,13 +155,14 @@ const SchoolsSection = () => {
             justify-center
             hover:scale-105
             transition
+            
           "
         >
           <ChevronLeft size={18} />
-        </button>
+        </button> */}
 
         {/* Next Button */}
-        <button
+        {/* <button
           onClick={nextSlide}
           className="
             absolute
@@ -160,130 +184,173 @@ const SchoolsSection = () => {
           "
         >
           <ChevronRight size={18} />
-        </button>
+        </button> */}
 
         {/* Cards */}
+
+
+    <div className="max-w-[1250px] mx-auto px-4 sm:px-8 relative z-50 mt-10">
+ <Swiper
+  modules={[Navigation, Pagination]}
+  navigation
+  pagination={{ clickable: true }}
+  spaceBetween={24}
+  speed={700}
+  slidesPerView={1}
+  breakpoints={{
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }}
+  className="schools-swiper"
+>
+    {schools.map((school, index) => (
+      <SwiperSlide key={index}>
         <div
+          onClick={() => handleCardClick(school)}
           className="
-            grid
-            grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-3
-            gap-5
-            place-items-center
+            group
+            w-full
+            max-w-[340px]
+            mx-auto
+            min-h-[500px]
+            rounded-[28px]
+            bg-white
+            shadow-xl
+            cursor-pointer
+            transition-all
+            duration-300
+            hover:-translate-y-2
+            hover:shadow-2xl
+            flex
+            flex-col
+           
           "
         >
-          {visibleCards.map((school, index) => (
-            <div
-              key={index}
-              onClick={() => handleCardClick(school)}
-              className="
-                group
-                relative
-                w-full
-                max-w-[340px]
-                h-[240px]
-                sm:h-[260px]
-                md:h-[280px]
-                rounded-2xl
-                overflow-hidden
-                shadow-lg
-                cursor-pointer
-              "
-            >
-              {/* Image */}
+          {/* Image */}
+          <div className="relative p-3 pb-0">
+            <div className="overflow-hidden rounded-[22px]">
               <img
                 src={school.image}
                 alt={school.name}
                 className="
-                  absolute
-                  inset-0
                   w-full
-                  h-full
+                  h-[240px]
                   object-cover
-                  object-center
-                  transition-all
+                  transition-transform
                   duration-700
-                  group-hover:scale-110
+                  group-hover:scale-105
                 "
               />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/35 group-hover:bg-black/55 transition-all duration-500"></div>
-
-              {/* Bottom Title */}
-              <div
-                className="
-                  absolute
-                  bottom-0
-                  left-0
-                  w-full
-                  p-5
-                  transition-all
-                  duration-500
-                  group-hover:-translate-y-12
-                "
-              >
-                <h3 className="text-white text-lg sm:text-xl font-bold leading-snug">
-                  {school.name}
-                </h3>
-              </div>
-
-              {/* Hover Content */}
-              <div
-                className="
-                  absolute
-                  top-0
-                  right-[-100%]
-                  group-hover:right-0
-                  w-full
-                  h-full
-                  bg-white/10
-                  backdrop-blur-xl
-                  border-l
-                  border-white/20
-                  p-5
-                  transition-all
-                  duration-700
-                  flex
-                  flex-col
-                  justify-end
-                "
-              >
-                <h3 className="text-white text-lg sm:text-xl font-bold mb-3">
-                  {school.name}
-                </h3>
-
-                <p className="text-white/85 leading-6 text-xs sm:text-sm">
-                  {school.courses}
-                </p>
-
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleCardClick(school);
-                  }}
-                  className="
-                    mt-4
-                    w-fit
-                    px-4
-                    py-2.5
-                    rounded-xl
-                    text-white
-                    text-sm
-                    font-semibold
-                    bg-[var(--forest)]
-                    hover:scale-105
-                    transition-all
-                    duration-300
-                  "
-                >
-                  Read More →
-                </button>
-              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Content */}
+          <div className="px-5 py-4 flex flex-col flex-1">
+            <h3 className="text-xl font-bold text-[var(--forest)]">
+              {school.name}
+            </h3>
+
+            <div className="mt-3">
+              {!expandedCards[index] ? (
+                <>
+                  <p className="text-sm leading-6 text-gray-600">
+                    {school.courses.length > 80
+                      ? `${school.courses.substring(0, 80)}...`
+                      : school.courses}
+                  </p>
+
+                  {school.courses.length > 80 && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setExpandedCards((prev) => ({
+                          ...prev,
+                          [index]: true,
+                        }));
+                      }}
+                      className="
+                        text-[var(--forest)]
+                        text-sm
+                        font-semibold
+                        mt-1
+                        hover:underline
+                      "
+                    >
+                      See More
+                    </button>
+                  )}
+                </>
+              ) : (
+                <>
+                  <p className="text-sm leading-6 text-gray-600">
+                    {school.courses}
+                  </p>
+
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCards((prev) => ({
+                        ...prev,
+                        [index]: false,
+                      }));
+                    }}
+                    className="
+                      text-[var(--forest)]
+                      text-sm
+                      font-semibold
+                      mt-1
+                      hover:underline
+                    "
+                  >
+                    See Less
+                  </button>
+                </>
+              )}
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="px-3 py-1 rounded-full bg-[var(--forest)]/10 text-xs text-[var(--forest)]">
+                Courses
+              </span>
+
+              <span className="px-3 py-1 rounded-full bg-[var(--forest)]/10 text-xs text-[var(--forest)]">
+                Faculty
+              </span>
+
+              <span className="px-3 py-1 rounded-full bg-[var(--forest)]/10 text-xs text-[var(--forest)]">
+                Campus
+              </span>
+            </div>
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCardClick(school);
+              }}
+              className="
+                mt-auto
+                w-full
+                py-3
+                rounded-xl
+                bg-[var(--forest)]
+                text-white
+                font-semibold
+                transition-all
+                duration-300
+                hover:opacity-90
+              "
+            >
+              Read More →
+            </button>
+          </div>
         </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
+
+       
       </div>
     </section>
   );

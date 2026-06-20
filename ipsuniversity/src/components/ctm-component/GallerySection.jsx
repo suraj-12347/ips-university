@@ -170,9 +170,12 @@ const GallerySection = () => {
         className="
           absolute
           right-2
-          md:-right-12
+          md:-right-6
           top-1/2
           -translate-y-1/2
+          bg-white
+          rounded-full
+          shadow-lg
          
           p-2
           md:p-3

@@ -141,3 +141,85 @@ body::-webkit-scrollbar-thumb {
 html {
   scroll-behavior: smooth;
 }
+
+
+/* Swiper Navigation */
+
+.swiper {
+  padding-bottom: 60px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 100% !important;
+  bottom: 0 !important;
+  width: 42px;
+  height: 42px;
+  border-radius: 9999px;
+  background: var(--forest);
+  color: white !important;
+}
+
+.swiper-button-prev {
+  left: calc(50% - 55px) !important;
+}
+
+.swiper-button-next {
+  right: calc(50% - 55px) !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 16px !important;
+  font-weight: bold;
+}
+
+.swiper-pagination {
+  bottom: 1px !important;
+}
+
+.schools-swiper {
+  padding-bottom: 90px !important;
+}
+
+.schools-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.schools-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Pagination niche */
+.schools-swiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+/* Arrows pagination ke upar nahi, uske side me */
+.schools-swiper .swiper-button-prev,
+.schools-swiper .swiper-button-next {
+  top: auto !important;
+  bottom: 0 !important;
+  width: 42px;
+  height: 42px;
+  border-radius: 9999px;
+  background: var(--forest);
+  color: white !important;
+  z-index: 20;
+}
+
+.schools-swiper .swiper-button-prev {
+  left: calc(50% - 80px) !important;
+}
+
+.schools-swiper .swiper-button-next {
+  right: calc(50% - 80px) !important;
+}
+
+.schools-swiper .swiper-button-prev::after,
+.schools-swiper .swiper-button-next::after {
+  font-size: 14px !important;
+  font-weight: 700;
+}

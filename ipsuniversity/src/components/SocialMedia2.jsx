@@ -1,6 +1,6 @@
 import React from "react";
 import DotedRing2 from "./DotedRing2";
-import pharma from "../images1/edu2.jpeg";
+import pharma from "../images1/flowerrr.jpeg";
 
 const socialData = [
   {
@@ -56,7 +56,26 @@ const SocialMedia2 = () => {
     >
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/75"></div>
+      {/* <div className="absolute inset-0 bg-black/75"></div> */}
+
+
+      
+         <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-1"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-1"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/30 backdrop-blur-[4px] z-0"></div>
+
 
       {/* Background Ring */}
       {/* <div className="absolute -left-32 -top-40 pointer-events-none opacity-40">
@@ -71,10 +90,10 @@ const SocialMedia2 = () => {
             px-5
             py-2
             rounded-full
-            bg-white/10
-            border
-            border-white/20
-            text-white
+            bg-[var(--forest)]/10
+           
+            border-[var(--white)]/20
+            text-[var(--forest)]
             text-xs
             sm:text-sm
             font-medium
@@ -86,11 +105,11 @@ const SocialMedia2 = () => {
           Connect With Us
         </span>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2 leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--forest)] mt-2 leading-tight">
           Follow IPS University
         </h2>
 
-        <p className="text-white/70 leading-7 mt-5 text-sm md:text-base max-w-2xl mx-auto px-2">
+        <p className="text-gray-700 leading-7 mt-5 text-sm md:text-base max-w-2xl mx-auto px-2">
           Stay connected with our vibrant student community,
           latest campus updates, achievements and events.
         </p>

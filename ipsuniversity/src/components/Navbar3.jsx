@@ -9,7 +9,7 @@ const Navbar2 = () => {
   const [active, setActive] = useState("home");
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50  ">
+    <nav className="fixed top-0 left-0 w-full z-[9999]  ">
      
         <Topbar3/>
       
@@ -45,11 +45,12 @@ const Navbar2 = () => {
               style={{
                 backgroundImage: `url(${edubuild3})`,
                 backgroundSize: "cover",
-                backgroundPosition: "bottom",
+                backgroundPosition: "center",
               }}
             >
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 rounded-full" />
+              {/* <div className="absolute inset-0 bg-black/40 rounded-full" /> */}
+              <div className="absolute inset-0 bg-black/40 rounded-full backdrop-blur-[1px]"></div>
 
               <ul className="relative z-10 flex items-center gap-1 mt-15">
 

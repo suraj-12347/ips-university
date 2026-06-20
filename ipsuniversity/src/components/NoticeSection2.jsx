@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DotedRing from "./DotedRing";
-import pharma from "../images1/flower2.jpeg";
+import pharma from "../images1/pharmaflowertree.png";
 
 const newsData = [
   {
@@ -102,14 +102,30 @@ const NewsNoticeSection = () => {
 
   return (
     <section
-      className="w-full py-14 px-3 md:px-5 relative overflow-hidden mt-10"
+      className="w-full py-14 px-3 md:px-5 relative overflow-hidden mt-20 lg:mt-30"
       style={{
               backgroundImage: `url(${pharma})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
     >
-       <div className="absolute inset-0 bg-[var(--moss)] lg:rounded-r-2xl"></div>
+       {/* <div className="absolute inset-0 bg-[var(--moss)] lg:rounded-r-2xl"></div> */}
+
+         <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px]"></div>
       {/* Background Rings */}
       {/* <div className="absolute -right-40 -top-40  pointer-events-none">
         <DotedRing height={500} width={500} />
@@ -120,7 +136,7 @@ const NewsNoticeSection = () => {
       </div> */}
 
       {/* Main Container */}
-      <div className="max-w-[1150px] mx-auto flex flex-col lg:flex-row gap-6 justify-center items-stretch relative z-10">
+      <div className="max-w-[1150px] mx-auto flex flex-col lg:flex-row gap-6 justify-center items-stretch relative z-40">
 
         {/* LEFT CARD */}
         <div
@@ -141,7 +157,7 @@ const NewsNoticeSection = () => {
           "
         >
           {/* Header */}
-          <div className="flex items-start justify-between gap-4 flex-wrap">
+          <div className="flex items-start justify-between gap-4 flex-wrap z-40">
 
             <h2 className="text-xl md:text-2xl font-bold text-[var(--forest)]">
               News & Events
@@ -180,7 +196,7 @@ const NewsNoticeSection = () => {
           </div>
 
           {/* News List */}
-          <div className="flex-1 overflow-y-auto mt-5 pr-2 scrollb">
+          <div className="flex-1 overflow-y-auto mt-5 pr-2 scrollb z-40">
 
             <div className="flex flex-col gap-4">
 

@@ -2,7 +2,7 @@ import React from "react";
 
 import DotedRing from "./DotedRing";
 
-import pharma from "../images1/edu2.jpeg";
+import pharma from "../images1/treepng.png";
 
 import { useLanguage } from "../context/LanguageContext";
 
@@ -91,13 +91,30 @@ const Brochure2 = () => {
       >
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/75"></div>
+        {/* <div className="absolute inset-0 bg-black/75"></div> */}
+
+         <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-1"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-1"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-[4px] z-0"></div>
+
 
         {/* Gradient Overlay */}
         
 
         {/* Glow */}
-        <div className="absolute top-0 left-1/3 w-72 h-72 bg-white/10 blur-3xl rounded-full"></div>
+        <div className="absolute top-0 left-1/3 w-72 h-72 bg-[var(--forest)]/10 blur-3xl rounded-full"></div>
 
         {/* Rings */}
         {/* <div className="absolute -top-32 -left-16 opacity-30 hidden md:block">
@@ -132,12 +149,12 @@ const Brochure2 = () => {
               rounded-full
               border
               border-white/20
-              bg-white/10
+              bg-[var(--forest)]/10
               backdrop-blur-md
               text-xs
               sm:text-sm
               tracking-wide
-              text-white
+              text-[var(--forest)]
               mb-5
             "
           >
@@ -147,7 +164,7 @@ const Brochure2 = () => {
           {/* Heading */}
           <h2
             className="
-              text-white
+              text-[var(--forest)]
               text-3xl
               sm:text-4xl
               md:text-5xl
@@ -162,7 +179,7 @@ const Brochure2 = () => {
           {/* Paragraph */}
           <p
             className="
-              text-white/75
+              text-gray-700
               text-sm
               md:text-base
               leading-7
@@ -195,8 +212,8 @@ const Brochure2 = () => {
                 w-full
                 sm:w-auto
                 rounded-2xl
-                bg-white
-                text-[var(--forest)]
+                bg-[var(--forest)]
+                text-[var(--white)]
                 font-semibold
                 flex
                 items-center
@@ -206,7 +223,7 @@ const Brochure2 = () => {
                 shadow-lg
               "
             >
-              {t.btn1}
+             Apply for Admission
             </a>
 
             <a
@@ -217,20 +234,20 @@ const Brochure2 = () => {
                 w-full
                 sm:w-auto
                 rounded-2xl
-                border
-                border-white/20
-                text-white
+                border-2
+                border-[var(--forest)]/20
+                text-[var(--forest)]
                 font-semibold
                 flex
                 items-center
                 justify-center
-                hover:bg-white
-                hover:text-[var(--forest)]
+                hover:bg-[var(--forest)]
+                hover:text-[var(--white)]
                 duration-300
                 backdrop-blur-md
               "
             >
-              {t.btn2}
+               Download Brochure
             </a>
 
           </div>

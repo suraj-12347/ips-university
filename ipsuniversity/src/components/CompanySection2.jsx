@@ -5,7 +5,7 @@ import React, {
 
 import tcs from "../images1/adobe.png";
 import DotedRing2 from "./DotedRing2";
-import pharma from "../images1/flower.jpeg";
+import pharma from "../images1/whiteflowerpng.png";
 
 import { useLanguage } from "../context/LanguageContext";
 
@@ -189,16 +189,33 @@ const CompanySection2 = () => {
       }}
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[var(--moss)]/90 z-0"></div>
+      {/* <div className="absolute inset-0 bg-[var(--moss)]/90 z-0"></div> */}
+
+       <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-0"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px] z-0"></div>
+
 
       {/* Heading */}
       <div className="max-w-5xl  mb-8 relative z-20">
 
-        <h2 className="text-3xl md:text-5xl font-semibold text-white">
+        <h2 className="text-3xl md:text-5xl font-semibold text-[var(--forest)]">
           {t.collaborators||"Our Collaborators"}
         </h2>
 
-        <p className="mt-4 text-white/70 max-w-xl leading-relaxed">
+        <p className="mt-4 text-gray-700 max-w-xl leading-relaxed">
           {t.collaboratorsDesc||"Companies across the world build, scale and ship whith us "}
         </p>
 
