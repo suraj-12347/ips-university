@@ -1,6 +1,6 @@
 import React from "react";
 
-import Potgr from "../images1/chairman2.jpeg";
+import Potgr from "../images1/chairmanimage3.jpeg";
 import ctm from "../images1/ctm.jpg";
 
 import { Check } from "lucide-react";
@@ -193,7 +193,7 @@ const About3 = () => {
           lg:h-[400px]
           lg:rounded-l-2xl
           bg-cover
-          bg-center
+          bg-left
           shadow-xl
           hidden
           xl:block
