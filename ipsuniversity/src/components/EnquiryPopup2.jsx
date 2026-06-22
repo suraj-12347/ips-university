@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { X } from "lucide-react";
-import pharma from "../images1/flower.jpeg";
+import pharma from "../images1/pharmaflowertree3.png";
 
 import { useLanguage } from "../context/LanguageContext";
 
@@ -75,7 +75,7 @@ const EnquiryPopup2 = () => {
             "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
         }}
       /> */}
-      <div className="absolute inset-0 bg-white/50 backdrop-blur-[4px] lg:h-full h-150 "></div>
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-[4px] lg:h-full h-150 "></div>
 
             {/* CLOSE BTN */}
             <button

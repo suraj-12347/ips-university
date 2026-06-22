@@ -1,43 +1,46 @@
 import React from "react";
 import { ArrowRightToLine } from "lucide-react";
 import tree from "../../images1/pharmaflowertree3.png";
+import suraj from "../../images1/suraj.jpeg";
+import neeraj from "../../images1/neeraj.jpeg";
+import prasansha from "../../images1/prasansha.jpeg";
 
 const placements = [
   {
     company: "Nagarro",
     student: "Ayush Raj Sharma",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
+      suraj,
   },
   {
     company: "TATA Consultancy",
     student: "Jatin Shrivastava",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
+      neeraj,
   },
   {
     company: "SNS",
-    student: "Piyush Jain",
+    student: "Prasansha",
     image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400",
+      prasansha,
   },
   {
     company: "TCS",
     student: "Rohan Chawan",
     image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400",
+      suraj,
   },
   {
     company: "Wipro",
     student: "Sourav Suman",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+      neeraj,
   },
   {
     company: "Infosys",
-    student: "Rahul Verma",
+    student: "Roshni",
     image:
-      "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=400",
+      prasansha,
   },
 ];
 

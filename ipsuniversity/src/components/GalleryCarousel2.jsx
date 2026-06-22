@@ -5,6 +5,13 @@ import DotedRing2 from "./DotedRing2";
 import React, { useRef, useState } from "react";
 import pharma from '../images1/flower.jpeg'
 
+import rajusir from '../images1/rajusir.JPG'
+import directersir from '../images1/directersir.JPG'
+import dj from '../images1/dj.JPG'
+import mrfr from '../images1/mrfr.jpeg'
+import skmic from '../images1/skmic.jpeg'
+import neeraj from '../images1/neeraj2.jpeg'
+
 import {
   ImageIcon,
   X,
@@ -20,28 +27,28 @@ const slidesData = [
     id: 1,
     title: "Campus Tour",
     coverImage:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop",
+      dj,
 
     miniCarouselImages: [
       {
         id: 1,
         image:
-          "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+          neeraj
       },
       {
         id: 2,
         image:
-          "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1200&auto=format&fit=crop",
+          rajusir
       },
       {
         id: 3,
         image:
-          "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+         directersir,
       },
       {
         id: 4,
         image:
-          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+         mrfr,
       },
     ],
   },
@@ -50,7 +57,7 @@ const slidesData = [
     id: 2,
     title: "Student Life",
     coverImage:
-      "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1200&auto=format&fit=crop",
+      directersir,
 
     miniCarouselImages: [
       {
@@ -80,7 +87,7 @@ const slidesData = [
     id: 3,
     title: "Events & Activities",
     coverImage:
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop",
+      directersir,
 
     miniCarouselImages: [
       {
@@ -110,7 +117,7 @@ const slidesData = [
     id: 4,
     title: "Sports Events",
     coverImage:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop",
+     skmic,
 
     miniCarouselImages: [
       {
