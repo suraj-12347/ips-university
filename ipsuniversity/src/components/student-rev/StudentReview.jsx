@@ -3,6 +3,7 @@ import pharma from '../../images1/flower2.jpeg'
 import DotedRing from "../DotedRing";
 import suraj from '../../images1/suraj.jpeg'
 import neeraj from '../../images1/neeraj.jpeg'
+import prasansha from '../../images1/prasansha.jpeg'
 
 const reviews = [
   {
@@ -23,9 +24,9 @@ const reviews = [
   },
   {
     id: 3,
-    name: "Rahul Verma",
+    name: "Prasansha Pandey",
     course: "BCA",
-    image: "https://i.pravatar.cc/150?img=15",
+    image: prasansha,
     review:
       "The learning experience here feels practical instead of only theoretical. Mentorship and peer culture helped me grow personally as well.",
   },
