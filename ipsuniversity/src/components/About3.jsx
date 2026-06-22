@@ -1,6 +1,6 @@
 import React from "react";
 
-import Potgr from "../images1/chairmanimage.png";
+import Potgr from "../images1/chairmanimage2.png";
 import ctm from "../images1/ctm.jpg";
 
 import { Check } from "lucide-react";
@@ -200,7 +200,7 @@ const About3 = () => {
         "
         style={{
           backgroundImage: `url(${Potgr})`,
-          backgroundPosition:"left",
+
         }}
       >
         <div className="absolute inset-0 bg-[var(--inset)]/50 lg:rounded-l-2xl"></div>
