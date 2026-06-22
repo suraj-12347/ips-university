@@ -200,6 +200,7 @@ const About3 = () => {
         "
         style={{
           backgroundImage: `url(${Potgr})`,
+          backgroundPosition:"left",
         }}
       >
         <div className="absolute inset-0 bg-[var(--inset)]/50 lg:rounded-l-2xl"></div>
