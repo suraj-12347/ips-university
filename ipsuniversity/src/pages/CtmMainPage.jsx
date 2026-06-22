@@ -26,7 +26,7 @@ const CtmMainPage = () => {
      
       <TestimonialsSection />
       <RecruitersSection />
-      <Chatbot/>
+      {/* <Chatbot/> */}
       <Footer/>
      </div>
     </>
