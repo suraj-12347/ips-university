@@ -1,6 +1,6 @@
 import React from "react";
 
-import Potgr from "../images1/potgr.jpg";
+import Potgr from "../images1/chairmanimage.png";
 import ctm from "../images1/ctm.jpg";
 
 import { Check } from "lucide-react";
