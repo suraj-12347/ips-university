@@ -184,7 +184,7 @@ const Navbar2 = () => {
                 lg:text-sm
                 text-[10px]
                 font-semibold
-                flex
+                md:flex
                 items-center
                 justify-center
                 transition-all
@@ -193,6 +193,7 @@ const Navbar2 = () => {
                 mt-20  
                 w-30 lg:w-40
                 bg-[var(--forest)]
+                hidden 
                 
               "
             
@@ -265,6 +266,7 @@ const Navbar2 = () => {
                 items-center
                 justify-center
                 bg-[var(--forest)]
+                
                 
               "
               
