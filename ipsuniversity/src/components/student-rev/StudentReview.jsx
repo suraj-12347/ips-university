@@ -36,7 +36,7 @@ const reviews = [
       "The learning experience here feels practical instead of only theoretical. Mentorship and peer culture helped me grow personally as well.",
   },
   {
-    id: 2,
+    id: 4,
     name: "Neeraj",
     course: "B-tech",
     image:neeraj,
@@ -44,7 +44,7 @@ const reviews = [
       "What I liked most was the balance between academics and extracurricular activities. The university atmosphere feels modern yet calm.",
   },
   {
-    id: 3,
+    id: 5,
     name: "Rahul Verma",
     course: "BCA",
     image: "https://i.pravatar.cc/150?img=15",
@@ -52,7 +52,7 @@ const reviews = [
       "The learning experience here feels practical instead of only theoretical. Mentorship and peer culture helped me grow personally as well.",
   },
   {
-    id: 2,
+    id: 6,
     name: "Neeraj",
     course: "B-tech",
     image:neeraj,
@@ -60,7 +60,7 @@ const reviews = [
       "What I liked most was the balance between academics and extracurricular activities. The university atmosphere feels modern yet calm.",
   },
   {
-    id: 3,
+    id: 8,
     name: "Rahul Verma",
     course: "BCA",
     image: "https://i.pravatar.cc/150?img=15",
@@ -144,6 +144,7 @@ const swiperRef = useRef(null);
    <div className="relative z-20 mt-10 max-w-6xl mx-auto">
 
   <Swiper
+ 
     onSwiper={(swiper) => {
       swiperRef.current = swiper;
     }}
@@ -164,7 +165,7 @@ const swiperRef = useRef(null);
     }}
   >
     {reviews.map((item) => (
-      <SwiperSlide key={item.id} className="h-auto">
+      <SwiperSlide key={item.id} className="h-auto py-4">
 
         <div
           className="

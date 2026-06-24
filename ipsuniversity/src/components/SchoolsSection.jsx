@@ -20,7 +20,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const schools = [
   {
     image: ctm,
-    name: "School of Engineering",
+    name: "School of Engineering & Technology",
     courses:
       "B.Tech (ME, CE, CS, EE, EC) · M.Tech · Applied Sciences & Humanities ",
     route: "/ipsctm",
@@ -74,6 +74,11 @@ const SchoolsSection = () => {
   const handleCardClick = (school) => {
     if (school.route) {
       navigate(school.route);
+      
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     }
   };
 
@@ -223,7 +228,7 @@ const SchoolsSection = () => {
             hover:shadow-2xl
             flex
             flex-col
-           
+            
           "
         >
           {/* Image */}

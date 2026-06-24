@@ -13,8 +13,8 @@ const Navbar2 = () => {
      
         <Topbar3/>
       
-      <div className="max-w-[1400px] -mt-20 ">
-        <div className="h-[170px] bg-white  shadow-md flex items-center px-4 w-full">
+      <div className="max-w-[1400px]  -mt-20 ">
+        <div className="h-[170px] bg-white  shadow-md flex items-center px-4 w-full gap-1 md:gap-2">
 
           {/* LOGO */}
           <div className="flex-shrink-0 z-20 mt-20 md:mt-15 lg:mt-20 md:w-1/22 lg:w-1/6 md:hidden lg:block">
@@ -28,7 +28,7 @@ const Navbar2 = () => {
           </div>
 
           {/* DESKTOP MENU */}
-          <div className="hidden md:flex  justify-center px-4 w-full   ">
+          <div className="hidden md:flex  justify-center ml-25 lg:ml-0  w-full   ">
             <div
               className="
                 relative
@@ -172,15 +172,17 @@ const Navbar2 = () => {
           </div>
 
           {/* ENQUIRY BUTTON */}
-          <div className="hidden xl:flex items-center pr-3 w-1/6">
+          
             <a
               href="#"
               className="
-                h-[42px]
+                lg:h-[42px]
+                h-[35px]
                 
                 rounded-2xl
                 text-white
-                text-sm
+                lg:text-sm
+                text-[10px]
                 font-semibold
                 flex
                 items-center
@@ -188,16 +190,16 @@ const Navbar2 = () => {
                 transition-all
                 duration-300
                 hover:scale-105
-                mt-20  w-full
+                mt-20  
+                w-30 lg:w-40
+                bg-[var(--forest)]
+                
               "
-              style={{
-                background:
-                  "linear-gradient(135deg,var(--forest),var(--grass))",
-              }}
+            
             >
               Enquiry Now
             </a>
-          </div>
+         
 
           {/* MOBILE MENU BTN */}
           <button
@@ -262,11 +264,10 @@ const Navbar2 = () => {
                 flex
                 items-center
                 justify-center
+                bg-[var(--forest)]
+                
               "
-              style={{
-                background:
-                  "linear-gradient(135deg,var(--forest),var(--grass))",
-              }}
+              
             >
               Enquiry Now
             </a>

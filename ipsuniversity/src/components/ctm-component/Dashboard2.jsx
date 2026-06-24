@@ -51,7 +51,8 @@ const AboutDepartment = () => {
 ];
   return (
   <section
-  className="relative pb-20 py-2 overflow-hidden"
+  id="cse"
+  className="relative pb-20 lg:py-2 overflow-hidden"
   style={{
     backgroundImage:
       "url('https://i.pinimg.com/736x/97/d2/ea/97d2ea714588e2cb6f757417c14d921f.jpg')",
@@ -64,7 +65,7 @@ const AboutDepartment = () => {
   <div className="absolute inset-0 bg-white/60 backdrop-blur-[4px]"></div>
 
   {/* Main Content */}
-  <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
+  <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-2 lg:px-4">
         {/* Heading */}
         <div className="text-center mb-2 md:mb-4">
           {/* <span className="text-xs md:text-sm tracking-[3px] md:tracking-[4px] uppercase text-[var(--forest)] font-semibold">
@@ -104,7 +105,7 @@ const AboutDepartment = () => {
 
             />
           </div> */}
-           <div className="w-full overflow-hidden rounded-3xl shadow-xl">
+           <div className="w-full overflow-hidden rounded-3xl  shadow-xl">
   <Swiper
     modules={[Autoplay, Pagination]}
     autoplay={{

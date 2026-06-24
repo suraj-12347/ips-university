@@ -143,9 +143,12 @@ html {
 }
 
 
-/* Swiper Navigation */
+/* =========================
+   Swiper Wrapper
+========================= */
 .schools-swiper {
   padding-bottom: 90px !important;
+  padding-top: 10px  !important;
 }
 
 .schools-swiper .swiper-wrapper {
@@ -158,57 +161,89 @@ html {
   justify-content: center;
 }
 
-/* Pagination */
+/* =========================
+   Pagination
+========================= */
 .schools-swiper .swiper-pagination {
-  bottom: 8px !important;
+  bottom: 10px !important;
 }
 
-/* Buttons */
+.schools-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--forest) !important;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.schools-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* =========================
+   Navigation Buttons
+========================= */
 .schools-swiper .swiper-button-prev,
 .schools-swiper .swiper-button-next {
   width: 48px !important;
   height: 48px !important;
-  border-radius: 9999px;
-  background: var(--forest);
+  border-radius: 9999px !important;
+  background: var(--forest) !important;
+  color: var(--white) !important;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
   top: auto !important;
   bottom: 0 !important;
-  color: var(--white) !important;
+
+  z-index: 20 !important;
+
+  transition: all 0.3s ease;
 }
 
-/* .schools-swiper .swiper-button-prev {
+/* Centered below pagination */
+.schools-swiper .swiper-button-prev {
   left: calc(50% - 110px) !important;
 }
 
 .schools-swiper .swiper-button-next {
   right: calc(50% - 110px) !important;
-} */
+}
 
-/* Remove Swiper default icons */
+/* Default Swiper Arrows */
 .schools-swiper .swiper-button-prev::after,
 .schools-swiper .swiper-button-next::after {
-  font-family: inherit !important;
-  font-size: 24px !important;
-  font-weight: 700;
-}
-
-/* Custom arrows */
-.schools-swiper .swiper-button-prev::after {
-  content: "" !important;
-}
-
-.schools-swiper .swiper-button-next::after {
-  content: "" !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
 }
 
 /* Hover */
 .schools-swiper .swiper-button-prev:hover,
 .schools-swiper .swiper-button-next:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* Mobile */
+/* Disabled state */
+.schools-swiper .swiper-button-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* =========================
+   Mobile
+========================= */
 @media (max-width: 640px) {
+  .schools-swiper {
+    padding-bottom: 80px !important;
+  }
+
+  .schools-swiper .swiper-button-prev,
+  .schools-swiper .swiper-button-next {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
   .schools-swiper .swiper-button-prev {
     left: calc(50% - 100px) !important;
   }
@@ -217,9 +252,8 @@ html {
     right: calc(50% - 100px) !important;
   }
 
-  .schools-swiper .swiper-button-prev,
-  .schools-swiper .swiper-button-next {
-    width: 42px !important;
-    height: 42px !important;
+  .schools-swiper .swiper-button-prev::after,
+  .schools-swiper .swiper-button-next::after {
+    font-size: 15px !important;
   }
 }

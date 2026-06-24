@@ -107,11 +107,8 @@ const Herosec = () => {
           {/* Apply Button */}
           <a
             href="#"
-            className="h-[48px] px-6 rounded-xl text-white text-[12px] font-semibold flex items-center justify-center transition-all duration-300 hover:scale-[1.03] shadow-lg"
-            style={{
-              background:
-                "linear-gradient(135deg,var(--forest),var(--grass))",
-            }}
+            className="h-[48px] px-6 rounded-xl text-white text-[12px] font-semibold flex items-center justify-center transition-all duration-300 hover:scale-[1.03] shadow-lg bg-[var(--forest)]"
+            
           >
             Apply for 2025–26 →
           </a>

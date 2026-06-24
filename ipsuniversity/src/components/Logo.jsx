@@ -53,7 +53,7 @@ const Logo = () => {
     className="
       h-[60px]
       sm:h-[55px]
-      md:h-[50px]
+      md:h-[55px]
       lg:h-[50px]
       xl:h-[70px]
       object-contain
@@ -69,7 +69,7 @@ const Logo = () => {
      
       font-bold
       text-[var(--forest)]
-      md:hidden xl:block lg:block
+       xl:block lg:block
     "
   >
     IPS

@@ -114,7 +114,7 @@ const EnquiryPopup2 = () => {
                 z-20
               "
             >
-              <p className="text-[var(--forest)]/70 uppercase tracking-[4px] text-xs mb-3">
+              <p className="text-[var(--forest)]/80 font-bold uppercase tracking-[4px] text-md  mb-3">
                 IPS University
               </p>
 

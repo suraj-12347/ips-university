@@ -67,19 +67,25 @@ const AcademicsSection = () => {
     activeTab === "diploma" ? diplomaCourses :
     certificateCourses;
 
-  const handleNavigation = (course) => {
-    if (course.route) navigate(course.route);
-  };
+ const handleNavigation = (course) => {
+  if (course.route) {
+    navigate(course.route);
 
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+};
   return (
-    <section
-      className="relative py-8 md:py-10 overflow-hidden md:h-[105vh] md:mt-10"
-      style={{
-        backgroundImage: `url(${pharma})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+   <section
+  className="relative py-8 md:py-10 md:min-h-screen md:mt-10"
+  style={{
+    backgroundImage: `url(${pharma})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
         <div
         className="absolute -bottom-2 left-0 w-full h-[70%] z-[2]"
         style={{
@@ -94,7 +100,7 @@ const AcademicsSection = () => {
             "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
         }}
       />
-      <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px]"></div>
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px] h-full"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-[var(--forest)]">
