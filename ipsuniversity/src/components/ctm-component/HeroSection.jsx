@@ -1,6 +1,6 @@
 import React from "react";
 import ctmdashboard from "../../images1/ctmlongpng3.png";
-import ctmmain from "../../images1/ipsmain2.png";
+import ctmmain from "../../images1/ctmphone.png";
 
 
 const HeroSection = () => {
@@ -37,7 +37,7 @@ const HeroSection = () => {
   School of 
 </h1>
  <h1
-  className="text-6xl lg:text-7xl font-bold mb-6 text-[var(--forest)]"
+  className="text-5xl lg:text-7xl font-bold mb-6 text-[var(--forest)]"
   style={{
     fontFamily: '"Noto Serif", serif',
     fontOpticalSizing: "auto",
