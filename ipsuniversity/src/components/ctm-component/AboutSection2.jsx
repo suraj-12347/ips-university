@@ -12,7 +12,7 @@ const AboutSection = () => {
             <img
               src={ctmprincipal}
               alt="IPSCTM Campus"
-              className="md:w-[75%] w-full h-full object-cover rounded-2xl shadow-xl "
+              className=" w-full h-full object-cover rounded-2xl shadow-xl "
             />
           </div>
 

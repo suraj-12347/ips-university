@@ -14,10 +14,10 @@ const Navbar2 = () => {
         <Topbar3/>
       
       <div className="[100vw]  -mt-20 ">
-        <div className="h-[170px] bg-white  shadow-md flex items-center px-4 w-full gap-1 md:gap-2">
+        <div className="h-[170px] bg-white  shadow-md flex items-center justify-center px-4 w-full gap-1 md:gap-2">
 
           {/* LOGO */}
-          <div className="flex-shrink-0 z-20 mt-20 md:mt-15 lg:mt-20 md:w-1/22 lg:w-1/6 md:hidden lg:block">
+          <div className="flex-shrink-0 z-20 mt-20 md:mt-15 lg:mt-20 md:w-1/22 lg:w-1/6 md:hidden lg:block max-w-50">
             <Logo />
           </div>
            <div className="hidden md:block lg:hidden flex-shrink-0 z-20 mt-20 md:mt-15 lg:mt-20 md:w-1/15 absolute -top-2 left-2  justify-start">
