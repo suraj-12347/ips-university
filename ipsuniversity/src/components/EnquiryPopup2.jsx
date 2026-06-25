@@ -82,7 +82,7 @@ const EnquiryPopup2 = () => {
               onClick={() => setOpen(false)}
               className="
                 absolute
-                top-4
+                top-10
                 right-4
                 z-50
                 w-10

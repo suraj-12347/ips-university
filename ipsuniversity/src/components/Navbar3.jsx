@@ -13,7 +13,7 @@ const Navbar2 = () => {
      
         <Topbar3/>
       
-      <div className="max-w-[1400px]  -mt-20 ">
+      <div className="[100vw]  -mt-20 ">
         <div className="h-[170px] bg-white  shadow-md flex items-center px-4 w-full gap-1 md:gap-2">
 
           {/* LOGO */}
@@ -52,14 +52,14 @@ const Navbar2 = () => {
               {/* <div className="absolute inset-0 bg-black/40 rounded-full" /> */}
               <div className="absolute inset-0 bg-black/40 rounded-full backdrop-blur-[1px]"></div>
 
-              <ul className="relative z-10 flex items-center gap-1 mt-15">
+              <ul className="relative z-10 flex items-center justify-evenly w-full mt-15">
 
                 {/* HOME */}
                 <li>
                   <a
                     href="#"
                     onClick={() => setActive("home")}
-                    className={`px-4 py-2 rounded-xl text-sm font-lg transition-all duration-300 ${
+                    className={`lg:px-4 px-2 py-2 rounded-xl text-sm font-lg transition-all duration-300 ${
                       active === "home"
                         ? "bg-white text-[var(--forest)]"
                         : "text-white hover:bg-white/15"
@@ -74,7 +74,7 @@ const Navbar2 = () => {
                   <a
                     href="#about"
                     onClick={() => setActive("about")}
-                    className={`flex items-center  px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    className={`flex items-center  lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                       active === "about"
                         ? "bg-white text-[var(--forest)]"
                         : "text-white hover:bg-white/15"
@@ -104,35 +104,33 @@ const Navbar2 = () => {
                       duration-300
                     "
                   >
-                    <h4 className="font-bold text-[var(--forest)] mb-3">
-                      University
-                    </h4>
+                    
 
                     <div className="flex flex-col gap-2">
                       <a
                         href="#"
-                        className="hover:text-[var(--forest)]"
+                        className="hover:bg-[var(--forest)] hover:text-white text:[var(--forest)] font-semibold rounded-2xl p-2"
                       >
                         Overview
                       </a>
 
                       <a
                         href="#"
-                        className="hover:text-[var(--forest)]"
+                        className="hover:bg-[var(--forest)] hover:text-white text:[var(--forest)] font-semibold rounded-2xl p-2"
                       >
                         Vision & Mission
                       </a>
 
                       <a
                         href="#"
-                        className="hover:text-[var(--forest)]"
+                        className="hover:bg-[var(--forest)] hover:text-white text:[var(--forest)] font-semibold rounded-2xl p-2"
                       >
                         Why IPS University
                       </a>
 
                       <a
                         href="#"
-                        className="hover:text-[var(--forest)]"
+                        className="hover:bg-[var(--forest)] hover:text-white text:[var(--forest)] rounded-2xl p-2"
                       >
                         Message Board
                       </a>
@@ -152,7 +150,7 @@ const Navbar2 = () => {
                     <a
                       href="#"
                       className="
-                        px-4
+                        lg:px-4 px-2
                         py-2
                         rounded-xl
                         text-sm
@@ -228,7 +226,7 @@ const Navbar2 = () => {
             }
           `}
         >
-          <div className="flex flex-col px-5">
+          <div className="flex flex-col lg:px-4 px-2">
 
             {[
               "Home",

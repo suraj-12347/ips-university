@@ -42,7 +42,7 @@ const Herosec = () => {
       />
 
       {/* Explore Button */}
-      <div
+      {/* <div
   className="
     absolute
     md:bottom-8
@@ -98,7 +98,7 @@ const Herosec = () => {
             Explore
           </span>
         </a>
-      </div>
+      </div> */}
 
       {/* Right Bottom Buttons */}
       <div className="relative z-[5] flex flex-col justify-end items-end w-full h-[82vh] px-4 md:px-8 pb-8">
