@@ -132,11 +132,11 @@ const swiperRef = useRef(null);
       {/* heading */}
       <div className="relative z-20 text-center max-w-xl mx-auto">
   <p className="text-[var(--forest)]/80 tracking-[5px] uppercase text-xs md:text-sm font-medium">
-    Student Voice
+     Student Testimonials
   </p>
 
   <h2 className="mt-2 md:mt-4 text-xl md:text-4xl font-semibold text-[var(--forest)] leading-snug md:leading-tight">
-    Experiences That Define Our Campus
+    Discover campus life or inspiring minds and enriching life
   </h2>
 </div>
 
@@ -259,7 +259,7 @@ const swiperRef = useRef(null);
   {/* Controls */}
   <div className="flex items-center justify-center gap-4 mt-8">
 
-    <button
+    {/* <button
       onClick={() => swiperRef.current?.slidePrev()}
       className="
         w-11
@@ -275,7 +275,7 @@ const swiperRef = useRef(null);
       "
     >
       ←
-    </button>
+    </button> */}
 
     {/* Pagination */}
     <div className="flex items-center gap-2">
@@ -287,6 +287,7 @@ const swiperRef = useRef(null);
             rounded-full
             transition-all
             duration-300
+            cursor-pointer
             ${
               activeIndex === index
                 ? "w-8 h-2 bg-[var(--forest)]"
@@ -297,7 +298,7 @@ const swiperRef = useRef(null);
       ))}
     </div>
 
-    <button
+    {/* <button
       onClick={() => swiperRef.current?.slideNext()}
       className="
         w-11
@@ -313,7 +314,7 @@ const swiperRef = useRef(null);
       "
     >
       →
-    </button>
+    </button> */}
 
   </div>
 

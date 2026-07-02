@@ -19,7 +19,7 @@
 
 :root {
   --forest: #3a6d33;
-  --grass: #578B07;
+  --grass: #31573a;
   --leaf: #ecf39e;
   --moss:rgba(0, 0,0, 0.7);
   --white: #ffffff;
@@ -184,7 +184,7 @@ html {
 /* =========================
    Navigation Buttons
 ========================= */
-.schools-swiper .swiper-button-prev,
+/* .schools-swiper .swiper-button-prev,
 .schools-swiper .swiper-button-next {
   width: 48px !important;
   height: 48px !important;
@@ -199,24 +199,24 @@ html {
   z-index: 20 !important;
 
   transition: all 0.3s ease;
-}
+} */
 
 /* Centered below pagination */
-.schools-swiper .swiper-button-prev {
+/* .schools-swiper .swiper-button-prev {
   left: calc(50% - 110px) !important;
-}
+} */
 
-.schools-swiper .swiper-button-next {
+/* .schools-swiper .swiper-button-next {
   right: calc(50% - 110px) !important;
-}
+} */
 
 /* Default Swiper Arrows */
-.schools-swiper .swiper-button-prev::after,
+/* .schools-swiper .swiper-button-prev::after,
 .schools-swiper .swiper-button-next::after {
   font-size: 18px !important;
   font-weight: 700 !important;
   color: #fff !important;
-}
+} */
 
 /* Hover */
 .schools-swiper .swiper-button-prev:hover,
@@ -238,22 +238,22 @@ html {
     padding-bottom: 80px !important;
   }
 
-  .schools-swiper .swiper-button-prev,
+  /* .schools-swiper .swiper-button-prev,
   .schools-swiper .swiper-button-next {
     width: 42px !important;
     height: 42px !important;
-  }
+  } */
 
-  .schools-swiper .swiper-button-prev {
+  /* .schools-swiper .swiper-button-prev {
     left: calc(50% - 100px) !important;
   }
 
   .schools-swiper .swiper-button-next {
     right: calc(50% - 100px) !important;
-  }
+  } */
 
-  .schools-swiper .swiper-button-prev::after,
+  /* .schools-swiper .swiper-button-prev::after,
   .schools-swiper .swiper-button-next::after {
     font-size: 15px !important;
-  }
+  } */
 }

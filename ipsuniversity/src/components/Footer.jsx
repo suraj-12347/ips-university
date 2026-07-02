@@ -8,8 +8,8 @@ const Footer = () => {
     "About University",
     "Admissions 2025–26",
     "All Programmes",
-    "Placements & T&P",
-    "Research & R&D",
+    "Placements",
+    "Research & Development",
     "Alumni Portal",
     "Downloads",
   ];
@@ -130,7 +130,7 @@ const Footer = () => {
         <p>© 2026 IPS University, Gwalior. All Rights Reserved.</p>
 
         <div className="flex gap-4 mt-3 md:mt-0 flex-wrap justify-center">
-          {["Privacy Policy", "Terms of Use", "Sitemap", "RTI", "Grievance"].map((item, i) => (
+          {["Privacy Policy", "Terms of Use", "Sitemap", "RTI", "Grievances"].map((item, i) => (
             <a key={i} href="#" className="hover:text-white">
               {item}
             </a>

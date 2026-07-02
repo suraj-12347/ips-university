@@ -3,10 +3,10 @@ import edubuilding from "../images1/pharmawhiteflower2.jpeg";
 
 /* DATA */
 const statsData = [
-  { number: 25, suffix: "+", label: "Years of Excellence" },
-  { number: 1500, suffix: "+", label: "Alumni" },
+  { number: 20, suffix: "+", label: "Years of Experience" },
+  { number: 15000, suffix: "+", label: "Alumni" },
   { number: 80, suffix: "+", label: "Recruiters" },
-  { number: 95, suffix: "%", label: "Placement Rate" },
+  { number: 100, suffix: "%", label: "Placement Support" },
   { number: 15, suffix: " LPA", label: "Highest Package" },
 ];
 

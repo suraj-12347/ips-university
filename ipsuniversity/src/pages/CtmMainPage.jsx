@@ -11,6 +11,7 @@ import AboutSection from "../components/ctm-component/AboutSection2";
 import Footer from "../components/Footer";
 import Chatbot from "../components/ChatBot";
 
+
 const CtmMainPage = () => {
   return (
     <>
@@ -26,6 +27,8 @@ const CtmMainPage = () => {
      
       <TestimonialsSection />
       <RecruitersSection />
+
+    
       {/* <Chatbot/> */}
       <Footer/>
      </div>

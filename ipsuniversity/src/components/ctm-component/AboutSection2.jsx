@@ -1,56 +1,94 @@
 import React from "react";
-import ctmprincipal from "../../images1/ctmprincipal2.png";
+import ctmprincipal from "../../images1/principal4.png";
+import PrincipalCard from "./PrincipalCard";
+import {
+  Landmark,
+  Target,
+  Users,
+  ShieldCheck,
+  GraduationCap,
+  ArrowRight,
+} from "lucide-react";
+
+const aboutItems = [
+  {
+    icon: Landmark,
+    text: "Welcome to the Faculty of Engineering at IPS University, where academic excellence, innovation, and ethical values converge to prepare the engineers of tomorrow.",
+  },
+  {
+    icon: Target,
+    text: "As we begin a new chapter in 2027, we are committed to delivering industry-oriented education through our core engineering programmes and emerging fields such as Artificial Intelligence, Machine Learning, Artificial Intelligence & Data Science, Cyber Security, and other advanced technologies. Our focus is on nurturing future-ready professionals equipped with the knowledge and skills to excel in a rapidly evolving world.",
+  },
+  {
+    icon: Users,
+    text: `At IPS University, education goes beyond classrooms through research, innovation, industry collaborations, internships, and experiential learning. We strive to develop graduates who combine technical expertise with leadership, integrity, creativity, and social responsibility.
+
+We firmly believe that engineering education should foster not only technical competence but also integrity, leadership, sustainability, and social responsibility. Our mission is to nurture professionals who are innovative, compassionate, and committed to improving lives through technology.
+
+I warmly invite students, parents, alumni, academicians, and industry partners to join us in our mission of Planting Future and together engineer a smarter, sustainable, and better tomorrow.`,
+  },
+];
 
 const AboutSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-5 items-center">
+        <div className="grid lg:grid-cols-2 gap-3 items-center ">
 
           {/* Image */}
-          <div>
-            <img
-              src={ctmprincipal}
-              alt="IPSCTM Campus"
-              className=" w-full h-full object-cover rounded-2xl shadow-xl "
-            />
-          </div>
-
+         
+         <div className="pt-10"> <PrincipalCard/></div>
           {/* Content */}
-         <div>
-  <span
-    className="uppercase tracking-[2px] font-semibold text-xs"
-    style={{ color: "var(--forest)" }}
-  >
+        {/* Content */}
+<div className="h-[500px] flex flex-col">
+
+  {/* Heading */}
+  <span className="uppercase tracking-[2px] text-xs font-semibold text-[#31573a]">
     About SOE
   </span>
 
-  <h2
-    className="text-3xl lg:text-4xl font-bold mt-2 mb-4"
-    style={{ color: "var(--forest)" }}
-  >
+  <div className="flex items-center mt-2 mb-2">
+    <div className="w-10 h-[2px] bg-[#d6b16c]" />
+    <div className="w-2 h-2 mx-2 rotate-45 border border-[#d6b16c]" />
+    <div className="w-10 h-[2px] bg-[#d6b16c]" />
+  </div>
+
+  <h2 className="text-4xl font-bold text-[#31573a] font-serif leading-tight mb-4">
     School of Engineering
   </h2>
 
-  <p className="text-sm text-gray-700 leading-6 mb-3 text-justify">
-   Welcome to the Faculty of Engineering at IPS University, where academic excellence, innovation, and ethical values converge to prepare the engineers of tomorrow.
-  </p>
+  {/* Timeline */}
+  <div className="relative flex-1 overflow-y-auto pr-3 custom-scroll scrollb">
 
-  <p className="text-sm text-gray-700 leading-6 mb-3 text-justify">
-  As IPS University embarks on a new chapter in 2027, we are committed to delivering future-focused education that meets the evolving needs of industry and society. Alongside our core engineering disciplines, we proudly offer cutting-edge programmes in Artificial Intelligence (AI), Machine Learning (ML), Artificial Intelligence & Data Science, Cyber Security, and other emerging technologies, equipping students with the skills required for the digital era
-  </p>
+    {/* Vertical Line */}
+    <div className="absolute left-[21px] top-5 bottom-5 w-[2px] bg-[#d9d9d9]" />
 
-  <p className="text-sm text-gray-700 leading-6 mb-3 text-justify">
-    At IPS University, learning extends beyond the classroom. Through industry partnerships, multidisciplinary research, innovation laboratories, entrepreneurship initiatives, internships, and experiential learning, we empower students to transform ideas into impactful solutions. Our emphasis on critical thinking, creativity, and problem-solving enables graduates to excel in Industry 4.0 and contribute to national and global development.
-  </p>
+    {aboutItems.map((item, index) => {
+      const Icon = item.icon;
 
-  <p className="text-sm text-gray-700 leading-6 text-justify">
-   We firmly believe that engineering education should foster not only technical competence but also integrity, leadership, sustainability, and social responsibility. Our mission is to nurture professionals who are innovative, compassionate, and committed to improving lives through technology.
-  </p>
-   <p className="text-sm text-gray-700 leading-6 text-justify">
-   I invite aspiring students, parents, academicians, alumni, and industry partners to join the IPS University family as we build a future driven by knowledge, innovation, research, and human values.
+      return (
+        <div key={index} className="relative flex gap-4 pb-3">
 
-Together, let us innovate, inspire, and engineer a better tomorrow. </p>
+          {/* Icon */}
+          <div className="relative z-10 flex items-center justify-center w-11 h-11 rounded-full border bg-[#eef4ec] border-[#d9dfd6] flex-shrink-0">
+            <Icon size={20} className="text-[#31573a]" />
+          </div>
+
+          {/* Text */}
+          <p className="text-[14px] leading-6 text-gray-700 text-justify">
+            {item.text}
+          </p>
+
+        </div>
+      );
+    })}
+
+   
+  </div>
+   <button className="bg-[#31573a] text-white py-2 px-4 rounded-md hover:bg-[#214826] cursor-pointer w-1/4 ml-10 mt-2 transition-colors">
+      Read More <ArrowRight size={16} className="inline-block ml-1"/> 
+    </button>
+
 </div>
 
         </div>

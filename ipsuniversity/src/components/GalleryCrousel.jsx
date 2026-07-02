@@ -297,31 +297,31 @@ const nextRef = useRef(null);
   return (
   <>
     <section className="w-full  py-5 pb-10 mt-20 relative overflow-hidden rounded-3xl bg-transparent"
-    style={{
-              backgroundImage: `url(${pharma})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+    // style={{
+    //           backgroundImage: `url(${pharma})`,
+    //           backgroundSize: "cover",
+    //           backgroundPosition: "center",
+    //         }}
     >
 
        {/* <div className="absolute inset-0 bg-[var(--moss)] "></div> */}
 
 
-        <div
+        {/* <div
         className="absolute -bottom-2 left-0 w-full h-[70%] z-[1]"
         style={{
           background:
             "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
         }}
-      />
-       <div
+      /> */}
+       {/* <div
         className="absolute -top-2 left-0 w-full h-[70%] z-[1]"
         style={{
           background:
             "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
         }}
-      />
-      <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px]"></div>
+      /> */}
+      {/* <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px]"></div> */}
 
 
       {/* Rings */}

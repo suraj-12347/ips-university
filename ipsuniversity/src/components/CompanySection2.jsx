@@ -183,9 +183,10 @@ const CompanySection2 = () => {
       className="w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0"
       style={{
         backgroundImage: `url(${pharma})`,
-        backgroundSize: "cover",
+        backgroundSize: "contain",
         backgroundPosition:
-          "center",
+          "right",
+          backgroundRepeat:"no-repeat"
       }}
     >
       {/* Dark Overlay */}
@@ -205,18 +206,18 @@ const CompanySection2 = () => {
             "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
       />
-      <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px] z-0"></div>
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-[1px] z-0"></div>
 
 
       {/* Heading */}
       <div className="max-w-5xl  mb-8 relative z-20">
 
         <h2 className="text-3xl md:text-5xl font-semibold text-[var(--forest)]">
-          {t.collaborators||"Our Collaborators"}
+          Our Collaborators
         </h2>
 
         <p className="mt-4 text-gray-700 max-w-xl leading-relaxed">
-          {t.collaboratorsDesc||"Companies across the world build, scale and ship whith us "}
+          Transforming aspirations into achievements
         </p>
 
       </div>

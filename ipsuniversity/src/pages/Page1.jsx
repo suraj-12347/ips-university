@@ -1,58 +1,76 @@
 import React from 'react'
-import Navbar2 from '../components/Navbar2'
+import Navbar3 from '../components/Navbar3'
 import Herosec from '../components/Herosec'
 import ChatBot from '../components/ChatBot'
-import About4 from '../components/About4'
+import About3 from '../components/About3'
 import ThemeSwitcher from '../components/ThemeSwitcher'
-import StatusBar from '../components/StatusBar'
+import StatsBar from '../components/StatusBar'
 import AboutUs from '../components/AboutUs'
-import SchoolsSection2 from '../components/SchoolSecction2'
+import SchoolsSection from '../components/SchoolsSection'
 import LatestBanner from '../components/LatestBanner'
-import NoticeSection3 from '../components/NoticeSection3'
-import Navbar4 from '../components/Navbar4'
-import EnquiryPopup from '../components/EnquiryPopup'
-
-import ReviewCard1 from '../components/student-rev/ReviewCard'
-import ReviewCard2 from '../components/student-rev/ReviewCard2'
-import ReviewCard3 from '../components/student-rev/ReviewCard3'
-import ReviewCard4 from '../components/student-rev/ReviewCard4'
-import ReviewCard5 from '../components/student-rev/ReviewCard5'
-import StudentReviews2 from '../components/student-rev/StudentReview2'
-import CompanySection from '../components/CompanySection'
-import { Import } from 'lucide-react'
+import NoticeSection2 from '../components/NoticeSection2'
+import EnquiryPopup2 from '../components/EnquiryPopup2'
+import GalleryCarousel2 from '../components/GalleryCarousel2'
+import StudentReviews from '../components/student-rev/StudentReview'
+import About5 from '../components/Aboute5'
+import CompanySection2 from '../components/CompanySection2'
+import SocialMedia2 from '../components/SocialMedia2'
+import Brochure2 from '../components/Brochure2'
 import Footer from '../components/Footer'
-import Brochure from '../components/Broucher'
-import SocialMedia from '../components/SocialMedia'
+import Topbar3 from '../components/Topbar3'
+import pharma from "../images1/pharmaflowertree4.png";
 
+import About from '../components/About'
 
-const Page1 = () => {
+const Page2 = () => {
   return (
     <>
-    {/* <Navbar2/> */}
-    <Navbar4/>
+     {/* <Topbar3/>  */}
+    
+    <Navbar3/>
+   
     <Herosec/>
     <ChatBot/>
-    <About4/>
-    <StatusBar/>
+    <About3/>
+    {/* <About/> */}
+    {/* <About5/> */}
+    <StatsBar/>
     <LatestBanner/>
-    {/* <AboutUs/> */}
-    <SchoolsSection2/>
+    
+    <SchoolsSection/>
+    {/* <ThemeSwitcher/> */}
 
-    <ThemeSwitcher/>
+   <div
+  className="relative w-full "
+  style={{
+    backgroundImage: `url(${pharma})`,
+    backgroundSize: "contain",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-white/40 backdrop-blur-[4px] z-0"></div>
 
-    <NoticeSection3/>
-    <EnquiryPopup/>
-    {/* <GalleryCarousel/> */}
+  {/* Content */}
+  <div className="relative z-10">
+    <NoticeSection2 />
+    <GalleryCarousel2 />
+  </div>
+</div>
+    <StudentReviews/>
+    <CompanySection2/>
+    <Brochure2/>
+    <SocialMedia2/>
+
+    <EnquiryPopup2/>
 
     
-    <StudentReviews2/>   
-    <CompanySection/> 
-    <Brochure/>
-    <SocialMedia/>
     <Footer/>
-   
+
+    
     </>
   )
 }
 
-export default Page1
+export default Page2

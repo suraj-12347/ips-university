@@ -1,11 +1,18 @@
 import React from "react";
 
 import Potgr from "../images1/chairmanimage3.jpeg";
-import ctm from "../images1/ctm.jpg";
+import ctm from "../images1/aboutleft.png";
 
 import { Check } from "lucide-react";
 
 import { useLanguage } from "../context/LanguageContext";
+import {
+  Leaf,
+  Building2,
+  GraduationCap,
+  BadgeCheck,
+  Users,
+} from "lucide-react";
 
 const About3 = () => {
 
@@ -22,10 +29,10 @@ const About3 = () => {
       para2:
         "The Institute of Professional Studies (IPS), founded in 2005, has always promoted the belief that emotional, intellectual, and physical lives are interconnected.",
 
-      feature1: "80 Acres Campus",
-      feature2: "3 Colleges",
-      feature3: "AICTE Approved",
-      feature4: "100% Placement",
+      feature1: "80 Acre Campus",
+      feature2: "9 Schools",
+      feature3: "UGC Approved",
+      feature4: "100% Placement Support",
     },
 
     hi: {
@@ -39,8 +46,8 @@ const About3 = () => {
         "इंस्टीट्यूट ऑफ प्रोफेशनल स्टडीज़ (IPS), जिसकी स्थापना 2005 में हुई, हमेशा भावनात्मक, बौद्धिक और शारीरिक विकास को साथ लेकर चलने में विश्वास रखता है।",
 
       feature1: "80 एकड़ परिसर",
-      feature2: "3 कॉलेज",
-      feature3: "AICTE स्वीकृत",
+      feature2: "9 कॉलेज",
+      feature3: "UGC स्वीकृत",
       feature4: "100% प्लेसमेंट",
     },
 
@@ -71,9 +78,9 @@ const About3 = () => {
         "L'Institut des Études Professionnelles (IPS), fondé en 2005, promeut le développement émotionnel, intellectuel et physique.",
 
       feature1: "Campus de 80 Acres",
-      feature2: "3 Collèges",
-      feature3: "Approuvé par AICTE",
-      feature4: "100% Placement",
+      feature2: "9 Collèges",
+      feature3: "Approuvé par UGC",
+      feature4: "100% Placement Support",
     },
   };
 
@@ -82,128 +89,188 @@ const About3 = () => {
   return (
     <section
       id="about"
-      className="w-full min-h-[80vh] flex flex-col lg:flex-row items-center justify-center gap-10 py-16 overflow-hidden pt-35"
+      className="w-full min-h-[80vh] flex flex-col lg:flex-row items-center justify-center gap-8 py-16 overflow-hidden pt-35"
     >
       {/* LEFT IMAGE */}
-      <div
-        className="
-          relative
-          w-[90%]
-          sm:w-[80%]
-          lg:w-[30%]
-          h-[250px]
-          sm:h-[320px]
-          lg:h-[400px]
-          lg:rounded-r-2xl
-          bg-cover
-          bg-center
-          shadow-xl
-        "
-        style={{
-          backgroundImage: `url(${ctm})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-[var(--inset)] lg:rounded-r-2xl"></div>
-      </div>
+     <div
+  className="
+    group
+    relative
+    w-[90%]
+    sm:w-[80%]
+    lg:w-[25%]
+    h-[250px]
+    sm:h-[320px]
+    lg:h-[450px]
+    overflow-hidden
+    lg:rounded-r-2xl
+    shadow-xl
+  "
+>
+  <img
+    src={ctm}
+    alt="Campus"
+    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+  />
+
+  <div className="absolute inset-0 bg-[var(--inset)] lg:rounded-r-2xl"></div>
+</div>
 
       {/* CENTER CONTENT */}
-      <div
-        className="
-          relative
-          w-full
-          lg:w-1/2
-          px-5
-          sm:px-8
-          lg:px-4
-          text-left
-          z-20
-        "
-      >
-        <p className="text-sm mb-2 flex justify-start items-center gap-2 text-[var(--grass)]">
-          {t.about}
-        </p>
+    <div className="lg:col-span-5 w-full lg:w-[40%] lg:h-[470px] flex flex-col justify-between px-5 lg:px-0 ">
 
-        <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-[var(--forest)] leading-tight">
-          {t.title}
-        </h2>
+  {/* Heading */}
+  <div>
+    <div className="flex items-center gap-3 text-[#7FAE46] uppercase font-semibold tracking-wider">
+      
+      <span>{t.about}</span>
+    </div>
 
-        <p className="text-sm sm:text-[15px] mb-4 text-gray-600 leading-7 text-justify">
-          {t.para1}
-        </p>
+    <h2 className="mt-2 text-4xl xl:text-3xl font-bold font-serif text-[#184D2C] leading-tight">
+      {t.title}
+    </h2>
 
-        <p className="text-sm sm:text-[15px] mb-4 text-gray-600 leading-7 text-justify">
-          {t.para2}
-        </p>
+    <p className="mt-2 text-[15px] leading-6 text-gray-600 text-justify">
+      IPS University is established under the aegis of Deendayal Krishi Avam
+      Gramin Proudyogiki Vikas Sansthan, a society registered under the
+      Madhya Pradesh Society Registration Act by visionary philanthropists
+      dedicated to quality education and social development.
+    </p>
 
-        {/* FEATURES */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+    <p className="mt-2 text-[15px] leading-6 text-gray-600 text-justify">
+      Since the establishment of the Institute of Professional Studies (IPS)
+      in 2005, the institution has remained committed to academic excellence,
+      innovation, multidisciplinary education, research, industry
+      collaboration and value-based learning to prepare future-ready
+      professionals.
+    </p>
+  </div>
 
-          <div className="flex items-center gap-2 bg-[var(--grass)]/30 p-2 rounded-full">
-            <span className="text-[var(--grass)] bg-[var(--grass)]/20 p-1 rounded-full">
-              <Check absoluteStrokeWidth />
-            </span>
+  {/* Stats Cards */}
 
-            <p className="text-sm text-[var(--forest)]">
-              {t.feature1}
-            </p>
-          </div>
+  <div className="grid grid-cols-2 gap-3 mt-2">
 
-          <div className="flex items-center gap-2 bg-[var(--grass)]/30 p-2 rounded-full">
-            <span className="text-[var(--grass)] bg-[var(--grass)]/20 p-1 rounded-full">
-              <Check absoluteStrokeWidth />
-            </span>
+    {/* Card 1 */}
+    <div className="flex items-center gap-4 rounded-2xl bg-[#F4F8EC] px-5 py-2 shadow-sm hover:shadow-md transition">
 
-            <p className="text-sm text-[var(--forest)]">
-              {t.feature2}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2 bg-[var(--grass)]/30 p-2 rounded-full">
-            <span className="text-[var(--grass)] bg-[var(--grass)]/20 p-1 rounded-full">
-              <Check absoluteStrokeWidth />
-            </span>
-
-            <p className="text-sm text-[var(--forest)]">
-              {t.feature3}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2 bg-[var(--grass)]/30 p-2 rounded-full">
-            <span className="text-[var(--grass)] bg-[var(--grass)]/20 p-1 rounded-full">
-              <Check absoluteStrokeWidth />
-            </span>
-
-            <p className="text-sm text-[var(--forest)]">
-              {t.feature4}
-            </p>
-          </div>
-
-        </div>
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DCECC8]">
+        <Building2 size={24} className="text-[#2F6B37]" />
       </div>
+
+      <div>
+        <h3 className="text-md  font-bold text-[#184D2C] leading-none">
+          80 Acre Campus
+        </h3>
+
+       
+      </div>
+
+    </div>
+
+    {/* Card 2 */}
+
+    <div className="flex items-center gap-4 rounded-2xl bg-[#F4F8EC] px-5 py-4 shadow-sm hover:shadow-md transition">
+
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DCECC8]">
+        <GraduationCap size={24} className="text-[#2F6B37]" />
+      </div>
+
+      <div>
+        <h3 className="text-md  font-bold text-[#184D2C] leading-none">
+          9+ Schools
+        </h3>
+
+       
+      </div>
+
+    </div>
+
+    {/* Card 3 */}
+
+    <div className="flex items-center gap-4 rounded-2xl bg-[#F4F8EC] px-5 py-4 shadow-sm hover:shadow-md transition">
+
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DCECC8]">
+        <BadgeCheck size={24} className="text-[#2F6B37]" />
+      </div>
+
+      <div>
+        <h3 className="text-md  font-bold text-[#184D2C] leading-none">
+          UGC Approved
+        </h3>
+
+       
+      </div>
+
+    </div>
+
+    {/* Card 4 */}
+
+    <div className="flex items-center gap-4 rounded-2xl bg-[#F4F8EC] px-5 py-4 shadow-sm hover:shadow-md transition">
+
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DCECC8]">
+        <Users size={24} className="text-[#2F6B37]" />
+      </div>
+
+      <div>
+        <h3 className="text-md font-bold text-[#184D2C] leading-none">
+          100% Placement Support
+        </h3>
+
+        
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
       {/* RIGHT IMAGE */}
-      <div
-        className="
-          relative
-          w-[90%]
-          sm:w-[85%]
-          lg:w-[60%]
-          h-[250px]
-          sm:h-[320px]
-          lg:h-[400px]
-          lg:rounded-l-2xl
-          bg-cover
-          bg-left
-          shadow-xl
-          hidden
-          xl:block
-        "
-        style={{
-          backgroundImage: `url(${Potgr})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-[var(--inset)]/50 lg:rounded-l-2xl"></div>
+    <div className="relative  h-[450px] w-[600px] rounded-l-2xl overflow-hidden  group">
+
+  {/* Image */}
+  <img
+    src={Potgr}
+    alt="Chairperson"
+    className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+  />
+
+  {/* Bottom Green Card */}
+  <div className="absolute bottom-0 left-0 w-full hidden lg:block">
+
+    <svg
+      viewBox="0 0 500 120"
+      className="w-full h-16 block"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0,80 C120,20 300,130 500,40 L500,120 L0,120 Z"
+        fill="#3a6d33"
+      />
+    </svg>
+
+    <div className="bg-[var(--forest)]  px-10 pb-5 pt-3 relative">
+
+      <div className="absolute -top-12 left-8 w-10 h-10 rounded-full bg-[#DCE5A7] flex items-center justify-center shadow-lg">
+        <span className="text-[var(--forest)] text-3xl font-bold">❝</span>
       </div>
+
+      <h3 className=" text-white text-[22px] font-serif font-semibold">
+        Mrs. Shobha Mishra
+      </h3>
+
+      <div className="flex items-center gap-3 mt-2">
+        <p className="uppercase tracking-[3px] text-[#D7D59C] text-sm">
+          Chairperson
+        </p>
+
+        <span className="w-10 h-[2px] bg-[#D7D59C]"></span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
     </section>
   );
 };

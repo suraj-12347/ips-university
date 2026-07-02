@@ -14,7 +14,7 @@ const Brochure2 = () => {
     en: {
       badge: "Admissions Open 2025–26",
 
-      heading: "Ready to Plant Your Future?",
+      heading: "Ready to Plant Your Future !!",
 
       para:
         "Join thousands of students who chose IPS University, Gwalior to transform their lives and build meaningful careers with quality education and innovation.",
@@ -85,8 +85,9 @@ const Brochure2 = () => {
         "
         style={{
           backgroundImage: `url(${pharma})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundSize: "contain",
+          backgroundPosition: "left",
+          backgroundRepeat:"no-repeat"
         }}
       >
 
@@ -107,7 +108,7 @@ const Brochure2 = () => {
             "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
       />
-      <div className="absolute inset-0 bg-white/50 backdrop-blur-[4px] z-0"></div>
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-[1px] z-0"></div>
 
 
         {/* Gradient Overlay */}
@@ -173,7 +174,7 @@ const Brochure2 = () => {
               max-w-4xl
             "
           >
-            {t.heading}
+            {/* {t.heading} */}Ready to Plant Your Future !! 
           </h2>
 
           {/* Paragraph */}
@@ -187,7 +188,8 @@ const Brochure2 = () => {
               mt-5
             "
           >
-            {t.para}
+            {/* {t.para} */}
+            Transform your future with world-class education, industry-focused learning, and endless opportunities at IPS University, Gwalior.
           </p>
 
           {/* Buttons */}

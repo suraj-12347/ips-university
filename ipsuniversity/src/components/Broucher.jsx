@@ -12,7 +12,7 @@ const Brochure = () => {
     en: {
       badge: "Admissions Open 2025–26",
 
-      heading: "Ready to Plant Your Future?",
+      heading: "Ready to Plant Your Future !!",
 
       para:
         "Join thousands of students who chose IPS University, Gwalior to transform their lives and build meaningful careers with quality education and innovation.",

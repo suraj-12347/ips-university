@@ -4,7 +4,7 @@ import React from "react";
 import { Phone, Globe } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-import edubuild3 from "../images1/edubuild3.png";
+import edubuild3 from "../images1/navbarimage2.png";
 
 import { useLanguage } from "../context/LanguageContext";
 import { IoEarthSharp ,IoGlobeOutline } from "react-icons/io5";
@@ -19,7 +19,7 @@ const Topbar3 = () => {
         style={{
           backgroundImage: `url(${edubuild3})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top",
         }}
       >
         {/* Overlay */}

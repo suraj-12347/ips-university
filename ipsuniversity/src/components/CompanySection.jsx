@@ -195,7 +195,7 @@ const CompanySection = () => {
         </h2>
 
         <p className="mt-4 text-[var(--grass)] max-w-xl leading-relaxed mx-auto md:mx-0 text-sm md:text-base">
-          {t.collaboratorsDesc||"Companies across the world build, scale and ship whith us"}
+          {t.collaboratorsDesc||"Transforming aspirations into achievements."}
         </p>
 
       </div>
