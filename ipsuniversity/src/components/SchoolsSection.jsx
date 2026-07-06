@@ -105,7 +105,7 @@ const SchoolsSection = () => {
 
   return (
     <section
-      id="schools"
+      id="academics"
       className="
         relative
         w-full
@@ -245,8 +245,10 @@ const SchoolsSection = () => {
           mx-auto
           bg-white
           rounded-[28px]
-          shadow-[0_10px_35px_rgba(0,0,0,.08)]
-          hover:shadow-[0_18px_45px_rgba(0,0,0,.12)]
+          shadow-md
+          hover:shadow-xl
+     
+      
           hover:-translate-y-2
           transition-all
           duration-500

@@ -1,9 +1,83 @@
 import React, { useState } from "react";
-import { Menu, X, ChevronDown, ChevronRight, ChevronUp } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, ChevronUp,Dot } from "lucide-react";
 import edubuild3 from "../images1/navbarimage.png";
 import Logo from "./Logo";
 import Topbar3 from "./Topbar3";
+ import { Link } from "react-router-dom";
 
+ const aboutLinks = [
+  {
+    title: "Overview",
+    path: "/about/overview",
+  },
+  {
+    title: "Vision & Mission",
+    path: "/about/vision-mission",
+  },
+  {
+    title: "Leadership",
+    path: "/about/leadership",
+  },
+  {
+    title: "Officials",
+    path: "/about/officials",
+  },
+  {
+    title: "Governance / Administration",
+    path: "/about/governance-administration",
+  },
+  {
+    title: "Governance Framework",
+    path: "/about/governance-framework",
+  },
+  {
+    title: "Recognition / Approvals",
+    path: "/about/recognition-approvals",
+  },
+  {
+    title: "Advisors",
+    path: "/about/advisors",
+  },
+  {
+    title: "Why IPS University",
+    path: "/about/why-ips-university",
+  },
+  {
+    title: "Ordinance",
+    path: "/about/ordinance",
+  },
+];
+ const admissionLinks = [
+  {
+    title: "Apply online & e-payment",
+    path: "/about/overview",
+  },
+  {
+    title: "Important dates",
+    path: "/about/vision-mission",
+  },
+  {
+    title: "Scholarship policy",
+    path: "/about/leadership",
+  },
+  {
+    title: "Downloads Brochure 2026-27",
+    path: "/about/officials",
+  },
+  {
+    title: "Fee refund policy 2026-27",
+    path: "/about/governance-administration",
+  },
+  {
+    title: "Hostel fee",
+    path: "/about/governance-framework",
+  },
+  {
+    title: "Fee structure 2026-27",
+    path: "/about/governance-framework",
+  },
+ 
+];
 const schools = [
   {
     title: "School of Engineering & Technology",
@@ -138,6 +212,54 @@ const schools = [
   },
 ];
 
+const RDLinks = [
+  {
+    title: "Innovation Cell",
+    path: "/innovation/innovation-cell",
+  },
+  {
+    title: "Startup / Innovation / Incubation Cell",
+    path: "/innovation/startup-incubation",
+  },
+  {
+    title: "MoUs / Collaborations",
+    path: "/innovation/mous-collaborations",
+  },
+  {
+    title: "Patents",
+    path: "/innovation/patents",
+  },
+  {
+    title: "Govt. Funded Projects",
+    path: "/innovation/grant-funded-projects",
+  },
+  {
+    title: "Publications",
+    children: [
+      {
+        title: "Research Articles",
+        path: "/innovation/publications/research-articles",
+      },
+      {
+        title: "Books / Book Chapters",
+        path: "/innovation/publications/books-book-chapters",
+      },
+      {
+        title: "Published Conference Papers",
+        path: "/innovation/publications/conference-papers",
+      },
+      {
+        title: "Journals",
+        path: "/innovation/publications/journals",
+      },
+    ],
+  },
+  {
+    title: "Activities",
+    path: "/innovation/activities",
+  },
+];
+
 const Navbar2 = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [active, setActive] = useState("schools");
@@ -188,7 +310,7 @@ const Navbar2 = () => {
 
               <ul className="relative z-10 flex items-center justify-evenly w-full mt-15">
                 {/* HOME */}
-                <li>
+                {/* <li>
                   <a
                     href="#"
                     onClick={() => setActive("home")}
@@ -200,7 +322,7 @@ const Navbar2 = () => {
                   >
                     Home
                   </a>
-                </li>
+                </li> */}
 
                 {/* ABOUT */}
                 <li className="relative group">
@@ -218,55 +340,146 @@ const Navbar2 = () => {
                   </a>
 
                   {/* DROPDOWN */}
-                  <div
-                    className="
-                      absolute
-                      top-full
-                      left-0
-                      mt-3
-                      w-64
-                      bg-white
-                      rounded-2xl
-                      shadow-xl
-                      p-4
-                      opacity-0
-                      invisible
-                      group-hover:opacity-100
-                      group-hover:visible
-                      transition-all
-                      duration-300
-                    "
+                 
+
+<div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[250px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+  {aboutLinks.map((item) => (
+    <Link
+      key={item.path}
+      to={item.path}
+      className="
+        flex items-center
+        gap-3
+        px-4
+        py-1
+        rounded-xl
+        text-[14px]
+        font-medium
+        text-gray-700
+        hover:bg-[var(--forest)]
+        hover:text-white
+        transition-all
+        duration-200
+
+      "
+    >
+      <Dot size={8} strokeWidth={20} />
+      {item.title}
+    </Link>
+  ))}
+</div>
+                </li>
+
+                {/* ADMISSIONS */}
+                 <li className="relative group">
+                  <a
+                    href="#admissions"
+                    onClick={() => setActive("admissions")}
+                    className={`flex items-center  lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                      active === "admissions"
+                        ? "bg-white text-[var(--forest)]"
+                        : "text-white hover:bg-white/15"
+                    }`}
                   >
-                    <div className="flex flex-col gap-2">
-                      <a
-                        href="#"
-                        className="hover:bg-[var(--forest)] hover:text-white text:[var(--forest)] font-semibold rounded-2xl p-2"
-                      >
-                        Overview
-                      </a>
+                    Admissions
+                    <ChevronDown size={14} />
+                  </a>
 
-                      <a
-                        href="#"
-                        className="hover:bg-[var(--forest)] hover:text-white text:[var(--forest)] font-semibold rounded-2xl p-2"
-                      >
-                        Vision & Mission
-                      </a>
 
-                      <a
-                        href="#"
-                        className="hover:bg-[var(--forest)] hover:text-white text:[var(--forest)] font-semibold rounded-2xl p-2"
-                      >
-                        Why IPS University
-                      </a>
+       {/* r&d            */}
 
-                      <a
-                        href="#"
-                        className="hover:bg-[var(--forest)] hover:text-white text:[var(--forest)] rounded-2xl p-2"
-                      >
-                        Message Board
-                      </a>
-                    </div>
-                  </div>
+      
+
+                  {/* DROPDOWN */}
+                 
+
+<div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+  {admissionLinks.map((item) => (
+    <Link
+      key={item.path}
+      to={item.path}
+      className="
+        flex items-center
+        gap-3
+        px-4
+        py-1
+        rounded-xl
+        text-[14px]
+        font-medium
+        text-gray-700
+        hover:bg-[var(--forest)]
+        hover:text-white
+        transition-all
+        duration-200
+
+      "
+    >
+      <Dot size={8} strokeWidth={20} />
+      {item.title}
+    </Link>
+  ))}
+</div>
+                </li>
+
+
+
+                {/* R&D */}
+
+                 <li className="relative group">
+                  <a
+                    href="#about"
+                    onClick={() => setActive("R&D")}
+                    className={`flex items-center  lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                      active === "R&D"
+                        ? "bg-white text-[var(--forest)]"
+                        : "text-white hover:bg-white/15"
+                    }`}
+                  >
+                    R&D
+                    <ChevronDown size={14} />
+                  </a>
+
+                  {/* DROPDOWN */}
+                 
+
+<div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+  {RDLinks.map((item) =>
+  item.children ? (
+    <div key={item.title} className="group/sub relative">
+      <div className="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-[var(--forest)] hover:text-white cursor-pointer">
+        
+       
+        <span className="flex items-center gap-3"> <Dot size={8} strokeWidth={20} />{item.title}</span>
+        <ChevronRight size={16} />
+      </div>
+
+      {/* Nested Dropdown */}
+      <div className="absolute left-full top-0 ml-2 w-64 bg-white rounded-2xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all p-2">
+        {item.children.map((child) => (
+          <Link
+            key={child.path}
+            to={child.path}
+            className="flex items-center gap-3 px-4 py-1 text-[14px] rounded-xl hover:bg-[var(--forest)] hover:text-white"
+          >  
+          <Dot size={8} strokeWidth={20} />
+      
+            {child.title}
+          </Link>
+        ))}
+      </div>
+    </div>
+  ) : (
+    <Link
+      key={item.path}
+      to={item.path}
+      className="flex items-center gap-3 px-4 py-1 text-[14px] rounded-xl hover:bg-[var(--forest)] hover:text-white"
+    >
+       <Dot size={8} strokeWidth={20} />
+      {item.title}
+    </Link>
+  )
+)}
+</div>
                 </li>
 
                 {/* Schools */}
@@ -278,15 +491,15 @@ const Navbar2 = () => {
                   {/* Menu Button */}
 
                   <a
-                    href="#schools"
-                    onClick={() => setActive("schools")}
+                    href="#academics"
+                    onClick={() => setActive("academics")}
                     className={`flex items-center  lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-                      active === "schools"
+                      active === "academics"
                         ? "bg-white text-[var(--forest)]"
                         : "text-white hover:bg-white/15"
                     }`}
                   >
-                    Schools
+                    Academics
                     <ChevronDown size={15} className="ml-1" />
                   </a>
 
@@ -328,7 +541,7 @@ const Navbar2 = () => {
 
                       <div className="border-r border-gray-100 bg-gray-50/70 p-6">
                         <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
-                          Schools
+                          academic Schools
                         </h2>
 
                         <div className="space-y-2">
@@ -561,6 +774,18 @@ const Navbar2 = () => {
                     </div>
                   </div>
                 </li>
+
+
+
+
+
+
+
+
+
+
+
+                
 
                 {/* LINKS */}
                 {["Admissions", "Research", "Student Zone"].map((item) => (

@@ -96,8 +96,8 @@ const About3 = () => {
   className="
     group
     relative
-    w-[90%]
-    sm:w-[80%]
+    w-[100%]
+    
     lg:w-[25%]
     h-[250px]
     sm:h-[320px]
@@ -117,7 +117,7 @@ const About3 = () => {
 </div>
 
       {/* CENTER CONTENT */}
-    <div className="lg:col-span-5 w-full lg:w-[40%] lg:h-[470px] flex flex-col justify-between px-5 lg:px-0 ">
+    <div className="lg:col-span-5 w-full max-w-[800px] lg:w-[40%] lg:h-[470px] flex flex-col justify-between px-5 lg:px-0 ">
 
   {/* Heading */}
   <div>
@@ -126,7 +126,7 @@ const About3 = () => {
       <span>{t.about}</span>
     </div>
 
-    <h2 className="mt-2 text-4xl xl:text-3xl font-bold font-serif text-[#184D2C] leading-tight">
+    <h2 className="mt-2 text-4xl xl:text-3xl font-bold font-serif text-[var(--forest)] leading-tight">
       {t.title}
     </h2>
 
@@ -158,7 +158,7 @@ const About3 = () => {
       </div>
 
       <div>
-        <h3 className="text-md  font-bold text-[#184D2C] leading-none">
+        <h3 className="text-md  font-bold text-[var(--forest)] leading-none">
           80 Acre Campus
         </h3>
 
@@ -176,7 +176,7 @@ const About3 = () => {
       </div>
 
       <div>
-        <h3 className="text-md  font-bold text-[#184D2C] leading-none">
+        <h3 className="text-md  font-bold text-[var(--forest)] leading-none">
           9+ Schools
         </h3>
 
@@ -194,7 +194,7 @@ const About3 = () => {
       </div>
 
       <div>
-        <h3 className="text-md  font-bold text-[#184D2C] leading-none">
+        <h3 className="text-md  font-bold text-[var(--forest)] leading-none">
           UGC Approved
         </h3>
 
@@ -212,7 +212,7 @@ const About3 = () => {
       </div>
 
       <div>
-        <h3 className="text-md font-bold text-[#184D2C] leading-none">
+        <h3 className="text-md font-bold text-[var(--forest)] leading-none">
           100% Placement Support
         </h3>
 
@@ -226,7 +226,7 @@ const About3 = () => {
 </div>
 
       {/* RIGHT IMAGE */}
-    <div className="relative  h-[450px] w-[600px] rounded-l-2xl overflow-hidden  group">
+    <div className="relative  h-[450px] lg:w-[600px] w-full lg:rounded-l-2xl overflow-hidden  group">
 
   {/* Image */}
   <img
@@ -236,7 +236,7 @@ const About3 = () => {
   />
 
   {/* Bottom Green Card */}
-  <div className="absolute bottom-0 left-0 w-full hidden lg:block">
+  <div className="absolute -bottom-3 left-0 w-full hidden lg:block">
 
     <svg
       viewBox="0 0 500 120"
@@ -249,7 +249,7 @@ const About3 = () => {
       />
     </svg>
 
-    <div className="bg-[var(--forest)]  px-10 pb-5 pt-3 relative">
+    <div className="bg-[var(--forest)]  px-10 pb-7 pt-3 relative">
 
       <div className="absolute -top-12 left-8 w-10 h-10 rounded-full bg-[#DCE5A7] flex items-center justify-center shadow-lg">
         <span className="text-[var(--forest)] text-3xl font-bold">❝</span>
