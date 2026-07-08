@@ -180,7 +180,7 @@ const CompanySection2 = () => {
 
   return (
     <section
-      className="w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0"
+      className="max-w-[100vw] w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0 flex  flex-col items-center gap-10"
       style={{
         backgroundImage: `url(${pharma})`,
         backgroundSize: "contain",
@@ -210,9 +210,9 @@ const CompanySection2 = () => {
 
 
       {/* Heading */}
-      <div className="max-w-5xl  mb-8 relative z-20">
+      <div className="max-w-5xl flex flex-col mb-8 relative z-20 items-center">
 
-        <h2 className="text-3xl md:text-5xl font-semibold text-[var(--forest)]">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
           Our Collaborators
         </h2>
 
@@ -225,13 +225,15 @@ const CompanySection2 = () => {
       {/* Grid */}
       <div
         className="
-          max-w-7xl
+          max-w-[100vw]
+         
           mx-auto
           grid
           grid-cols-3
           sm:grid-cols-4
           md:grid-cols-6
           lg:grid-cols-8
+           2xl:grid-cols-8
           gap-3
           md:gap-4
           relative
@@ -279,7 +281,8 @@ const CompanySection2 = () => {
               className="
                 h-7
                 sm:h-8
-                w-auto
+                w-40
+                2xl:w-50
                 object-contain
                 opacity-75
                 group-hover:opacity-100

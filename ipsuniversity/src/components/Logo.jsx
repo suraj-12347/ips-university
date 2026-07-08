@@ -85,7 +85,7 @@ const Logo = () => {
       font-bold
       text-[var(--forest)]
       md:hidden xl:block
-      lg:block
+      
     "
   >
     UNIVERSITY

@@ -102,6 +102,7 @@ const About3 = () => {
     h-[250px]
     sm:h-[320px]
     lg:h-[450px]
+    max-h-[500px]
     overflow-hidden
     lg:rounded-r-2xl
     shadow-xl
@@ -130,14 +131,14 @@ const About3 = () => {
       {t.title}
     </h2>
 
-    <p className="mt-2 text-[15px] leading-6 text-gray-600 text-justify">
+    <p className="mt-2 text-[13px] xl:text-[15px] leading-6 text-gray-600 text-justify">
       IPS University is established under the aegis of Deendayal Krishi Avam
       Gramin Proudyogiki Vikas Sansthan, a society registered under the
       Madhya Pradesh Society Registration Act by visionary philanthropists
       dedicated to quality education and social development.
     </p>
 
-    <p className="mt-2 text-[15px] leading-6 text-gray-600 text-justify">
+    <p className="mt-2  text-[13px] xl:text-[15px]  leading-6 text-gray-600 text-justify">
       Since the establishment of the Institute of Professional Studies (IPS)
       in 2005, the institution has remained committed to academic excellence,
       innovation, multidisciplinary education, research, industry
@@ -148,7 +149,7 @@ const About3 = () => {
 
   {/* Stats Cards */}
 
-  <div className="grid grid-cols-2 gap-3 mt-2">
+  <div className="grid grid-cols-2 gap-3 mt-1 xl:mt-2">
 
     {/* Card 1 */}
     <div className="flex items-center gap-4 rounded-2xl bg-[#F4F8EC] px-5 py-2 shadow-sm hover:shadow-md transition">

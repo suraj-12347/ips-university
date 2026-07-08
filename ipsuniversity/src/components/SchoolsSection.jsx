@@ -335,38 +335,28 @@ const SchoolsSection = () => {
           </p>
 
           {/* Pills */}
-          <div className=" flex justify-center gap-2 flex-wrap mb-2">
-            <div className="flex items-center gap-1.5 px-3 py-2 rounded-full bg-[#F5F6F7]">
-              <BookOpen
-                size={16}
-                className="text-[var(--forest)]"
-              />
-              <span className="text-[13px] font-medium">
-                Courses
-              </span>
-            </div>
+          <div className="flex gap-2 mb-2 w-full">
+  <div className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-full bg-[#F5F6F7] min-w-0">
+    <BookOpen size={16} className="text-[var(--forest)] flex-shrink-0" />
+    <span className="text-[13px] font-medium truncate">
+      Courses
+    </span>
+  </div>
 
-            <div className="flex items-center gap-1.5 px-3 py-2 rounded-full bg-[#F5F6F7]">
-              <GraduationCap
-                size={16}
-                className="text-[var(--forest)]"
-              />
-              <span className="text-[13px] font-medium">
-                Faculty
-              </span>
-            </div>
+  <div className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-full bg-[#F5F6F7] min-w-0">
+    <GraduationCap size={16} className="text-[var(--forest)] flex-shrink-0" />
+    <span className="text-[13px] font-medium truncate">
+      Faculty
+    </span>
+  </div>
 
-            <div className="flex items-center gap-1.5 px-3 py-2 rounded-full bg-[#F5F6F7] ">
-              <Building2
-                size={16}
-                className="text-[var(--forest)]"
-              />
-              <span className="text-[13px] font-medium">
-                Campus
-              </span>
-            </div>
-          </div>
-
+  <div className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-full bg-[#F5F6F7] min-w-0">
+    <Building2 size={16} className="text-[var(--forest)] flex-shrink-0" />
+    <span className="text-[13px] font-medium truncate">
+      Campus
+    </span>
+  </div>
+</div>
           {/* Button */}
           <button
             onClick={(e) => {

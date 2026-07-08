@@ -136,7 +136,7 @@ const swiperRef = useRef(null);
      Student Testimonials
   </p>
 
-  <h2 className="mt-2 md:mt-4 text-xl md:text-4xl font-semibold text-[var(--forest)] leading-snug md:leading-tight">
+  <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
      Inspiring minds and enriching life
   </h2>
 </div>

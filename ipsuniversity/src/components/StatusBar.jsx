@@ -71,7 +71,7 @@ const StatsBar = () => {
     <section
       ref={sectionRef}
       className="
-        relative w-full py-16 sm:py-20 px-4 overflow-hidden mt-10
+        relative w-full py-16 sm:py-2 px-4 overflow-hidden mt-10
         bg-cover bg-center bg-fixed
       "
       style={{

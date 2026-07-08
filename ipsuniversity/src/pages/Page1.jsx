@@ -2,11 +2,11 @@ import React from 'react'
 import Navbar3 from '../components/Navbar3'
 import Herosec from '../components/Herosec'
 import ChatBot from '../components/ChatBot'
-import About3 from '../components/About3'
+import About3 from '../components/About4'
 import ThemeSwitcher from '../components/ThemeSwitcher'
 import StatsBar from '../components/StatusBar'
 import AboutUs from '../components/AboutUs'
-import SchoolsSection from '../components/SchoolsSection'
+import SchoolsSection from '../components/SchoolSecction2'
 import LatestBanner from '../components/LatestBanner'
 import NoticeSection2 from '../components/NoticeSection2'
 import EnquiryPopup2 from '../components/EnquiryPopup2'
@@ -37,23 +37,24 @@ const Page2 = () => {
     <StatsBar/>
     <LatestBanner/>
     
-    <SchoolsSection/>
+    
     {/* <ThemeSwitcher/> */}
 
    <div
   className="relative w-full "
   style={{
     backgroundImage: `url(${pharma})`,
-    backgroundSize: "contain",
+    backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   }}
 >
   {/* Overlay */}
-  <div className="absolute inset-0 bg-white/40 backdrop-blur-[4px] z-0"></div>
+  <div className="absolute inset-0 bg-white/50 backdrop-blur-[4px] z-0"></div>
 
   {/* Content */}
   <div className="relative z-10">
+    <SchoolsSection/>
     <NoticeSection2 />
     <GalleryCarousel2 />
   </div>

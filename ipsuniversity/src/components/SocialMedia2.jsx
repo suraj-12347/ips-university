@@ -105,7 +105,7 @@ const SocialMedia2 = () => {
           Connect With Us
         </span>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--forest)] mt-2 leading-tight">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
           Follow IPS University
         </h2>
 

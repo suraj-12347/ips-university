@@ -165,13 +165,7 @@ const Brochure2 = () => {
           {/* Heading */}
           <h2
             className="
-              text-[var(--forest)]
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              font-bold
-              leading-tight
-              max-w-4xl
+             text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight
             "
           >
             {/* {t.heading} */}Ready to Plant Your Future !! 

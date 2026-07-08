@@ -1,6 +1,6 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import DotedRing2 from "./DotedRing2";
 import React, { useRef, useState } from "react";
 import pharma from '../images1/flower.jpeg'
@@ -113,155 +113,16 @@ const slidesData = [
     ],
   },
 
-  {
-    id: 4,
-    title: "Sports Events",
-    coverImage:
-     skmic,
+  
 
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
+ 
 
-  {
-    id: 5,
-    title: "Library",
-    coverImage:
-      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop",
+ 
 
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
+ 
 
-  {
-    id: 6,
-    title: "Labs",
-    coverImage:
-      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop",
-
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1516321310764-8d5d3c2c4d7f?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1581093458791-9d15482442f6?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
-
-  {
-    id: 7,
-    title: "Workshops",
-    coverImage:
-      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
-
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
-
-  {
-    id: 8,
-    title: "Cultural Fest",
-    coverImage:
-      "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop",
-
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1521334884684-d80222895322?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
+    
+  
 
   // SAME PATTERN FOLLOW KARKE
   // id: 9 se id: 24 tak aur add kar sakte ho
@@ -272,6 +133,9 @@ const GalleryCarousel2 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevRef = useRef(null);
 const nextRef = useRef(null);
+const swiperRef = useRef(null);
+const [activeIndex, setActiveIndex] = useState(0);
+const [expandedReview, setExpandedReview] = useState(null);
 
   const openPopup = (popupImages, index = 0) => {
     setPopupImages(popupImages);
@@ -296,7 +160,7 @@ const nextRef = useRef(null);
 
   return (
   <>
-    <section className="w-full  py-5 pb-10 mt-20 relative overflow-hidden rounded-3xl bg-transparent"
+    <section className="w-full  py-5 pb-10 mt-20 relative overflow-hidden rounded-3xl bg-transparent flex justify-center items-center flex-col gap-10"
     // style={{
     //           backgroundImage: `url(${pharma})`,
     //           backgroundSize: "cover",
@@ -307,21 +171,9 @@ const nextRef = useRef(null);
        {/* <div className="absolute inset-0 bg-[var(--moss)] "></div> */}
 
 
-        {/* <div
-        className="absolute -bottom-2 left-0 w-full h-[70%] z-[1]"
-        style={{
-          background:
-            "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
-        }}
-      /> */}
-       {/* <div
-        className="absolute -top-2 left-0 w-full h-[70%] z-[1]"
-        style={{
-          background:
-            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
-        }}
-      /> */}
-      {/* <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px]"></div> */}
+       
+       
+    
 
 
       {/* Rings */}
@@ -336,18 +188,18 @@ const nextRef = useRef(null);
       {/* Header */}
       <div className="flex items-center justify-between px-6 md:px-12 mb-10 relative z-4">
 
-        <div>
+        <div className="flex flex-col items-center">
           <p className="text-[var(--forest)]/80 text-sm font-semibold tracking-[3px] uppercase">
             Campus Life
           </p>
 
-          <h2 className="text-3xl text-[var(--forest)] md:text-5xl font-bold mt-2">
+          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
             Explore IPS Moments
           </h2>
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center gap-3 40">
+        {/* <div className="flex items-center gap-3 ml-10">
 
           <button
             ref={prevRef}
@@ -363,13 +215,18 @@ const nextRef = useRef(null);
             <ChevronRight size={24} />
           </button>
 
-        </div>
+        </div> */}
       </div>
 
       {/* Main Slider */}
      {/* Main Slider */}
 <Swiper
-  modules={[Navigation]}
+  onSwiper={(swiper) => {
+    swiperRef.current = swiper;
+  }}
+  onSlideChange={(swiper) => {
+    setActiveIndex(swiper.realIndex);
+  }}
   slidesPerView={1}
   spaceBetween={20}
   observer={true}
@@ -388,7 +245,7 @@ const nextRef = useRef(null);
     <SwiperSlide key={slide.id}>
       
       {/* Desktop */}
-      <div className="hidden xl:flex gap-4 items-stretch w-full px-6 z-40">
+      <div className="hidden xl:flex justify-center gap-4 items-stretch w-full px-6 z-40">
 
         {/* Big Square */}
         <div
@@ -591,6 +448,21 @@ const nextRef = useRef(null);
     </SwiperSlide>
   ))}
 </Swiper>
+
+   {/* Pagination */}
+    <div className="flex justify-center items-center gap-2 mt-6">
+  {slidesData.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => swiperRef.current?.slideToLoop(index)}
+      className={`transition-all duration-300 rounded-full ${
+        activeIndex === index
+          ? "w-8 h-2 bg-[var(--forest)]"
+          : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
+      }`}
+    />
+  ))}
+</div>
     </section>
 
     {/* Popup */}
@@ -629,6 +501,8 @@ const nextRef = useRef(null);
         >
           <ChevronRight size={44} />
         </button>
+
+        
       </div>
     )}
   </>

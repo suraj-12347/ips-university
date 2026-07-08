@@ -7,6 +7,9 @@ import indiangirl from '../../images1/indiangirl.png'
 import prasansha from '../../images1/prasansha2.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
+
+
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -19,7 +22,27 @@ const reviews = [
     image: suraj,
     review:
       "A peaceful campus with supportive faculty that helped me build confidence",
+  }, {
+    id: 4,
+    name: "Prasansha",
+    course: "BCA",
+    image: prasansha,
+    review:
+      "Practical learning and excellent mentorship made my journey truly rewarding.",
   },
+
+ 
+ 
+  {
+    id: 3,
+    name: "Neeraj",
+    course: "B.Tech",
+    image: neeraj,
+    review:
+      "Experienced quality education with a friendly and motivating campus culture.",
+  },
+
+  
   {
     id: 2,
     name: "Payal Kushwah",
@@ -27,30 +50,6 @@ const reviews = [
     image: indiangirl,
     review:
       "Great balance between academics and extracurricular activities in a modern environment.",
-  },
-  {
-    id: 3,
-    name: "Prasansha",
-    course: "BCA",
-    image: prasansha,
-    review:
-      "Practical learning and excellent mentorship made my journey truly rewarding.",
-  },
-  {
-    id: 4,
-    name: "Neeraj",
-    course: "B.Tech",
-    image: neeraj,
-    review:
-      "Experienced quality education with a friendly and motivating campus culture.",
-  },
-  {
-    id: 5,
-    name: "Rahul Verma",
-    course: "BCA",
-    image: "https://i.pravatar.cc/150?img=15",
-    review:
-      "Supportive teachers and hands-on learning helped me grow academically.",
   },
   {
     id: 6,
@@ -137,7 +136,7 @@ const [expandedReview, setExpandedReview] = useState(null);
      Student Testimonials
   </p>
 
-  <h2 className="mt-2 md:mt-4 text-xl md:text-4xl font-semibold text-[var(--forest)] leading-snug md:leading-tight">
+  <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
      Inspiring minds and enriching life
   </h2>
 </div>
@@ -146,10 +145,24 @@ const [expandedReview, setExpandedReview] = useState(null);
    <div className="relative z-20 mt-10 max-w-[100vw] mx-auto">
 
  <Swiper
+   onSwiper={(swiper) => {
+    swiperRef.current = swiper;
+  }}
+  onSlideChange={(swiper) => {
+    setActiveIndex(swiper.realIndex);
+  }}
+
   loop={true}
   speed={700}
   spaceBetween={24}
   slidesPerView={1}
+  autoplay={{
+    delay: 3000,
+    disableOnInteraction: false,
+  }}
+  pagination={{
+    clickable: true,
+  }}
   breakpoints={{
     640: {
       slidesPerView: 2,
@@ -160,9 +173,12 @@ const [expandedReview, setExpandedReview] = useState(null);
     1300: {
       slidesPerView: 4,
     },
+    
   }}
+
+  
 >   {reviews.map((item) => (
-      <SwiperSlide key={item.id} className="py-5 ml-12 md:ml-0 px-2">
+      <SwiperSlide key={item.id} className="py-5   px-2">
   <div
     className="
       bg-white
@@ -181,6 +197,8 @@ const [expandedReview, setExpandedReview] = useState(null);
       overflow-hidden
       max-w-[270px]
       group
+      ml-12
+      lg:ml-0
       
     "
   >
@@ -275,25 +293,19 @@ const [expandedReview, setExpandedReview] = useState(null);
     </button> */}
 
     {/* Pagination */}
-    <div className="flex items-center gap-2">
-      {reviews.map((_, index) => (
-        <button
-          key={index}
-          onClick={() => swiperRef.current?.slideToLoop(index)}
-          className={`
-            rounded-full
-            transition-all
-            duration-300
-            cursor-pointer
-            ${
-              activeIndex === index
-                ? "w-8 h-2 bg-[var(--forest)]"
-                : "w-2 h-2 bg-gray-300"
-            }
-          `}
-        />
-      ))}
-    </div>
+    <div className="flex justify-center items-center gap-2 mt-6">
+  {reviews.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => swiperRef.current?.slideToLoop(index)}
+      className={`transition-all duration-300 rounded-full ${
+        activeIndex === index
+          ? "w-8 h-2 bg-[var(--forest)]"
+          : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
+      }`}
+    />
+  ))}
+</div>
 
     {/* <button
       onClick={() => swiperRef.current?.slideNext()}

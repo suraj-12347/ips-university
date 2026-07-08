@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div className="absolute top-10 md:top-2 lg:top-10 flex items-center">
         <div className="max-w-7xl mx-auto px-6 text-white">
          <h1
-  className="text-3xl lg:text-5xl font-bold  text-[var(--forest)] mt-25 md:mt-1 ml-10"
+  className="text-3xl lg:text-3xl xl:text-5xl   font-bold  text-[var(--forest)] mt-25 md:mt-1 lg:-mt-8 xl:-mt-5 ml-10 hidden lg:block"
   style={{
     fontFamily: '"Noto Serif", serif',
     fontOpticalSizing: "auto",
@@ -37,7 +37,7 @@ const HeroSection = () => {
   School of 
 </h1>
  <h1
-  className="text-5xl lg:text-7xl font-bold mb-6 text-[var(--forest)]"
+  className="text-5xl lg:text-5xl xl:text-5xl font-bold mb-6 text-[var(--forest)] hidden lg:block"
   style={{
     fontFamily: '"Noto Serif", serif',
     fontOpticalSizing: "auto",
@@ -46,7 +46,7 @@ const HeroSection = () => {
     fontVariationSettings: '"wdth" 100',
   }}
 >
-  Engineering
+  Engineering & Technology
 </h1>
 
           {/* <p className="max-w-2xl text-lg md:text-xl text-gray-700">

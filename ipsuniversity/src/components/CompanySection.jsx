@@ -190,7 +190,7 @@ const CompanySection = () => {
       {/* Heading */}
       <div className="max-w-5xl  mb-8 relative z-10 text-center md:text-left">
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[var(--forest)] leading-tight">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
           {t.collaborators||"Our Collaborators"}
         </h2>
 

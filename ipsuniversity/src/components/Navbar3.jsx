@@ -1,131 +1,94 @@
 import React, { useState } from "react";
-import { Menu, X, ChevronDown, ChevronRight, ChevronUp,Dot } from "lucide-react";
-import edubuild3 from "../images1/navbarimage.png";
+import { Menu, X, ChevronDown, ChevronRight, ChevronUp, Dot } from "lucide-react";
+import edubuild3 from "../images1/navbarimage2.png";
 import Logo from "./Logo";
 import Topbar3 from "./Topbar3";
- import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
- const aboutLinks = [
-  {
-    title: "Overview",
-    path: "/about/overview",
-  },
-  {
-    title: "Vision & Mission",
-    path: "/about/vision-mission",
-  },
-  {
-    title: "Leadership",
-    path: "/about/leadership",
-  },
-  {
-    title: "Officials",
-    path: "/about/officials",
-  },
-  {
-    title: "Governance / Administration",
-    path: "/about/governance-administration",
-  },
-  {
-    title: "Governance Framework",
-    path: "/about/governance-framework",
-  },
-  {
-    title: "Recognition / Approvals",
-    path: "/about/recognition-approvals",
-  },
-  {
-    title: "Advisors",
-    path: "/about/advisors",
-  },
-  {
-    title: "Why IPS University",
-    path: "/about/why-ips-university",
-  },
-  {
-    title: "Ordinance",
-    path: "/about/ordinance",
-  },
+const aboutLinks = [
+  { title: "Overview", path: "/about/overview" },
+  { title: "Vision & Mission", path: "/about/vision-mission" },
+  { title: "Leadership", path: "/about/leadership" },
+  { title: "Officials", path: "/about/officials" },
+  { title: "Governance / Administration", path: "/about/governance-administration" },
+  { title: "Governance Framework", path: "/about/governance-framework" },
+  { title: "Recognition / Approvals", path: "/about/recognition-approvals" },
+  { title: "Advisors", path: "/about/advisors" },
+  { title: "Why IPS University", path: "/about/why-ips-university" },
+  { title: "Ordinance", path: "/about/ordinance" },
 ];
- const admissionLinks = [
-  {
-    title: "Apply online & e-payment",
-    path: "/about/overview",
-  },
-  {
-    title: "Important dates",
-    path: "/about/vision-mission",
-  },
-  {
-    title: "Scholarship policy",
-    path: "/about/leadership",
-  },
-  {
-    title: "Downloads Brochure 2026-27",
-    path: "/about/officials",
-  },
-  {
-    title: "Fee refund policy 2026-27",
-    path: "/about/governance-administration",
-  },
-  {
-    title: "Hostel fee",
-    path: "/about/governance-framework",
-  },
-  {
-    title: "Fee structure 2026-27",
-    path: "/about/governance-framework",
-  },
- 
+
+const admissionLinks = [
+  { title: "Apply online & e-payment", path: "/about/overview" },
+  { title: "Important dates", path: "/about/vision-mission" },
+  { title: "Scholarship policy", path: "/about/leadership" },
+  { title: "Downloads Brochure 2026-27", path: "/about/officials" },
+  { title: "Fee refund policy 2026-27", path: "/about/governance-administration" },
+  { title: "Hostel fee", path: "/about/governance-framework" },
+  { title: "Fee structure 2026-27", path: "/about/governance-framework" },
 ];
+
+// ==========================================================================
+// 13 SCHOOLS — per Ordinance No. 2 (IPS University, Gwalior)
+// Each School is now a standalone top-level entry (no 2 schools merged into
+// one Faculty block). A "Certificate" program has been added to every
+// School as requested.
+// ==========================================================================
 const schools = [
   {
     title: "School of Engineering & Technology",
     image:
       "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
-    description: "Building future engineers with innovation and technology.",
+    description:
+      "Empowering future engineers through innovation, research, and industry-oriented technical education.",
     programs: [
       {
         title: "Undergraduate",
         courses: [
-          "B.Tech Computer Science & Engineering",
-          "B.Tech Artificial Intelligence & Data Science",
-          "B.Tech Electronics & Communication",
-          "B.Tech Mechanical Engineering",
-          "B.Tech Civil Engineering",
+          "B.Tech. Computer Science & Engineering",
+          "B.Tech. Artificial Intelligence & Data Science",
+          "B.Tech. Artificial Intelligence & Machine Learning",
+          "B.Tech. Electronics & Communication Engineering",
+          "B.Tech. Electrical Engineering",
+          "B.Tech. Mechanical Engineering",
+          "B.Tech. Civil Engineering",
+          "B.Tech. Automobile Engineering",
         ],
       },
       {
         title: "Postgraduate",
         courses: [
-          "M.Tech Computer Science",
-          "M.Tech Artificial Intelligence",
-          "M.Tech Civil Engineering",
+          "M.Tech. Construction Technology & Management",
+          "M.Tech. Structural Engineering",
+          "M.Tech. Machine Design",
+          "M.Tech. Production & Industrial Engineering",
+          "M.Tech. Computer Science & Engineering (CSE)",
+          "M.Tech. Cyber Security",
+          "M.Tech. Data Science & Analytics",
+          "M.Tech. Artificial Intelligence & Machine Learning",
         ],
-      },
-      {
-        title: "Doctorate",
-        courses: ["Ph.D. in Engineering"],
       },
       {
         title: "Diploma",
-        courses: [
-          "Diploma in Mechanical Engineering",
-          "Diploma in Civil Engineering",
-        ],
+        courses: ["Diploma in Engineering"],
+      },
+      {
+        title: "Doctorate",
+        courses: ["Ph.D. in Engineering & Technology (All Disciplines)"],
       },
       {
         title: "Certificate",
-        courses: ["Web Development", "Artificial Intelligence"],
+        courses: ["Certificate in Full Stack Web Development", "Certificate in AutoCAD & Design"],
       },
     ],
   },
 
-  {
-    title: "School of Pharmacy",
+   {
+    title: "School of Pharmaceutical Sciences",
     image:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80",
-    description: "Advancing healthcare through pharmaceutical education.",
+    description:
+      "Advancing healthcare through excellence in pharmaceutical education, research, and innovation.",
     programs: [
       {
         title: "Undergraduate",
@@ -133,51 +96,152 @@ const schools = [
       },
       {
         title: "Postgraduate",
-        courses: ["Master of Pharmacy (M.Pharm)"],
-      },
-      {
-        title: "Doctorate",
-        courses: ["Ph.D. in Pharmacy"],
+        courses: [
+          "M.Pharm. Pharmaceutics",
+          "M.Pharm. Pharmacology",
+          "M.Pharm. Pharmaceutical Chemistry",
+          "M.Pharm. Pharmacognosy",
+        ],
       },
       {
         title: "Diploma",
         courses: ["Diploma in Pharmacy (D.Pharm)"],
       },
       {
+        title: "Doctorate",
+        courses: ["Ph.D. in Pharmaceutical Sciences (All Disciplines)"],
+      },
+      {
         title: "Certificate",
-        courses: ["Clinical Research"],
+        courses: ["Certificate in Clinical Research", "Certificate in Pharmacovigilance"],
       },
     ],
   },
 
   {
-    title: "School of Management",
+    title: "School of Business Studies",
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
-    description: "Preparing future business leaders and entrepreneurs.",
+    description:
+      "Developing future business leaders and entrepreneurs through quality management education.",
+    programs: [
+      {
+        title: "Undergraduate",
+        courses: ["Bachelor of Business Administration (BBA)"],
+      },
+      {
+        title: "Postgraduate",
+        courses: [
+          "MBA - Dual Specialization",
+          "MBA - Digital Marketing",
+          "MBA - Health Care Management",
+          "MBA - Finance Technology",
+          "MBA - Data Science",
+          "MBA - Pharmaceutical Management",
+          "MBA - Sports Management",
+        ],
+      },
+      {
+        title: "Doctorate",
+        courses: ["Ph.D. in Business Studies"],
+      },
+      {
+        title: "Certificate",
+        courses: ["Certificate in Digital Marketing", "Certificate in Entrepreneurship Development"],
+      },
+    ],
+  },
+
+  {
+    title: "School of Commerce",
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Building commerce and finance professionals through industry-relevant academic programs.",
     programs: [
       {
         title: "Undergraduate",
         courses: [
-          "Bachelor of Business Administration",
-          "Bachelor of Commerce",
+          "Bachelor of Commerce (Plain)",
+          "Bachelor of Commerce (Computer Application)",
         ],
       },
       {
         title: "Postgraduate",
-        courses: ["Master of Business Administration"],
-      },
-      {
-        title: "Doctorate",
-        courses: ["Ph.D. in Management"],
+        courses: ["Master of Commerce (M.Com)"],
       },
       {
         title: "Diploma",
-        courses: ["Diploma in Business Management"],
+        courses: [
+          "Diploma in Business Management",
+          "Diploma in Retail Management",
+          "Diploma in Floor Management",
+          "Diploma in Hospital Management",
+        ],
+      },
+      {
+        title: "Doctorate",
+        courses: ["Ph.D. in Commerce"],
       },
       {
         title: "Certificate",
-        courses: ["Digital Marketing"],
+        courses: ["Certificate in Taxation & GST", "Certificate in Tally & Accounting"],
+      },
+    ],
+  },
+
+  {
+    title: "School of Science",
+    image:
+      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Providing quality education in pure and applied sciences with a strong focus on research and innovation.",
+    programs: [
+      {
+        title: "Undergraduate",
+        courses: [
+          "B.Sc. Physics, Chemistry & Mathematics (PCM)",
+          "B.Sc. Physics, Chemistry & Biology (PCB)",
+          "B.Sc. Computer Science",
+        ],
+      },
+      {
+        title: "Postgraduate",
+        courses: ["M.Sc. Mathematics", "M.Sc. Chemistry", "M.Sc. Physics", "M.Sc. Computer Science"],
+      },
+      {
+        title: "Doctorate",
+        courses: ["Ph.D. in Science (All Disciplines)"],
+      },
+      {
+        title: "Certificate",
+        courses: ["Certificate in Data Analysis using Python", "Certificate in Basic Laboratory Techniques"],
+      },
+    ],
+  },
+
+  {
+    title: "School of Computer Applications",
+    image:
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Shaping future IT professionals through hands-on computer applications education and emerging technologies.",
+    programs: [
+      {
+        title: "Undergraduate",
+        courses: ["Bachelor of Computer Applications (BCA)"],
+      },
+      {
+        title: "Postgraduate",
+        courses: ["Master of Computer Applications (MCA)"],
+      },
+      {
+        title: "Doctorate",
+        courses: ["Ph.D. in Computer Applications"],
+      },
+      {
+        title: "Certificate",
+        courses: ["Certificate in Web Development", "Certificate in Cloud Computing Fundamentals"],
       },
     ],
   },
@@ -186,7 +250,8 @@ const schools = [
     title: "School of Education",
     image:
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
-    description: "Developing skilled educators for tomorrow.",
+    description:
+      "Preparing skilled educators through quality teaching, training, and research in education.",
     programs: [
       {
         title: "Undergraduate",
@@ -201,73 +266,247 @@ const schools = [
         courses: ["Ph.D. in Education"],
       },
       {
+        title: "Certificate",
+        courses: ["Certificate in Early Childhood Education", "Certificate in Educational Technology"],
+      },
+    ],
+  },
+
+  {
+    title: "School of Physical Education",
+    image:
+      "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Training sports and fitness professionals through quality physical education, coaching, and research.",
+    programs: [
+      {
+        title: "Undergraduate",
+        courses: ["Bachelor of Physical Education (B.P.Ed.)"],
+      },
+      {
+        title: "Postgraduate",
+        courses: ["Master of Physical Education (M.P.Ed.)"],
+      },
+      {
         title: "Diploma",
-        courses: ["Diploma in Education"],
+        courses: [
+          "Diploma in Yoga & Naturopathy",
+          "Diploma in Fitness Center Management",
+          "Diploma in Strength Training & Conditioning",
+          "Diploma in Sports Journalism",
+        ],
+      },
+      {
+        title: "Doctorate",
+        courses: ["Ph.D. in Physical Education"],
       },
       {
         title: "Certificate",
-        courses: ["Teacher Training"],
+        courses: ["Certificate in Sports Nutrition", "Certificate in Yoga Instructor Training"],
+      },
+    ],
+  },
+
+  {
+    title: "School of Law",
+    image:
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Building legal professionals through comprehensive education in constitutional, corporate, criminal, and public law.",
+    programs: [
+      {
+        title: "Undergraduate",
+        courses: [
+          "LL.B. (3 Years)",
+          "B.A. LL.B. (Hons.) - 5 Years",
+          "B.Com. LL.B. (Hons.) - 5 Years",
+          "B.Sc. LL.B. (Hons.) - 5 Years",
+        ],
+      },
+      {
+        title: "Postgraduate",
+        courses: [
+          "LL.M. Public Policy",
+          "LL.M. Constitutional & Administrative Law",
+          "LL.M. Criminal & Security Laws",
+          "LL.M. Corporate Law",
+          "LL.M. Industrial & Labour Laws",
+        ],
+      },
+      {
+        title: "Doctorate",
+        courses: ["Ph.D. in Law"],
+      },
+      {
+        title: "Certificate",
+        courses: ["Certificate in Cyber Law", "Certificate in Alternative Dispute Resolution"],
+      },
+    ],
+  },
+
+  {
+    title: "School of Fine Arts",
+    image:
+      "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Encouraging creativity and artistic excellence through professional education in visual and fine arts.",
+    programs: [
+      {
+        title: "Undergraduate",
+        courses: ["Bachelor of Arts (Fine Arts)"],
+      },
+      {
+        title: "Diploma",
+        courses: ["Diploma in Sculpturing", "Diploma in Painting"],
+      },
+      {
+        title: "Certificate",
+        courses: ["Certificate in Photography", "Certificate in Graphic Designing"],
+      },
+    ],
+  },
+
+  {
+    title: "School of Languages",
+    image:
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Promoting linguistic excellence through Indian and foreign language education, research, and cultural studies.",
+    programs: [
+      {
+        title: "Postgraduate",
+        courses: ["M.A. English", "M.A. Hindi", "M.A. Sanskrit"],
+      },
+      {
+        title: "Foreign Languages",
+        courses: ["French", "German", "Spanish"],
+      },
+      {
+        title: "Doctorate",
+        courses: ["Ph.D. in Languages"],
+      },
+      {
+        title: "Certificate",
+        courses: ["Certificate in Spoken English", "Certificate in French Language (Basic)"],
+      },
+    ],
+  },
+
+  {
+    title: "School of Agriculture",
+    image:
+      "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Advancing agricultural education through modern farming practices and scientific research.",
+    programs: [
+      {
+        title: "Undergraduate",
+        courses: ["B.Sc. Agriculture"],
+      },
+      {
+        title: "Postgraduate",
+        courses: ["M.Sc. Agronomy", "M.Sc. Horticulture", "M.Sc. Soil Science"],
+      },
+      {
+        title: "Doctorate",
+        courses: ["Ph.D. in Agriculture"],
+      },
+      {
+        title: "Certificate",
+        courses: ["Certificate in Organic Farming", "Certificate in Precision Agriculture"],
+      },
+    ],
+  },
+
+  {
+    title: "School of Horticulture & Forestry",
+    image:
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Advancing horticultural and forestry education through hands-on training in gardens, nurseries, and forests.",
+    programs: [
+      {
+        title: "Undergraduate",
+        courses: ["B.Sc. Horticulture", "B.Sc. Forestry"],
+      },
+      {
+        title: "Certificate",
+        courses: ["Certificate in Nursery Management", "Certificate in Landscape Gardening"],
       },
     ],
   },
 ];
 
 const RDLinks = [
-  {
-    title: "Innovation Cell",
-    path: "/innovation/innovation-cell",
-  },
-  {
-    title: "Startup / Innovation / Incubation Cell",
-    path: "/innovation/startup-incubation",
-  },
-  {
-    title: "MoUs / Collaborations",
-    path: "/innovation/mous-collaborations",
-  },
-  {
-    title: "Patents",
-    path: "/innovation/patents",
-  },
-  {
-    title: "Govt. Funded Projects",
-    path: "/innovation/grant-funded-projects",
-  },
+  { title: "Innovation Cell", path: "/innovation/innovation-cell" },
+  { title: "Startup / Innovation / Incubation Cell", path: "/innovation/startup-incubation" },
+  { title: "MoUs / Collaborations", path: "/innovation/mous-collaborations" },
+  { title: "Patents", path: "/innovation/patents" },
+  { title: "Govt. Funded Projects", path: "/innovation/grant-funded-projects" },
   {
     title: "Publications",
     children: [
-      {
-        title: "Research Articles",
-        path: "/innovation/publications/research-articles",
-      },
-      {
-        title: "Books / Book Chapters",
-        path: "/innovation/publications/books-book-chapters",
-      },
-      {
-        title: "Published Conference Papers",
-        path: "/innovation/publications/conference-papers",
-      },
-      {
-        title: "Journals",
-        path: "/innovation/publications/journals",
-      },
+      { title: "Research Articles", path: "/innovation/publications/research-articles" },
+      { title: "Books / Book Chapters", path: "/innovation/publications/books-book-chapters" },
+      { title: "Published Conference Papers", path: "/innovation/publications/conference-papers" },
+      { title: "Journals", path: "/innovation/publications/journals" },
     ],
   },
-  {
-    title: "Activities",
-    path: "/innovation/activities",
-  },
+  { title: "Activities", path: "/innovation/activities" },
 ];
 
-const Navbar2 = () => {
+const Navbar5 = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [active, setActive] = useState("schools");
   const [selectedSchool, setSelectedSchool] = useState(schools[0]);
+  const [selectedProgram, setSelectedProgram] = useState(schools[0].programs[0]);
 
-  const [selectedProgram, setSelectedProgram] = useState(
-    schools[0].programs[0],
-  );
+  const studentZoneLinks = [
+    { title: "Student's Council", path: "/students-zone/students-council" },
+    { title: "Duplicate Identity Card Request", path: "/students-zone/duplicate-id-card-request" },
+    { title: "Facilities for Differently-Abled", path: "/students-zone/facilities-for-differently-abled" },
+    { title: "Student Feedback", path: "/students-zone/student-feedback" },
+    {
+      title: "Professional Clubs",
+      children: [
+        { title: "CSI", path: "/students-zone/professional-clubs/csi" },
+        { title: "ISTE", path: "/students-zone/professional-clubs/iste" },
+        { title: "Standard Club", path: "/students-zone/professional-clubs/standard-club" },
+        { title: "Administrative Club", path: "/students-zone/professional-clubs/administrative-club" },
+      ],
+    },
+    {
+      title: "Social Committee",
+      children: [
+        { title: "NSS", path: "/students-zone/social-committee/nss" },
+        { title: "NCC", path: "/students-zone/social-committee/ncc" },
+        { title: "pahal", path: "/students-zone/social-committee/pahal" },
+      ],
+    },
+    { title: "Airboys Club", path: "/students-zone/airboys-club" },
+    {
+      title: "Fest",
+      children: [
+        { title: "Photos", path: "/students-zone/fest/photos" },
+        { title: "Videos", path: "/students-zone/fest/videos" },
+      ],
+    },
+  ];
+
+  const TPCellLinks = [
+    { title: "About T&P Cell", path: "/training-placement/about" },
+    { title: "Leading Recruiters", path: "/training-placement/leading-recruiters" },
+    {
+      title: "Placements",
+      children: [
+        { title: "Placement Statistics", path: "/training-placement/placements/statistics" },
+        { title: "Placement Records", path: "/training-placement/placements/records" },
+      ],
+    },
+    { title: "Prominent Alumni", path: "/training-placement/prominent-alumni" },
+    { title: "Contact Info", path: "/training-placement/contact" },
+    { title: "Industrial Training / Internship", path: "/training-placement/industrial-training-internship" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-[9998]  ">
@@ -295,7 +534,8 @@ const Navbar2 = () => {
                 h-[160px]
                 rounded-full
                 overflow-visible
-                w-[90%]
+                3xl:w-[100%]
+                 w-[90%] 
                 
               "
               style={{
@@ -304,26 +544,9 @@ const Navbar2 = () => {
                 backgroundPosition: "right",
               }}
             >
-              {/* Overlay */}
-              {/* <div className="absolute inset-0 bg-black/40 rounded-full" /> */}
-              <div className="absolute inset-0 bg-black/40 rounded-full backdrop-blur-[1px]"></div>
+              <div className="absolute inset-0 bg-black/40 rounded-full backdrop-blur-[1px] w-full"></div>
 
               <ul className="relative z-10 flex items-center justify-evenly w-full mt-15">
-                {/* HOME */}
-                {/* <li>
-                  <a
-                    href="#"
-                    onClick={() => setActive("home")}
-                    className={`lg:px-4 px-2 py-2 rounded-xl text-sm font-lg transition-all duration-300 ${
-                      active === "home"
-                        ? "bg-white text-[var(--forest)]"
-                        : "text-white hover:bg-white/15"
-                    }`}
-                  >
-                    Home
-                  </a>
-                </li> */}
-
                 {/* ABOUT */}
                 <li className="relative group">
                   <a
@@ -339,39 +562,36 @@ const Navbar2 = () => {
                     <ChevronDown size={14} />
                   </a>
 
-                  {/* DROPDOWN */}
-                 
-
-<div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[250px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-  {aboutLinks.map((item) => (
-    <Link
-      key={item.path}
-      to={item.path}
-      className="
-        flex items-center
-        gap-3
-        px-4
-        py-1
-        rounded-xl
-        text-[14px]
-        font-medium
-        text-gray-700
-        hover:bg-[var(--forest)]
-        hover:text-white
-        transition-all
-        duration-200
-
-      "
-    >
-      <Dot size={8} strokeWidth={20} />
-      {item.title}
-    </Link>
-  ))}
-</div>
+                  <div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[250px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    {aboutLinks.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className="
+                          flex items-center
+                          gap-3
+                          px-4
+                          py-1
+                          
+                          text-[14px]
+                          font-medium
+                          text-gray-700
+                          hover:bg-[var(--forest)]
+                          hover:text-white
+                          transition-all
+                          duration-200
+                          border-b border-[var(--forest)]/80 last:border-b-0
+                        "
+                      >
+                        
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
                 </li>
 
                 {/* ADMISSIONS */}
-                 <li className="relative group">
+                <li className="relative group">
                   <a
                     href="#admissions"
                     onClick={() => setActive("admissions")}
@@ -385,47 +605,35 @@ const Navbar2 = () => {
                     <ChevronDown size={14} />
                   </a>
 
-
-       {/* r&d            */}
-
-      
-
-                  {/* DROPDOWN */}
-                 
-
-<div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-  {admissionLinks.map((item) => (
-    <Link
-      key={item.path}
-      to={item.path}
-      className="
-        flex items-center
-        gap-3
-        px-4
-        py-1
-        rounded-xl
-        text-[14px]
-        font-medium
-        text-gray-700
-        hover:bg-[var(--forest)]
-        hover:text-white
-        transition-all
-        duration-200
-
-      "
-    >
-      <Dot size={8} strokeWidth={20} />
-      {item.title}
-    </Link>
-  ))}
-</div>
+                  <div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    {admissionLinks.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className="
+                          flex items-center
+                          gap-3
+                          px-4
+                          py-1
+                          border-b border-[var(--forest)]/80 last:border-b-0
+                          text-[14px]
+                          font-medium
+                          text-gray-700
+                          hover:bg-[var(--forest)]
+                          hover:text-white
+                          transition-all
+                          duration-200
+                        "
+                      >
+                        
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
                 </li>
 
-
-
                 {/* R&D */}
-
-                 <li className="relative group">
+                <li className="relative group">
                   <a
                     href="#about"
                     onClick={() => setActive("R&D")}
@@ -439,57 +647,47 @@ const Navbar2 = () => {
                     <ChevronDown size={14} />
                   </a>
 
-                  {/* DROPDOWN */}
-                 
+                  <div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    {RDLinks.map((item) =>
+                      item.children ? (
+                        <div key={item.title} className="group/sub relative">
+                          <div className="flex items-center justify-between px-4 py-1  hover:bg-[var(--forest)] hover:text-white cursor-pointer text-[14px]  border-b border-[var(--forest)]/80 last:border-b-0">
+                            <span className="flex items-center gap-3 ">
+                             
+                              {item.title}
+                            </span>
+                            <ChevronRight size={16} />
+                          </div>
 
-<div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-  {RDLinks.map((item) =>
-  item.children ? (
-    <div key={item.title} className="group/sub relative">
-      <div className="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-[var(--forest)] hover:text-white cursor-pointer">
-        
-       
-        <span className="flex items-center gap-3"> <Dot size={8} strokeWidth={20} />{item.title}</span>
-        <ChevronRight size={16} />
-      </div>
-
-      {/* Nested Dropdown */}
-      <div className="absolute left-full top-0 ml-2 w-64 bg-white rounded-2xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all p-2">
-        {item.children.map((child) => (
-          <Link
-            key={child.path}
-            to={child.path}
-            className="flex items-center gap-3 px-4 py-1 text-[14px] rounded-xl hover:bg-[var(--forest)] hover:text-white"
-          >  
-          <Dot size={8} strokeWidth={20} />
-      
-            {child.title}
-          </Link>
-        ))}
-      </div>
-    </div>
-  ) : (
-    <Link
-      key={item.path}
-      to={item.path}
-      className="flex items-center gap-3 px-4 py-1 text-[14px] rounded-xl hover:bg-[var(--forest)] hover:text-white"
-    >
-       <Dot size={8} strokeWidth={20} />
-      {item.title}
-    </Link>
-  )
-)}
-</div>
+                          <div className="absolute left-full top-0 ml-2 w-64 bg-white rounded-2xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all p-2">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.path}
+                                to={child.path}
+                                className="flex items-center gap-3 px-4 py-1 text-[14px]  border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white"
+                              >
+                                
+                                {child.title}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className="flex items-center gap-3 px-4 py-1 text-[14px] border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white"
+                        >
+                          
+                          {item.title}
+                        </Link>
+                      )
+                    )}
+                  </div>
                 </li>
 
-                {/* Schools */}
-                {/* =========================
-        SCHOOLS MENU
-========================= */}
-
+                {/* ========================= SCHOOLS MENU ========================= */}
                 <li className="relative group">
-                  {/* Menu Button */}
-
                   <a
                     href="#academics"
                     onClick={() => setActive("academics")}
@@ -503,45 +701,37 @@ const Navbar2 = () => {
                     <ChevronDown size={15} className="ml-1" />
                   </a>
 
-                  {/* Mega Menu */}
-
                   <div
                     className="
-      absolute
-      top-full
-      left-50
-      -translate-x-1/2
-      mt-5
-      w-[1100px]
-      max-h-[80vh]
-      bg-white
-      rounded-[30px]
-      shadow-[0_25px_70px_rgba(0,0,0,.15)]
-      border
-      border-gray-100
-      opacity-0
-      invisible
-      translate-y-4
-      group-hover:opacity-100
-      group-hover:visible
-      group-hover:translate-y-0
-      transition-all
-      duration-300
-      overflow-hidden
-      z-50
-    "
+                      absolute
+                      top-full
+                      left-20
+                      -translate-x-1/2
+                      mt-5
+                      w-[1100px]
+                      max-h-[80vh]
+                      bg-white
+                      rounded-[20px]
+                      shadow-[0_25px_70px_rgba(0,0,0,.15)]
+                      border
+                      border-gray-100
+                      opacity-0
+                      invisible
+                      translate-y-4
+                      group-hover:opacity-100
+                      group-hover:visible
+                      group-hover:translate-y-0
+                      transition-all
+                      duration-300
+                      overflow-y-auto max-h-[450px]
+                      z-50
+                    "
                   >
-                    {/* Main Grid */}
-
                     <div className="grid grid-cols-[280px_1fr_320px] min-h-[520px]">
-                      {/* =========================
-        START PART 2
-   LEFT COLUMN
-========================= */}
-
-                      <div className="border-r border-gray-100 bg-gray-50/70 p-6">
+                      {/* LEFT COLUMN — all 13 schools, scrollable */}
+                      <div className="border-r border-gray-100 bg-gray-50/70 p-6 overflow-y-auto max-h-[520px]">
                         <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
-                          academic Schools
+                          Academic Schools
                         </h2>
 
                         <div className="space-y-2">
@@ -553,29 +743,27 @@ const Navbar2 = () => {
                                 setSelectedProgram(school.programs[0]);
                               }}
                               className={`
-          w-full
-          flex
-          items-center
-          justify-between
-          text-left
-          rounded-2xl
-          px-4
-          py-3
-          transition-all
-          duration-300
-
-          ${
-            selectedSchool.title === school.title
-              ? "bg-[var(--forest)] text-white shadow-lg"
-              : "bg-white text-gray-700 hover:bg-green-50 hover:shadow-md"
-          }
-        `}
+                                w-full
+                                flex
+                                items-center
+                                justify-between
+                                text-left
+                                rounded-2xl
+                                px-4
+                                py-3
+                                transition-all
+                                duration-300
+                                ${
+                                  selectedSchool.title === school.title
+                                    ? "bg-[var(--forest)] text-white shadow-lg"
+                                    : "bg-white text-gray-700 hover:bg-green-50 hover:shadow-md"
+                                }
+                              `}
                             >
                               <div className="flex flex-col">
                                 <span className="font-semibold text-[14px]">
                                   {school.title}
                                 </span>
-
                                 <span
                                   className={`text-xs mt-1 ${
                                     selectedSchool.title === school.title
@@ -600,23 +788,11 @@ const Navbar2 = () => {
                         </div>
                       </div>
 
-                      {/* =========================
-         END PART 2
-========================= */}
-
-                      {/* =========================
-        START PART 3
-        CENTER COLUMN
-========================= */}
-
-                      <div className="p-6 flex flex-col">
-                        {/* Heading */}
-
+                      {/* CENTER COLUMN — Programs + Courses */}
+                      <div className="p-6 flex flex-col overflow-y-auto max-h-[520px]">
                         <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
                           Programs
                         </h2>
-
-                        {/* Program Tabs */}
 
                         <div className="flex flex-wrap gap-2 mb-6">
                           {selectedSchool.programs.map((program) => (
@@ -624,29 +800,26 @@ const Navbar2 = () => {
                               key={program.title}
                               onMouseEnter={() => setSelectedProgram(program)}
                               className={`
-          px-4
-          py-2
-          rounded-xl
-          text-sm
-          font-medium
-          transition-all
-          duration-300
-
-          ${
-            selectedProgram.title === program.title
-              ? "bg-[var(--forest)] text-white shadow-md"
-              : "bg-gray-100 text-gray-700 hover:bg-green-50"
-          }
-        `}
+                                px-4
+                                py-2
+                                rounded-xl
+                                text-sm
+                                font-medium
+                                transition-all
+                                duration-300
+                                ${
+                                  selectedProgram.title === program.title
+                                    ? "bg-[var(--forest)] text-white shadow-md"
+                                    : "bg-gray-100 text-gray-700 hover:bg-green-50"
+                                }
+                              `}
                             >
                               {program.title}
                             </button>
                           ))}
                         </div>
 
-                        {/* Courses */}
-
-                        <div className="flex-1">
+                        <div className="flex-1 overflow-y-auto max-h-[520px]">
                           <h3 className="text-[15px] font-semibold text-gray-800 mb-4">
                             Courses
                           </h3>
@@ -657,35 +830,35 @@ const Navbar2 = () => {
                                 key={course}
                                 href="#"
                                 className="
-            group
-            flex
-            items-center
-            justify-between
-            rounded-xl
-            border
-            border-gray-200
-            bg-white
-            px-4
-            py-3
-            text-sm
-            text-gray-700
-            transition-all
-            duration-300
-            hover:border-[var(--forest)]
-            hover:bg-green-50
-          "
+                                  group
+                                  flex
+                                  items-center
+                                  justify-between
+                                  rounded-xl
+                                  border
+                                  border-gray-200
+                                  bg-white
+                                  px-4
+                                  py-3
+                                  text-sm
+                                  text-gray-700
+                                  transition-all
+                                  duration-300
+                                  hover:border-[var(--forest)]
+                                  hover:bg-green-50
+                                "
                               >
                                 <span>{course}</span>
 
                                 <ChevronRight
                                   size={16}
                                   className="
-              text-gray-400
-              transition-transform
-              duration-300
-              group-hover:translate-x-1
-              group-hover:text-[var(--forest)]
-            "
+                                    text-gray-400
+                                    transition-transform
+                                    duration-300
+                                    group-hover:translate-x-1
+                                    group-hover:text-[var(--forest)]
+                                  "
                                 />
                               </a>
                             ))}
@@ -693,46 +866,29 @@ const Navbar2 = () => {
                         </div>
                       </div>
 
-                      {/* =========================
-         END PART 3
-========================= */}
-
-                      {/* =========================
-        START PART 4
-        RIGHT COLUMN
-========================= */}
-
-                      <div className="border-l border-gray-100 bg-gray-50/60 p-6 flex flex-col">
-                        {/* School Image */}
-
-                        <div className="overflow-hidden rounded-3xl">
+                      {/* RIGHT COLUMN — school summary */}
+                      <div className="border-l border-gray-100 bg-gray-50/60 p-6 flex flex-col ">
+                        <div className="rounded-3xl">
                           <img
                             src={selectedSchool.image}
                             alt={selectedSchool.title}
                             className="w-full h-[220px] object-cover transition-transform duration-500 hover:scale-105"
                           />
                         </div>
-
-                        {/* School Title */}
-
+{/*                       
                         <h2 className="mt-6 text-2xl font-bold text-[var(--forest)] leading-snug">
                           {selectedSchool.title}
                         </h2>
 
-                        {/* Description */}
-
-                        {/* <p className="mt-3 text-sm leading-7 text-gray-600">
-    {selectedSchool.description}
-  </p>  */}
-
-                        {/* Stats */}
+                        <p className="mt-3 text-sm leading-7 text-gray-600">
+                          {selectedSchool.description}
+                        </p> */}
 
                         <div className="grid grid-cols-2 gap-4 mt-3">
                           <div className="rounded-2xl bg-white border border-gray-200 p-4">
                             <p className="text-xs uppercase tracking-wide text-gray-500">
                               Programs
                             </p>
-
                             <h3 className="mt-2 text-2xl font-bold text-[var(--forest)]">
                               {selectedSchool.programs.length}
                             </h3>
@@ -742,31 +898,28 @@ const Navbar2 = () => {
                             <p className="text-xs uppercase tracking-wide text-gray-500">
                               Courses
                             </p>
-
                             <h3 className="mt-2 text-2xl font-bold text-[var(--forest)]">
                               {selectedProgram.courses.length}
                             </h3>
                           </div>
                         </div>
 
-                        {/* Explore Button */}
-
                         <a
                           href="http://localhost:5173/ipsctm"
                           className="
-      mt-auto
-      w-full
-      rounded-2xl
-      bg-[var(--forest)]
-      py-3
-      text-center
-      text-white
-      font-semibold
-      transition-all
-      duration-300
-      hover:shadow-xl
-      hover:scale-[1.02]
-    "
+                            mt-auto
+                            w-full
+                            rounded-2xl
+                            bg-[var(--forest)]
+                            py-3
+                            text-center
+                            text-white
+                            font-semibold
+                            transition-all
+                            duration-300
+                            hover:shadow-xl
+                            hover:scale-[1.02]
+                          "
                         >
                           Explore School
                         </a>
@@ -774,69 +927,142 @@ const Navbar2 = () => {
                     </div>
                   </div>
                 </li>
+                 
+                 {/* T&P Cell */}
+                <li className="relative group">
+                  <a
+                    href="#training-placement"
+                    onClick={() => setActive("T&P Cell")}
+                    className={`flex items-center lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                      active === "T&P Cell"
+                        ? "bg-white text-[var(--forest)]"
+                        : "text-white hover:bg-white/15"
+                    }`}
+                  >
+                    T&P Cell
+                    <ChevronDown size={14} />
+                  </a>
 
+                  <div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    {TPCellLinks.map((item) =>
+                      item.children ? (
+                        <div key={item.title} className="group/sub relative">
+                          <div className="flex items-center justify-between px-4 py-1  border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white cursor-pointer text-[14px]">
+                            <span className="flex items-center gap-3">
+                              
+                              {item.title}
+                            </span>
+                            <ChevronRight size={16} />
+                          </div>
 
+                          <div className="absolute left-full top-0 ml-2 w-[70%] bg-white rounded-2xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all p-2">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.path}
+                                to={child.path}
+                                className="flex items-center gap-3 px-4 py-1 text-[14px] border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white"
+                              >
+                                
+                                {child.title}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className="flex items-center gap-3 px-4 py-1 text-[14px] border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white"
+                        >
+                        
+                          {item.title}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                </li>
 
+                {/* Student Zone */}
+                <li className="relative group">
+                  <a
+                    href="#students-zone"
+                    onClick={() => setActive("Student Zone")}
+                    className={`flex items-center lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                      active === "Student Zone"
+                        ? "bg-white text-[var(--forest)]"
+                        : "text-white hover:bg-white/15"
+                    }`}
+                  >
+                    Student Zone
+                    <ChevronDown size={14} />
+                  </a>
 
+                  <div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[320px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    {studentZoneLinks.map((item) =>
+                      item.children ? (
+                        <div key={item.title} className="group/sub relative">
+                          <div className="flex items-center justify-between px-4 py-1 border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white cursor-pointer text-[14px]">
+                            <span className="flex items-center gap-3">
+                              
+                              {item.title}
+                            </span>
+                            <ChevronRight size={16} />
+                          </div>
 
-
-
-
-
-
+                          <div className="absolute right-full top-0 ml-2 w-[75%] bg-white rounded-2xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all p-2">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.path}
+                                to={child.path}
+                                className="flex items-center gap-3 px-4 py-1 text-[14px] border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white"
+                              >
+                                
+                                {child.title}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className="flex items-center gap-3 px-4 py-1 text-[14px] border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white"
+                        >
+                          
+                          {item.title}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                </li>
 
                 
-
-                {/* LINKS */}
-                {["Admissions", "Research", "Student Zone"].map((item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="
-                        lg:px-4 px-2
-                        py-2
-                        rounded-xl
-                        text-sm
-                        font-medium
-                        text-white
-                        hover:bg-white/15
-                        transition-all
-                        duration-300
-                      "
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
               </ul>
             </div>
           </div>
 
           {/* ENQUIRY BUTTON */}
-
           <a
             href="#"
             className="
-                lg:h-[42px]
-                h-[35px]
-                
-                rounded-2xl
-                text-white
-                lg:text-sm
-                text-[10px]
-                font-semibold
-                md:flex
-                items-center
-                justify-center
-                transition-all
-                duration-300
-                hover:scale-105
-                mt-20  
-                w-30 lg:w-40
-                bg-[var(--forest)]
-                hidden 
-                
-              "
+              lg:h-[42px]
+              h-[35px]
+              rounded-2xl
+              text-white
+              lg:text-sm
+              text-[10px]
+              font-semibold
+              md:flex
+              items-center
+              justify-center
+              transition-all
+              duration-300
+              hover:scale-105
+              mt-20  
+              w-30 lg:w-40
+              bg-[var(--forest)]
+              hidden 
+            "
           >
             Enquiry Now
           </a>
@@ -900,8 +1126,6 @@ const Navbar2 = () => {
                 items-center
                 justify-center
                 bg-[var(--forest)]
-                
-                
               "
             >
               Enquiry Now
@@ -913,4 +1137,4 @@ const Navbar2 = () => {
   );
 };
 
-export default Navbar2;
+export default Navbar5;

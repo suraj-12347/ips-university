@@ -143,125 +143,12 @@ const slidesData = [
     ],
   },
 
-  {
-    id: 5,
-    title: "Library",
-    coverImage:
-      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop",
+ 
 
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
+ 
+  
 
-  {
-    id: 6,
-    title: "Labs",
-    coverImage:
-      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop",
 
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1516321310764-8d5d3c2c4d7f?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1581093458791-9d15482442f6?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
-
-  {
-    id: 7,
-    title: "Workshops",
-    coverImage:
-      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
-
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
-
-  {
-    id: 8,
-    title: "Cultural Fest",
-    coverImage:
-      "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop",
-
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1521334884684-d80222895322?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
 
   // SAME PATTERN FOLLOW KARKE
   // id: 9 se id: 24 tak aur add kar sakte ho
@@ -296,7 +183,7 @@ const nextRef = useRef(null);
 
   return (
   <>
-    <section className="w-full  py-5 pb-10 mt-20 relative overflow-hidden rounded-3xl bg-transparent"
+    <section className="w-full  py-5 pb-10 mt-20 relative overflow-hidden rounded-3xl bg-transparent flex justify-center items-center flex-col gap-10"
     style={{
               backgroundImage: `url(${pharma})`,
               backgroundSize: "cover",
@@ -341,7 +228,7 @@ const nextRef = useRef(null);
             Campus Life
           </p>
 
-          <h2 className="text-3xl text-[var(--forest)] md:text-5xl font-bold mt-2">
+          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
             Explore IPS Moments
           </h2>
         </div>
@@ -388,7 +275,7 @@ const nextRef = useRef(null);
     <SwiperSlide key={slide.id}>
       
       {/* Desktop */}
-      <div className="hidden xl:flex gap-4 items-stretch w-full px-6 z-40">
+      <div className="hidden xl:flex justify-center gap-4 items-stretch w-full px-6 z-40">
 
         {/* Big Square */}
         <div

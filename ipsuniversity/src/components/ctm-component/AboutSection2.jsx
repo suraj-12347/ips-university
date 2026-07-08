@@ -54,7 +54,7 @@ const AboutSection = () => {
   </div>
 
   <h2 className="text-4xl font-bold text-[#31573a] font-serif leading-tight mb-4">
-    School of Engineering
+    School of Engineering & Technology
   </h2>
 
   {/* Timeline */}
@@ -85,7 +85,7 @@ const AboutSection = () => {
 
    
   </div>
-   <button className="bg-[#31573a] text-white py-2 px-4 rounded-md hover:bg-[#214826] cursor-pointer w-1/4 ml-10 mt-2 transition-colors">
+   <button className="bg-[#31573a] text-white py-2 px-4 rounded-md hover:bg-[#214826] cursor-pointer w-1/4 ml-10 mt-2 transition-colors w-35">
       Read More <ArrowRight size={16} className="inline-block ml-1"/> 
     </button>
 
