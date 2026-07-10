@@ -136,9 +136,9 @@ const [expandedReview, setExpandedReview] = useState(null);
      Student Testimonials
   </p>
 
-  <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
-     Inspiring minds and enriching life
-  </h2>
+  <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
+     Inspiring Minds and Enriching Life
+  </h1>
 </div>
 
       {/* cards */}

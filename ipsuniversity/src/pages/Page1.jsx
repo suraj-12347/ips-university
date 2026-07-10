@@ -4,10 +4,10 @@ import Herosec from '../components/Herosec'
 import ChatBot from '../components/ChatBot'
 import About3 from '../components/About4'
 import ThemeSwitcher from '../components/ThemeSwitcher'
-import StatsBar from '../components/StatusBar'
+import StatsBar from '../components/StatusBar2'
 import AboutUs from '../components/AboutUs'
 import SchoolsSection from '../components/SchoolSecction2'
-import LatestBanner from '../components/LatestBanner'
+import LatestBanner from '../components/LatestBanner2'
 import NoticeSection2 from '../components/NoticeSection2'
 import EnquiryPopup2 from '../components/EnquiryPopup2'
 import GalleryCarousel2 from '../components/GalleryCrousel'
@@ -21,6 +21,7 @@ import Topbar3 from '../components/Topbar3'
 import pharma from "../images1/pharmaflowertree4.png";
 
 import About from '../components/About'
+import ApprovalRecognition from '../components/ApprovalRecognition'
 
 const Page2 = () => {
   return (
@@ -66,7 +67,9 @@ const Page2 = () => {
 
     <EnquiryPopup2/>
 
-    
+
+
+    <ApprovalRecognition/>
     <Footer/>
 
     

@@ -53,7 +53,11 @@ const AboutSection = () => {
     <div className="w-10 h-[2px] bg-[#d6b16c]" />
   </div>
 
-  <h2 className="text-4xl font-bold text-[#31573a] font-serif leading-tight mb-4">
+  <h2 className="text-3xl font-bold text-[#31573a] font-serif leading-tight mb-4"
+  
+  style={{
+      fontFamily:"Fraunces, serif"
+    }}>
     School of Engineering & Technology
   </h2>
 

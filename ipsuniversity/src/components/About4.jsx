@@ -37,7 +37,7 @@ const features = [
   {
     icon: Users,
     title: "100%",
-    subtitle: "Placement Support",
+    subtitle: "Placement assitence",
   },
 ];
 
@@ -112,7 +112,7 @@ const About3 = () => {
             {/* LEFT */}
 
             <div className="w-[50%] flex items-start justify-start   mr-10 h-full" >
-              <div className="   max-w-[720px]">
+              <div className="   max-w-[720px] h-full">
                 {/* About */}
 
                <div className="relative flex flex-col py-4 pl-5 pb-10 h-full">
@@ -144,245 +144,131 @@ const About3 = () => {
   />
 
   {/* Content */}
-  <div className="relative z-10 w-[80%]">
-    <div className="flex items-center gap-2 text-[#8BAE45] font-semibold tracking-[3px] uppercase ">
-
-                  <Leaf size={17} />
-
-
-
-                  <span>{t.about}</span>
-
-                </div>
-
-
-
-                {/* Heading */}
-
-
-
-                <h1
-
-                  className="
-
-                  mt-5
-
-                  text-2xl
-
-                  lg:text-4xl
-
-                  leading-6
-
-                  font-serif
-
-                  font-bold
-
-                  text-[var(--forest)]
-
-                "
-
-                >
-
-                  {t.title}
-
-                </h1>
-
-
-
-                {/* Subtitle */}
-
-
-
-                <p
-
-                  className="
-
-                  mt-3
-
-
-                  text-xl
-
-                  text-[#A47B2A]
-
-                  font-light
-
-                "
-
-                >
-
-                  {t.subtitle}
-
-                </p>
-
-
-
-                {/* Paragraph */}
-
-
-
-                <p
-
-                  className="
-
-                  mt-2
-
-                  text-[15px]
-
-                  leading-6
-
-                  text-gray-700
-
-                "
-
-                >
-
-                  {t.para}
-
-                </p>
-
-
-
-                {/* Button */}
-
-
-
-                <button
-
-                  className="
-
-                  mt-4
-
-                 px-2
-
-                  py-2
-
-                  cursor-pointer
-
-                  rounded-full
-
-                  bg-[var(--forest)]
-
-                 
-
-                  text-white
-
-                  flex
-
-                  items-center
-
-                  gap-3
-
-                  shadow-lg
-                  group
-
-                "
-
-                >
-
-                  Know More
-
-                  <span
-    className="
-      w-7
-      h-7
-      rounded-full
-      bg-white
-      flex
-      items-center
-      justify-center
-      transition-transform
-      duration-300
-      group-hover:translate-x-1
-    "
-  >
-    <ArrowRight
-      size={18}
-      className="text-[var(--forest)]"
-    />
-  </span>
-</button>
-
-               
+ {/* ================= LEFT CONTENT ================= */}
+
+<div className="relative z-10 w-full lg:w-[80%]">
+  <div className="flex items-center gap-2 text-[#8BAE45] text-xs sm:text-sm font-semibold uppercase tracking-[2px]">
+    <Leaf size={14} />
+    <span>{t.about}</span>
   </div>
 
+  <h1
+    className="
+      mt-3
+      text-2xl
+      sm:text-3xl
+      lg:text-4xl
+      font-serif
+      font-bold
+      leading-tight
+      text-[var(--forest)]
+    "
+  >
+    {t.title}
+  </h1>
 
+  <p
+    className="
+      mt-2
+      text-sm
+      sm:text-base
+      lg:text-lg
+      text-[#A47B2A]
+    "
+  >
+    {t.subtitle}
+  </p>
 
+  <p
+    className="
+      mt-3
+      text-[13px]
+      sm:text-[14px]
+      leading-6
+      text-gray-700
+    "
+  >
+    {t.para}
+  </p>
+
+  <button
+    className="
+      mt-5
+      px-4
+      py-2.5
+      rounded-full
+      bg-[var(--forest)]
+      text-white
+      flex
+      items-center
+      gap-2
+      text-sm
+      group
+    "
+  >
+    Know More
+
+    <span className="w-7 h-7 rounded-full bg-white flex items-center justify-center group-hover:translate-x-1 transition">
+      <ArrowRight size={16} className="text-[var(--forest)]" />
+    </span>
+  </button>
+</div>
+
+{/* ================= FEATURES ================= */}
 <div
-                  className="
-  mt-10
-  
-  
-  
-  rounded-[24px]
-  overflow-hidden
-  backdrop-blur-2xl
-  bg-transparent
-  backdrop-blur-md
-  border-2
-  border-white/70
-  
-  py-3  
-"
-                >
-                  <div className="grid grid-cols-4 w-full">
-                    {features.map((item, index) => {
-                      const Icon = item.icon;
+  className="
+    mt-8
+    rounded-2xl
+    border
+    border-white/70
+    bg-white/10
+    backdrop-blur-md
+    overflow-hidden
+  "
+>
+  <div className="grid grid-cols-2 lg:grid-cols-4">
 
-                      return (
-                        <div
-                          key={index}
-                          className="
-          flex
-          items-center
-          gap-2
-         
-          border-r
-          last:border-r-0
-          border-gray-200
-          hover:bg-white/25
-          duration-300
-        "
-                        >
-                          <div
-                            className="
-            h-14
-            w-14
-            
-            bg-transparent
+    {features.map((item, index) => {
+      const Icon = item.icon;
+
+      return (
+        <div
+          key={index}
+          className="
             flex
+            flex-col
             items-center
-            justify-center
-            
+            text-center
+            p-4
+
+            lg:flex-row
+            lg:text-left
+            lg:items-center
+
+            border
+            border-gray-100
           "
-                          >
-                            <Icon className="text-[#234D31]" size={32} />
-                          </div>
+        >
+          <Icon
+            size={28}
+            className="text-[var(--forest)] mb-2 lg:mb-0 lg:mr-3 shrink-0"
+          />
 
-                          <div>
-                            <h3
-                              className="
-              text-[16px]
-              font-bold
-              text-[#163A24]
-            "
-                            >
-                              {item.title}
-                            </h3>
+          <div>
+            <h3 className="text-sm font-semibold text-[var(--forest)]">
+              {item.title}
+            </h3>
 
-                            <p
-                              className="
-              text-[12px]
-              text-gray-600
-            "
-                            >
-                              {item.subtitle}
-                            </p>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
+            <p className="text-[11px] text-gray-700 mt-1 leading-4">
+              {item.subtitle}
+            </p>
+          </div>
+        </div>
+      );
+    })}
+
+  </div>
+</div>
 </div>
 
                 {/* Glass Feature Strip */}
@@ -393,16 +279,16 @@ const About3 = () => {
 
             {/* RIGHT */}
 
-            <div className="flex-1 flex justify-end items-center pr-4">
+            {/* <div className="flex-1 flex justify-end items-center pr-4">
               <div className="relative w-[75%] h-[90%] overflow-hidden rounded-[30px]">
-                {/* Chairman Image */}
+              
                 <img
                   src={chairman}
                   alt="Chairperson"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
 
-                {/* Main Gradient */}
+               
                 <div
                   className="
       absolute inset-0
@@ -411,25 +297,25 @@ const About3 = () => {
     "
                 />
 
-                {/* Right Dark Shade */}
+              
                 <div
                   className="
     absolute inset-0
     bg-[linear-gradient(45deg,rgba(23,54,33,0.75)_0%,rgba(23,54,33,0.35)_35%,rgba(23,54,33,0)_70%)]
   "
                 />
-                {/* <div
+                <div
                   className="
       absolute inset-0
       bg-gradient-to-r
       from-[#234D31] via-[#234D31]/45 to-transparent
     "
-                /> */}
+                />
 
-                {/* Content */}
+             
                 <div className="absolute inset-0 flex flex-col justify-end p-8">
-                  {/* Quote */}
-                  {/* <div>
+                  
+                  <div>
                     <div className="mt-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
                       <span className="text-2xl text-[#E3C16F]">❝</span>
                     </div>
@@ -438,11 +324,11 @@ const About3 = () => {
                       Education is not just about knowledge, it's about
                       empowering lives to create a better tomorrow.
                     </p>
-                  </div> */}
+                  </div>
 
-                  {/* Bottom */}
+                 
                   <div className="relative">
-                    {/* Gold Line */}
+                  
                     <div className="w-12 h-[2px] bg-[#D8C07A] mb-5"></div>
 
                     <h3 className="text-white text-[30px] font-serif font-semibold">
@@ -453,11 +339,11 @@ const About3 = () => {
                       Chairperson
                     </p>
 
-                    {/* Decorative Building */}
+                   
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

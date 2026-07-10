@@ -43,9 +43,79 @@ const RecruitersSection = () => {
   return (
     <section className="py-20 md:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 text-[var(--forest)]">
-          Our Recruiters
-        </h2>
+        <div className="text-center mb-12 md:mb-16">
+
+  <p
+    className="
+      uppercase
+      tracking-[4px]
+      text-sm
+      font-semibold
+      text-[var(--grass)]
+      mb-3
+    "
+    style={{
+      fontFamily:"Outfit, sans-serif"
+    }}
+  >
+    Industry Connect
+  </p>
+
+
+  <h2
+    className="
+      text-4xl
+      md:text-5xl
+      lg:text-6xl
+      text-[var(--forest)]
+      relative
+      inline-block
+    "
+    style={{
+      fontFamily:"Fraunces, serif"
+    }}
+  >
+    Our Recruiters
+
+
+    <span
+      className="
+        absolute
+        left-1/2
+        -bottom-3
+        -translate-x-1/2
+        w-24
+        h-[3px]
+        bg-[var(--grass)]
+        rounded-full
+      "
+    />
+
+  </h2>
+
+
+
+  <p
+    className="
+      max-w-3xl
+      mx-auto
+      mt-8
+      text-gray-600
+      leading-8
+      text-base
+      md:text-lg
+    "
+    style={{
+      fontFamily:"Outfit, sans-serif"
+    }}
+  >
+    Collaborating with leading organizations and industry partners
+    to create valuable career opportunities and professional growth
+    pathways for our students.
+  </p>
+
+
+</div>
 
         <div className="relative overflow-hidden">
           {/* Left Fade */}

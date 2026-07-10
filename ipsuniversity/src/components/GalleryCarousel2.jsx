@@ -183,7 +183,7 @@ const nextRef = useRef(null);
 
   return (
   <>
-    <section className="w-full  py-5 pb-10 mt-20 relative overflow-hidden rounded-3xl bg-transparent flex justify-center items-center flex-col gap-10"
+    <section className="w-full  py-5 pb-10 mt-20 relative overflow-hidden rounded-3xl bg-transparent"
     style={{
               backgroundImage: `url(${pharma})`,
               backgroundSize: "cover",

@@ -6,7 +6,7 @@ const statsData = [
   { number: 20, suffix: "+", label: "Years of Experience" },
   { number: 15000, suffix: "+", label: "Alumni" },
   { number: 80, suffix: "+", label: "Recruiters" },
-  { number: 100, suffix: "%", label: "Placement Support" },
+  { number: 100, suffix: "%", label: "Placement Assistence" },
   { number: 15, suffix: " LPA", label: "Highest Package" },
 ];
 

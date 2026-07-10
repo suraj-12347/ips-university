@@ -80,7 +80,7 @@ const About3 = () => {
       feature1: "Campus de 80 Acres",
       feature2: "9 Collèges",
       feature3: "Approuvé par UGC",
-      feature4: "100% Placement Support",
+      feature4: "100% Placement Assistence",
     },
   };
 
@@ -214,7 +214,7 @@ const About3 = () => {
 
       <div>
         <h3 className="text-md font-bold text-[var(--forest)] leading-none">
-          100% Placement Support
+          100% Placement Assistence
         </h3>
 
         

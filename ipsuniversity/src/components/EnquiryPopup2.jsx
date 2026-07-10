@@ -118,10 +118,8 @@ const EnquiryPopup2 = () => {
                 IPS University
               </p>
 
-              <h2 className="text-4xl font-extrabold text-[var(--forest)] leading-tight">
-                {t.admission}
-                <br />
-                {t.enquiry}
+              <h2 className="text-3xl font-extrabold text-[var(--forest)] leading-tight">
+                Admission Enquiry
               </h2>
 
               <p className="text-gray-700 mt-5 leading-7 text-sm">
@@ -131,7 +129,7 @@ const EnquiryPopup2 = () => {
               <div className="mt-6 flex flex-col gap-3 text-sm">
                 <div className="flex items-center gap-3 text-gray-700">
                   <span className="w-2 h-2 rounded-full bg-[var(--forest)]"></span>
-                  <p>{t.placementAssist}</p>
+                  <p>100% Placement assistence</p>
                 </div>
 
                 <div className="flex items-center gap-3 text-gray-700">
@@ -141,7 +139,7 @@ const EnquiryPopup2 = () => {
 
                 <div className="flex items-center gap-3 text-gray-700">
                   <span className="w-2 h-2 rounded-full bg-[var(--forest)]"></span>
-                  <p>{t.campus}</p>
+                  <p>80 Acre Campus</p>
                 </div>
               </div>
             </div>
@@ -274,6 +272,7 @@ const EnquiryPopup2 = () => {
                       hover:scale-[1.02]
                       transition-all
                       cursor-pointer
+                      shadow-xl
                     "
                   >
                     {t.submit}

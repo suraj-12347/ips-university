@@ -113,9 +113,77 @@ const GallerySection = () => {
     <section className="py-10 bg-white mt-10 mb-10">
   <div className="max-w-7xl mx-auto px-4 md:px-6">
     
-    <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-12 text-[var(--forest)]">
-      Gallery
-    </h2>
+    <div className="text-center mb-10 md:mb-14">
+
+  <p
+    className="
+      uppercase
+      tracking-[4px]
+      text-sm
+      font-semibold
+      text-[var(--grass)]
+      mb-3
+    "
+    style={{
+      fontFamily:"Outfit, sans-serif"
+    }}
+  >
+    Campus Glimpse
+  </p>
+
+
+  <h2
+    className="
+      text-4xl
+      md:text-6xl
+      text-[var(--forest)]
+      relative
+      inline-block
+    "
+    style={{
+      fontFamily:"Fraunces, serif"
+    }}
+  >
+    Gallery
+
+
+    <span
+      className="
+        absolute
+        left-1/2
+        -bottom-3
+        -translate-x-1/2
+        w-24
+        h-[3px]
+        bg-[var(--grass)]
+        rounded-full
+      "
+    />
+
+  </h2>
+
+
+
+  <p
+    className="
+      max-w-3xl
+      mx-auto
+      mt-8
+      text-gray-600
+      leading-8
+      text-base
+      md:text-lg
+    "
+    style={{
+      fontFamily:"Outfit, sans-serif"
+    }}
+  >
+    Explore memorable moments, achievements, events and experiences
+    that showcase the vibrant campus life and learning environment
+    of our institution.
+  </p>
+
+</div>
 
     <div className="relative">
       

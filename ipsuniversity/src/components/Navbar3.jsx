@@ -523,7 +523,7 @@ const Navbar5 = () => {
           </div>
 
           {/* DESKTOP MENU */}
-          <div className="hidden md:flex  justify-center ml-25 lg:ml-0  w-full   ">
+          <div className="hidden lg:flex  justify-center ml-25 lg:ml-0  w-full   ">
             <div
               className="
                 relative
@@ -546,13 +546,13 @@ const Navbar5 = () => {
             >
               <div className="absolute inset-0 bg-black/40 rounded-full backdrop-blur-[1px] w-full"></div>
 
-              <ul className="relative z-10 flex items-center justify-evenly w-full mt-15">
+              <ul className="relative z-10 flex items-center justify-center w-full mt-15">
                 {/* ABOUT */}
                 <li className="relative group">
                   <a
                     href="#about"
                     onClick={() => setActive("about")}
-                    className={`flex items-center  lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    className={`flex items-center  xl:px-4  py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                       active === "about"
                         ? "bg-white text-[var(--forest)]"
                         : "text-white hover:bg-white/15"
@@ -595,7 +595,7 @@ const Navbar5 = () => {
                   <a
                     href="#admissions"
                     onClick={() => setActive("admissions")}
-                    className={`flex items-center  lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                       active === "admissions"
                         ? "bg-white text-[var(--forest)]"
                         : "text-white hover:bg-white/15"
@@ -637,7 +637,7 @@ const Navbar5 = () => {
                   <a
                     href="#about"
                     onClick={() => setActive("R&D")}
-                    className={`flex items-center  lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                       active === "R&D"
                         ? "bg-white text-[var(--forest)]"
                         : "text-white hover:bg-white/15"
@@ -691,7 +691,7 @@ const Navbar5 = () => {
                   <a
                     href="#academics"
                     onClick={() => setActive("academics")}
-                    className={`flex items-center  lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                       active === "academics"
                         ? "bg-white text-[var(--forest)]"
                         : "text-white hover:bg-white/15"
@@ -933,7 +933,7 @@ const Navbar5 = () => {
                   <a
                     href="#training-placement"
                     onClick={() => setActive("T&P Cell")}
-                    className={`flex items-center lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    className={`flex items-center xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                       active === "T&P Cell"
                         ? "bg-white text-[var(--forest)]"
                         : "text-white hover:bg-white/15"
@@ -987,7 +987,7 @@ const Navbar5 = () => {
                   <a
                     href="#students-zone"
                     onClick={() => setActive("Student Zone")}
-                    className={`flex items-center lg:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    className={`flex items-center xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                       active === "Student Zone"
                         ? "bg-white text-[var(--forest)]"
                         : "text-white hover:bg-white/15"
@@ -1052,7 +1052,7 @@ const Navbar5 = () => {
               lg:text-sm
               text-[10px]
               font-semibold
-              md:flex
+              lg:flex
               items-center
               justify-center
               transition-all
@@ -1070,7 +1070,7 @@ const Navbar5 = () => {
           {/* MOBILE MENU BTN */}
           <button
             onClick={() => setMobileMenu(!mobileMenu)}
-            className="md:hidden ml-auto mr-3 text-[var(--forest)] mt-20"
+            className="lg:hidden ml-auto mr-3 text-[var(--forest)] mt-20"
           >
             {mobileMenu ? <X size={30} /> : <Menu size={30} />}
           </button>

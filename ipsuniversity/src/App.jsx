@@ -19,6 +19,7 @@ import Events from "./components/ctm-component/Events";
 import Achievement from "./components/ctm-component/Achievement";
 import Gallery from "./components/ctm-component/Gellary";
 import CtmMainPage from "./pages/CtmMainPage";
+import {HodMessageData} from "./assets/CseData";
 
 const App = () => {
   return (
@@ -33,7 +34,7 @@ const App = () => {
       <Route path="/page5" element={<CTMLayout />}>
   <Route index element={<Overview />} />
 
-  <Route path="hod-message" element={<HodMessage />} />
+  <Route path="hod-message" element={<HodMessage HodMessageData={HodMessageData} />} />
   <Route path="faculty" element={<FacultyCse />} />
   <Route path="scope" element={<Scope />} />
   <Route path="activity" element={<Activities />} />

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import pharma from '../../images1/pharmaflowertree.png'
+import pharma from '../../images1/flowerrr.jpeg'
 import DotedRing from "../DotedRing";
 import suraj from '../../images1/suraj.jpeg'
 import neeraj from '../../images1/neeraj.jpeg'
@@ -99,7 +99,7 @@ const swiperRef = useRef(null);
       className="w-full  py-5 md:py-6 px-4 md:px-8 overflow-hidden relative mt-10 "
          style={{
               backgroundImage: `url(${pharma})`,
-              backgroundSize: "contain",
+              backgroundSize: "cover",
               backgroundPosition: "left",
               backgroundRepeat: "no-repeat",
             }}
@@ -107,21 +107,21 @@ const swiperRef = useRef(null);
 
        {/* <div className="absolute inset-0 bg-[var(--moss)] -z-1"></div> */}
 
-       {/* <div
+       <div
         className="absolute -bottom-2 left-0 w-full h-[70%] z-0"
         style={{
           background:
             "linear-gradient(to top, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
-      /> */}
-       {/* <div
+      />
+       <div
         className="absolute -top-2 left-0 w-full h-[70%] z-0"
         style={{
           background:
             "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
-      /> */}
-      <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px] z-0"></div>
+      />
+      <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] z-0"></div>
 
          {/* <div className="absolute -right-20 lg:right-60 -top-80 opacity-40 lg:opacity-100">
           <DotedRing height={600} width={600} />

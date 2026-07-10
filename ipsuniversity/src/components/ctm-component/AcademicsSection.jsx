@@ -103,9 +103,78 @@ const AcademicsSection = () => {
       <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px] h-full"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-[var(--forest)]">
-          Academics
-        </h2>
+       <div className="text-center mb-10">
+
+  <p
+    className="
+      uppercase
+      tracking-[2px]
+      text-[14px]
+      font-semibold
+      text-[var(--grass)]
+      mb-3
+    "
+    style={{
+      fontFamily:"Outfit, sans-serif"
+    }}
+  >
+    Learning & Excellence
+  </p>
+
+
+  <h2
+    className="
+      text-4xl
+      md:text-6xl
+      text-[var(--forest)]
+      relative
+      inline-block
+    "
+    style={{
+      fontFamily:"Fraunces, serif"
+    }}
+  >
+    Academics
+
+
+    <span
+      className="
+        absolute
+        left-1/2
+        -bottom-3
+        -translate-x-1/2
+        w-24
+        h-[3px]
+        bg-[var(--grass)]
+        rounded-full
+      "
+    />
+
+  </h2>
+
+
+
+  <p
+    className="
+      max-w-3xl
+      mx-auto
+      mt-8
+      text-gray-700
+      leading-8
+      text-base
+      md:text-md
+    "
+    style={{
+      fontFamily:"Outfit, sans-serif"
+    }}
+  >
+    Explore our comprehensive academic programs designed to provide
+    quality education, practical knowledge, and industry-oriented skills
+    that prepare students for future challenges and professional success.
+  </p>
+
+
+</div>
 
         <div className="flex flex-wrap justify-center gap-3 mb-6">
           {[

@@ -112,8 +112,9 @@ const SchoolsSection = () => {
         py-5
         md:py-12
         overflow-hidden
-        mt-20
+        z-10
         bg-transparent
+        
         
       "
       // style={{

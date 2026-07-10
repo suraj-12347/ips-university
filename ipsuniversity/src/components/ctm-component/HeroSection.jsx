@@ -5,61 +5,93 @@ import ctmmain from "../../images1/edubuild7.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[60vh] sm:h-[75vh] md:h-[95vh]  mb-80 md:mb-0">
+  <section className="relative group h-[55vh] sm:h-[65vh] lg:h-[95vh] overflow-hidden mt-10">
 
-     {/* <div
-        className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"
-        style={{
-          background:
-            "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
-        }}
-      /> */}
+  {/* Background Image */}
+  <img
+    src={ctmdashboard}
+    alt="School of Engineering & Technology"
+    className="w-full h-full object-cover object-left md:object-center transition-transform duration-700 lg:group-hover:scale-105"
+  />
 
-      <img
-        src={ctmdashboard}
-        alt=""
-        className="w-full md:h-full h-[100vh] object-cover md:object-center object-left "
-        
-      />
+  {/* Overlay */}
+  <div
+    className="
+      absolute inset-0
+      bg-gradient-to-t
+      from-[#183A1D]/90
+      via-[#183A1D]/55
+      to-transparent
+      opacity-100
+      lg:opacity-0
+      lg:group-hover:opacity-100
+      transition-all
+      duration-500
+      flex
+      items-end
+      z-20
+    "
+  >
+    <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pb-8 sm:pb-10 lg:pb-16">
 
-      <div className="absolute top-10 md:top-2 lg:top-10 flex items-center">
-        <div className="max-w-7xl mx-auto px-6 text-white">
-         <h1
-  className="text-3xl lg:text-3xl xl:text-5xl   font-bold  text-[var(--forest)] mt-25 md:mt-1 lg:-mt-8 xl:-mt-5 ml-10 hidden lg:block"
+      {/* Tag */}
+      <span className="inline-block text-[var(--forest)] uppercase tracking-[2px] sm:tracking-[3px] lg:tracking-[4px] font-semibold text-[11px] sm:text-xs lg:text-sm mb-3">
+        Empowering Future Engineers
+      </span>
+
+      {/* Heading */}
+      <h1
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.15]"
+         style={{
+      fontFamily:"Fraunces, serif"
+    }}>
+      
+        School of <br />
+        Engineering & Technology
+      </h1>
+
+      <div className="w-16 sm:w-20 lg:w-24 h-[3px] bg-[#C7D36F] rounded-full my-4 lg:my-6"></div>
+
+      {/* Paragraph */}
+     <p
+  className="max-w-2xl text-white/90 text-base md:text-lg leading-8 font-normal"
   style={{
-    fontFamily: '"Noto Serif", serif',
-    fontOpticalSizing: "auto",
-    fontWeight: 500,
-    fontStyle: "normal",
-    fontVariationSettings: '"wdth" 100',
+    fontFamily: '"Inter", sans-serif',
   }}
 >
-  School of 
-</h1>
- <h1
-  className="text-5xl lg:text-5xl xl:text-5xl font-bold mb-6 text-[var(--forest)] hidden lg:block"
-  style={{
-    fontFamily: '"Noto Serif", serif',
-    fontOpticalSizing: "auto",
-    fontWeight: 700,
-    fontStyle: "normal",
-    fontVariationSettings: '"wdth" 100',
-  }}
->
-  Engineering & Technology
-</h1>
+  Shaping Future Engineers Through Excellence, Innovation,
+  Research and Professional Development while preparing
+  students for global opportunities.
+</p>
+      {/* Button */}
+      <button
+        className="
+          mt-6
+          lg:mt-8
+          px-5
+          sm:px-6
+          lg:px-8
+          py-2.5
+          sm:py-3
+          rounded-full
+          bg-[var(--forest)]
+          text-white
+          text-sm
+          sm:text-base
+          font-semibold
+          hover:bg-white
+          hover:text-[var(--forest)]
+          transition-all
+          duration-300
+        "
+      >
+        Explore Campus →
+      </button>
 
-          {/* <p className="max-w-2xl text-lg md:text-xl text-gray-700">
-            Shaping Future Engineers Through Excellence, Innovation
-            and Professional Development.
-          </p>
+    </div>
+  </div>
 
-          <button className="mt-8 px-8 py-3 bg-white text-[var(--forest)] font-semibold">
-            Explore Campus
-          </button> */}
-        </div>
-      </div>
-    </section>
+</section>
   );
 };
 

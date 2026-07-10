@@ -45,7 +45,7 @@ const Logo = () => {
   return (
     <a
   href="/"
-  className="flex items-center justify-start shrink-0"
+  className="flex items-center justify-start "
 >
   <img
     src={themeLogos[theme]}
@@ -66,6 +66,7 @@ const Logo = () => {
       text-[18px]
       sm:text-[22px]
       md:text-[28px]
+      lg:text-[24px]
      
       font-bold
       text-[var(--forest)]
@@ -81,10 +82,11 @@ const Logo = () => {
       text-[12px]
       sm:text-[15px]
       md:text-[18px]
+      lg:text-[16px]
      
       font-bold
       text-[var(--forest)]
-      md:hidden xl:block
+      md:hidden lg:block
       
     "
   >
