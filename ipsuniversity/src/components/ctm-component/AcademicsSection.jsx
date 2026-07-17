@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import pharma from "../../images1/flowerrr.jpeg";
+import { ArrowUpRight } from "lucide-react";
 
 const ugCourses = [
   { name: "Computer Science Engineering", route: "/page5" },
@@ -80,11 +81,11 @@ const AcademicsSection = () => {
   return (
    <section
   className="relative py-8 md:py-10 md:min-h-screen md:mt-10"
-  style={{
-    backgroundImage: `url(${pharma})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
+  // style={{
+  //   backgroundImage: `url(${pharma})`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  // }}
 >
         <div
         className="absolute -bottom-2 left-0 w-full h-[70%] z-[2]"
@@ -198,37 +199,136 @@ const AcademicsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {courses.map((course, index) => (
-            <div
-              key={index}
-              onClick={() => handleNavigation(course)}
-              className="bg-white overflow-hidden rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+  {courses.map((course, index) => (
+    <div
+      key={index}
+      onClick={() => handleNavigation(course)}
+      className="group cursor-pointer"
+    >
+      {/* White Frame */}
+      <div
+        className="
+          bg-white
+          rounded-[28px]
+          p-1
+          shadow-md
+          hover:shadow-2xl
+          transition-all
+          duration-500
+          hover:-translate-y-2
+        "
+      >
+        {/* Image */}
+        <div
+          className="relative rounded-[22px] overflow-hidden"
+          style={{
+            boxShadow: "inset 0 0 0 3px rgba(49,87,44,0.22)",
+          }}
+        >
+          <img
+            src={
+              courseImages[course.name] ||
+              "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80"
+            }
+            alt={course.name}
+            className="
+              w-full
+              h-[320px]
+              object-cover
+              transition-transform
+              duration-700
+              group-hover:scale-110
+            "
+          />
+
+          {/* Dark Overlay */}
+          <div
+            className="
+              absolute
+              inset-0
+              bg-gradient-to-t
+              from-black/80
+              via-black/20
+              to-transparent
+            "
+          />
+
+          {/* Bottom Green Accent */}
+          <div
+  className="
+    absolute
+    inset-0
+    bg-gradient-to-t
+    from-[var(--forest)]/85
+    via-[#578B07]/25
+    to-transparent
+  "
+/>
+
+          {/* Content */}
+          <div
+            className="
+              absolute
+              bottom-0
+              left-0
+              right-0
+              p-6
+            "
+          >
+            <h3
+              className="
+                text-white
+                text-2xl
+                leading-8
+              "
+              style={{
+                fontFamily: "Fraunces, serif",
+              }}
             >
-              <img
-                src={courseImages[course.name] || "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80"}
-                alt={course.name}
-                className="w-full h-25 object-cover"
-              />
+              {course.name}
+            </h3>
 
-              <div className="p-3">
-                <h3 className="font-semibold text-[var(--forest)] text-sm md:text-base mb-3 min-h-[48px]">
-                  {course.name}
-                </h3>
+            <div className="flex items-center justify-between mt-5">
 
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleNavigation(course);
-                  }}
-                  className="text-sm font-medium bg-[var(--forest)] text-white rounded-2xl px-3 py-1"
-                >
-                  Read More →
-                </button>
+              <span className="text-white/80 text-sm tracking-wide">
+                Explore Program
+              </span>
+
+              <div
+                className="
+                  w-11
+                  h-11
+                  rounded-full
+                  bg-white/20
+                  backdrop-blur-md
+                  border
+                  border-white/30
+                  flex
+                  items-center
+                  justify-center
+                  text-white
+                  transition-all
+                  duration-500
+                  group-hover:translate-x-1
+                  group-hover:-translate-y-1
+                "
+              >
+                <ArrowUpRight
+                  size={20}
+                  className="transition-transform duration-500 group-hover:rotate-45"
+                />
               </div>
+
             </div>
-          ))}
+
+          </div>
+
         </div>
+      </div>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );

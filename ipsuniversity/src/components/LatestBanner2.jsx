@@ -27,7 +27,7 @@ const updates = [
 
 const LatestBanner = () => {
   return (
-    <section className="w-full mt-10 px-4 lg:px-8 z-20 mb-5">
+    <section className="w-full mt-10 px-4 lg:px-8  mb-20">
       <div
         className="
         max-w-[1380px]

@@ -13,22 +13,90 @@ import EnquiryPopup2 from '../components/EnquiryPopup2'
 import GalleryCarousel2 from '../components/GalleryCrousel'
 import StudentReviews from '../components/student-rev/StudentReview2'
 import About5 from '../components/Aboute5'
-import CompanySection2 from '../components/CompanySection2'
+import CompanySection2 from '../components/CompanySection'
 import SocialMedia2 from '../components/SocialMedia'
-import Brochure2 from '../components/Brochure2'
+import Brochure2 from '../components/Broucher'
 import Footer from '../components/Footer'
 import Topbar3 from '../components/Topbar3'
 import pharma from "../images1/pharmaflowertree4.png";
 
 import About from '../components/About'
 import ApprovalRecognition from '../components/ApprovalRecognition'
+import Leadership from '../components/AboutComponents/Leadership'
+import Navbar5 from '../components/Navbar'
+import { useEffect, useState } from "react";
+import FAQ from '../components/FAQ'
 
 const Page2 = () => {
+
+   const [showNavbar5, setShowNavbar5] = useState(false);
+
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+
+      if (window.scrollY > 100) {
+        setShowNavbar5(true);
+      } else {
+        setShowNavbar5(false);
+      }
+
+    };
+
+
+    window.addEventListener("scroll", handleScroll);
+
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+  }, []);
   return (
     <>
      {/* <Topbar3/>  */}
     
-    <Navbar3/>
+   <div
+  className={`
+    fixed
+    top-0
+    left-0
+    w-full
+    z-40
+    transition-all
+    duration-700
+    ease-[cubic-bezier(0.4,0,0.2,1)]
+    ${
+      showNavbar5
+      ? "opacity-0 -translate-y-5 pointer-events-none"
+      : "opacity-100 translate-y-0"
+    }
+  `}
+>
+  <Navbar3/>
+</div>
+
+
+<div
+  className={`
+    fixed
+    top-0
+    left-0
+    w-full
+    z-50
+    transition-all
+    duration-700
+    ease-[cubic-bezier(0.4,0,0.2,1)]
+    ${
+      showNavbar5
+      ? "opacity-100 translate-y-0"
+      : "opacity-0 -translate-y-5 pointer-events-none"
+    }
+  `}
+>
+  <Navbar5/>
+</div>
    
     <Herosec/>
     <ChatBot/>
@@ -60,12 +128,18 @@ const Page2 = () => {
     <GalleryCarousel2 />
   </div>
 </div>
+<FAQ/>
     <StudentReviews/>
-    <CompanySection2/>
+      
+   
     <Brochure2/>
-    <SocialMedia2/>
+  
+    {/* <SocialMedia2/> */}
 
     <EnquiryPopup2/>
+     <CompanySection2/>
+
+   
 
 
 

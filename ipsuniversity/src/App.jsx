@@ -20,33 +20,64 @@ import Achievement from "./components/ctm-component/Achievement";
 import Gallery from "./components/ctm-component/Gellary";
 import CtmMainPage from "./pages/CtmMainPage";
 import {HodMessageData} from "./assets/CseData";
+import AboutRoutes from "./components/AboutComponents/AboutRoutes";
+import RandDRoutes from "./components/R&D-components/RandDRoutes";
+import EducationPage from "./pages/EducationPage";
+
+
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Page2 />} />
-      <Route path="/page2" element={<Page2 />} />
-      <Route path="/page3" element={<Page3 />} />
-       <Route path="/page6" element={<Page1 />} />
-      <Route path="/ipsctm" element={<CtmMainPage />} />
+    <>
 
-      {/* CTM Department Routes */}
-      <Route path="/page5" element={<CTMLayout />}>
-  <Route index element={<Overview />} />
+      <Routes>
 
-  <Route path="hod-message" element={<HodMessage HodMessageData={HodMessageData} />} />
-  <Route path="faculty" element={<FacultyCse />} />
-  <Route path="scope" element={<Scope />} />
-  <Route path="activity" element={<Activities />} />
-  <Route path="features" element={<SalientFeatures />} />
-  <Route path="testimonials" element={<TestinomialCse />} />
-  <Route path="research" element={<ReSearch />} />
-  <Route path="events" element={<Events />} />
-  <Route path="achievements" element={<Achievement />} />
-  <Route path="gallery" element={<Gallery />} />
-</Route>
-    </Routes>
+ <Route path="/" element={<Page2 />} />
+        <Route path="/page2" element={<Page2 />} />
+        <Route path="/page3" element={<Page3 />} />
+        <Route path="/page6" element={<Page1 />} />
+
+        <Route path="/ipsctm" element={<CtmMainPage />} />
+        <Route path="/education" element={<EducationPage/>} />
+        <Route path="/about/*" element={<AboutRoutes />} />
+
+
+  {/* R&D Routes */}
+  <Route 
+    path="/innovation/*" 
+    element={<RandDRoutes />} 
+  />
+
+
+  <Route path="/page5" element={<CTMLayout />}>
+
+    <Route index element={<Overview />} />
+
+    <Route 
+      path="hod-message" 
+      element={<HodMessage HodMessageData={HodMessageData} />} 
+    />
+
+    <Route path="faculty" element={<FacultyCse />} />
+    <Route path="scope" element={<Scope />} />
+    <Route path="activity" element={<Activities />} />
+    <Route path="features" element={<SalientFeatures />} />
+    <Route path="research" element={<ReSearch />} />
+    <Route path="events" element={<Events />} />
+    <Route path="gallery" element={<Gallery />} />
+
+  </Route>
+
+
+</Routes>
+
+
+      {/* Separate Route Group */}
+   y
+
+    </>
   );
 };
 
 export default App;
+

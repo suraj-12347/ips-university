@@ -3,7 +3,7 @@ import ctmprincipal from "../../images1/ctmprincipal2.png";
 
 const PrincipalCard = ({
   image = ctmprincipal,
-  name = "Dr. Anurag Garg",
+  name = "Dr. XYZ",
   designation = "PRINCIPAL",
   department = "School of Engineering & Technology",
 }) => {
@@ -30,7 +30,7 @@ const PrincipalCard = ({
       <div className="absolute left-[12%] top-[7%] w-[78%] h-[68%] rounded-[18px] overflow-hidden border-[3px] border-white shadow-2xl bg-white">
 
         <img
-          src={image}
+          src="https://i.pinimg.com/736x/ff/43/ac/ff43ac9a9638df9019a13c54bfa3c82e.jpg"
           alt={name}
           className="w-full h-full object-cover object-top"
         />

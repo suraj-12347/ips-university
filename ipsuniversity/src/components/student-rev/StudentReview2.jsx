@@ -96,7 +96,7 @@ const [expandedReview, setExpandedReview] = useState(null);
   return (
     <section
       ref={sectionRef}
-      className="w-full   md:py-30 px-4 lg:px-20 overflow-hidden relative mt-10 "
+      className="w-full   md:py-30 px-4 lg:px-10 overflow-hidden relative mt-10 "
          style={{
               backgroundImage: `url(${pharma})`,
               backgroundSize: "contain",
@@ -136,13 +136,13 @@ const [expandedReview, setExpandedReview] = useState(null);
      Student Testimonials
   </p>
 
-  <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
+  <h1 className="text-center text-2xl sm:text-3xl md:text-5xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
      Inspiring Minds and Enriching Life
   </h1>
 </div>
 
       {/* cards */}
-   <div className="relative z-20 mt-10 max-w-[100vw] mx-auto">
+   <div className="relative z-20 mt-10 max-w-[1400px] mx-auto">
 
  <Swiper
    onSwiper={(swiper) => {
@@ -154,7 +154,7 @@ const [expandedReview, setExpandedReview] = useState(null);
 
   loop={true}
   speed={700}
-  spaceBetween={24}
+  spaceBetween={22}
   slidesPerView={1}
   autoplay={{
     delay: 3000,

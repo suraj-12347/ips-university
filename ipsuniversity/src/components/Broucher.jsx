@@ -1,242 +1,165 @@
 import React from "react";
+import {
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
 
-import DotedRing from "./DotedRing";
+// Remove these imports
 
-import { useLanguage } from "../context/LanguageContext";
+// import IMG1 from "../assets/images/brochure1.jpg";
+// import IMG2 from "../assets/images/brochure2.jpg";
+// import IMG3 from "../assets/images/brochure3.jpg";
 
-const Brochure = () => {
+const IMG1 =
+  "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=700&q=80";
 
-  const { language } = useLanguage();
+const IMG2 =
+  "https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=700&q=80";
 
-  const content = {
-    en: {
-      badge: "Admissions Open 2025–26",
-
-      heading: "Ready to Plant Your Future !!",
-
-      para:
-        "Join thousands of students who chose IPS University, Gwalior to transform their lives and build meaningful careers with quality education and innovation.",
-
-      btn1: "Apply for Admission",
-
-      btn2: "Download Brochure",
-    },
-
-    hi: {
-      badge: "प्रवेश खुले हैं 2025–26",
-
-      heading: "क्या आप अपना भविष्य बनाने के लिए तैयार हैं?",
-
-      para:
-        "हजारों छात्रों की तरह IPS University, Gwalior से जुड़ें और गुणवत्तापूर्ण शिक्षा व नवाचार के साथ अपने भविष्य को नई दिशा दें।",
-
-      btn1: "प्रवेश के लिए आवेदन करें",
-
-      btn2: "ब्रोशर डाउनलोड करें",
-    },
-
-    es: {
-      badge: "Admisiones Abiertas 2025–26",
-
-      heading: "¿Listo para Construir Tu Futuro?",
-
-      para:
-        "Únete a miles de estudiantes que eligieron IPS University, Gwalior para transformar sus vidas y construir carreras exitosas.",
-
-      btn1: "Solicitar Admisión",
-
-      btn2: "Descargar Folleto",
-    },
-
-    fr: {
-      badge: "Admissions Ouvertes 2025–26",
-
-      heading: "Prêt à Construire Votre Avenir ?",
-
-      para:
-        "Rejoignez des milliers d'étudiants qui ont choisi IPS University, Gwalior pour transformer leur vie grâce à une éducation de qualité.",
-
-      btn1: "Postuler à l'Admission",
-
-      btn2: "Télécharger la Brochure",
-    },
-  };
-
-  const t = content[language];
-
+const IMG3 =
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80";
+const BrochureSection = () => {
   return (
-    <section className="w-full py-10 mt-10">
+    <section className="relative py-28 overflow-hidden  mt-20">
 
-      <div
-        className="
-          w-full
-          max-w-8xl
-          mx-auto
-          min-h-[420px]
-          md:min-h-[380px]
-          lg:min-h-[340px]
-          relative
-          overflow-hidden
-          flex
-          items-center
-          justify-center
-        "
-        style={{
-          background: `
-            linear-gradient(
-              135deg,
-              var(--forest) 0%,
-              var(--grass) 100%
-            )
-          `,
-        }}
-      >
+      {/* Decorative Circle */}
+      <div className="absolute -left-44 top-28 w-[520px] h-[520px] rounded-full border border-[#578B07]/30"></div>
+      <div className="absolute -left-52 top-20 w-[640px] h-[640px] rounded-full border border-red-400/20"></div>
 
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/10"></div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-        {/* Rings */}
-        <div className="absolute -top-32 -left-16 scale-125  hidden md:block">
-          <DotedRing width={320} height={320} />
-        </div>
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-        <div className="absolute -bottom-28 -right-10 rotate-180 scale-125  hidden md:block">
-          <DotedRing width={320} height={320} />
-        </div>
+          {/* ================= LEFT IMAGES ================= */}
 
-        {/* Glow */}
-        <div className="absolute top-0 left-1/3 w-72 h-72 bg-white/10 blur-3xl rounded-full"></div>
+       
 
-        {/* Content */}
-        <div
-          className="
-            relative
-            z-10
-            w-full
-            flex
-            flex-col
-            items-center
-            text-center
-            px-5
-            sm:px-8
-            py-14
-          "
-        >
+<div className="flex justify-center z-40">
+  <div className="grid grid-cols-[150px_300px] md:grid-cols-[220px_380px] gap-1 md:gap-5 items-start">
 
-          {/* Badge */}
-          <span
-            className="
-              px-5
-              py-2
-              rounded-full
-              border
-              border-white/20
-              bg-white/10
-              backdrop-blur-md
-              text-xs
-              sm:text-sm
-              tracking-wide
-              text-white
-              mb-5
-            "
-          >
-            {t.badge}
-          </span>
+    {/* Left Side */}
+    <div className="flex flex-col gap-2 md:gap-5 pt-5">
 
-          {/* Heading */}
-          <h2
-            className="
-              text-white
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              font-bold
-              leading-tight
-              max-w-4xl
-            "
-          >
-            {t.heading}
-          </h2>
+      <div className="h-[150px] md:h-[250px]  rounded-xl overflow-hidden shadow-xl md:w-full">
+        <img
+          src={IMG1}
+          alt=""
+          className="w-full h-full object-cover   transition-transform
+    duration-500
+    hover:scale-105"
+        />
+      </div>
 
-          {/* Paragraph */}
-          <p
-            className="
-              text-white/75
-              text-sm
-              md:text-base
-              leading-7
-              max-w-3xl
-              mt-5
-            "
-          >
-            {t.para}
-          </p>
+      <div className="md:h-[180px] h-30 ml-12 rounded-xl overflow-hidden shadow-xl   ">
+        <img
+          src={IMG2}
+          alt=""
+          className="w-full  h-full object-cover   transition-transform
+    duration-500
+    hover:scale-105"
+        />
+      </div>
 
-          {/* Buttons */}
-          <div
-            className="
-              flex
-              flex-col
-              sm:flex-row
-              items-center
-              gap-4
+    </div>
+
+    {/* Right Large Image */}
+    <div className="relative">
+
+      <div className="md:h-[560px] h-[400px] rounded-xl overflow-hidden shadow-2xl w-[70%] md:w-full">
+        <img
+          src={IMG3}
+          alt=""
+          className="w-full h-full object-cover
+            transition-transform
+    duration-500
+    hover:scale-105"
+        />
+      </div>
+
+      {/* Decorative Circle */}
+      <div className="absolute -top-4 right-2 w-14 h-14 rounded-full border-[4px] border-[#578B07] border-r-transparent border-b-transparent rotate-45 -z-1"></div>
+
+    </div>
+
+  </div>
+</div>
+
+          {/* ================= RIGHT CONTENT ================= */}
+
+          <div>
+
+            <span className="text-[#578B07] font-semibold uppercase tracking-[3px]">
+              Download Brochure
+            </span>
+
+            <h2 className="mt-4 text-4xl lg:text-6xl font-bold text-[var(--forest)] leading-tight">
+              Ready To Plant
+              <br />
+              your
+              <span className="text-[#578B07]"> Future !!</span>
+            </h2>
+
+            <p className="mt-6 text-gray-600 text-md leading-8 max-w-xl">
+               Transform your future with world-class education, industry-focused learning, and endless opportunities at IPS University, Gwalior.
+         
+            </p>
+
+            <div className="mt-6 space-y-3">
+
+              {[
+                "Detailed Academic Programs",
+                "Modern Campus Facilities",
+                "Admission Process & Eligibility",
+                "Placement & Career Opportunities",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-4"
+                >
+                  <div className="w-10 h-10 rounded-full bg-[#578B07]/10 flex items-center justify-center">
+                    <CheckCircle
+                      size={20}
+                      className="text-[#578B07]"
+                    />
+                  </div>
+
+                  <span className="text-lg text-gray-700">
+                    {item}
+                  </span>
+                </div>
+              ))}
+
+            </div>
+
+            <button
+              className="
               mt-8
-              w-full
-              sm:w-auto
+              inline-flex
+              items-center
+              gap-3
+              bg-[#31572c]
+              hover:bg-[#578B07]
+              transition
+              duration-300
+              text-white
+              px-8
+              py-4
+              rounded-xl
+              font-semibold
+              shadow-lg
             "
-          >
-
-            <a
-              href="#"
-              className="
-                h-12
-                px-7
-                w-full
-                sm:w-auto
-                rounded-full
-                bg-white
-                text-[var(--forest)]
-                font-semibold
-                flex
-                items-center
-                justify-center
-                hover:scale-105
-                duration-300
-                shadow-lg
-              "
             >
-              {t.btn1}
-            </a>
-
-            <a
-              href="#"
-              className="
-                h-12
-                px-7
-                w-full
-                sm:w-auto
-                rounded-full
-                border
-                border-white/20
-                text-white
-                font-semibold
-                flex
-                items-center
-                justify-center
-                hover:bg-white
-                hover:text-[var(--forest)]
-                duration-300
-                backdrop-blur-md
-              "
-            >
-              {t.btn2}
-            </a>
+              Download Brochure
+              <ArrowRight size={20} />
+            </button>
 
           </div>
+
         </div>
+
       </div>
     </section>
   );
 };
 
-export default Brochure;
+export default BrochureSection;

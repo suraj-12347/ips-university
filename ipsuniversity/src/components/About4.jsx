@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../images1/aboutbg2.png"; // Building + students image
+import bgImage from "../images1/aboutbg5.png"; // Building + students image
 import chairman from "../images1/chairmanimage3.jpeg";
 
 import { useLanguage } from "../context/LanguageContext";
@@ -58,26 +58,43 @@ const About3 = () => {
   return (
     <section
     id="about"
-      className="relative pt-35 pb-44 bg-[#f8faf7] overflow-hidden "
+      className="relative  h-full  pb-35 pt-80 mt-20 bg-[#f8faf7] overflow-hidden "
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top",
+        backgroundRepeat:"no-repeat"
       }}
     >
-      <div className="max-w-[97vw] mx-auto px-6">
+
+      <div
+    className="
+      absolute
+      inset-0
+      
+      bg-gradient-to-r
+      from-white
+      
+      
+      to-transparent
+      h-full
+      
+    "
+  />
+      <div className="max-w-full mx-auto h-full ">
         {/* MAIN HERO */}
 
         <div
           className="
           relative
-         h-[680px] xl:h-[35vw]
-          rounded-[36px]
+         h-full
+        
           overflow-hidden
-          border
-          border-white/30
-          shadow-[0_30px_80px_rgba(0,0,0,.18)]
-          backdrop-blur-[1.2px]
+         
+          
+          
+          
+         
         "
         >
           {/* Background */}
@@ -108,14 +125,14 @@ const About3 = () => {
 
           {/* Content */}
 
-          <div className="relative z-20 h-full flex ">
+          <div className="relative z-20 h-full flex  flex-col md:flex-row">
             {/* LEFT */}
 
-            <div className="w-[50%] flex items-start justify-start   mr-10 h-full" >
+            <div className="w-full flex items-start justify-start   mr-10 " >
               <div className="   max-w-[720px] h-full">
                 {/* About */}
 
-               <div className="relative flex flex-col py-4 pl-5 pb-10 h-full">
+               <div className="relative flex flex-col py-4 pl-5 pb-10 h-full ">
 
   {/* White Gradient */}
   <div
@@ -127,26 +144,19 @@ const About3 = () => {
       from-white
       
       
+      
       to-transparent
+      
     "
   />
 
   {/* Blur */}
-  <div
-    className="
-      absolute
-      inset-0
-      -z-10
-      w-[100%]
-      backdrop-blur-[2px]
-
-    "
-  />
+  
 
   {/* Content */}
  {/* ================= LEFT CONTENT ================= */}
 
-<div className="relative z-10 w-full lg:w-[80%]">
+<div className="relative z-10 w-full lg:w-[80%] pt-40 pl-5">
   <div className="flex items-center gap-2 text-[#8BAE45] text-xs sm:text-sm font-semibold uppercase tracking-[2px]">
     <Leaf size={14} />
     <span>{t.about}</span>
@@ -186,6 +196,7 @@ const About3 = () => {
       sm:text-[14px]
       leading-6
       text-gray-700
+      text-justify
     "
   >
     {t.para}
@@ -196,7 +207,7 @@ const About3 = () => {
       mt-5
       px-4
       py-2.5
-      rounded-full
+      rounded-2xl
       bg-[var(--forest)]
       text-white
       flex
@@ -226,7 +237,8 @@ const About3 = () => {
     overflow-hidden
   "
 >
-  <div className="grid grid-cols-2 lg:grid-cols-4">
+  <div className="grid grid-cols-2 lg:grid-cols-4  py-3   border
+            border-gray-100 backdrop:blur-md">
 
     {features.map((item, index) => {
       const Icon = item.icon;
@@ -239,14 +251,18 @@ const About3 = () => {
             flex-col
             items-center
             text-center
-            p-4
+           
 
             lg:flex-row
             lg:text-left
             lg:items-center
 
-            border
-            border-gray-100
+            border-r
+            border-white
+            pl-1
+            last:border-r-0
+
+           
           "
         >
           <Icon

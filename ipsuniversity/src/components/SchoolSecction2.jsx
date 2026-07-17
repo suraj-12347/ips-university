@@ -144,18 +144,18 @@ const SchoolsSection = () => {
 
       {/* Heading */}
       <div className="relative z-40 w-full px-4  z-20">
-        <p className="text-center text-[var(--forest)]/90 font-semibold tracking-[4px] uppercase text-xs">
+        <p className="text-center text-[var(--forest)]/90 font-semibold tracking-[4px] uppercase text-md">
           Explore
         </p>
 
-        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
+        <h1 className="text-center text-2xl sm:text-3xl md:text-5xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
           Our Schools
         </h1>
       </div>
 
       {/* Description */}
       <div className="relative z-40 max-w-[850px] mx-auto px-4 mb-8">
-        <p className="text-center text-gray-700 max-w-2xl mx-auto mt-4 leading-6 text-sm">
+        <p className="text-center text-gray-700 max-w-2xl mx-auto mt-4 leading-6 text-md">
           Specialized schools designed to deliver focused,
           industry-aligned education across diverse disciplines.
         </p>
@@ -217,178 +217,119 @@ const SchoolsSection = () => {
         {/* Cards */}
 
 
-    <div className="max-w-[1250px] mx-0 md:mx-auto px-4  relative z-50 mt-10">
- <Swiper
-  modules={[ Pagination]}
-  navigation
-  pagination={{ clickable: true }}
-  spaceBetween={24}
-  speed={700}
-  slidesPerView={1}
-  breakpoints={{
-    640: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  }}
-  className="schools-swiper"
->
-   {schools.map((school, index) => {
-  const Icon = school.icon;
+  <div className="relative z-20 mt-10 max-w-[1450px] mx-auto ">
 
-  return (
-    <SwiperSlide key={index}>
-      <div
-        onClick={() => handleCardClick(school)}
-        className="
-          group
-          relative
-          w-full
-          max-w-[340px]
-          h-[440px]
-          mx-auto
-          bg-white
-          rounded-[28px]
-          shadow-md
-          hover:shadow-xl
-     
-      
-          hover:-translate-y-2
-          transition-all
-          duration-500
-          overflow-hidden
-          cursor-pointer
-          flex
-          flex-col
-        "
-      >
-        {/* Image */}
-        <div className="relative p-4 pb-0">
-          <div className="overflow-hidden rounded-[22px]">
-            <img
-              src={school.image}
-              alt={school.name}
-              className="
-                w-full
-                h-[190px]
-                object-cover
-                rounded-[22px]
-                transition-transform
-                duration-700
-                group-hover:scale-105
-              "
-            />
-          </div>
+  <Swiper
+    modules={[Pagination]}
+    loop={true}
+    speed={700}
+    spaceBetween={24}
+    slidesPerView={1}
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+    pagination={{
+      clickable: true,
+    }}
+    breakpoints={{
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1300: {
+        slidesPerView: 4,
+      },
+    }}
+    className="schools-swiper"
+  >
+    {schools.map((school, index) => (
+      <SwiperSlide key={index} className="py-4">
+        <div
+          onClick={() => handleCardClick(school)}
+          className="
+            group
+            relative
+            w-full
+            max-w-[330px]
+            mx-auto
+            h-[350px]
+            rounded-[30px]
+            overflow-hidden
+            shadow-lg
+            hover:shadow-2xl
+            hover:-translate-y-2
+            transition-all
+            duration-500
+            cursor-pointer
+            border-[5px]
+            border-white
+          "
+        >
+          {/* Image */}
+          <img
+            src={school.image}
+            alt={school.name}
+            className="
+              absolute
+              inset-0
+              w-full
+              h-full
+              object-cover
+              transition-transform
+              duration-700
+              group-hover:scale-110
+            "
+          />
 
-          {/* Floating Icon */}
+          {/* Overlay */}
           <div
             className="
               absolute
-              left-1/2
-              -translate-x-1/2
-              bottom-[-28px]
-              w-14
-              h-14
-              rounded-full
-              bg-[var(--forest)]
-              border-4
-              border-white
-              flex
-              items-center
-              justify-center
-              shadow-lg
+              inset-0
+              bg-gradient-to-t
+              from-[var(--forest)]
+              via-[#31572c]/70
+              to-transparent
             "
-          >
-            <Icon className="w-7 h-7 text-white" />
+          />
+
+          {/* Content */}
+          <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+
+            <h3
+              className="text-2xl mb-3"
+              style={{ fontFamily: "Fraunces, serif" }}
+            >
+              {school.name}
+            </h3>
+
+            {/* <p className="text-sm text-white/90 leading-6 line-clamp-3 mb-5">
+              {school.quote}
+            </p> */}
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCardClick(school);
+              }}
+              className="flex items-center gap-3 font-semibold"
+            >
+              <span>Explore School</span>
+
+              <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:translate-x-1">
+                →
+              </div>
+            </button>
+
           </div>
         </div>
-
-        {/* Content */}
-        <div className="flex flex-col flex-1 px-5 pt-6 text-center">
-          {/* Heading */}
-          <h3
-            className="
-              text-[18px]
-              font-bold
-              leading-snug
-              text-[var(--forest)]
-              min-h-[40px]
-              flex
-              items-center
-              justify-center
-            "
-          >
-            {school.name}
-          </h3>
-
-          {/* Divider */}
-          <div className="w-15 h-[2px] bg-[#D9B86A] mx-auto  rounded-full mt-1"></div>
-
-          {/* Quote */}
-          <p
-            className="
-              
-              text-[14px]
-              text-gray-600
-              leading-5
-              min-h-[50px]
-              line-clamp-3
-            "
-          >
-            {school.quote}
-          </p>
-
-          {/* Pills */}
-          <div className="flex gap-2 mb-2 w-full">
-  <div className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-full bg-[#F5F6F7] min-w-0">
-    <BookOpen size={16} className="text-[var(--forest)] flex-shrink-0" />
-    <span className="text-[13px] font-medium truncate">
-      Courses
-    </span>
-  </div>
-
-  <div className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-full bg-[#F5F6F7] min-w-0">
-    <GraduationCap size={16} className="text-[var(--forest)] flex-shrink-0" />
-    <span className="text-[13px] font-medium truncate">
-      Faculty
-    </span>
-  </div>
-
-  <div className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-full bg-[#F5F6F7] min-w-0">
-    <Building2 size={16} className="text-[var(--forest)] flex-shrink-0" />
-    <span className="text-[13px] font-medium truncate">
-      Campus
-    </span>
-  </div>
-</div>
-          {/* Button */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              handleCardClick(school);
-            }}
-            className="
-              mt-auto
-              w-full
-              py-3
-              rounded-xl
-              bg-[var(--forest)]
-              text-white
-              font-semibold
-              text-[16px]
-              transition-all
-              duration-300
-              hover:bg-[#1e4f2d]
-              hover:shadow-lg
-              mb-2
-            "
-          >
-            Explore More →
-          </button>
-        </div>
-      </div>
-    </SwiperSlide>
-  );
-})}
+      </SwiperSlide>
+    ))}
   </Swiper>
+
 </div>
 
 

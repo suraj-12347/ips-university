@@ -1,7 +1,7 @@
 // EnquiryPopup2.jsx
 
 import React, { useEffect, useState } from "react";
-import { X } from "lucide-react";
+import { X, CheckCircle2, GraduationCap } from "lucide-react";
 import pharma from "../images1/pharmaflowertree3.png";
 
 import { useLanguage } from "../context/LanguageContext";
@@ -12,229 +12,385 @@ const EnquiryPopup2 = () => {
   const { t } = useLanguage();
 
   useEffect(() => {
-    const firstTimer = setTimeout(() => {
+    const timer = setTimeout(() => {
       setOpen(true);
     }, 5000);
 
-    return () => {
-      clearTimeout(firstTimer);
-    };
+    return () => clearTimeout(timer);
   }, []);
+
 
   return (
     <>
       {open && (
+
         <div
           className="
-            fixed
-            inset-0
-            bg-black/45
-            z-[999]
-            flex
-            items-center
-            justify-center
-            backdrop-blur-md
-            px-4
-            top-30
+          fixed
+          inset-0
+          z-[99999]
+          flex
+          items-center
+          justify-center
+          bg-black/50
+          backdrop-blur-md
+          px-4
           "
         >
-          {/* POPUP */}
+
+          {/* MAIN POPUP */}
+
           <div
             className="
-              relative
-              w-full
-              max-w-[1000px]
-              h-[400px]
-              overflow-y-auto
-              md:overflow-y-hidden
-              shadow-2xl
-              animate-[popup_.4s_ease]
-              flex
-              flex-col
-              lg:flex-row
+            relative
+            w-full
+            max-w-[1050px]
+            min-h-[430px]
+            rounded-[32px]
+            overflow-hidden
+            shadow-2xl
+            animate-[popup_.4s_ease]
+            flex
+            flex-col
+            lg:flex-row
             "
             style={{
-              backgroundImage: `url(${pharma})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundImage:`url(${pharma})`,
+              backgroundSize:"cover",
+              backgroundPosition:"center"
             }}
           >
-            {/* Overlay */}
-            {/* <div className="absolute inset-0 bg-[var(--moss)]"></div> */}
-             {/* <div
-        className="absolute -bottom-2 left-0 w-full h-[70%] z-[1]"
-        style={{
-          background:
-            "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
-        }}
-      />
-       <div
-        className="absolute -top-2 left-0 w-full h-[70%] z-[1]"
-        style={{
-          background:
-            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
-        }}
-      /> */}
-      <div className="absolute inset-0 bg-white/70 backdrop-blur-[4px] lg:h-full h-150 "></div>
 
-            {/* CLOSE BTN */}
-            <button
-              onClick={() => setOpen(false)}
-              className="
-                absolute
-                top-10
-                right-4
-                z-50
-                w-10
-                h-10
-                rounded-full
-                bg-[var(--forest)]/30
-                hover:bg-[var(--forest)]/40
-                flex
-                items-center
-                justify-center
-                text-[var(--forest)]
-                transition-all
-                cursor-pointer
-              "
-            >
-              <X size={20} />
-            </button>
 
-            {/* LEFT CONTENT */}
+            {/* WHITE GLASS OVERLAY */}
+
             <div
               className="
-                hidden
-                lg:flex
-                w-[42%]
-                flex-col
-                justify-center
-                px-10
-                relative
-                z-20
+              absolute
+              inset-0
+              bg-white/75
+              backdrop-blur-lg
+              "
+            />
+
+
+            {/* Decorative circles */}
+
+            <div
+              className="
+              absolute
+              -top-20
+              -left-20
+              w-60
+              h-60
+              rounded-full
+              bg-[var(--leaf)]/40
+              blur-3xl
+              "
+            />
+
+            <div
+              className="
+              absolute
+              -bottom-20
+              -right-20
+              w-72
+              h-72
+              rounded-full
+              bg-[var(--grass)]/30
+              blur-3xl
+              "
+            />
+
+
+
+            {/* CLOSE */}
+
+            <button
+              onClick={()=>setOpen(false)}
+              className="
+              absolute
+              right-5
+              top-5
+              z-50
+              w-11
+              h-11
+              rounded-full
+              bg-white
+              shadow-lg
+              flex
+              items-center
+              justify-center
+              text-[var(--forest)]
+              hover:rotate-90
+              transition-all
+              cursor-pointer
               "
             >
-              <p className="text-[var(--forest)]/80 font-bold uppercase tracking-[4px] text-md  mb-3">
-                IPS University
-              </p>
+              <X size={22}/>
+            </button>
 
-              <h2 className="text-3xl font-extrabold text-[var(--forest)] leading-tight">
-                Admission Enquiry
+
+
+
+
+            {/* LEFT SECTION */}
+
+
+            <div
+              className="
+              relative
+              z-20
+              lg:w-[42%]
+              w-full
+              flex
+              flex-col
+              justify-center
+              px-8
+              lg:px-12
+              py-10
+              "
+            >
+
+              <div
+                className="
+                flex
+                items-center
+                gap-3
+                mb-5
+                "
+              >
+
+                <div
+                  className="
+                  w-12
+                  h-12
+                  rounded-2xl
+                  bg-[var(--forest)]
+                  text-white
+                  flex
+                  items-center
+                  justify-center
+                  "
+                >
+                  <GraduationCap size={26}/>
+                </div>
+
+
+                <div>
+
+                  <p
+                    className="
+                    text-xs
+                    tracking-[3px]
+                    font-bold
+                    text-[var(--forest)]
+                    "
+                  >
+                    IPS UNIVERSITY
+                  </p>
+
+                  <p className="text-sm text-gray-600">
+                    Gwalior, Madhya Pradesh
+                  </p>
+
+                </div>
+
+              </div>
+
+
+
+              <h2
+                className="
+                text-4xl
+                font-extrabold
+                text-[var(--forest)]
+                leading-tight
+                "
+              >
+                Start Your
+                <br/>
+                Admission Journey
               </h2>
 
-              <p className="text-gray-700 mt-5 leading-7 text-sm">
+
+
+              <p
+                className="
+                mt-5
+                text-gray-700
+                leading-7
+                text-sm
+                max-w-md
+                "
+              >
                 {t.enquiryDesc}
               </p>
 
-              <div className="mt-6 flex flex-col gap-3 text-sm">
-                <div className="flex items-center gap-3 text-gray-700">
-                  <span className="w-2 h-2 rounded-full bg-[var(--forest)]"></span>
-                  <p>100% Placement assistence</p>
-                </div>
 
-                <div className="flex items-center gap-3 text-gray-700">
-                  <span className="w-2 h-2 rounded-full bg-[var(--forest)]"></span>
-                  <p>{t.aicte}</p>
-                </div>
 
-                <div className="flex items-center gap-3 text-gray-700">
-                  <span className="w-2 h-2 rounded-full bg-[var(--forest)]"></span>
-                  <p>80 Acre Campus</p>
-                </div>
+
+              <div className="mt-7 space-y-3">
+
+
+                {
+                  [
+                    "100% Placement Assistance",
+                    t.aicte,
+                    "80 Acre Green Campus"
+                  ].map((item,index)=>(
+
+                    <div
+                      key={index}
+                      className="
+                      flex
+                      items-center
+                      gap-3
+                      text-gray-700
+                      text-sm
+                      "
+                    >
+
+                      <CheckCircle2
+                        size={18}
+                        className="text-[var(--grass)]"
+                      />
+
+                      <span>
+                        {item}
+                      </span>
+
+                    </div>
+
+                  ))
+                }
+
+
               </div>
+
+
+
             </div>
 
-            {/* RIGHT FORM */}
+
+
+
+
+
+
+            {/* FORM SECTION */}
+
+
+
             <div
               className="
-                w-full
-                lg:w-[58%]
-                flex
-                items-center
-                justify-center
-                p-4
-                md:p-6
-                relative
-                z-20
+              relative
+              z-20
+              lg:w-[58%]
+              w-full
+              flex
+              items-center
+              justify-center
+              p-6
               "
             >
+
+
               <div
                 className="
-                  w-full
-                  bg-transparent
-                  py-10
-                  rounded-[24px]
-                  p-5
+                w-full
+                max-w-xl
+                bg-white/50
+                backdrop-blur-xl
+                rounded-[28px]
+                p-6
+                md:p-8
+                shadow-xl
+                border
+                border-white/60
                 "
               >
-                <h3 className="text-2xl font-bold text-[var(--forest)]">
+
+
+
+                <h3
+                  className="
+                  text-2xl
+                  font-bold
+                  text-[var(--forest)]
+                  "
+                >
                   {t.getStarted}
                 </h3>
 
-                <p className="text-gray-700 text-sm mb-2">
+
+                <p
+                  className="
+                  text-gray-600
+                  text-sm
+                  mt-1
+                  mb-6
+                  "
+                >
                   {t.formDesc}
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative">
-                  <input
-                    type="text"
-                    placeholder={t.fullName}
-                    className="
-                      w-full
-                      h-[48px]
-                      rounded-xl
-                      
-                      shadow-xl
-                      px-4
-                      outline-none
-                      bg-white
-                      text-[var(--forest)]
-                    "
-                  />
 
-                  <input
-                    type="tel"
-                    placeholder={t.mobile}
-                    className="
-                      w-full
-                      h-[48px]
-                      rounded-xl
-                     shadow-xl
-                      bg-white
-                      text-[var(--forest)]
-                      px-4
-                      outline-none
-                    "
-                  />
 
-                  <input
-                    type="email"
-                    placeholder={t.email}
-                    className="
-                      w-full
-                      h-[48px]
-                      rounded-xl
-                      shadow-xl
-                      px-4
-                      outline-none
-                      bg-white
-                      text-[var(--forest)]
-                    "
-                  />
+                <div
+                  className="
+                  grid
+                  grid-cols-1
+                  md:grid-cols-2
+                  gap-4
+                  "
+                >
+
+
+                  {
+                    [
+                      t.fullName,
+                      t.mobile,
+                      t.email
+                    ].map((item,index)=>(
+
+                      <input
+                        key={index}
+                        placeholder={item}
+                        className="
+                        h-[48px]
+                        rounded-xl
+                        bg-white
+                        px-4
+                        text-sm
+                        outline-none
+                        shadow-md
+                        focus:ring-2
+                        focus:ring-[var(--grass)]
+                        transition
+                        "
+                      />
+
+                    ))
+                  }
+
+
 
                   <select
                     className="
-                      w-full
-                      h-[48px]
-                      rounded-xl
-                      shadow-xl
-                      px-4
-                      outline-none
-                      bg-white
-                      text-[var(--forest)]
+                    h-[48px]
+                    rounded-xl
+                    bg-white
+                    px-4
+                    outline-none
+                    shadow-md
+                    text-gray-700
                     "
                   >
-                    <option>{t.selectCourse}</option>
+
+                    <option>
+                      {t.selectCourse}
+                    </option>
 
                     <option>B.Tech</option>
                     <option>BCA</option>
@@ -242,65 +398,93 @@ const EnquiryPopup2 = () => {
                     <option>MBA</option>
                     <option>B.Pharm</option>
                     <option>MCA</option>
+
                   </select>
+
+
+
 
                   <textarea
                     rows="3"
                     placeholder={t.message}
                     className="
-                      md:col-span-2
-                      w-full
-                      rounded-xl
-                     shadow-xl
-                      p-4
-                      outline-none
-                      resize-none
-                      bg-white
-                      text-[var(--forest)]
+                    md:col-span-2
+                    rounded-xl
+                    bg-white
+                    p-4
+                    shadow-md
+                    outline-none
+                    resize-none
+                    focus:ring-2
+                    focus:ring-[var(--grass)]
                     "
-                  ></textarea>
+                  />
+
+
+
 
                   <button
                     className="
-                      md:col-span-2
-                      w-full
-                      h-[50px]
-                      rounded-xl
-                      text-[var(--forest)]
-                      font-semibold
-                      bg-[var(--white)]
-                      hover:scale-[1.02]
-                      transition-all
-                      cursor-pointer
-                      shadow-xl
+                    md:col-span-2
+                    h-[52px]
+                    rounded-xl
+                    bg-[var(--forest)]
+                    text-white
+                    font-semibold
+                    shadow-lg
+                    hover:-translate-y-1
+                    transition-all
+                    cursor-pointer
                     "
                   >
                     {t.submit}
                   </button>
+
+
                 </div>
+
+
               </div>
+
+
             </div>
+
+
+
           </div>
+
+
         </div>
+
       )}
 
-      <style>
-        {`
-          @keyframes popup{
-            from{
-              opacity:0;
-              transform:scale(.9) translateY(20px);
-            }
 
-            to{
-              opacity:1;
-              transform:scale(1) translateY(0);
-            }
-          }
-        `}
+
+
+      <style>
+      {`
+
+      @keyframes popup{
+
+        from{
+          opacity:0;
+          transform:scale(.92) translateY(30px);
+        }
+
+        to{
+          opacity:1;
+          transform:scale(1) translateY(0);
+        }
+
+      }
+
+      `}
       </style>
+
+
     </>
   );
 };
+
 
 export default EnquiryPopup2;

@@ -31,7 +31,7 @@ I warmly invite students, parents, alumni, academicians, and industry partners t
 
 const AboutSection = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[#f8fbf6]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-3 items-center ">
 

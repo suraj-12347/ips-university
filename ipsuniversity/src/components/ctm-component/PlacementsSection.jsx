@@ -151,45 +151,139 @@ const PlacementsSection = () => {
 
       {/* Cards */}
       <div
-        id="placement-scroll"
-        className="flex gap-4 md:gap-6 overflow-x-auto  pb-4 scroll-smooth scrollb py-4"
-      >
-        {placements.map((item, index) => (
-          <div
-            key={index}
+  id="placement-scroll"
+  className="
+    flex
+    gap-6
+    overflow-x-auto
+    pb-6
+    scroll-smooth
+    scrollb
+    py-4
+  "
+>
+  {placements.map((item, index) => (
+    <div
+      key={index}
+      className="
+        group
+        relative
+        min-w-[260px]
+        sm:min-w-[280px]
+        md:min-w-[300px]
+        max-h-[280px]
+        bg-white
+        rounded-[28px]
+        overflow-hidden
+        shadow-md
+        hover:shadow-2xl
+        hover:-translate-y-2
+        transition-all
+        duration-500
+        flex-shrink-0
+        border
+        border-4 
+        border-white
+      "
+    >
+      {/* Top Gradient */}
+      <div
+        className="
+         
+          h-20
+          bg-[#31572c]
+        "
+      />
+
+      {/* Student Image */}
+      <div className="relative -mt-14 flex justify-center">
+
+        <img
+          src={item.image}
+          alt={item.student}
+          className="
+            w-28
+            h-28
+            rounded-full
+            object-cover
+            border-[6px]
+            border-white
+            shadow-lg
+            transition-transform
+            duration-500
+            group-hover:scale-105
+          "
+        />
+
+      </div>
+
+      {/* Content */}
+      <div className="px-6 pb-6 pt-2 text-center">
+
+        {/* <span
+          className="
+            inline-block
+            px-4
+            py-1.5
+            rounded-full
+            bg-[#ecf39e]
+            text-[#31572c]
+            text-xs
+            font-semibold
+            tracking-wide
+          "
+        >
+          Placement
+        </span> */}
+
+        <h3
+          className="mt-1 text-xl text-[#31572c]"
+          style={{ fontFamily: "Fraunces, serif" }}
+        >
+          {item.company}
+        </h3>
+
+        <p className="mt-1 text-gray-600 leading-7">
+          {item.student}
+        </p>
+
+        <button
+          className="
+            mt-2
+            inline-flex
+            items-center
+            gap-2
+            text-[#31572c]
+            font-semibold
+            group/button
+          "
+        >
+          View Profile
+
+          <span
             className="
-              min-w-[240px]
-              sm:min-w-[260px]
-              md:min-w-[280px]
-              bg-white
-              p-6
-              text-center
-              shadow-lg
-              rounded-2xl
-              flex-shrink-0
-              hover:-translate-y-2
+              w-9
+              h-9
+              rounded-full
+              bg-[#31572c]
+              text-white
+              flex
+              items-center
+              justify-center
               transition-all
               duration-300
-              border-t
-              border-gray-100
+              group-hover/button:translate-x-1
             "
           >
-            <img
-              src={item.image}
-              alt={item.student}
-              className="h-24 w-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-100"
-            />
+            →
+          </span>
+        </button>
 
-            <h3 className="font-bold text-lg md:text-xl text-[var(--forest)]">
-              {item.company}
-            </h3>
-
-            <p className="mt-3 text-gray-600 text-sm md:text-base">
-              {item.student}
-            </p>
-          </div>
-        ))}
       </div>
+
+    </div>
+  ))}
+</div>
 
       {/* Right Arrow */}
       <button

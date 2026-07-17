@@ -18,6 +18,7 @@ import SocialMedia2 from '../components/SocialMedia2'
 import Brochure2 from '../components/Brochure2'
 import Footer from '../components/Footer'
 import Topbar3 from '../components/Topbar3'
+import ApprovalRecodgnition from '../components/ApprovalRecognition'
 
 const Page2 = () => {
   return (
@@ -43,6 +44,7 @@ const Page2 = () => {
     <CompanySection2/>
     <Brochure2/>
     <SocialMedia2/>
+    <ApprovalRecodgnition/>
     <Footer/>
 
     

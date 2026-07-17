@@ -22,10 +22,10 @@ const ChatBot = () => {
       online: "🟢 Online — Ask me anything!",
 
       welcome:
-        "👋 Namaste! I'm the IPS University virtual assistant.",
+        "👋 Namaste! I'm  IPS University's virtual assistant.",
 
       ask:
-        "Ask about Admissions, Courses, Scholarships, Fees & Placements.",
+        "Ask about Admission, Courses, Scholarship, Fees & Placements.",
 
       placeholder: "Type your message...",
 

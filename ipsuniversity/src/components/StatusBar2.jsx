@@ -105,16 +105,16 @@ const StatsBar = () => {
   return (
  <section
   ref={sectionRef}
-  className="relative lg:px-8 px-4  xl:-mt-15 "
+  className="relative   z-40 "
 >
-  <div className="max-w-[1380px] mx-auto">
+  <div className="max-w-[1380px] mx-auto mt-5">
     <div
       className="
         bg-transparent
         backdrop-blur-md
-        rounded-[24px]
+       
         border border-white/50
-       shadow-lg
+       
         overflow-hidden
         xl:h-[130px]
       "

@@ -231,7 +231,7 @@ const About3 = () => {
 
   {/* Image */}
   <img
-    src={Potgr}
+    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
     alt="Chairperson"
     className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
   />
@@ -257,7 +257,7 @@ const About3 = () => {
       </div>
 
       <h3 className=" text-white text-[22px] font-serif font-semibold">
-        Mrs. Shobha Mishra
+        Mrs.XYZ
       </h3>
 
       <div className="flex items-center gap-3 mt-2">
