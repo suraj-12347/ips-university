@@ -39,7 +39,7 @@ const FAQ = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-[#f8fbf6] mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           {/* Left Content */}

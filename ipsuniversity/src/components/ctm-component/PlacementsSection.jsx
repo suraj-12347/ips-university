@@ -2,19 +2,26 @@ import React from "react";
 import { ArrowRightToLine } from "lucide-react";
 import tree from "../../images1/pharmaflowertree3.png";
 import suraj from "../../images1/suraj.jpeg";
-import neeraj from "../../images1/neeraj.jpeg";
-import prasansha from "../../images1/prasansha.jpeg";
+import neeraj from "../../images1/neerajwhite.png";
+import prasansha from "../../images1/prasansha2.png";
+import indiangirl from "../../images1/indiangirl.png";
 
 const placements = [
   {
     company: "Nagarro",
-    student: "Ayush Raj Sharma",
+    student: "Ayush Raj ",
     image:
       suraj,
   },
   {
+    company: "Infosys",
+    student: "Roshni",
+    image:
+      indiangirl,
+  },
+  {
     company: "TATA Consultancy",
-    student: "Jatin Shrivastava",
+    student: "Jatin ",
     image:
       neeraj,
   },
@@ -36,24 +43,19 @@ const placements = [
     image:
       neeraj,
   },
-  {
-    company: "Infosys",
-    student: "Roshni",
-    image:
-      prasansha,
-  },
+  
 ];
 
 const PlacementsSection = () => {
   return (
    <section
   className="relative py-12 md:py-15 overflow-hidden mt-20 md:mt-20"
-  style={{
-    backgroundImage: `url(${tree})`,
-    backgroundSize: "cover",
+  // style={{
+  //   backgroundImage: `url(${tree})`,
+  //   backgroundSize: "cover",
     
-    backgroundRepeat: "no-repeat",
-  }}
+  //   backgroundRepeat: "no-repeat",
+  // }}
 >
 
   <div
@@ -164,124 +166,118 @@ const PlacementsSection = () => {
 >
   {placements.map((item, index) => (
     <div
-      key={index}
+  key={index}
+  className="
+    group
+    relative
+    w-full
+    max-w-[285px]
+    h-[390px]
+    rounded-[28px]
+    overflow-hidden
+    cursor-pointer
+    shadow-lg
+    hover:shadow-2xl
+    hover:-translate-y-2
+    transition-all
+    duration-500
+    mx-auto
+    flex-shrink-0
+  "
+>
+  {/* Image */}
+  <img
+    src={item.image}
+    alt={item.student}
+    className="
+      w-full
+      h-full
+      object-cover
+      transition-transform
+      duration-700
+      group-hover:scale-110
+    "
+  />
+
+  {/* Optional Dark Overlay */}
+  <div
+    className="
+      absolute
+      inset-0
+      bg-gradient-to-t
+      from-black/30
+      to-transparent
+    "
+  />
+
+  {/* Floating Card */}
+  <div
+    className="
+      absolute
+      left-4
+      right-4
+      bottom-4
+      bg-white
+      rounded-2xl
+      px-5
+      py-4
+      shadow-xl
+      flex
+      items-center
+      justify-between
+      transition-all
+      duration-500
+      group-hover:bottom-6
+    "
+  >
+    <div className="pr-3">
+      <h3
+        className="text-[22px] leading-tight text-[var(--forest)]"
+        style={{ fontFamily: "Fraunces, serif" }}
+      >
+        {item.student}
+      </h3>
+
+      <p className="text-sm text-gray-500 mt-1">
+        {item.company}
+      </p>
+    </div>
+
+    {/* Arrow Button */}
+    <button
       className="
-        group
-        relative
-        min-w-[260px]
-        sm:min-w-[280px]
-        md:min-w-[300px]
-        max-h-[280px]
-        bg-white
-        rounded-[28px]
-        overflow-hidden
-        shadow-md
-        hover:shadow-2xl
-        hover:-translate-y-2
-        transition-all
-        duration-500
-        flex-shrink-0
+        w-11
+        h-11
+        rounded-full
         border
-        border-4 
-        border-white
+        border-gray-300
+        flex
+        items-center
+        justify-center
+        transition-all
+        duration-300
+        text-[var(--forest)]
+        group-hover:bg-[var(--forest)]
+        group-hover:text-white
       "
     >
-      {/* Top Gradient */}
-      <div
-        className="
-         
-          h-20
-          bg-[#31572c]
-        "
-      />
-
-      {/* Student Image */}
-      <div className="relative -mt-14 flex justify-center">
-
-        <img
-          src={item.image}
-          alt={item.student}
-          className="
-            w-28
-            h-28
-            rounded-full
-            object-cover
-            border-[6px]
-            border-white
-            shadow-lg
-            transition-transform
-            duration-500
-            group-hover:scale-105
-          "
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.3"
+        className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M7 17L17 7M17 7H8M17 7V16"
         />
-
-      </div>
-
-      {/* Content */}
-      <div className="px-6 pb-6 pt-2 text-center">
-
-        {/* <span
-          className="
-            inline-block
-            px-4
-            py-1.5
-            rounded-full
-            bg-[#ecf39e]
-            text-[#31572c]
-            text-xs
-            font-semibold
-            tracking-wide
-          "
-        >
-          Placement
-        </span> */}
-
-        <h3
-          className="mt-1 text-xl text-[#31572c]"
-          style={{ fontFamily: "Fraunces, serif" }}
-        >
-          {item.company}
-        </h3>
-
-        <p className="mt-1 text-gray-600 leading-7">
-          {item.student}
-        </p>
-
-        <button
-          className="
-            mt-2
-            inline-flex
-            items-center
-            gap-2
-            text-[#31572c]
-            font-semibold
-            group/button
-          "
-        >
-          View Profile
-
-          <span
-            className="
-              w-9
-              h-9
-              rounded-full
-              bg-[#31572c]
-              text-white
-              flex
-              items-center
-              justify-center
-              transition-all
-              duration-300
-              group-hover/button:translate-x-1
-            "
-          >
-            →
-          </span>
-        </button>
-
-      </div>
-
-    </div>
+      </svg>
+    </button>
+  </div>
+</div>
   ))}
 </div>
 

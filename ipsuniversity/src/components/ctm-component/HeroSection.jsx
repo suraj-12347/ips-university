@@ -1,5 +1,5 @@
 import React from "react";
-import ctmdashboard from "../../images1/ctmlongpng3.png";
+import ctmdashboard from "../../images1/ctmlongpng4.png";
 import ctmmain from "../../images1/edubuild7.png";
 
 

@@ -42,6 +42,7 @@ const schools = [
     quote:
       "Inspiring educators to shape minds, build character, and transform the future.",
     icon: GraduationCap,
+    route: "/education",
   },
   {
     image: pharmacy,
