@@ -1,60 +1,82 @@
-// SchoolsSection2.jsx
-
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
-import ctm from "../images1/ctmb.jpg";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import ctm from "../images1/ctmmain.png";
 import bca from "../images1/pharmacy.jpeg";
 import mgmt from "../images1/pharmacy.jpeg";
 import pharmacy from "../images1/pharmab.jpg";
 import education from "../images1/edub.jpg";
 import physical from "../images1/pharmacy.jpeg";
-
-import DotetRing2 from "./DotedRing2";
+import flower from "../images1/flowerrr.jpeg";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import {
+  Cpu,
+  GraduationCap,
+  Building2,
+  BookOpen,
+  BriefcaseBusiness,
+  MonitorSmartphone,
+  Dumbbell,
+} from "lucide-react";
 
 const schools = [
   {
     image: ctm,
     name: "School of Engineering & Technology",
-    courses:
-      "B.Tech (ME, CE, CS, EE, EC) · M.Tech · Applied Sciences & Humanities",
+    quote:
+      "Empowering future engineers through innovation, technology, and hands-on learning.",
+    icon: Cpu,
+    route: "/ipsctm",
   },
-   {
+  {
     image: education,
     name: "School of Education",
-    courses: "B.Ed · M.Ed — Teacher Education",
+    quote:
+      "Inspiring educators to shape minds, build character, and transform the future.",
+    icon: GraduationCap,
   },
- 
-  
   {
     image: pharmacy,
     name: "School of Pharmacy",
-    courses: "D.Pharm · B.Pharm · M.Pharm",
-  },
- 
-  {
-    image: physical,
-    name: "School of Physical Education",
-    courses:
-      "B.P.Ed · M.P.Ed — Sports Science & Wellness",
-  },
-   {
-    image: bca,
-    name: "School of Computer Applications",
-    courses:
-      "BCA · MCA · AI-ML · Cyber Security · Data Science",
+    quote:
+      "Advancing healthcare through pharmaceutical excellence, research, and patient care.",
+    icon: BookOpen,
   },
   {
     image: mgmt,
     name: "School of Management & Commerce",
-    courses:
-      "MBA · BBA · B.Com · Tourism & Management",
+    quote:
+      "Developing visionary leaders for business, entrepreneurship, and global success.",
+    icon: BriefcaseBusiness,
+  },
+  {
+    image: bca,
+    name: "School of Computer Applications",
+    quote:
+      "Creating tomorrow's innovators through coding, AI, and digital transformation.",
+    icon: MonitorSmartphone,
+  },
+  {
+    image: physical,
+    name: "School of Physical Education",
+    quote:
+      "Building champions with discipline, fitness, leadership, and sportsmanship.",
+    icon: Dumbbell,
   },
 ];
 
-const SchoolsSection2 = () => {
+const SchoolsSection = () => {
+  const navigate = useNavigate();
   const [startIndex, setStartIndex] = useState(0);
+  const [expandedCards, setExpandedCards] = useState({});
 
   const visibleCards = schools.slice(startIndex, startIndex + 3);
 
@@ -70,51 +92,84 @@ const SchoolsSection2 = () => {
     }
   };
 
-  return (
-    <section id="schools" className="relative w-full bg-[#f8f8f8] py-10 overflow-hidden mt-10">
+  const handleCardClick = (school) => {
+    if (school.route) {
+      navigate(school.route);
+      
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    }
+  };
 
-      {/* Ring */}
-      <div className="absolute -left-20 lg:left-80 -top-80 opacity-50">
-        <DotetRing2
-          height={700}
-          width={700}
-          color="var(--grass)"
-        />
-      </div>
+  return (
+    <section
+      id="academics"
+      className="
+        relative
+        w-full
+        py-5
+        md:py-12
+        overflow-hidden
+        z-10
+        bg-transparent
+        
+        
+      "
+      // style={{
+      //   backgroundImage: `url(${flower})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
+    >
+      {/* Overlay */}
+       {/* <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/40 backdrop-blur-[4px]"></div> */}
+
+
 
       {/* Heading */}
-      <div className="relative z-40 w-full px-4">
-
-        <p className="text-center text-[var(--grass)] font-semibold tracking-[4px] uppercase text-xs">
-          Academic
+      <div className="relative z-40 w-full px-4  z-20">
+        <p className="text-center text-[var(--forest)]/90 font-semibold tracking-[4px] uppercase text-md">
+          Explore
         </p>
 
-        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--grass)] mt-2 leading-tight">
+        <h1 className="text-center text-2xl sm:text-3xl md:text-5xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
           Our Schools
         </h1>
-
       </div>
 
       {/* Description */}
-      <div className="relative z-20 max-w-[850px] mx-auto px-4 mb-7">
-
-        <p className="text-center text-gray-800 max-w-2xl mx-auto mt-3 leading-6 text-md">
+      <div className="relative z-40 max-w-[850px] mx-auto px-4 mb-8">
+        <p className="text-center text-gray-700 max-w-2xl mx-auto mt-4 leading-6 text-md">
           Specialized schools designed to deliver focused,
           industry-aligned education across diverse disciplines.
         </p>
-
       </div>
 
       {/* Slider */}
-      <div className="max-w-[1250px] mx-auto px-4 sm:px-6 relative">
-
-        {/* Prev */}
-        <button
+      <div className="max-w-[1250px] mx-auto px-2  relative">
+        {/* Prev Button */}
+        {/* <button
           onClick={prevSlide}
           className="
             absolute
             left-0
-            md:left-2
+            md:-left-2
             top-1/2
             -translate-y-1/2
             z-20
@@ -128,18 +183,19 @@ const SchoolsSection2 = () => {
             justify-center
             hover:scale-105
             transition
+            
           "
         >
           <ChevronLeft size={18} />
-        </button>
+        </button> */}
 
-        {/* Next */}
-        <button
+        {/* Next Button */}
+        {/* <button
           onClick={nextSlide}
           className="
             absolute
             right-0
-            md:right-2
+            md:-right-2
             top-1/2
             -translate-y-1/2
             z-20
@@ -156,135 +212,131 @@ const SchoolsSection2 = () => {
           "
         >
           <ChevronRight size={18} />
-        </button>
+        </button> */}
 
         {/* Cards */}
+
+
+  <div className="relative z-20 mt-10 max-w-[1450px] mx-auto ">
+
+  <Swiper
+    modules={[Pagination]}
+    loop={true}
+    speed={700}
+    spaceBetween={24}
+    slidesPerView={1}
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+    pagination={{
+      clickable: true,
+    }}
+    breakpoints={{
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1300: {
+        slidesPerView: 4,
+      },
+    }}
+    className="schools-swiper"
+  >
+    {schools.map((school, index) => (
+      <SwiperSlide key={index} className="py-4">
         <div
+          onClick={() => handleCardClick(school)}
           className="
-            grid
-            grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-3
-            gap-5
-            place-items-center
+            group
+            relative
+            w-full
+            max-w-[330px]
+            mx-auto
+            h-[350px]
+            rounded-[30px]
+            overflow-hidden
+            shadow-lg
+            hover:shadow-2xl
+            hover:-translate-y-2
+            transition-all
+            duration-500
+            cursor-pointer
+            border-[5px]
+            border-white
           "
         >
+          {/* Image */}
+          <img
+            src={school.image}
+            alt={school.name}
+            className="
+              absolute
+              inset-0
+              w-full
+              h-full
+              object-cover
+              transition-transform
+              duration-700
+              group-hover:scale-110
+            "
+          />
 
-          {visibleCards.map((school, index) => (
-            <div
-              key={index}
-              className="
-                group
-                relative
-                w-full
-                max-w-[340px]
-                h-[240px]
-                sm:h-[260px]
-                md:h-[280px]
-                rounded-2xl
-                overflow-hidden
-                shadow-lg
-                cursor-pointer
-              "
+          {/* Overlay */}
+          <div
+            className="
+              absolute
+              inset-0
+              bg-gradient-to-t
+              from-[var(--forest)]
+              via-[#31572c]/70
+              to-transparent
+            "
+          />
+
+          {/* Content */}
+          <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+
+            <h3
+              className="text-2xl mb-3"
+              style={{ fontFamily: "Fraunces, serif" }}
             >
+              {school.name}
+            </h3>
 
-              {/* Image */}
-              <img
-                src={school.image}
-                alt={school.name}
-                className="
-                  absolute
-                  inset-0
-                  w-full
-                  h-full
-                  object-cover
-                  object-center
-                  transition-all
-                  duration-700
-                  group-hover:scale-110
-                "
-              />
+            {/* <p className="text-sm text-white/90 leading-6 line-clamp-3 mb-5">
+              {school.quote}
+            </p> */}
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/35 group-hover:bg-black/55 transition-all duration-500"></div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCardClick(school);
+              }}
+              className="flex items-center gap-3 font-semibold"
+            >
+              <span>Explore School</span>
 
-              {/* Bottom Title */}
-              <div
-                className="
-                  absolute
-                  bottom-0
-                  left-0
-                  w-full
-                  p-5
-                  transition-all
-                  duration-500
-                  group-hover:-translate-y-12
-                "
-              >
-                <h3 className="text-white text-lg sm:text-xl font-bold leading-snug">
-                  {school.name}
-                </h3>
+              <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:translate-x-1">
+                →
               </div>
+            </button>
 
-              {/* Hover Content */}
-              <div
-                className="
-                  absolute
-                  top-0
-                  right-[-100%]
-                  group-hover:right-0
-                  w-full
-                  h-full
-                  bg-white/10
-                  backdrop-blur-xl
-                  border-l
-                  border-white/20
-                  p-5
-                  transition-all
-                  duration-700
-                  flex
-                  flex-col
-                  justify-end
-                "
-              >
-
-                <h3 className="text-white text-lg sm:text-xl font-bold mb-3">
-                  {school.name}
-                </h3>
-
-                <p className="text-white/85 leading-6 text-xs sm:text-sm">
-                  {school.courses}
-                </p>
-
-                <button
-                  className="
-                    mt-4
-                    w-fit
-                    px-4
-                    py-2.5
-                    rounded-xl
-                    text-white
-                    text-sm
-                    font-semibold
-                    bg-[var(--forest)]
-                    hover:scale-105
-                    transition-all
-                    duration-300
-                  "
-                >
-                  Read More →
-                </button>
-
-              </div>
-
-            </div>
-          ))}
-
+          </div>
         </div>
-      </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
 
+</div>
+
+
+       
+      </div>
     </section>
   );
 };
 
-export default SchoolsSection2;
+export default SchoolsSection;

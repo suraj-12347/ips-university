@@ -1,43 +1,46 @@
 import React from "react";
 import { ArrowRightToLine } from "lucide-react";
 import tree from "../../images1/pharmaflowertree3.png";
+import suraj from "../../images1/suraj.jpeg";
+import neeraj from "../../images1/neeraj.jpeg";
+import prasansha from "../../images1/prasansha.jpeg";
 
 const placements = [
   {
     company: "Nagarro",
     student: "Ayush Raj Sharma",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
+      suraj,
   },
   {
     company: "TATA Consultancy",
     student: "Jatin Shrivastava",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
+      neeraj,
   },
   {
     company: "SNS",
-    student: "Piyush Jain",
+    student: "Prasansha",
     image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400",
+      prasansha,
   },
   {
     company: "TCS",
     student: "Rohan Chawan",
     image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400",
+      suraj,
   },
   {
     company: "Wipro",
     student: "Sourav Suman",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+      neeraj,
   },
   {
     company: "Infosys",
-    student: "Rahul Verma",
+    student: "Roshni",
     image:
-      "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=400",
+      prasansha,
   },
 ];
 
@@ -73,53 +76,214 @@ const PlacementsSection = () => {
 
   <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
     
-    <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-16 text-[var(--forest)]">
-      Placements
-    </h2>
+   <div className="text-center mb-10 md:mb-16">
+
+  <p
+    className="
+      uppercase
+      tracking-[4px]
+      text-sm
+      font-semibold
+      text-[var(--grass)]
+      mb-3
+    "
+    style={{
+      fontFamily:"Outfit, sans-serif"
+    }}
+  >
+    Career & Opportunities
+  </p>
+
+
+  <h2
+    className="
+      text-4xl
+      md:text-6xl
+      text-[var(--forest)]
+      relative
+      inline-block
+    "
+    style={{
+      fontFamily:"Fraunces, serif"
+    }}
+  >
+    Placements
+
+    <span
+      className="
+        absolute
+        left-1/2
+        -bottom-3
+        -translate-x-1/2
+        w-24
+        h-[3px]
+        bg-[var(--grass)]
+        rounded-full
+      "
+    />
+
+  </h2>
+
+
+
+  <p
+    className="
+      max-w-3xl
+      mx-auto
+      mt-8
+      text-gray-600
+      leading-8
+      text-base
+      md:text-lg
+    "
+    style={{
+      fontFamily:"Outfit, sans-serif"
+    }}
+  >
+    Empowering students with industry-ready skills, professional growth
+    opportunities and successful career pathways through strong
+    industry connections and placement support.
+  </p>
+
+</div>
 
     <div className="relative">
 
       {/* Cards */}
       <div
-        id="placement-scroll"
-        className="flex gap-4 md:gap-6 overflow-x-auto  pb-4 scroll-smooth scrollb py-4"
-      >
-        {placements.map((item, index) => (
-          <div
-            key={index}
+  id="placement-scroll"
+  className="
+    flex
+    gap-6
+    overflow-x-auto
+    pb-6
+    scroll-smooth
+    scrollb
+    py-4
+  "
+>
+  {placements.map((item, index) => (
+    <div
+      key={index}
+      className="
+        group
+        relative
+        min-w-[260px]
+        sm:min-w-[280px]
+        md:min-w-[300px]
+        max-h-[280px]
+        bg-white
+        rounded-[28px]
+        overflow-hidden
+        shadow-md
+        hover:shadow-2xl
+        hover:-translate-y-2
+        transition-all
+        duration-500
+        flex-shrink-0
+        border
+        border-4 
+        border-white
+      "
+    >
+      {/* Top Gradient */}
+      <div
+        className="
+         
+          h-20
+          bg-[#31572c]
+        "
+      />
+
+      {/* Student Image */}
+      <div className="relative -mt-14 flex justify-center">
+
+        <img
+          src={item.image}
+          alt={item.student}
+          className="
+            w-28
+            h-28
+            rounded-full
+            object-cover
+            border-[6px]
+            border-white
+            shadow-lg
+            transition-transform
+            duration-500
+            group-hover:scale-105
+          "
+        />
+
+      </div>
+
+      {/* Content */}
+      <div className="px-6 pb-6 pt-2 text-center">
+
+        {/* <span
+          className="
+            inline-block
+            px-4
+            py-1.5
+            rounded-full
+            bg-[#ecf39e]
+            text-[#31572c]
+            text-xs
+            font-semibold
+            tracking-wide
+          "
+        >
+          Placement
+        </span> */}
+
+        <h3
+          className="mt-1 text-xl text-[#31572c]"
+          style={{ fontFamily: "Fraunces, serif" }}
+        >
+          {item.company}
+        </h3>
+
+        <p className="mt-1 text-gray-600 leading-7">
+          {item.student}
+        </p>
+
+        <button
+          className="
+            mt-2
+            inline-flex
+            items-center
+            gap-2
+            text-[#31572c]
+            font-semibold
+            group/button
+          "
+        >
+          View Profile
+
+          <span
             className="
-              min-w-[240px]
-              sm:min-w-[260px]
-              md:min-w-[280px]
-              bg-white
-              p-6
-              text-center
-              shadow-lg
-              rounded-2xl
-              flex-shrink-0
-              hover:-translate-y-2
+              w-9
+              h-9
+              rounded-full
+              bg-[#31572c]
+              text-white
+              flex
+              items-center
+              justify-center
               transition-all
               duration-300
-              border-t
-              border-gray-100
+              group-hover/button:translate-x-1
             "
           >
-            <img
-              src={item.image}
-              alt={item.student}
-              className="h-24 w-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-100"
-            />
+            →
+          </span>
+        </button>
 
-            <h3 className="font-bold text-lg md:text-xl text-[var(--forest)]">
-              {item.company}
-            </h3>
-
-            <p className="mt-3 text-gray-600 text-sm md:text-base">
-              {item.student}
-            </p>
-          </div>
-        ))}
       </div>
+
+    </div>
+  ))}
+</div>
 
       {/* Right Arrow */}
       <button
@@ -134,7 +298,7 @@ const PlacementsSection = () => {
         className="
           absolute
           right-2
-          md:-right-12
+          md:-right-6
           top-1/2
           -translate-y-1/2
           p-2 md:p-3
@@ -143,6 +307,7 @@ const PlacementsSection = () => {
           z-10
           bg-white
           rounded-full
+          shadow-lg
         "
       >
         <ArrowRightToLine

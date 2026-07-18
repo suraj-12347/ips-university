@@ -5,160 +5,162 @@ import React, {
 
 import tcs from "../images1/adobe.png";
 import DotedRing2 from "./DotedRing2";
+import pharma from "../images1/treepng2.png";
+
 import { useLanguage } from "../context/LanguageContext";
 
-const companySlides = [
-  [
-    {
-      name: "Google",
-      logo: "https://img.icons8.com/color/96/google-logo.png",
-    },
-    {
-      name: "Microsoft",
-      logo: "https://img.icons8.com/color/96/microsoft.png",
-    },
-    {
-      name: "Amazon",
-      logo: "https://img.icons8.com/color/96/amazon.png",
-    },
-    {
-      name: "Apple",
-      logo: "https://cdn.simpleicons.org/apple",
-    },
-    {
-      name: "Meta",
-      logo: "https://img.icons8.com/color/96/meta.png",
-    },
-    {
-      name: "Netflix",
-      logo: "https://cdn.simpleicons.org/netflix",
-    },
-    {
-      name: "Adobe",
-      logo: tcs,
-    },
-    {
-      name: "Spotify",
-      logo: "https://img.icons8.com/color/96/spotify--v1.png",
-    },
-    {
-      name: "Tesla",
-      logo: "https://cdn.simpleicons.org/tesla",
-    },
-    {
-      name: "Airbnb",
-      logo: "https://img.icons8.com/color/96/airbnb.png",
-    },
-    {
-      name: "Notion",
-      logo: "https://img.icons8.com/ios-filled/100/notion.png",
-    },
-    {
-      name: "Slack",
-      logo: "https://img.icons8.com/color/96/slack-new.png",
-    },
-    {
-      name: "TCS",
-      logo: tcs,
-    },
-    {
-      name: "Airtel",
-      logo: "https://cdn.simpleicons.org/airtel",
-    },
-    {
-      name: "Infosys",
-      logo: "https://cdn.simpleicons.org/infosys",
-    },
-    {
-      name: "Wipro",
-      logo: "https://cdn.simpleicons.org/wipro",
-    },
-  ],
-
-  [
-    {
-      name: "LinkedIn",
-      logo: "https://img.icons8.com/color/96/linkedin.png",
-    },
-
-    {
-      name: "Uber",
-      logo: "https://cdn.simpleicons.org/uber",
-    },
-
-    {
-      name: "Samsung",
-      logo: "https://cdn.simpleicons.org/samsung",
-    },
-
-    {
-      name: "Intel",
-      logo: "https://cdn.simpleicons.org/intel",
-    },
-
-    {
-      name: "PayPal",
-      logo: "https://cdn.simpleicons.org/paypal",
-    },
-
-    {
-      name: "Pinterest",
-      logo: "https://cdn.simpleicons.org/pinterest",
-    },
-
-    {
-      name: "Oracle",
-      logo: "https://img.icons8.com/color/96/oracle-logo.png",
-    },
-
-    {
-      name: "IBM",
-      logo: "https://img.icons8.com/color/96/ibm.png",
-    },
-
-    {
-      name: "Accenture",
-      logo: "https://cdn.simpleicons.org/accenture",
-    },
-
-    {
-      name: "Dell",
-      logo: "https://cdn.simpleicons.org/dell",
-    },
-
-    {
-      name: "Cisco",
-      logo: "https://cdn.simpleicons.org/cisco",
-    },
-
-    {
-      name: "Reddit",
-      logo: "https://cdn.simpleicons.org/reddit",
-    },
-
-    {
-      name: "Figma",
-      logo: "https://cdn.simpleicons.org/figma",
-    },
-
-    {
-      name: "GitHub",
-      logo: "https://cdn.simpleicons.org/github",
-    },
-
-    {
-      name: "Dropbox",
-      logo: "https://cdn.simpleicons.org/dropbox",
-    },
-
-    {
-      name: "YouTube",
-      logo: "https://cdn.simpleicons.org/youtube",
-    },
-  ],
+const slide1 = [
+  {
+    name: "Google",
+    logo: "https://img.icons8.com/color/96/google-logo.png",
+  },
+  {
+    name: "Microsoft",
+    logo: "https://img.icons8.com/color/96/microsoft.png",
+  },
+  {
+    name: "Amazon",
+    logo: "https://img.icons8.com/color/96/amazon.png",
+  },
+  {
+    name: "Apple",
+    logo: "https://cdn.simpleicons.org/apple",
+  },
+  {
+    name: "Meta",
+    logo: "https://img.icons8.com/color/96/meta.png",
+  },
+  {
+    name: "Netflix",
+    logo: "https://cdn.simpleicons.org/netflix",
+  },
+  {
+    name: "Adobe",
+    logo: tcs,
+  },
+  {
+    name: "Spotify",
+    logo: "https://img.icons8.com/color/96/spotify--v1.png",
+  },
+  {
+    name: "Tesla",
+    logo: "https://cdn.simpleicons.org/tesla",
+  },
+  {
+    name: "Airbnb",
+    logo: "https://img.icons8.com/color/96/airbnb.png",
+  },
+  {
+    name: "Notion",
+    logo: "https://img.icons8.com/ios-filled/100/notion.png",
+  },
+  {
+    name: "Slack",
+    logo: "https://img.icons8.com/color/96/slack-new.png",
+  },
+  {
+    name: "TCS",
+    logo: tcs,
+  },
+  {
+    name: "Airtel",
+    logo: "https://cdn.simpleicons.org/airtel",
+  },
+  {
+    name: "Infosys",
+    logo: "https://cdn.simpleicons.org/infosys",
+  },
+  {
+    name: "Wipro",
+    logo: "https://cdn.simpleicons.org/wipro",
+  },
 ];
 
-const CompanySection = () => {
+const slide2 = [
+  {
+    name: "LinkedIn",
+    logo: "https://img.icons8.com/color/96/linkedin.png",
+  },
+
+  {
+    name: "Uber",
+    logo: "https://cdn.simpleicons.org/uber",
+  },
+
+  {
+    name: "Samsung",
+    logo: "https://cdn.simpleicons.org/samsung",
+  },
+
+  {
+    name: "Intel",
+    logo: "https://cdn.simpleicons.org/intel",
+  },
+
+  {
+    name: "PayPal",
+    logo: "https://cdn.simpleicons.org/paypal",
+  },
+
+  {
+    name: "Pinterest",
+    logo: "https://cdn.simpleicons.org/pinterest",
+  },
+
+  {
+    name: "Oracle",
+    logo: "https://img.icons8.com/color/96/oracle-logo.png",
+  },
+
+  {
+    name: "IBM",
+    logo: "https://img.icons8.com/color/96/ibm.png",
+  },
+
+  {
+    name: "Accenture",
+    logo: "https://cdn.simpleicons.org/accenture",
+  },
+
+  {
+    name: "Dell",
+    logo: "https://cdn.simpleicons.org/dell",
+  },
+
+  {
+    name: "Cisco",
+    logo: "https://cdn.simpleicons.org/cisco",
+  },
+
+  {
+    name: "Reddit",
+    logo: "https://cdn.simpleicons.org/reddit",
+  },
+
+  {
+    name: "Figma",
+    logo: "https://cdn.simpleicons.org/figma",
+  },
+
+  {
+    name: "GitHub",
+    logo: "https://cdn.simpleicons.org/github",
+  },
+
+  {
+    name: "Dropbox",
+    logo: "https://cdn.simpleicons.org/dropbox",
+  },
+
+  {
+    name: "YouTube",
+    logo: "https://cdn.simpleicons.org/youtube",
+  },
+];
+
+const slides = [slide1, slide2];
+
+const CompanySection2 = () => {
   const [activeSlide, setActiveSlide] =
     useState(0);
 
@@ -177,39 +179,102 @@ const CompanySection = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[#f8f8f8] py-10 px-4 md:px-16 relative overflow-hidden mt-10">
+    <section
+      className="max-w-[100vw] w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0 flex  flex-col items-center gap-10"
+      style={{
+        backgroundImage: `url(${pharma})`,
+        backgroundSize: "cover",
+        backgroundPosition:
+          "center",
+          backgroundRepeat:"no-repeat"
+      }}
+    >
+      {/* Dark Overlay */}
+      {/* <div className="absolute inset-0 bg-[var(--moss)]/90 z-0"></div> */}
 
-      {/* Background Ring */}
-      <div className="absolute right-0 md:right-20 -top-40 rotate-180 opacity-40 md:opacity-70">
-        <DotedRing2
-          height={350}
-          width={350}
-        />
-      </div>
+       <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-0"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] z-0"></div>
+
 
       {/* Heading */}
-      <div className="max-w-5xl  mb-8 relative z-10 text-center md:text-left">
+      <div className="max-w-4xl mx-auto text-center mb-10 relative z-20">
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[var(--forest)] leading-tight">
-          {t.collaborators||"Our Collaborators"}
-        </h2>
+  <span
+    className="
+      inline-flex
+      items-center
+      gap-2
+      px-5
+      py-2
+      rounded-full
+      
+      text-[var(--forest)]
+      font-semibold
+      tracking-[3px]
+      uppercase
+      text-sm
+      
+    "
+  >
+    Strategic Partnerships
+  </span>
 
-        <p className="mt-4 text-[var(--grass)] max-w-xl leading-relaxed mx-auto md:mx-0 text-sm md:text-base">
-          {t.collaboratorsDesc||"Companies across the world build, scale and ship whith us"}
-        </p>
+  <h2
+    className="
+      mt-4
+      text-4xl
+      md:text-5xl
+      lg:text-6xl
+      font-bold
+      text-[var(--forest)]
+      leading-tight
+    "
+    style={{ fontFamily: "Fraunces, serif" }}
+  >
+    Our <span className="text-[var(--grass)]">Collaborators</span>
+  </h2>
 
-      </div>
+  <p
+    className="
+      mt-5
+      max-w-xl
+      mx-auto
+      text-lg
+      leading-8
+      text-gray-600
+    "
+  >
+    Collaborating with leading industries, universities, and organizations to
+    foster innovation, research, and student success.
+  </p>
 
-      {/* Logo Grid */}
+</div>
+
+      {/* Grid */}
       <div
         className="
-          max-w-7xl
+          max-w-[100vw]
+         
           mx-auto
           grid
           grid-cols-3
           sm:grid-cols-4
           md:grid-cols-6
           lg:grid-cols-8
+           2xl:grid-cols-8
           gap-3
           md:gap-4
           relative
@@ -217,8 +282,7 @@ const CompanySection = () => {
           perspective-[1200px]
         "
       >
-
-        {companySlides[activeSlide].map((c, i) => (
+        {slides[activeSlide].map((c, i) => (
           <div
             key={`${activeSlide}-${i}`}
             className="
@@ -228,12 +292,13 @@ const CompanySection = () => {
               items-center
               justify-center
               rounded-2xl
-              bg-white
+              bg-white/95
+              backdrop-blur-md
               border
-              border-[var(--grass)]/10
-              shadow-sm
-              hover:-translate-y-2
-              hover:shadow-xl
+              border-white/10
+              shadow-lg
+              hover:shadow-2xl
+              hover:-translate-y-1
               transition-all
               duration-500
               group
@@ -243,12 +308,12 @@ const CompanySection = () => {
               p-3
             "
             style={{
-              animationDelay: `${i * 0.06}s`,
+              animationDelay: `${i * 0.05}s`,
             }}
           >
 
             {/* Glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--grass)]/5 to-[var(--forest)]/5 opacity-0 group-hover:opacity-100 transition duration-500" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-[var(--grass)]/10 to-[var(--forest)]/10" />
 
             {/* Logo */}
             <img
@@ -257,12 +322,14 @@ const CompanySection = () => {
               className="
                 h-7
                 sm:h-8
-                w-auto
+                w-40
+                2xl:w-50
                 object-contain
+                opacity-75
                 group-hover:opacity-100
+                group-hover:scale-110
                 transition
                 duration-500
-                group-hover:scale-110
               "
             />
 
@@ -273,7 +340,7 @@ const CompanySection = () => {
         ))}
       </div>
 
-      {/* Custom Animation */}
+      {/* Animation */}
       <style>
         {`
           @keyframes flipCard {
@@ -299,4 +366,4 @@ const CompanySection = () => {
   );
 };
 
-export default CompanySection;
+export default CompanySection2;

@@ -1,58 +1,154 @@
 import React from 'react'
-import Navbar2 from '../components/Navbar2'
+import Navbar3 from '../components/Navbar3'
 import Herosec from '../components/Herosec'
 import ChatBot from '../components/ChatBot'
-import About4 from '../components/About4'
+import About3 from '../components/About4'
 import ThemeSwitcher from '../components/ThemeSwitcher'
-import StatusBar from '../components/StatusBar'
+import StatsBar from '../components/StatusBar2'
 import AboutUs from '../components/AboutUs'
-import SchoolsSection2 from '../components/SchoolSecction2'
-import LatestBanner from '../components/LatestBanner'
-import NoticeSection3 from '../components/NoticeSection3'
-import Navbar4 from '../components/Navbar4'
-import EnquiryPopup from '../components/EnquiryPopup'
-
-import ReviewCard1 from '../components/student-rev/ReviewCard'
-import ReviewCard2 from '../components/student-rev/ReviewCard2'
-import ReviewCard3 from '../components/student-rev/ReviewCard3'
-import ReviewCard4 from '../components/student-rev/ReviewCard4'
-import ReviewCard5 from '../components/student-rev/ReviewCard5'
-import StudentReviews2 from '../components/student-rev/StudentReview2'
-import CompanySection from '../components/CompanySection'
-import { Import } from 'lucide-react'
+import SchoolsSection from '../components/SchoolSecction2'
+import LatestBanner from '../components/LatestBanner2'
+import NoticeSection2 from '../components/NoticeSection2'
+import EnquiryPopup2 from '../components/EnquiryPopup2'
+import GalleryCarousel2 from '../components/GalleryCrousel'
+import StudentReviews from '../components/student-rev/StudentReview2'
+import About5 from '../components/Aboute5'
+import CompanySection2 from '../components/CompanySection'
+import SocialMedia2 from '../components/SocialMedia'
+import Brochure2 from '../components/Broucher'
 import Footer from '../components/Footer'
-import Brochure from '../components/Broucher'
-import SocialMedia from '../components/SocialMedia'
+import Topbar3 from '../components/Topbar3'
+import pharma from "../images1/pharmaflowertree4.png";
+
+import About from '../components/About'
+import ApprovalRecognition from '../components/ApprovalRecognition'
+import Leadership from '../components/AboutComponents/Leadership'
+import Navbar5 from '../components/Navbar'
+import { useEffect, useState } from "react";
+import FAQ from '../components/FAQ'
+
+const Page2 = () => {
+
+   const [showNavbar5, setShowNavbar5] = useState(false);
 
 
-const Page1 = () => {
+  useEffect(() => {
+
+    const handleScroll = () => {
+
+      if (window.scrollY > 100) {
+        setShowNavbar5(true);
+      } else {
+        setShowNavbar5(false);
+      }
+
+    };
+
+
+    window.addEventListener("scroll", handleScroll);
+
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+  }, []);
   return (
     <>
-    {/* <Navbar2/> */}
-    <Navbar4/>
+     {/* <Topbar3/>  */}
+    
+   <div
+  className={`
+    fixed
+    top-0
+    left-0
+    w-full
+    z-40
+    transition-all
+    duration-700
+    ease-[cubic-bezier(0.4,0,0.2,1)]
+    ${
+      showNavbar5
+      ? "opacity-0 -translate-y-5 pointer-events-none"
+      : "opacity-100 translate-y-0"
+    }
+  `}
+>
+  <Navbar3/>
+</div>
+
+
+<div
+  className={`
+    fixed
+    top-0
+    left-0
+    w-full
+    z-50
+    transition-all
+    duration-700
+    ease-[cubic-bezier(0.4,0,0.2,1)]
+    ${
+      showNavbar5
+      ? "opacity-100 translate-y-0"
+      : "opacity-0 -translate-y-5 pointer-events-none"
+    }
+  `}
+>
+  <Navbar5/>
+</div>
+   
     <Herosec/>
     <ChatBot/>
-    <About4/>
-    <StatusBar/>
+    <About3/>
+    {/* <About/> */}
+    {/* <About5/> */}
+    <StatsBar/>
     <LatestBanner/>
-    {/* <AboutUs/> */}
-    <SchoolsSection2/>
+    
+    
+    {/* <ThemeSwitcher/> */}
 
-    <ThemeSwitcher/>
+   <div
+  className="relative w-full "
+  style={{
+    backgroundImage: `url(${pharma})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-white/50 backdrop-blur-[4px] z-0"></div>
 
-    <NoticeSection3/>
-    <EnquiryPopup/>
-    {/* <GalleryCarousel/> */}
+  {/* Content */}
+  <div className="relative z-10">
+    <SchoolsSection/>
+    <NoticeSection2 />
+    <GalleryCarousel2 />
+  </div>
+</div>
+<FAQ/>
+    <StudentReviews/>
+      
+   
+    <Brochure2/>
+  
+    {/* <SocialMedia2/> */}
+
+    <EnquiryPopup2/>
+     <CompanySection2/>
+
+   
+
+
+
+    <ApprovalRecognition/>
+    <Footer/>
 
     
-    <StudentReviews2/>   
-    <CompanySection/> 
-    <Brochure/>
-    <SocialMedia/>
-    <Footer/>
-   
     </>
   )
 }
 
-export default Page1
+export default Page2

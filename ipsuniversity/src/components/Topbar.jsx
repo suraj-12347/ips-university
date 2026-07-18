@@ -1,76 +1,82 @@
 // Topbar.jsx
 
 import React from "react";
-import { Mail, Phone } from "lucide-react";
+import { Phone, Mail, Globe } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Topbar = () => {
   return (
-    <div className="w-full bg-[var(--grass)]  text-[var(--white)] text-[13px] font-medium  z-50">
+    <div className="w-full bg-[var(--forest)] text-white h-[40px] hidden lg:flex items-center">
+      <div className="max-w-[1500px] mx-auto w-full px-10 flex items-center justify-between">
 
-      <div className="max-w-[1350px] mx-auto px-4 lg:px-6 h-[35px] flex items-center justify-between"
-      
-       
-      >
-
-        {/* Left */}
-        <div className="hidden md:flex items-center gap-5">
-
-          <a
-            href="mailto:admission@ipsuniversity.edu"
-            className="flex items-center gap-2 text-[13px] font-medium text-[var(--white)] hover:text-[var(--grass)] transition-all duration-200"
-          >
-            <Mail size={14} />
-            admission@ipsuniversity.edu
-          </a>
+        {/* LEFT */}
+        <div className="flex items-center gap-8 text-[14px]">
 
           <a
             href="tel:+919876543210"
-            className="flex items-center gap-2 text-[13px] font-medium text-[var(--white)] hover:text-[var(--grass)] transition-all duration-200"
+            className="flex items-center gap-2 hover:text-green-200 duration-300"
           >
-            <Phone size={14} />
-            +91 98765 43210
-          </a>
-        </div>
-        {/* middle */}
-        <div className=" ml-10 flex w-145 items-center gap-5 h-20 bg-[var(--grass)] text-[var(--grass)] text-[13px] font-medium px-2 rounded z-10 rounded-full">
-          <span className="text-[13px]  font-medium bg-[var(--white)]  z-10">
-           
-            
-          </span>
-        </div>
-
-        {/* Right */}
-        <div className="flex items-center gap-4 lg:gap-6 ml-auto">
-
-          {/* <a
-            href="#"
-            className="text-[12.5px] font-medium text-[var(--white)] hover:text-[var(--grass)] transition-all duration-200"
-          >
-            Admission Portal
-          </a> */}
-
-          <a
-            href="#"
-            className="hidden sm:block text-[12.5px] font-medium text-[var(--white)] hover:text-[var(--grass)] transition-all duration-200"
-          >
-            Scholarship Policy
+            <Phone size={15} />
+            +91 9876543210
           </a>
 
           <a
-            href="#"
-            className="hidden md:block text-[12.5px] font-medium text-[var(--white)] hover:text-[var(--grass)] transition-all duration-200"
+            href="mailto:info@ipsuniversity.edu"
+            className="flex items-center gap-2 hover:text-green-200 duration-300"
           >
+            <Mail size={15} />
+            info@ipsuniversity.edu
+          </a>
+
+        </div>
+
+        {/* CENTER */}
+        <div className="flex items-center gap-8 text-[14px]">
+
+          <a href="#" className="hover:text-green-200 duration-300">
+            Scholarship
+          </a>
+
+          <a href="#" className="hover:text-green-200 duration-300">
             Academic Calendar
           </a>
 
-          <a
-            href="#"
-            className="hidden md:block text-[12.5px] font-medium text-[var(--white)] hover:text-[var(--grass)] transition-all duration-200"
-            
-          >
-            Login →
-          </a>
         </div>
+
+        {/* RIGHT */}
+        <div className="flex items-center gap-6">
+
+          <button className="flex items-center gap-2 hover:text-green-200 duration-300">
+            <Globe size={16} />
+            English
+          </button>
+
+          <a href="#" className="hover:text-green-200 duration-300">
+            Admission Portal
+          </a>
+
+          <a href="#" className="hover:text-green-200 duration-300">
+            Login
+          </a>
+
+          <div className="flex items-center gap-3">
+
+            <a className="hover:text-green-200 duration-300">
+              <FaFacebookF />
+            </a>
+
+            <a className="hover:text-green-200 duration-300">
+              <FaInstagram />
+            </a>
+
+            <a className="hover:text-green-200 duration-300">
+              <FaLinkedinIn />
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
     </div>
   );

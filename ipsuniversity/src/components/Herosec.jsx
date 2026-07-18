@@ -42,14 +42,14 @@ const Herosec = () => {
       />
 
       {/* Explore Button */}
-      <div
+      {/* <div
   className="
     absolute
     md:bottom-8
     bottom-20
     left-1/2
     -translate-x-1/2
-    z-[99999]
+    z-[999]
     cursor-pointer
   "
 >
@@ -98,7 +98,7 @@ const Herosec = () => {
             Explore
           </span>
         </a>
-      </div>
+      </div> */}
 
       {/* Right Bottom Buttons */}
       <div className="relative z-[5] flex flex-col justify-end items-end w-full h-[82vh] px-4 md:px-8 pb-8">
@@ -107,11 +107,8 @@ const Herosec = () => {
           {/* Apply Button */}
           <a
             href="#"
-            className="h-[48px] px-6 rounded-xl text-white text-[12px] font-semibold flex items-center justify-center transition-all duration-300 hover:scale-[1.03] shadow-lg"
-            style={{
-              background:
-                "linear-gradient(135deg,var(--forest),var(--grass))",
-            }}
+            className="h-[48px] px-6 rounded-xl text-white text-[12px] font-semibold flex items-center justify-center transition-all duration-300 hover:scale-[1.03] shadow-lg bg-[var(--forest)]"
+            
           >
             Apply for 2025–26 →
           </a>

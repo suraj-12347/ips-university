@@ -5,7 +5,7 @@ import React, {
 
 import tcs from "../images1/adobe.png";
 import DotedRing2 from "./DotedRing2";
-import pharma from "../images1/flower.jpeg";
+import pharma from "../images1/whiteflowerpng.png";
 
 import { useLanguage } from "../context/LanguageContext";
 
@@ -180,26 +180,44 @@ const CompanySection2 = () => {
 
   return (
     <section
-      className="w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0"
+      className="max-w-[100vw] w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0 flex  flex-col items-center gap-10"
       style={{
         backgroundImage: `url(${pharma})`,
-        backgroundSize: "cover",
+        backgroundSize: "contain",
         backgroundPosition:
-          "center",
+          "right",
+          backgroundRepeat:"no-repeat"
       }}
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[var(--moss)]/90 z-0"></div>
+      {/* <div className="absolute inset-0 bg-[var(--moss)]/90 z-0"></div> */}
+
+       <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-0"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-[1px] z-0"></div>
+
 
       {/* Heading */}
-      <div className="max-w-5xl  mb-8 relative z-20">
+      <div className="max-w-5xl flex flex-col mb-8 relative z-20 items-center">
 
-        <h2 className="text-3xl md:text-5xl font-semibold text-white">
-          {t.collaborators||"Our Collaborators"}
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
+          Our Collaborators
         </h2>
 
-        <p className="mt-4 text-white/70 max-w-xl leading-relaxed">
-          {t.collaboratorsDesc||"Companies across the world build, scale and ship whith us "}
+        <p className="mt-4 text-gray-700 max-w-xl leading-relaxed">
+          Transforming aspirations into achievements
         </p>
 
       </div>
@@ -207,13 +225,15 @@ const CompanySection2 = () => {
       {/* Grid */}
       <div
         className="
-          max-w-7xl
+          max-w-[100vw]
+         
           mx-auto
           grid
           grid-cols-3
           sm:grid-cols-4
           md:grid-cols-6
           lg:grid-cols-8
+           2xl:grid-cols-8
           gap-3
           md:gap-4
           relative
@@ -261,7 +281,8 @@ const CompanySection2 = () => {
               className="
                 h-7
                 sm:h-8
-                w-auto
+                w-40
+                2xl:w-50
                 object-contain
                 opacity-75
                 group-hover:opacity-100

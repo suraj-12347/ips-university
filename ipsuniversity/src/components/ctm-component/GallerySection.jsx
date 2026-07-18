@@ -7,80 +7,105 @@ import mrfr from '../../images1/mrfr.jpeg'
 import skmic from '../../images1/skmic.jpeg'
 import neeraj from '../../images1/neeraj2.jpeg'
 import { ArrowRightToLine } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const images = [
   {
     src: dj,
     caption: "Campus Life",
+    subImages: [
+      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+      "https://images.unsplash.com/photo-1562774053-701939374585",
+    ],
   },
   {
-    src:rajusir,
+    src: rajusir,
     caption: "Industry Visits",
+    subImages: [
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216",
+    ],
   },
   {
     src: skmic,
     caption: "Smart Classrooms",
+    subImages: [
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    ],
   },
   {
     src: directersir,
     caption: "Modern Infrastructure",
+    subImages: [
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72",
+      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2",
+    ],
   },
   {
-    src:mrfr,
+    src: mrfr,
     caption: "Library Facilities",
+    subImages: [
+      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da",
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    ],
   },
   {
     src: dj,
     caption: "Technical Workshops",
+    subImages: [
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    ],
   },
   {
-    src:neeraj,
+    src: neeraj,
     caption: "Student Achievements",
+    subImages: [
+      "https://images.unsplash.com/photo-1522204502588-8f39b3b3b16f",
+      "https://images.unsplash.com/photo-1513258496099-48168024aec0",
+    ],
   },
   {
     src: directersir,
     caption: "Cultural Events",
+    subImages: [
+      "https://images.unsplash.com/photo-1505236858219-8359eb29e329",
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30",
+    ],
   },
-
-
-
 
    {
     src: dj,
-    caption: "Campus Life",
-  },
-  {
-    src:rajusir,
-    caption: "Industry Visits",
-  },
-  {
-    src: skmic,
-    caption: "Smart Classrooms",
-  },
-  {
-    src: directersir,
-    caption: "Modern Infrastructure",
-  },
-  {
-    src:mrfr,
-    caption: "Library Facilities",
-  },
-  {
-    src: dj,
     caption: "Technical Workshops",
-  },
-  {
-    src:neeraj,
-    caption: "Student Achievements",
-  },
-  {
-    src: directersir,
-    caption: "Cultural Events",
+    subImages: [
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    ],
   },
 ];
 
 const GallerySection = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
+  
+const [currentSubIndex, setCurrentSubIndex] = useState(0);
+const [showAll, setShowAll] = useState(false);
+
+const nextSubImage = () => {
+  const total = images[selectedIndex].subImages.length;
+
+  setCurrentSubIndex((prev) =>
+    prev === total - 1 ? 0 : prev + 1
+  );
+};
+
+const prevSubImage = () => {
+  const total = images[selectedIndex].subImages.length;
+
+  setCurrentSubIndex((prev) =>
+    prev === 0 ? total - 1 : prev - 1
+  );
+};
 
   const nextImage = () => {
     setSelectedIndex((prev) =>
@@ -94,182 +119,382 @@ const GallerySection = () => {
     );
   };
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (selectedIndex === null) return;
 
-      if (e.key === "ArrowRight") nextImage();
-      if (e.key === "ArrowLeft") prevImage();
-      if (e.key === "Escape") setSelectedIndex(null);
-    };
+ useEffect(() => {
+  const handleKey = (e) => {
+    if (selectedIndex === null) return;
 
-    window.addEventListener("keydown", handleKeyDown);
+    if (e.key === "ArrowRight") nextSubImage();
+    if (e.key === "ArrowLeft") prevSubImage();
+    if (e.key === "Escape") setSelectedIndex(null);
+  };
 
-    return () =>
-      window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedIndex]);
+  window.addEventListener("keydown", handleKey);
+
+  return () => window.removeEventListener("keydown", handleKey);
+}, [selectedIndex, currentSubIndex]);
 
   return (
-    <section className="py-10 bg-white mt-10 mb-10">
-  <div className="max-w-7xl mx-auto px-4 md:px-6">
-    
-    <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-12 text-[var(--forest)]">
-      Gallery
-    </h2>
+   <section className="py-24 bg-[#f8fbf6]">
 
-    <div className="relative">
-      
-      {/* Gallery */}
-      <div
-        id="gallery-scroll"
-        className="flex gap-4 md:gap-6 overflow-x-auto overflow-y-hidden pb-4 scrollbar scroll-smooth scrollb"
-      >
-        {images.map((item, index) => (
-          <div
-            key={index}
-            onClick={() => setSelectedIndex(index)}
-            className="
-              relative
-              min-w-[240px]
-              sm:min-w-[280px]
-              md:min-w-[320px]
-              h-[180px]
-              sm:h-[220px]
-              overflow-hidden
-              rounded-2xl
-              shadow-lg
-              group
-              cursor-pointer
-              flex-shrink-0
-            "
-          >
-            <img
-              src={item.src}
-              alt={item.caption}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+  <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
-              <div className="p-4">
-                <h3 className="text-white font-semibold text-sm md:text-lg">
-                  {item.caption}
-                </h3>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+    {/* Heading */}
 
-      {/* Arrow */}
-      <button
-        onClick={() => {
-          document
-            .getElementById("gallery-scroll")
-            ?.scrollBy({ left: 350, behavior: "smooth" });
-        }}
+    <div className="text-center max-w-3xl mx-auto">
+
+      <span
         className="
-          absolute
-          right-2
-          md:-right-12
-          top-1/2
-          -translate-y-1/2
-         
-          p-2
-          md:p-3
-          z-10
-          hover:scale-110
-          transition
+          uppercase
+          tracking-[4px]
+          text-sm
+          font-semibold
+          text-[#578B07]
         "
       >
-        <ArrowRightToLine
-          size={22}
-          className="md:w-7 md:h-7 text-[var(--forest)]"
-        />
-      </button>
+        Campus Gallery
+      </span>
+
+      <h2
+        className="
+          text-4xl
+          lg:text-5xl
+          text-[#31572c]
+          mt-5
+          relative
+        "
+        style={{
+          fontFamily: "Fraunces, serif",
+        }}
+      >
+        Capturing
+        <br />
+        Campus Moments
+      
+      
+      <span
+      className="
+        absolute
+        left-1/2
+        -bottom-3
+        -translate-x-1/2
+        w-24
+        h-[3px]
+        bg-[var(--grass)]
+        rounded-full
+      "
+    />
+      </h2>
+       
+
+      <p
+        className="
+          mt-6
+          text-gray-600
+          leading-8
+          max-w-2xl
+          mx-auto
+        "
+      >
+        Explore memorable moments, achievements,
+        academic activities and vibrant campus life
+        through our gallery.
+      </p>
+
     </div>
 
-    {/* Modal */}
-    {selectedIndex !== null && (
-      <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center px-4 mt-30 pt-10">
 
-        {/* Close */}
-        <button
-          onClick={() => setSelectedIndex(null)}
-          className="absolute top-4 right-4 text-white text-3xl md:text-4xl"
+
+
+
+    {/* Gallery */}
+
+    <div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[180px] gap-6 mt-16">
+
+    {(showAll ? images : images.slice(0, 8)).map((item, index) => {
+
+      const pattern = index % 6;
+
+      const classes = [
+        "lg:col-span-2 lg:row-span-2",
+        "",
+        "",
+        "lg:row-span-2 ",
+        "",
+        ""
+      ][pattern];
+
+      return (
+        <div
+          key={index}
+          onClick={() => {
+            setSelectedIndex(index);
+            setCurrentSubIndex(0);
+          }}
+          className={`
+            relative
+            overflow-hidden
+            rounded-[30px]
+            cursor-pointer
+            group
+            shadow-lg
+            hover:shadow-2xl
+            transition-all
+            duration-500
+            border-5
+            border-white
+            ${classes}
+          `}
         >
-          ✕
-        </button>
 
-        {/* Prev */}
-        <button
-          onClick={prevImage}
-          className="
-            absolute
-            left-2
-            md:left-8
-            text-white
-            bg-white/10
-            hover:bg-white/20
-            w-10 h-10
-            md:w-14 md:h-14
-            rounded-full
-            flex items-center justify-center
-            text-2xl md:text-5xl
-          "
-        >
-          ❮
-        </button>
-
-        {/* Content */}
-        <div className="w-full max-w-5xl flex flex-col items-center">
+          {/* Image */}
           <img
-            src={images[selectedIndex].src}
-            alt={images[selectedIndex].caption}
+            src={item.src}
+            alt={item.caption}
             className="
               w-full
-              max-w-[90vw]
-              md:max-w-[80vw]
-              max-h-[300px]
-              sm:max-h-[300px]
-              md:max-h-[400px]
-              object-contain
-              rounded-2xl
+              h-full
+              object-cover
+              transition-transform
+              duration-700
+              group-hover:scale-110
             "
           />
 
-          <div className="mt-4 text-center px-4">
-            <h3 className="text-white text-lg md:text-2xl font-semibold">
-              {images[selectedIndex].caption}
-            </h3>
+          {/* Overlay */}
+          <div
+            className="
+              absolute
+              inset-0
+              bg-gradient-to-t
+              from-black/80
+              via-black/20
+              to-transparent
+              opacity-0
+              group-hover:opacity-100
+              transition-all
+              duration-500
+            "
+          />
 
-            <p className="text-gray-400 text-sm md:text-base mt-1">
-              {selectedIndex + 1} / {images.length}
-            </p>
+          {/* Hover Content */}
+          <div
+            className="
+              absolute
+              inset-x-0
+              bottom-0
+              p-6
+              translate-y-8
+              opacity-0
+              group-hover:translate-y-0
+              group-hover:opacity-100
+              transition-all
+              duration-500
+            "
+          >
+            <div className="flex items-center justify-between">
+
+              <div>
+                <h3 className="text-white text-2xl font-semibold">
+                  {item.caption}
+                </h3>
+
+                <p className="text-white/80 text-sm mt-1">
+                  {item.subImages.length} Photos
+                </p>
+              </div>
+
+              <div
+                className="
+                  w-12
+                  h-12
+                  rounded-full
+                  bg-white/20
+                  backdrop-blur-md
+                  flex
+                  items-center
+                  justify-center
+                  text-white
+                  text-xl
+                  transition-all
+                  duration-500
+                  group-hover:rotate-45
+                "
+              >
+                +
+              </div>
+
+            </div>
           </div>
-        </div>
 
-        {/* Next */}
-        <button
-          onClick={nextImage}
-          className="
-            absolute
-            right-2
-            md:right-8
-            text-white
-            bg-white/10
-            hover:bg-white/20
-            w-10 h-10
-            md:w-14 md:h-14
-            rounded-full
-            flex items-center justify-center
-            text-2xl md:text-5xl
-          "
-        >
-          ❯
-        </button>
-      </div>
-    )}
+          {/* Badge */}
+          <div
+            className="
+              absolute
+              top-5
+              right-5
+              bg-black/55
+              backdrop-blur-md
+              text-white
+              text-xs
+              font-medium
+              px-3
+              py-1.5
+              rounded-full
+            "
+          >
+            {item.subImages.length} Photos
+          </div>
+
+        </div>
+      );
+
+    })}
+
   </div>
+
+  {/* View All Button */}
+
+  {images.length > 8 && (
+    <div className="flex justify-center mt-14">
+
+      <button
+  onClick={() => setShowAll(!showAll)}
+  className="
+    group
+    relative
+    inline-flex
+    items-center
+    gap-4
+    px-4
+    py-2
+    rounded-full
+    bg-white
+    border
+    border-[#31572c]/20
+    text-[#31572c]
+    font-semibold
+    shadow-md
+    overflow-hidden
+    transition-all
+    duration-500
+    hover:shadow-2xl
+    hover:-translate-y-1
+  "
+>
+  {/* Hover Background */}
+  <span
+    className="
+      absolute
+      inset-0
+      bg-[#31572c]
+      scale-x-0
+      origin-left
+      transition-transform
+      duration-500
+      group-hover:scale-x-100
+    "
+  />
+
+  {/* Text */}
+  <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
+    {showAll ? "Show Less" : "View All Events"}
+  </span>
+
+  {/* Arrow */}
+  <span
+    className="
+      relative
+      z-10
+      w-10
+      h-10
+      rounded-full
+      bg-[#31572c]
+      flex
+      items-center
+      justify-center
+      transition-all
+      duration-500
+      group-hover:bg-white
+      group-hover:translate-x-1
+    "
+  >
+    <ArrowRight
+      size={18}
+      className="text-white group-hover:text-[#31572c]"
+    />
+  </span>
+</button>
+
+    </div>
+  )}
+
+</div>
+
+{selectedIndex !== null && (
+  <div className="fixed inset-0 top-30 bg-black/95 z-50 flex items-center justify-center">
+
+    {/* Close */}
+    <button
+      onClick={() => setSelectedIndex(null)}
+      className="absolute top-6 right-6 text-white text-5xl"
+    >
+      ×
+    </button>
+
+    {/* Prev */}
+    <button
+      onClick={() =>
+        setCurrentSubIndex((prev) =>
+          prev === 0
+            ? images[selectedIndex].subImages.length - 1
+            : prev - 1
+        )
+      }
+      className="absolute left-6 text-white text-6xl"
+    >
+      ❮
+    </button>
+
+    {/* Image */}
+    <div className="max-w-2xl  px-10 mt-3">
+
+      <img
+        src={images[selectedIndex].subImages[currentSubIndex]}
+        className="w-full max-h-[80vh] object-contain rounded-3xl"
+      />
+
+      <h2 className="text-white text-xl text-center mt-3">
+        {images[selectedIndex].caption}
+      </h2>
+
+      <p className="text-center text-sm text-gray-300 mt-1">
+        {currentSubIndex + 1} / {images[selectedIndex].subImages.length}
+      </p>
+
+    </div>
+
+    {/* Next */}
+    <button
+      onClick={() =>
+        setCurrentSubIndex((prev) =>
+          prev === images[selectedIndex].subImages.length - 1
+            ? 0
+            : prev + 1
+        )
+      }
+      className="absolute right-6 text-white text-6xl"
+    >
+      ❯
+    </button>
+
+  </div>
+)}
+
+  </div>
+
 </section>
   );
 };

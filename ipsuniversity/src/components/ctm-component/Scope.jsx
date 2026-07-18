@@ -1,82 +1,10 @@
 import React from "react";
-import {
-  ShieldCheck,
-  Globe,
-  Code,
-  Cpu,
-  Network,
-  Lock,
-  Database,
-  GitBranch,
-  GraduationCap,
-  Radio,
-  Bot,
-  TrendingUp,
-} from "lucide-react";
+
+
+import {scopeData} from '../../assets/CseData'
 
 const ScopeSection = () => {
-  const scopeData = [
-    {
-      icon: ShieldCheck,
-      title: "Government R&D Organisations",
-      desc: "DRDO, ISRO, ECIL and BEL offer exciting roles to computer science graduates in defence, space and electronics research.",
-    },
-    {
-      icon: Globe,
-      title: "Software Multinationals",
-      desc: "Microsoft, Google, Amazon, IBM, Oracle, Infosys, TCS and Wipro recruit computer engineers globally.",
-    },
-    {
-      icon: Code,
-      title: "Software Development & Testing",
-      desc: "Opportunities in development, testing, support, networking, security and DevOps with excellent career growth.",
-    },
-    {
-      icon: Cpu,
-      title: "Hardware Engineering",
-      desc: "Design and development of circuits, microchips, servers and hardware infrastructure powering modern technology.",
-    },
-    {
-      icon: Network,
-      title: "Computer Network Architecture",
-      desc: "Network architects manage communication infrastructure and data-sharing systems across organizations.",
-    },
-    {
-      icon: Lock,
-      title: "Information Security Analysis",
-      desc: "Cyber security professionals protect systems, applications and critical business data from threats.",
-    },
-    {
-      icon: Database,
-      title: "Database Administration",
-      desc: "Database administrators manage, secure and optimize valuable organizational data.",
-    },
-    {
-      icon: GitBranch,
-      title: "System Design & Analysis",
-      desc: "Designing efficient information systems and solving business challenges through technology.",
-    },
-    {
-      icon: GraduationCap,
-      title: "Academia & Research",
-      desc: "Teaching, higher studies, innovation and advanced research opportunities in Computer Science.",
-    },
-    {
-      icon: Radio,
-      title: "Telecommunications",
-      desc: "Roles in communication networks, protocols, infrastructure management and telecom software.",
-    },
-    {
-      icon: Bot,
-      title: "Cyber Security & Robotics",
-      desc: "High-demand careers in AI, Machine Learning, Robotics and Cyber Security industries.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Entrepreneurship",
-      desc: "Build startups, launch products and create innovative solutions that transform industries.",
-    },
-  ];
+ 
 
   return (
     <section

@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import edubuilding from "../images1/edubuild.JPG";
+import edubuilding from "../images1/pharmawhiteflower2.jpeg";
 
 /* DATA */
 const statsData = [
-  { number: 25, suffix: "+", label: "Years of Excellence" },
-  { number: 1500, suffix: "+", label: "Alumni" },
+  { number: 20, suffix: "+", label: "Years of Experience" },
+  { number: 15000, suffix: "+", label: "Alumni" },
   { number: 80, suffix: "+", label: "Recruiters" },
-  { number: 95, suffix: "%", label: "Placement Rate" },
+  { number: 100, suffix: "%", label: "Placement Assistence" },
   { number: 15, suffix: " LPA", label: "Highest Package" },
 ];
 
@@ -71,7 +71,7 @@ const StatsBar = () => {
     <section
       ref={sectionRef}
       className="
-        relative w-full py-16 sm:py-20 px-4 overflow-hidden mt-10
+        relative w-full py-16 sm:py-2 px-4 overflow-hidden mt-10
         bg-cover bg-center bg-fixed
       "
       style={{
@@ -80,7 +80,7 @@ const StatsBar = () => {
     >
 
       {/* OVERLAY */}
-      <div className="absolute inset-0 bg-[var(--moss)]"></div>
+     <div className="absolute inset-0 bg-white/10 backdrop-blur-[4px] z-0"></div>
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-[1350px] mx-auto">

@@ -1,5 +1,6 @@
 import React from "react";
 import DotedRing2 from "./DotedRing2";
+import pharma from "../images1/ipslongpng1.png";
 
 const socialData = [
   {
@@ -34,14 +35,52 @@ const socialData = [
   },
 ];
 
-const SocialMedia = () => {
+const SocialMedia2 = () => {
   return (
-    <section className="w-full bg-[#f8f8f8] px-4 md:px-8 py-14 relative overflow-hidden mt-10">
+    <section
+      className="
+        w-full
+        px-4
+        md:px-8
+        py-14
+        relative
+        overflow-hidden
+        mt-10
+        mb-20
+      "
+      style={{
+        backgroundImage: `url(${pharma})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+
+      {/* Overlay */}
+      {/* <div className="absolute inset-0 bg-black/75"></div> */}
+
+
+      
+         <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-1"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       {/* <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-1"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      /> */}
+      <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px] z-0"></div>
+
 
       {/* Background Ring */}
-      <div className="absolute -left-32 -top-40 pointer-events-none opacity-70">
+      {/* <div className="absolute -left-32 -top-40 pointer-events-none opacity-40">
         <DotedRing2 height={450} width={450} />
-      </div>
+      </div> */}
 
       {/* Heading */}
       <div className="max-w-3xl mx-auto text-center relative z-10">
@@ -51,15 +90,16 @@ const SocialMedia = () => {
             px-5
             py-2
             rounded-full
-            bg-[var(--grass)]/10
-            border
-            border-[var(--grass)]/20
+            bg-[var(--forest)]/10
+           
+            border-[var(--white)]/20
             text-[var(--forest)]
             text-xs
             sm:text-sm
             font-medium
             inline-block
             mb-3
+            backdrop-blur-md
           "
         >
           Connect With Us
@@ -69,7 +109,7 @@ const SocialMedia = () => {
           Follow IPS University
         </h2>
 
-        <p className="text-gray-600 leading-7 mt-5 text-sm md:text-base max-w-2xl mx-auto px-2">
+        <p className="text-gray-700 leading-7 mt-5 text-sm md:text-base max-w-2xl mx-auto px-2">
           Stay connected with our vibrant student community,
           latest campus updates, achievements and events.
         </p>
@@ -96,17 +136,18 @@ const SocialMedia = () => {
             key={index}
             className="
               group
-              bg-[var(--white)]
+              bg-white/95
+              backdrop-blur-md
               rounded-[28px]
               border
-              border-gray-100
+              border-white/20
               p-5
               sm:p-6
-              min-h-[280px]
+              min-h-[250px]
               flex
               flex-col
               justify-between
-              shadow-sm
+              shadow-lg
               hover:shadow-2xl
               hover:-translate-y-2
               transition-all
@@ -124,7 +165,7 @@ const SocialMedia = () => {
                 right-0
                 w-24
                 h-24
-                bg-[var(--grass)]/5
+                bg-[var(--grass)]/10
                 blur-2xl
                 rounded-full
               "
@@ -146,6 +187,7 @@ const SocialMedia = () => {
                   items-center
                   justify-center
                   mx-auto
+                  shadow-sm
                 "
               >
                 <img
@@ -166,7 +208,7 @@ const SocialMedia = () => {
               </p>
 
               {/* Followers */}
-              <div className="mt-5 text-center">
+              {/* <div className="mt-5 text-center">
 
                 <h4 className="text-2xl sm:text-3xl font-bold text-[var(--forest)]">
                   {item.followers}
@@ -176,7 +218,7 @@ const SocialMedia = () => {
                   Followers
                 </p>
 
-              </div>
+              </div> */}
             </div>
 
             {/* Button */}
@@ -187,11 +229,11 @@ const SocialMedia = () => {
                 mt-6
                 h-11
                 w-full
-                rounded-full
+                rounded-2xl
                 bg-[#f4f4f4]
                 hover:bg-[var(--forest)]
                 text-[var(--forest)]
-                hover:text-[var(--white)]
+                hover:text-white
                 text-sm
                 font-semibold
                 transition-all
@@ -209,4 +251,4 @@ const SocialMedia = () => {
   );
 };
 
-export default SocialMedia;
+export default SocialMedia2;

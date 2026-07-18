@@ -1,7 +1,7 @@
 // LatestBanner.jsx
 
 import React from "react";
-import edubuilding from "../images1/edubuild.JPG";
+import edubuilding from "../images1/pharmawhiteflower.jpeg";
 
 const updates = [
   "📢 Admission Open 2025-26 — For free online registration form click here",
@@ -30,7 +30,8 @@ const LatestBanner = () => {
   }}
 >
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-[var(--moss)]"></div>
+  {/* <div className="absolute inset-0 bg-[var(--moss)]"></div> */}
+  <div className="absolute inset-0 bg-white/10 backdrop-blur-[4px] z-0"></div>
 
   {/* Glass Banner */}
   <div className="relative z-20 max-w-[1350px] mx-auto px-2 sm:px-4">

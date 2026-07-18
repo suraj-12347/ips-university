@@ -1,54 +1,82 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
-import ctm from "../images1/ctmb.jpg";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import ctm from "../images1/ctmmain.png";
 import bca from "../images1/pharmacy.jpeg";
 import mgmt from "../images1/pharmacy.jpeg";
 import pharmacy from "../images1/pharmab.jpg";
 import education from "../images1/edub.jpg";
 import physical from "../images1/pharmacy.jpeg";
-import flower from "../images1/flower.jpeg";
+import flower from "../images1/flowerrr.jpeg";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import {
+  Cpu,
+  GraduationCap,
+  Building2,
+  BookOpen,
+  BriefcaseBusiness,
+  MonitorSmartphone,
+  Dumbbell,
+} from "lucide-react";
 
 const schools = [
   {
     image: ctm,
     name: "School of Engineering & Technology",
-    courses:
-      "B.Tech (ME, CE, CS, EE, EC) · M.Tech · Applied Sciences & Humanities",
+    quote:
+      "Empowering future engineers through innovation, technology, and hands-on learning.",
+    icon: Cpu,
     route: "/ipsctm",
   },
   {
     image: education,
     name: "School of Education",
-    courses: "B.Ed · M.Ed — Teacher Education",
+    quote:
+      "Inspiring educators to shape minds, build character, and transform the future.",
+    icon: GraduationCap,
   },
   {
     image: pharmacy,
     name: "School of Pharmacy",
-    courses: "D.Pharm · B.Pharm · M.Pharm",
+    quote:
+      "Advancing healthcare through pharmaceutical excellence, research, and patient care.",
+    icon: BookOpen,
   },
   {
     image: mgmt,
     name: "School of Management & Commerce",
-    courses: "MBA · BBA · B.Com · Tourism & Management",
+    quote:
+      "Developing visionary leaders for business, entrepreneurship, and global success.",
+    icon: BriefcaseBusiness,
   },
   {
     image: bca,
     name: "School of Computer Applications",
-    courses: "BCA · MCA · AI-ML · Cyber Security · Data Science",
+    quote:
+      "Creating tomorrow's innovators through coding, AI, and digital transformation.",
+    icon: MonitorSmartphone,
   },
   {
     image: physical,
     name: "School of Physical Education",
-    courses: "B.P.Ed · M.P.Ed — Sports Science & Wellness",
+    quote:
+      "Building champions with discipline, fitness, leadership, and sportsmanship.",
+    icon: Dumbbell,
   },
 ];
 
 const SchoolsSection = () => {
   const navigate = useNavigate();
   const [startIndex, setStartIndex] = useState(0);
+  const [expandedCards, setExpandedCards] = useState({});
 
   const visibleCards = schools.slice(startIndex, startIndex + 3);
 
@@ -67,20 +95,25 @@ const SchoolsSection = () => {
   const handleCardClick = (school) => {
     if (school.route) {
       navigate(school.route);
+      
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     }
   };
 
   return (
     <section
-      id="schools"
+      id="academics"
       className="
         relative
         w-full
-        py-10
+        py-5
         md:py-12
         overflow-hidden
-        mt-10
-        px-4
+        mt-20
+        
       "
       style={{
         backgroundImage: `url(${flower})`,
@@ -89,31 +122,47 @@ const SchoolsSection = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[var(--moss)]/95"></div>
+       <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/40 backdrop-blur-[4px]"></div>
+
+
 
       {/* Heading */}
-      <div className="relative z-40 w-full px-4">
-        <p className="text-center text-[var(--white)] font-semibold tracking-[4px] uppercase text-xs">
+      <div className="relative z-40 w-full px-4  z-20">
+        <p className="text-center text-[var(--forest)]/90 font-semibold tracking-[4px] uppercase text-xs">
           Explore
         </p>
 
-        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--white)] mt-2 leading-tight">
+        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
           Our Schools
         </h1>
       </div>
 
       {/* Description */}
       <div className="relative z-40 max-w-[850px] mx-auto px-4 mb-8">
-        <p className="text-center text-gray-300 max-w-2xl mx-auto mt-4 leading-6 text-sm">
+        <p className="text-center text-gray-700 max-w-2xl mx-auto mt-4 leading-6 text-sm">
           Specialized schools designed to deliver focused,
           industry-aligned education across diverse disciplines.
         </p>
       </div>
 
       {/* Slider */}
-      <div className="max-w-[1250px] mx-auto px-4 sm:px-8 relative">
+      <div className="max-w-[1250px] mx-auto px-2  relative">
         {/* Prev Button */}
-        <button
+        {/* <button
           onClick={prevSlide}
           className="
             absolute
@@ -132,13 +181,14 @@ const SchoolsSection = () => {
             justify-center
             hover:scale-105
             transition
+            
           "
         >
           <ChevronLeft size={18} />
-        </button>
+        </button> */}
 
         {/* Next Button */}
-        <button
+        {/* <button
           onClick={nextSlide}
           className="
             absolute
@@ -160,130 +210,187 @@ const SchoolsSection = () => {
           "
         >
           <ChevronRight size={18} />
-        </button>
+        </button> */}
 
         {/* Cards */}
-        <div
-          className="
-            grid
-            grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-3
-            gap-5
-            place-items-center
-          "
-        >
-          {visibleCards.map((school, index) => (
-            <div
-              key={index}
-              onClick={() => handleCardClick(school)}
+
+
+    <div className="max-w-[1250px] mx-0 md:mx-auto px-4  relative z-50 mt-10">
+ <Swiper
+  modules={[ Pagination]}
+  navigation
+  pagination={{ clickable: true }}
+  spaceBetween={24}
+  speed={700}
+  slidesPerView={1}
+  breakpoints={{
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }}
+  className="schools-swiper"
+>
+   {schools.map((school, index) => {
+  const Icon = school.icon;
+
+  return (
+    <SwiperSlide key={index}>
+      <div
+        onClick={() => handleCardClick(school)}
+        className="
+          group
+          relative
+          w-full
+          max-w-[340px]
+          h-[440px]
+          mx-auto
+          bg-white
+          rounded-[28px]
+          shadow-md
+          hover:shadow-xl
+     
+      
+          hover:-translate-y-2
+          transition-all
+          duration-500
+          overflow-hidden
+          cursor-pointer
+          flex
+          flex-col
+        "
+      >
+        {/* Image */}
+        <div className="relative p-4 pb-0">
+          <div className="overflow-hidden rounded-[22px]">
+            <img
+              src={school.image}
+              alt={school.name}
               className="
-                group
-                relative
                 w-full
-                max-w-[340px]
-                h-[240px]
-                sm:h-[260px]
-                md:h-[280px]
-                rounded-2xl
-                overflow-hidden
-                shadow-lg
-                cursor-pointer
+                h-[190px]
+                object-cover
+                rounded-[22px]
+                transition-transform
+                duration-700
+                group-hover:scale-105
               "
-            >
-              {/* Image */}
-              <img
-                src={school.image}
-                alt={school.name}
-                className="
-                  absolute
-                  inset-0
-                  w-full
-                  h-full
-                  object-cover
-                  object-center
-                  transition-all
-                  duration-700
-                  group-hover:scale-110
-                "
-              />
+            />
+          </div>
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/35 group-hover:bg-black/55 transition-all duration-500"></div>
-
-              {/* Bottom Title */}
-              <div
-                className="
-                  absolute
-                  bottom-0
-                  left-0
-                  w-full
-                  p-5
-                  transition-all
-                  duration-500
-                  group-hover:-translate-y-12
-                "
-              >
-                <h3 className="text-white text-lg sm:text-xl font-bold leading-snug">
-                  {school.name}
-                </h3>
-              </div>
-
-              {/* Hover Content */}
-              <div
-                className="
-                  absolute
-                  top-0
-                  right-[-100%]
-                  group-hover:right-0
-                  w-full
-                  h-full
-                  bg-white/10
-                  backdrop-blur-xl
-                  border-l
-                  border-white/20
-                  p-5
-                  transition-all
-                  duration-700
-                  flex
-                  flex-col
-                  justify-end
-                "
-              >
-                <h3 className="text-white text-lg sm:text-xl font-bold mb-3">
-                  {school.name}
-                </h3>
-
-                <p className="text-white/85 leading-6 text-xs sm:text-sm">
-                  {school.courses}
-                </p>
-
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleCardClick(school);
-                  }}
-                  className="
-                    mt-4
-                    w-fit
-                    px-4
-                    py-2.5
-                    rounded-xl
-                    text-white
-                    text-sm
-                    font-semibold
-                    bg-[var(--forest)]
-                    hover:scale-105
-                    transition-all
-                    duration-300
-                  "
-                >
-                  Read More →
-                </button>
-              </div>
-            </div>
-          ))}
+          {/* Floating Icon */}
+          <div
+            className="
+              absolute
+              left-1/2
+              -translate-x-1/2
+              bottom-[-28px]
+              w-14
+              h-14
+              rounded-full
+              bg-[var(--forest)]
+              border-4
+              border-white
+              flex
+              items-center
+              justify-center
+              shadow-lg
+            "
+          >
+            <Icon className="w-7 h-7 text-white" />
+          </div>
         </div>
+
+        {/* Content */}
+        <div className="flex flex-col flex-1 px-5 pt-6 text-center">
+          {/* Heading */}
+          <h3
+            className="
+              text-[18px]
+              font-bold
+              leading-snug
+              text-[var(--forest)]
+              min-h-[40px]
+              flex
+              items-center
+              justify-center
+            "
+          >
+            {school.name}
+          </h3>
+
+          {/* Divider */}
+          <div className="w-15 h-[2px] bg-[#D9B86A] mx-auto  rounded-full mt-1"></div>
+
+          {/* Quote */}
+          <p
+            className="
+              
+              text-[14px]
+              text-gray-600
+              leading-5
+              min-h-[50px]
+              line-clamp-3
+            "
+          >
+            {school.quote}
+          </p>
+
+          {/* Pills */}
+          <div className="flex gap-2 mb-2 w-full">
+  <div className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-full bg-[#F5F6F7] min-w-0">
+    <BookOpen size={16} className="text-[var(--forest)] flex-shrink-0" />
+    <span className="text-[13px] font-medium truncate">
+      Courses
+    </span>
+  </div>
+
+  <div className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-full bg-[#F5F6F7] min-w-0">
+    <GraduationCap size={16} className="text-[var(--forest)] flex-shrink-0" />
+    <span className="text-[13px] font-medium truncate">
+      Faculty
+    </span>
+  </div>
+
+  <div className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-full bg-[#F5F6F7] min-w-0">
+    <Building2 size={16} className="text-[var(--forest)] flex-shrink-0" />
+    <span className="text-[13px] font-medium truncate">
+      Campus
+    </span>
+  </div>
+</div>
+          {/* Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleCardClick(school);
+            }}
+            className="
+              mt-auto
+              w-full
+              py-3
+              rounded-xl
+              bg-[var(--forest)]
+              text-white
+              font-semibold
+              text-[16px]
+              transition-all
+              duration-300
+              hover:bg-[#1e4f2d]
+              hover:shadow-lg
+              mb-2
+            "
+          >
+            Explore More →
+          </button>
+        </div>
+      </div>
+    </SwiperSlide>
+  );
+})}
+  </Swiper>
+</div>
+
+
+       
       </div>
     </section>
   );

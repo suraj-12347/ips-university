@@ -50,34 +50,104 @@ const TestimonialsSection = () => {
       className="relative py-15 overflow-hidden mt-20 bg-center"
       style={{
         backgroundImage: `url(${tree})`,
-        backgroundSize: "cover",
+        backgroundSize: "contain",
+        backgroundPosition:"right",
+        backgroundRepeat:"no-repeat"
       
        
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/10 backdrop-blur-[3px] z-0 "></div>
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-[1px] z-0 "></div>
        {/* Bottom White Gradient */}
       <div
-        className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"
+        className="absolute -bottom-3 left-0 w-full h-[80%] z-[2]"
         style={{
           background:
             "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
         }}
       />
        <div
-        className="absolute top-0 left-0 w-full h-[70%] z-[2]"
+        className="absolute -top-3 left-0 w-full h-[80%] z-[2]"
         style={{
           background:
-            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+            "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
       />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-5">
-        <h2 className="text-center text-4xl md:text-5xl font-bold text-[var(--forest)] mb-12">
-          Testimonials
-        </h2>
+       <div className="text-center mb-10 md:mb-12">
+
+  <p
+    className="
+      uppercase
+      tracking-[4px]
+      text-sm
+      font-semibold
+      text-[var(--grass)]
+      mb-3
+    "
+    style={{
+      fontFamily:"Outfit, sans-serif"
+    }}
+  >
+    Student Experiences
+  </p>
+
+
+  <h2
+    className="
+      text-4xl
+      md:text-6xl
+      text-[var(--forest)]
+      relative
+      inline-block
+    "
+    style={{
+      fontFamily:"Fraunces, serif"
+    }}
+  >
+    Testimonials
+
+
+    <span
+      className="
+        absolute
+        left-1/2
+        -bottom-3
+        -translate-x-1/2
+        w-24
+        h-[3px]
+        bg-[var(--grass)]
+        rounded-full
+      "
+    />
+
+  </h2>
+
+
+
+  <p
+    className="
+      max-w-3xl
+      mx-auto
+      mt-8
+      text-gray-600
+      leading-8
+      text-base
+      md:text-lg
+    "
+    style={{
+      fontFamily:"Outfit, sans-serif"
+    }}
+  >
+    Hear from our students and alumni about their journey,
+    learning experiences and the impact of our institution
+    on their academic and professional growth.
+  </p>
+
+</div>
 
         {/* Message Card */}
         <AnimatePresence mode="wait">

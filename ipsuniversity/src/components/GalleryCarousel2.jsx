@@ -5,6 +5,13 @@ import DotedRing2 from "./DotedRing2";
 import React, { useRef, useState } from "react";
 import pharma from '../images1/flower.jpeg'
 
+import rajusir from '../images1/rajusir.JPG'
+import directersir from '../images1/directersir.JPG'
+import dj from '../images1/dj.JPG'
+import mrfr from '../images1/mrfr.jpeg'
+import skmic from '../images1/skmic.jpeg'
+import neeraj from '../images1/neeraj2.jpeg'
+
 import {
   ImageIcon,
   X,
@@ -20,28 +27,28 @@ const slidesData = [
     id: 1,
     title: "Campus Tour",
     coverImage:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop",
+      dj,
 
     miniCarouselImages: [
       {
         id: 1,
         image:
-          "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+          neeraj
       },
       {
         id: 2,
         image:
-          "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1200&auto=format&fit=crop",
+          rajusir
       },
       {
         id: 3,
         image:
-          "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+         directersir,
       },
       {
         id: 4,
         image:
-          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+         mrfr,
       },
     ],
   },
@@ -50,7 +57,7 @@ const slidesData = [
     id: 2,
     title: "Student Life",
     coverImage:
-      "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1200&auto=format&fit=crop",
+      directersir,
 
     miniCarouselImages: [
       {
@@ -80,7 +87,7 @@ const slidesData = [
     id: 3,
     title: "Events & Activities",
     coverImage:
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop",
+      directersir,
 
     miniCarouselImages: [
       {
@@ -110,7 +117,7 @@ const slidesData = [
     id: 4,
     title: "Sports Events",
     coverImage:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop",
+     skmic,
 
     miniCarouselImages: [
       {
@@ -136,125 +143,12 @@ const slidesData = [
     ],
   },
 
-  {
-    id: 5,
-    title: "Library",
-    coverImage:
-      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop",
+ 
 
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
+ 
+  
 
-  {
-    id: 6,
-    title: "Labs",
-    coverImage:
-      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop",
 
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1516321310764-8d5d3c2c4d7f?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1581093458791-9d15482442f6?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
-
-  {
-    id: 7,
-    title: "Workshops",
-    coverImage:
-      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
-
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
-
-  {
-    id: 8,
-    title: "Cultural Fest",
-    coverImage:
-      "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop",
-
-    miniCarouselImages: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1521334884684-d80222895322?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-  },
 
   // SAME PATTERN FOLLOW KARKE
   // id: 9 se id: 24 tak aur add kar sakte ho
@@ -289,7 +183,7 @@ const nextRef = useRef(null);
 
   return (
   <>
-    <section className="w-full  py-5 pb-10 mt-10 relative overflow-hidden"
+    <section className="w-full  py-5 pb-10 mt-20 relative overflow-hidden rounded-3xl bg-transparent"
     style={{
               backgroundImage: `url(${pharma})`,
               backgroundSize: "cover",
@@ -297,7 +191,25 @@ const nextRef = useRef(null);
             }}
     >
 
-       <div className="absolute inset-0 bg-[var(--moss)] "></div>
+       {/* <div className="absolute inset-0 bg-[var(--moss)] "></div> */}
+
+
+        <div
+        className="absolute -bottom-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+       <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-[1]"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px]"></div>
+
 
       {/* Rings */}
       {/* <div className="absolute right-25 -top-80 rotate-180">
@@ -309,31 +221,31 @@ const nextRef = useRef(null);
       </div> */}
 
       {/* Header */}
-      <div className="flex items-center justify-between px-6 md:px-12 mb-10 relative z-10">
+      <div className="flex items-center justify-between px-6 md:px-12 mb-10 relative z-4">
 
         <div>
-          <p className="text-white/80 text-sm font-semibold tracking-[3px] uppercase">
+          <p className="text-[var(--forest)]/80 text-sm font-semibold tracking-[3px] uppercase">
             Campus Life
           </p>
 
-          <h2 className="text-3xl text-[var(--white)] md:text-5xl font-bold mt-2">
+          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
             Explore IPS Moments
           </h2>
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 40">
 
           <button
             ref={prevRef}
-            className="w-14 h-14 border text-[var(--white)] border-[var(--white)] flex items-center justify-center hover:bg-[var(--forest)] hover:text-white transition-all duration-300 mt-8"
+            className="w-14 h-14 border text-[var(--forest)] border-[var(--forest)] flex items-center justify-center hover:bg-[var(--forest)] hover:text-white transition-all duration-300 mt-8"
           >
             <ChevronLeft size={24} />
           </button>
 
           <button
             ref={nextRef}
-            className="w-14 h-14 border border-[var(--white)] text-[var(--white)] flex items-center justify-center hover:bg-[var(--forest)] hover:text-white transition-all duration-300 mt-8"
+            className="w-14 h-14 border border-[var(--forest)] text-[var(--forest)] flex items-center justify-center hover:bg-[var(--forest)] hover:text-white transition-all duration-300 mt-8"
           >
             <ChevronRight size={24} />
           </button>
@@ -363,7 +275,7 @@ const nextRef = useRef(null);
     <SwiperSlide key={slide.id}>
       
       {/* Desktop */}
-      <div className="hidden xl:flex gap-4 items-stretch w-full px-6">
+      <div className="hidden xl:flex justify-center gap-4 items-stretch w-full px-6 z-40">
 
         {/* Big Square */}
         <div
@@ -373,12 +285,12 @@ const nextRef = useRef(null);
               0
             )
           }
-          className="relative group min-w-[260px] h-[260px] overflow-hidden cursor-pointer"
+          className="relative group min-w-[260px] h-[260px] overflow-hidden rounded-3xl cursor-pointer"
         >
           <img
             src={slide.coverImage}
             alt=""
-            className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-500"
+            className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-500 rounded-3xl"
           />
 
           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
@@ -399,12 +311,12 @@ const nextRef = useRef(null);
                     i
                   )
                 }
-                className="relative group w-[120px] h-[120px] overflow-hidden cursor-pointer"
+                className="relative group w-[120px] h-[120px] overflow-hidden rounded-3xl cursor-pointer"
               >
                 <img
                   src={slide.miniCarouselImages[i].image}
                   alt=""
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500 rounded-3xl"
                 />
 
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
@@ -421,12 +333,12 @@ const nextRef = useRef(null);
                 2
               )
             }
-            className="relative group h-[120px] overflow-hidden cursor-pointer"
+            className="relative group h-[120px] overflow-hidden rounded-3xl cursor-pointer"
           >
             <img
               src={slide.miniCarouselImages[2].image}
               alt=""
-              className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              className="w-full h-full object-cover group-hover:scale-110 transition duration-500 rounded-3xl"
             />
 
             <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
@@ -443,12 +355,12 @@ const nextRef = useRef(null);
               3
             )
           }
-          className="relative group min-w-[420px] h-[260px] overflow-hidden cursor-pointer"
+          className="relative group min-w-[420px] h-[260px] overflow-hidden rounded-3xl rounded-3xl cursor-pointer"
         >
           <img
             src={slide.miniCarouselImages[3].image}
             alt=""
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+            className="w-full h-full object-cover group-hover:scale-110 transition duration-500 rounded-3xl"
           />
 
           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
@@ -467,12 +379,12 @@ const nextRef = useRef(null);
                   i
                 )
               }
-              className="relative group w-[120px] h-[120px] overflow-hidden cursor-pointer"
+              className="relative group w-[120px] h-[120px] overflow-hidden rounded-3xl rounded-3xl cursor-pointer"
             >
               <img
                 src={slide.miniCarouselImages[i].image}
                 alt=""
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                className="w-full h-full object-cover group-hover:scale-110 transition duration-500 rounded-3xl"
               />
 
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
@@ -490,12 +402,12 @@ const nextRef = useRef(null);
               2
             )
           }
-          className="relative group min-w-[260px] h-[260px] overflow-hidden cursor-pointer"
+          className="relative group min-w-[150px] h-[260px] overflow-hidden rounded-3xl rounded-3xl cursor-pointer "
         >
           <img
             src={slide.coverImage}
             alt=""
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+            className="w-full h-full object-cover group-hover:scale-110 transition duration-500 rounded-3xl"
           />
 
           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
@@ -518,7 +430,7 @@ const nextRef = useRef(null);
                   index
                 )
               }
-              className={`relative group overflow-hidden cursor-pointer
+              className={`relative group overflow-hidden rounded-3xl cursor-pointer
               ${index === 0 ? "col-span-2 h-[320px]" : "h-[220px]"}`}
             >
               <img
@@ -548,7 +460,7 @@ const nextRef = useRef(null);
                   index
                 )
               }
-              className={`relative group overflow-hidden cursor-pointer
+              className={`relative group overflow-hidden rounded-3xl cursor-pointer
               ${index === 0 ? "h-[260px]" : "h-[180px]"}`}
             >
               <img

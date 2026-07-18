@@ -19,7 +19,7 @@
 
 :root {
   --forest: #3a6d33;
-  --grass: #578B07;
+  --grass: #31573a;
   --leaf: #ecf39e;
   --moss:rgba(0, 0,0, 0.7);
   --white: #ffffff;
@@ -141,3 +141,129 @@ body::-webkit-scrollbar-thumb {
 html {
   scroll-behavior: smooth;
 }
+
+
+/* =========================
+   Swiper Wrapper
+========================= */
+.schools-swiper {
+  padding-bottom: 90px !important;
+  padding-top: 10px  !important;
+}
+
+.schools-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.schools-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   Pagination
+========================= */
+.schools-swiper .swiper-pagination {
+  bottom: 10px !important;
+}
+
+.schools-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--forest) !important;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.schools-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* =========================
+   Navigation Buttons
+========================= */
+/* .schools-swiper .swiper-button-prev,
+.schools-swiper .swiper-button-next {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 9999px !important;
+  background: var(--forest) !important;
+  color: var(--white) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  top: auto !important;
+  bottom: 0 !important;
+
+  z-index: 20 !important;
+
+  transition: all 0.3s ease;
+} */
+
+/* Centered below pagination */
+/* .schools-swiper .swiper-button-prev {
+  left: calc(50% - 110px) !important;
+} */
+
+/* .schools-swiper .swiper-button-next {
+  right: calc(50% - 110px) !important;
+} */
+
+/* Default Swiper Arrows */
+/* .schools-swiper .swiper-button-prev::after,
+.schools-swiper .swiper-button-next::after {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+} */
+
+/* Hover */
+.schools-swiper .swiper-button-prev:hover,
+.schools-swiper .swiper-button-next:hover {
+  transform: scale(1.08);
+}
+
+/* Disabled state */
+.schools-swiper .swiper-button-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* =========================
+   Mobile
+========================= */
+@media (max-width: 640px) {
+  .schools-swiper {
+    padding-bottom: 80px !important;
+  }
+
+  /* .schools-swiper .swiper-button-prev,
+  .schools-swiper .swiper-button-next {
+    width: 42px !important;
+    height: 42px !important;
+  } */
+
+  /* .schools-swiper .swiper-button-prev {
+    left: calc(50% - 100px) !important;
+  }
+
+  .schools-swiper .swiper-button-next {
+    right: calc(50% - 100px) !important;
+  } */
+
+  /* .schools-swiper .swiper-button-prev::after,
+  .schools-swiper .swiper-button-next::after {
+    font-size: 15px !important;
+  } */
+}
+
+h1,
+h2 {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+

@@ -4,7 +4,7 @@ import React from "react";
 import { Phone, Globe } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-import edubuild3 from "../images1/edubuild3.png";
+import edubuild3 from "../images1/navbarimage2.png";
 
 import { useLanguage } from "../context/LanguageContext";
 import { IoEarthSharp ,IoGlobeOutline } from "react-icons/io5";
@@ -13,17 +13,17 @@ const Topbar3 = () => {
   const { t, setLanguage } = useLanguage();
 
   return (
-    <div className="w-full bg-[var(--grass)] text-[var(--white)] text-[13px] font-medium z-50">
+    <div className="w-full text-[var(--white)] text-[13px] font-medium z-[9999]   ">
       <div
-        className="max-w-[1350px] relative mx-auto px-4 lg:px-6 h-[35px] flex items-center justify-between"
+        className="max-w-[100vw] relative mx-auto px-2 lg:px-4 h-[35px] flex items-center justify-between"
         style={{
           backgroundImage: `url(${edubuild3})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top",
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[var(--inset)]"></div>
+        <div className="absolute inset-0 bg-black/40  backdrop-blur-[1px]"></div>
 
         {/* LEFT */}
       <div className="flex items-center gap-5 z-10 flex-nowrap">
@@ -47,7 +47,7 @@ const Topbar3 = () => {
 
   
           {/* Language Dropdown */}
-          <div className="relative group z-50">
+          <div className="relative group z-50  hidden md:block">
             <button
               className="
                 flex items-center gap-2
@@ -88,6 +88,7 @@ const Topbar3 = () => {
                   hover:bg-gray-100
                   transition-all
                   text-[var(--forest)]
+                 
                 "
               >
                 🇺🇸 English
@@ -133,26 +134,22 @@ const Topbar3 = () => {
         </div>
 
         {/* MIDDLE */}
-        <div
-          className="
-            relative
-            ml-10
-            w-[65%]
-            h-52
-            hidden md:flex
-            items-center
-            justify-center
-            gap-5
-            px-2
-            rounded-full
-            overflow-hidden
-            z-10
-          "
-          // style={{
-          //   backgroundImage: `url(${edubuild3})`,
-          //   backgroundSize: "contain",
-          // }}
-        >
+       <div
+  className="
+    relative
+    ml-4
+    flex-1
+    h-52
+    hidden lg:flex
+    items-center
+    justify-center
+    gap-5
+    px-2
+    rounded-full
+    overflow-hidden
+    z-10
+  "
+>
           {/* <div className="absolute inset-0 bg-[var(--inset)] rounded-full"></div> */}
 
           <a
@@ -181,29 +178,32 @@ const Topbar3 = () => {
         </div>
 
         {/* RIGHT */}
-        <div className="flex items-center gap-4 lg:gap-6 ml-auto z-10">
-          <a
-            href="#"
-            className="
-              text-[13.5px]
-              hover:scale-[1.03]
-              transition-all duration-200
-            "
-          >
-            {t.admission||"Admission Portal"}
-          </a>
+      {/* RIGHT */}
+<div className="flex items-center gap-3 lg:gap-6 shrink-0 z-10">
+         <a
+  href="#"
+  className="
+    text-[13px] lg:text-[13.5px]
+    whitespace-nowrap
+    hover:scale-[1.03]
+    transition-all duration-200
+    hidden md:block
+  "
+>
+  {t.admission || "Admission Portal"}
+</a>
 
-          <a
-            href="#"
-            className="
-              hidden md:block
-              text-[13.5px]
-              hover:scale-[1.03]
-              transition-all duration-200
-            "
-          >
-            {t.login||"Login"}
-          </a>
+<a
+  href="#"
+  className="
+    text-[13px] lg:text-[13.5px]
+    whitespace-nowrap
+    hover:scale-[1.03]
+    transition-all duration-200
+  "
+>
+  {t.login || "Login"}
+</a>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Trophy,
   Medal,
@@ -12,145 +13,162 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+import { milestonesAchievementsData } from "../../assets/CseData";
+
+const iconMap = {
+  Trophy,
+  Medal,
+  Award,
+  Star,
+  BookOpen,
+  GraduationCap,
+  BriefcaseBusiness,
+  Building2,
+  ArrowUpRight,
+  CheckCircle2,
+};
+
 const MilestonesAchievementsSection = () => {
-  const milestones = [
-    {
-      year: "2007",
-      title: "Department Established",
-      desc: "Computer Science & Engineering Department was established with a vision of excellence in technical education.",
-    },
-    {
-      year: "2012",
-      title: "Research Expansion",
-      desc: "Faculty members started contributing actively in national and international journals and conferences.",
-    },
-    {
-      year: "2016",
-      title: "Industry Collaboration",
-      desc: "Strengthened academic-industry partnerships through workshops, internships and expert sessions.",
-    },
-    {
-      year: "2020",
-      title: "Digital Transformation",
-      desc: "Successfully adopted online learning, webinars and virtual industry interaction initiatives.",
-    },
-    {
-      year: "2024",
-      title: "Innovation & Growth",
-      desc: "Enhanced focus on AI, Cyber Security, Data Science and research-driven learning.",
-    },
-  ];
+  const {
+    hero,
+    heading,
+    achievements,
+    milestones,
+    highlights,
+    excellence,
+    cta,
+  } = milestonesAchievementsData;
 
-  const achievements = [
-    {
-      icon: Trophy,
-      value: "1000+",
-      title: "Successful Alumni",
-    },
-    {
-      icon: GraduationCap,
-      value: "95%+",
-      title: "Academic Excellence",
-    },
-    {
-      icon: BriefcaseBusiness,
-      value: "500+",
-      title: "Placements",
-    },
-    {
-      icon: BookOpen,
-      value: "50+",
-      title: "Research Publications",
-    },
-  ];
+  const titleStyle = {
+    color: "var(--forest)",
+    fontFamily: "Fraunces, serif",
+  };
 
-  const highlights = [
-    "Highly qualified and experienced faculty members",
-    "Regular seminars, workshops and guest lectures",
-    "Excellent placement assistance and career guidance",
-    "Strong research and innovation culture",
-    "Modern computing infrastructure and laboratories",
-    "Industry-oriented curriculum and skill development",
-  ];
+  const bodyStyle = {
+    fontFamily: "Outfit, sans-serif",
+  };
+
+  const cardStyle = {
+    background: "rgba(255,255,255,0.95)",
+    border: "1px solid rgba(0,0,0,0.08)",
+    boxShadow: "0 8px 28px rgba(31,77,58,.08)",
+  };
 
   return (
     <section
-      className="relative py-5 px-4 md:px-8 overflow-hidden bg-white"
+      className="
+relative
+py-10
+px-4
+md:px-8
+overflow-hidden
+"
       style={{
-        backgroundImage:
-          "url('https://i.pinimg.com/736x/5b/f3/38/5bf338b5a9755400d669323410428b10.jpg')",
+        backgroundImage: `url(${hero.background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-white/60 backdrop-blur-[4px]" />
+      <div
+        className="
+absolute
+inset-0
+bg-white/65
+backdrop-blur-[4px]
+"
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Header */}
+        {/* HEADER */}
+
         <div className="text-center mb-16">
           <p
-            className="uppercase tracking-[3px] text-sm font-semibold"
-            style={{
-              color: "var(--forest)",
-              fontFamily: "Outfit, sans-serif",
-            }}
+            className="
+uppercase
+tracking-[3px]
+text-sm
+font-semibold
+text-[var(--forest)]
+"
+            style={bodyStyle}
           >
-            Legacy & Success
+            {heading.subtitle}
           </p>
 
           <h2
-            className="mt-3 text-4xl md:text-6xl"
-            style={{
-              color: "var(--forest)",
-              fontFamily: "Fraunces, serif",
-            }}
+            className="
+mt-3
+text-4xl
+md:text-6xl
+"
+            style={titleStyle}
           >
-            Milestones & Achievements
+            {heading.title}
           </h2>
 
           <p
-            className="max-w-3xl mx-auto mt-5 leading-8 text-gray-700"
-            style={{
-              fontFamily: "Outfit, sans-serif",
-            }}
+            className="
+max-w-3xl
+mx-auto
+mt-5
+leading-8
+text-gray-700
+"
+            style={bodyStyle}
           >
-            A journey marked by academic excellence, innovation,
-            industry engagement and the success of thousands of students.
+            {heading.description}
           </p>
         </div>
 
-        {/* Achievement Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
-          {achievements.map((item, index) => {
-            const Icon = item.icon;
+        {/* ACHIEVEMENTS */}
+
+        <div
+          className="
+grid
+grid-cols-2
+md:grid-cols-4
+gap-6
+mb-20
+"
+        >
+          {achievements.map((item) => {
+            const Icon = iconMap[item.icon];
 
             return (
               <div
-                key={index}
-                className="text-center rounded-[18px] bg-white border border-gray-200 p-6 shadow-lg"
+                key={item.title}
+                className="
+rounded-[18px]
+p-6
+text-center
+"
+                style={cardStyle}
               >
                 <Icon
                   size={34}
-                  color="var(--forest)"
-                  className="mx-auto mb-4"
+                  className="
+mx-auto
+mb-4
+text-[var(--forest)]
+"
                 />
 
                 <h3
-                  className="text-4xl"
-                  style={{
-                    color: "var(--forest)",
-                    fontFamily: "Fraunces, serif",
-                  }}
+                  className="
+text-4xl
+"
+                  style={titleStyle}
                 >
                   {item.value}
                 </h3>
 
                 <p
-                  className="mt-2 text-sm text-gray-700"
-                  style={{
-                    fontFamily: "Outfit, sans-serif",
-                  }}
+                  className="
+mt-2
+text-sm
+text-gray-700
+"
+                  style={bodyStyle}
                 >
                   {item.title}
                 </p>
@@ -159,55 +177,102 @@ const MilestonesAchievementsSection = () => {
           })}
         </div>
 
-        {/* Timeline */}
+        {/* TIMELINE */}
+
         <div className="mb-20">
           <h3
-            className="text-3xl mb-10 text-center"
-            style={{
-              color: "var(--forest)",
-              fontFamily: "Fraunces, serif",
-            }}
+            className="
+text-3xl
+mb-10
+text-center
+"
+            style={titleStyle}
           >
             Journey Through The Years
           </h3>
 
           <div className="relative">
-            <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-[var(--forest)] opacity-20 hidden md:block"></div>
+            <div
+              className="
+absolute
+left-6
+top-0
+bottom-0
+w-[2px]
+bg-[var(--forest)]
+opacity-20
+hidden
+md:block
+"
+            />
 
             <div className="space-y-8">
-              {milestones.map((item, index) => (
-                <div key={index} className="relative md:pl-20">
-                  <div className="hidden md:flex absolute left-0 top-4 w-12 h-12 rounded-full bg-[var(--forest)] items-center justify-center">
-                    <Star size={18} color="#ffffff" />
+              {milestones.map((item) => (
+                <div
+                  key={item.year}
+                  className="
+relative
+md:pl-20
+"
+                >
+                  <div
+                    className="
+hidden
+md:flex
+absolute
+left-0
+top-4
+w-12
+h-12
+rounded-full
+bg-[var(--forest)]
+items-center
+justify-center
+"
+                  >
+                    <Star size={18} className="text-white" />
                   </div>
 
-                  <div className="rounded-[18px] border border-gray-200 bg-white shadow-lg p-6">
+                  <div
+                    className="
+rounded-[18px]
+p-6
+"
+                    style={cardStyle}
+                  >
                     <span
-                      className="inline-block px-3 py-1 rounded-full text-sm mb-3"
+                      className="
+inline-block
+px-3
+py-1
+rounded-full
+text-sm
+mb-3
+"
                       style={{
                         background: "rgba(22,51,42,.08)",
                         color: "var(--forest)",
-                        fontFamily: "Outfit, sans-serif",
                       }}
                     >
                       {item.year}
                     </span>
 
                     <h4
-                      className="text-2xl mb-3"
-                      style={{
-                        color: "var(--forest)",
-                        fontFamily: "Fraunces, serif",
-                      }}
+                      className="
+text-2xl
+mb-3
+"
+                      style={titleStyle}
                     >
                       {item.title}
                     </h4>
 
                     <p
-                      className="leading-7 text-gray-700"
-                      style={{
-                        fontFamily: "Outfit, sans-serif",
-                      }}
+                      className="
+leading-7
+text-gray-700
+"
+                      style={bodyStyle}
                     >
                       {item.desc}
                     </p>
@@ -218,41 +283,62 @@ const MilestonesAchievementsSection = () => {
           </div>
         </div>
 
-        {/* Key Highlights */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-20">
-          <div className="rounded-[22px] p-8 border border-gray-200 bg-white shadow-lg">
-            <div className="flex items-center gap-3 mb-6">
-              <Award size={30} color="var(--forest)" />
+        {/* HIGHLIGHTS + EXCELLENCE */}
+
+        <div
+          className="
+grid
+lg:grid-cols-2
+gap-8
+mb-20
+"
+        >
+          <div
+            className="
+rounded-[22px]
+p-8
+"
+            style={cardStyle}
+          >
+            <div
+              className="
+flex
+items-center
+gap-3
+mb-6
+"
+            >
+              <Award size={30} className="text-[var(--forest)]" />
 
               <h3
-                className="text-3xl"
-                style={{
-                  color: "var(--forest)",
-                  fontFamily: "Fraunces, serif",
-                }}
+                className="
+text-3xl
+"
+                style={titleStyle}
               >
                 Key Highlights
               </h3>
             </div>
 
             <div className="space-y-4">
-              {highlights.map((item, index) => (
+              {highlights.map((item) => (
                 <div
-                  key={index}
-                  className="flex items-start gap-3"
+                  key={item}
+                  className="
+flex
+items-start
+gap-3
+"
                 >
                   <CheckCircle2
                     size={18}
-                    color="var(--forest)"
-                    className="mt-1"
+                    className="
+mt-1
+text-[var(--forest)]
+"
                   />
 
-                  <p
-                    className="text-gray-700"
-                    style={{
-                      fontFamily: "Outfit, sans-serif",
-                    }}
-                  >
+                  <p className="text-gray-700" style={bodyStyle}>
                     {item}
                   </p>
                 </div>
@@ -260,81 +346,106 @@ const MilestonesAchievementsSection = () => {
             </div>
           </div>
 
-          <div className="rounded-[22px] p-8 border border-gray-200 bg-white shadow-lg">
-            <div className="flex items-center gap-3 mb-6">
-              <Building2 size={30} color="var(--forest)" />
+          <div
+            className="
+rounded-[22px]
+p-8
+"
+            style={cardStyle}
+          >
+            <div
+              className="
+flex
+items-center
+gap-3
+mb-6
+"
+            >
+              <Building2 size={30} className="text-[var(--forest)]" />
 
               <h3
-                className="text-3xl"
-                style={{
-                  color: "var(--forest)",
-                  fontFamily: "Fraunces, serif",
-                }}
+                className="
+text-3xl
+"
+                style={titleStyle}
               >
-                Department Excellence
+                {excellence.title}
               </h3>
             </div>
 
             <p
-              className="leading-8 text-gray-700"
-              style={{
-                fontFamily: "Outfit, sans-serif",
-              }}
+              className="
+leading-8
+text-gray-700
+"
+              style={bodyStyle}
             >
-              The Department has consistently maintained high academic
-              standards while fostering innovation, leadership and
-              professional growth among students. Through industry
-              partnerships, research initiatives and modern infrastructure,
-              the department continues to produce skilled engineers ready
-              to contribute globally.
+              {excellence.description}
             </p>
 
-            <div className="mt-8 flex items-center gap-3">
-              <Medal size={24} color="var(--forest)" />
+            <div
+              className="
+mt-8
+flex
+items-center
+gap-3
+"
+            >
+              <Medal size={24} className="text-[var(--forest)]" />
 
               <span
-                style={{
-                  color: "var(--forest)",
-                  fontFamily: "Outfit, sans-serif",
-                }}
+                className="
+text-[var(--forest)]
+"
+                style={bodyStyle}
               >
-                Excellence • Innovation • Leadership
+                {excellence.tag}
               </span>
             </div>
           </div>
         </div>
 
-        {/* Bottom CTA */}
+        {/* CTA */}
+
         <div
-  className="rounded-[24px] p-10 text-center bg-white border border-gray-200 shadow-lg"
->
-  <ArrowUpRight
-    size={42}
-    color="var(--forest)"
-    className="mx-auto mb-4"
-  />
+          className="
+rounded-[24px]
+p-10
+text-center
+"
+          style={cardStyle}
+        >
+          <ArrowUpRight
+            size={42}
+            className="
+mx-auto
+mb-4
+text-[var(--forest)]
+"
+          />
 
-  <h3
-    className="text-3xl"
-    style={{
-      color: "var(--forest)",
-      fontFamily: "Fraunces, serif",
-    }}
-  >
-    Inspiring The Next Generation
-  </h3>
+          <h3
+            className="
+text-3xl
+"
+            style={titleStyle}
+          >
+            {cta.title}
+          </h3>
 
-  <p
-    className="max-w-3xl mx-auto mt-4 leading-8 text-gray-700"
-    style={{
-      fontFamily: "Outfit, sans-serif",
-    }}
-  >
-    Building a future where innovation, knowledge and
-    professional excellence empower students to become leaders
-    in technology and society.
-  </p>
-</div>
+          <p
+            className="
+max-w-3xl
+mx-auto
+mt-4
+leading-8
+text-gray-700
+"
+            style={bodyStyle}
+          >
+            {cta.description}
+          </p>
+        </div>
       </div>
     </section>
   );
