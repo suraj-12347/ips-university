@@ -45,76 +45,27 @@ const RecruitersSection = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
 
-  <p
-    className="
-      uppercase
-      tracking-[4px]
-      text-sm
-      font-semibold
-      text-[var(--grass)]
-      mb-3
-    "
-    style={{
-      fontFamily:"Outfit, sans-serif"
-    }}
-  >
-    Industry Connect
-  </p>
+ <div className="text-center mb-20">
 
+  <span className="uppercase tracking-[5px] text-xs font-semibold text-[var(--grass)]">
+    Industry Partners
+  </span>
 
   <h2
-    className="
-      text-4xl
-      md:text-5xl
-      lg:text-6xl
-      text-[var(--forest)]
-      relative
-      inline-block
-    "
-    style={{
-      fontFamily:"Fraunces, serif"
-    }}
+    className="mt-5 text-5xl lg:text-6xl text-[var(--forest)]"
+    style={{ fontFamily: "Fraunces, serif" }}
   >
-    Our Recruiters
-
-
-    <span
-      className="
-        absolute
-        left-1/2
-        -bottom-3
-        -translate-x-1/2
-        w-24
-        h-[3px]
-        bg-[var(--grass)]
-        rounded-full
-      "
-    />
-
+    Trusted Recruiters
   </h2>
 
+  <div className="w-20 h-[2px] bg-[var(--grass)] mx-auto mt-6 rounded-full"></div>
 
-
-  <p
-    className="
-      max-w-3xl
-      mx-auto
-      mt-8
-      text-gray-600
-      leading-8
-      text-base
-      md:text-lg
-    "
-    style={{
-      fontFamily:"Outfit, sans-serif"
-    }}
-  >
-    Collaborating with leading organizations and industry partners
-    to create valuable career opportunities and professional growth
-    pathways for our students.
+  <p className="max-w-2xl mx-auto mt-8 text-gray-600 leading-8">
+    Our graduates begin their careers with globally recognized organizations
+    across technology, consulting, finance, manufacturing and emerging industries.
   </p>
 
-
+</div>
 </div>
 
         <div className="relative overflow-hidden">
@@ -127,38 +78,74 @@ const RecruitersSection = () => {
           <div className="recruiter-scroll flex items-center gap-5 md:gap-8 py-4">
             {[...recruiters, ...recruiters].map((company, index) => (
               <div
-                key={index}
-                className="
-                  min-w-[170px]
-                  md:min-w-[220px]
-                  bg-white
-                  rounded-2xl
-                  shadow-md
-                  border
-                  border-gray-100
-                  p-4
-                  md:p-6
-                  flex
-                  flex-col
-                  items-center
-                  justify-center
-                  hover:shadow-xl
-                  hover:-translate-y-1
-                  transition-all
-                  duration-300
-                "
-              >
-                <img
-                  src={company.logo}
-                  alt={company.name}
-                  className="h-10 md:h-14 object-contain mb-3 md:mb-4"
-                  loading="lazy"
-                />
+  key={index}
+  className="
+    group
+    relative
+    min-w-[180px]
+    md:min-w-[220px]
+    h-[150px]
+    bg-white
+    rounded-3xl
+    border
+    border-gray-100
+    overflow-hidden
+    flex
+    flex-col
+    items-center
+    justify-center
+    transition-all
+    duration-500
+    hover:-translate-y-2
+    hover:shadow-[0_20px_45px_rgba(49,87,44,0.12)]
+  "
+>
+  {/* Top Border Animation */}
+  <div
+    className="
+      absolute
+      top-0
+      left-0
+      h-[4px]
+      w-0
+      bg-[var(--grass)]
+      transition-all
+      duration-500
+      group-hover:w-full
+    "
+  />
 
-                <h3 className="text-sm md:text-base text-gray-700 font-semibold text-center">
-                  {company.name}
-                </h3>
-              </div>
+  <img
+    src={company.logo}
+    alt={company.name}
+    className="
+      h-12
+      md:h-14
+      object-contain
+     
+      opacity-70
+      transition-all
+      duration-500
+      group-hover:grayscale-0
+      group-hover:opacity-100
+      group-hover:scale-110
+    "
+  />
+
+  <p
+    className="
+      mt-5
+      text-sm
+      font-medium
+      text-gray-500
+      group-hover:text-[var(--forest)]
+      transition-colors
+      duration-300
+    "
+  >
+    {company.name}
+  </p>
+</div>
             ))}
           </div>
         </div>

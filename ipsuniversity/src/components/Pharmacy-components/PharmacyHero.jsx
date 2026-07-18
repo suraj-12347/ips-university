@@ -1,11 +1,11 @@
 import React from "react";
 import ctmdashboard from "../../images1/ctmlongpng3.png";
-import educationbg from "../../images1/edubuild8.png";
+import educationbg from "../../images1/pharma2.png";
 
 
 const HeroSection = () => {
   return (
-  <section className="relative group h-[55vh] sm:h-[65vh] lg:h-[95vh] overflow-hidden mt-10">
+  <section className="relative group h-[55vh] sm:h-[65vh] lg:h-[110vh] overflow-hidden mt-10">
 
   {/* Background Image */}
   <img
@@ -14,8 +14,16 @@ const HeroSection = () => {
     className="w-full h-full object-cover object-left md:object-center transition-transform duration-700 lg:group-hover:scale-105"
   />
 
+  {/* <div
+        className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"
+        style={{
+          background:
+            "linear-gradient(to top, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      /> */}
+
   {/* Overlay */}
-  <div
+  {/* <div
     className="
       absolute inset-0
       bg-gradient-to-t
@@ -36,12 +44,12 @@ const HeroSection = () => {
   >
     <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-4 pb-8 sm:pb-10 lg:pb-16">
 
-  {/* Tag */}
+ 
   <span className="inline-block text-[var(--forest)] uppercase tracking-[2px] sm:tracking-[3px] lg:tracking-[4px] font-semibold text-[11px] sm:text-xs lg:text-sm mb-3">
    Excellence in Education
   </span>
 
-  {/* Heading */}
+
   <h1
     className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.15]"
     style={{
@@ -54,7 +62,7 @@ const HeroSection = () => {
 
   <div className="w-16 sm:w-20 lg:w-24 h-[3px] bg-[#C7D36F] rounded-full my-4 lg:my-6"></div>
 
-  {/* Paragraph */}
+
   <p
     className="max-w-2xl text-white/90 text-base md:text-lg leading-8 font-normal"
     style={{
@@ -66,7 +74,7 @@ const HeroSection = () => {
     future of education.
   </p>
 
-  {/* Button */}
+
   <button
     className="
       mt-6
@@ -92,7 +100,7 @@ const HeroSection = () => {
   </button>
 
 </div>
-  </div>
+  </div> */}
 
 </section>
   );

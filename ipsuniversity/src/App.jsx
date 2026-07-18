@@ -23,7 +23,7 @@ import {HodMessageData} from "./assets/CseData";
 import AboutRoutes from "./components/AboutComponents/AboutRoutes";
 import RandDRoutes from "./components/R&D-components/RandDRoutes";
 import EducationPage from "./pages/EducationPage";
-
+import PharmacyPage from './pages/PharmacyPage'
 
 
 const App = () => {
@@ -39,6 +39,7 @@ const App = () => {
 
         <Route path="/ipsctm" element={<CtmMainPage />} />
         <Route path="/education" element={<EducationPage/>} />
+         <Route path="/pharmacy" element={<PharmacyPage/>} />
         <Route path="/about/*" element={<AboutRoutes />} />
 
 

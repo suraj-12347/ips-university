@@ -7,11 +7,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import ctm from "../images1/ctmmain.png";
+import ctm from "../images1/ctmmain2.png";
 import bca from "../images1/pharmacy.jpeg";
 import mgmt from "../images1/pharmacy.jpeg";
-import pharmacy from "../images1/pharmab.jpg";
-import education from "../images1/edub.jpg";
+import pharmacy from "../images1/pharma2.png";
+import education from "../images1/edubuild8.png";
 import physical from "../images1/pharmacy.jpeg";
 import flower from "../images1/flowerrr.jpeg";
 
@@ -42,6 +42,7 @@ const schools = [
     quote:
       "Inspiring educators to shape minds, build character, and transform the future.",
     icon: GraduationCap,
+    route: "/education",
   },
   {
     image: pharmacy,
@@ -291,7 +292,7 @@ const SchoolsSection = () => {
               inset-0
               bg-gradient-to-t
               from-[var(--forest)]
-              via-[#31572c]/70
+             
               to-transparent
             "
           />
