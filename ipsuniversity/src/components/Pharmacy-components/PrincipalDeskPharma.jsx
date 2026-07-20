@@ -37,37 +37,47 @@ const About5 = () => {
     At the School of Pharmacy, we believe that excellence in education,
     research, and professional ethics creates future-ready healthcare
     professionals. Together, let us learn, innovate, and serve society with
-    dedication and compassion. <span className="text-[var(--forest)] text-md font-bold">Read More →</span>
+    dedication and compassion. <span className="text-[var(--forest)] text-md font-bold cursor-pointer">Read More →</span>
   </p>
 
   {/* Principal Info */}
   <div className="mt-8 flex items-center gap-4">
 
     {/* Principal Image */}
-     <div className="mt-4 flex items-start gap-4 mb-4">
+     <div className="mt-4 flex items-start gap-4 mb-4 group">
+  
+  {/* IMAGE WRAPPER */}
+  <div className="w-25 h-25 rounded-lg overflow-hidden">
+    <img
+      src="https://i.pinimg.com/736x/07/30/63/07306357a3cc2af19c63f1979e9334b8.jpg"
+      alt="gardener"
+      className="
+        w-full h-full 
+        object-cover
+        transition-transform
+        duration-700
+        ease-out
+        group-hover:scale-120
+      "
+    />
+  </div>
 
-            {/* SMALL IMAGE */}
-            <img
-              src="https://i.pinimg.com/736x/07/30/63/07306357a3cc2af19c63f1979e9334b8.jpg"
-              alt="gardener"
-              className="w-25 h-25 rounded-lg object-cover"
-            />
+  {/* FEATURES RIGHT SIDE */}
+  <div className="space-y-1">
+    {[
+      "Industry-Oriented Curriculum",
+      "Advanced Pharmaceutical Labs",
+      "Experienced Faculty Members",
+      "Research & Innovation Focus",
+    ].map((item, i) => (
+      <div key={i} className="flex items-center gap-2 text-sm">
+        <span className="text-[var(--forest)]">✓</span>
+        <span className="text-gray-700">{item}</span>
+      </div>
+    ))}
+  </div>
 
-            {/* FEATURES RIGHT SIDE */}
-            <div className="space-y-1">
-              {[
-  "Industry-Oriented Curriculum",
-  "Advanced Pharmaceutical Labs",
-  "Experienced Faculty Members",
-  "Research & Innovation Focus",
-].map((item, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm">
-                  <span className="text-[var(--forest)]">✓</span>
-                  <span className="text-gray-700">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+</div>
     
 
     {/* <button className="px-5 py-2.5 rounded-full bg-[var(--forest)] text-white text-sm hover:bg-[var(--grass)] transition">
@@ -79,11 +89,12 @@ const About5 = () => {
 </div>
 
         {/* RIGHT SIDE IMAGE */}
-        <div className="flex-1 h-full p-6 rounded-2xl">
+       <div className="flex-1 p-6 rounded-2xl group ">
           <img
             src="https://i.pinimg.com/1200x/de/2f/50/de2f5019f280f57e3de8dde27a56f848.jpg"
             alt="gardening"
-            className="w-full h-full object-cover  rounded-2xl"
+            className="w-full h-full object-cover  rounded-2xl  transition-transform
+            "
           />
         </div>
 

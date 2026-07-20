@@ -13,6 +13,7 @@ import TestimonialsSection from '../components/ctm-component/TestimonialsSection
 import RecruitersSection from '../components/ctm-component/RecruitersSection'
 import About5 from '../components/Aboute5'
 import PharmacyHero from '../components/Pharmacy-components/PharmacyHero'
+import PharmaGallery from '../components/Pharmacy-components/PharmaGallery'
 
 
 export const coursesData = {
@@ -131,6 +132,8 @@ const EducationPage = () => {
   coursesData={coursesData}
   courseImages={courseImages}
 />
+
+<PharmaGallery/>
 
 {/* <EducationGallery/>
 <PlacementsSection/>
