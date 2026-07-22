@@ -148,7 +148,7 @@ const EnquiryPopup2 = () => {
               justify-center
               px-8
               lg:px-12
-              py-10
+              py-10 hidden md:block
               "
             >
 

@@ -131,41 +131,62 @@ const EducationGallery = () => {
 
   return (
     <>
-      <section className="relative py-20 bg-[#f8fbf6] overflow-hidden mt-20"
+     <section
+  className="relative py-25 bg-[#f8fbf6] overflow-hidden mt-20 flex justify-center "
+  style={{
+    backgroundImage:
+      "url('https://i.pinimg.com/1200x/6b/4c/6c/6b4c6c54c206b50db450e93d3d2b0cd1.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "bottom",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-green-900/80 z-0"></div>
 
+  {/* Content */}
+  <div className="relative z-10 max-w-[1700px] flex flex-col items-center justify-center">
 
- style={{
-        backgroundImage:
-          "url('https://i.pinimg.com/1200x/6b/4c/6c/6b4c6c54c206b50db450e93d3d2b0cd1.jpg')",
-          backgroundSize:"cover",
-          backgroundPosition:"bottom",
-          backgroundRepeat:"no-repeat",
-      }}
-    >
-      {/* Overlay FIXED HEIGHT */}
-      <div className="absolute inset-0 bg-green-900/80 h-fulln z-[0]"></div>
-        
+    <div className="mb-12 text-center">
+      <span className="uppercase tracking-[4px] text-xs font-semibold text-white">
+        Gallery
+      </span>
 
+      <h2
+        className="text-4xl lg:text-5xl font-bold text-white mt-3"
+        style={{ fontFamily: "Fraunces, serif" }}
+      >
+        Life at School of Pharmacy
+      </h2>
+    </div>
 
-        <div className="max-w-[1700px]   flex justify-center flex-col z-[40]">
+    {/* Gallery */}
+    <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 w-[85%] mt-10">
+      {(showAll ? images : images.slice(0, 11)).map((item, index) => (
+        <div
+          key={index}
+          onClick={() => openPopup(item.subImages)}
+          className="group relative mb-4 break-inside-avoid overflow-hidden cursor-pointer border-3 border-white"
+        >
+          <img
+            src={item.src}
+            alt={item.caption}
+            className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
 
-          <div className="mb-12 text-center">
-            <span className="uppercase tracking-[4px] text-xs font-semibold text-[var(--white)] z-40">
-              Gallery
-            </span>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold text-[var(--forest)] mt-3">
-              Life at School of Education
-            </h2>
+          <div className="absolute bottom-0 left-0 p-4 translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <h3 className="text-white font-semibold text-lg">
+              {item.caption}
+            </h3>
           </div>
-
-          {/* Gallery */}
-         {/* Gallery */}
-
-
-
         </div>
-      </section>
+      ))}
+    </div>
+
+  </div>
+</section>
 
       <GalleryPopup
         open={popupOpen}

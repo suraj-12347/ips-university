@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Plus } from "lucide-react";
 import ctmStudents from '../images1/ctmstudents.jpeg'
+import pharma from '../images1/treepng.png'
 
 const faqs = [
   {
@@ -39,180 +40,198 @@ const FAQ = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-24 bg-[#f8fbf6] mt-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
-          {/* Left Content */}
-          <div>
-            <span
-              className="
-                uppercase
-                tracking-[4px]
-                text-sm
-                font-semibold
-                text-[#578B07]
-              "
-            >
-              Frequently Asked Questions
-            </span>
+    <section className="relative py-24 mt-20  overflow-hidden"
+    
+    
+    
+    
+    style={{
+                  backgroundImage:`url(${pharma})`,
+                  backgroundSize:"cover",
+                  backgroundPosition:"center"
+                }}
+    
+    >
 
-            <h2
+      <div
               className="
-                text-4xl
-                lg:text-5xl
-                text-[#31572c]
-                mt-5
-                leading-tight
+              absolute
+              inset-0
+              bg-white/60
+              backdrop-blur-[3px]
               "
-              style={{
-                fontFamily: "Fraunces, serif",
-              }}
-            >
-              Everything You Need
-              <br />
-              To Know About
-              <br />
-              IPS University
-            </h2>
-
-            <p
-              className="
-                mt-6
-                text-gray-600
-                leading-8
-                text-lg
-              "
-            >
-              Explore answers to the most frequently asked questions
-              about admissions, academics, placements, campus life,
-              scholarships and student support services at IPS
-              University.
-            </p>
+            />
 
             <div
+        className="absolute -top-2 left-0 w-full h-[70%] z-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+      />
+  {/* Background Blur */}
+  {/* <div className="absolute top-20 -left-24 w-72 h-72 bg-[var(--leaf)]/30 rounded-full blur-3xl"></div>
+  <div className="absolute bottom-0 right-0 w-80 h-80 bg-[var(--grass)]/10 rounded-full blur-3xl"></div> */}
+
+  <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+    <div className="grid lg:grid-cols-2 gap-20 items-start">
+      {/* LEFT */}
+      <div className="lg:sticky lg:top-28">
+        <span
+          className="
+            uppercase
+            tracking-[4px]
+            text-sm
+            font-semibold
+            text-[var(--grass)]
+          "
+        >
+          Frequently Asked Questions
+        </span>
+
+        <h2
+          className="
+            mt-5
+            text-4xl
+            lg:text-[56px]
+            leading-[1.08]
+            tracking-[-1px]
+            text-[var(--forest)]
+          "
+          style={{
+            fontFamily: "Fraunces, serif",
+          }}
+        >
+          Everything You
+          <br />
+          Need To Know
+          <br />
+          About IPS
+          <br />
+          University
+        </h2>
+
+        <p className="mt-8 text-gray-600 leading-8 text-lg max-w-xl">
+          Find quick answers to common questions about admissions,
+          academics, scholarships, placements, campus facilities,
+          student life, and support services at IPS University.
+        </p>
+
+        {/* <div className="mt-12 overflow-hidden rounded-[32px] shadow-xl">
+          <img
+            src={ctmStudents}
+            alt="IPS University"
+            className="
+              w-full
+              h-[340px]
+              object-cover
+              transition
+              duration-700
+              hover:scale-105
+            "
+          />
+        </div> */}
+      </div>
+
+      {/* RIGHT */}
+      <div className="divide-y divide-[#dce6d5]">
+        {faqs.map((item, index) => (
+          <div
+            key={index}
+            className="group py-7 transition-all duration-300"
+          >
+            <button
+              onClick={() =>
+                setActive(active === index ? null : index)
+              }
               className="
-                mt-10
-                rounded-[32px]
-                overflow-hidden
-                h-[400px]
-                shadow-xl
+                w-full
+                flex
+                justify-between
+                items-start
+                gap-6
+                text-left
               "
             >
-             <img
-  src={ctmStudents}
-  alt="IPS University Campus"
-  className="
-    w-full
-    h-full
-    object-cover
-    transition-transform
-    duration-500
-    hover:scale-105
-  "
-/>
-            </div>
-          </div>
-
-          {/* Right Accordion */}
-          <div className="space-y-5">
-            {faqs.map((item, index) => (
-              <div
-                key={index}
-                className="
-                  bg-white
-                  border
-                  border-[#e7efe3]
-                  rounded-[24px]
-                  overflow-hidden
-                  shadow-sm
-                  hover:shadow-lg
-                  transition-all
-                  duration-300
-                "
-              >
-                <button
-                  onClick={() =>
-                    setActive(active === index ? null : index)
-                  }
+              <div className="flex gap-5">
+                <span
                   className="
-                    w-full
-                    flex
-                    items-center
-                    justify-between
-                    p-6
-                    text-left
+                    text-sm
+                    font-semibold
+                    text-[var(--grass)]
+                    mt-1
+                    min-w-[34px]
                   "
                 >
-                  <h3
-                    className="
-                      text-lg
-                      font-semibold
-                      text-[#31572c]
-                      pr-5
-                    "
-                  >
-                    {item.question}
-                  </h3>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
 
-                  <div
-                    className="
-                      w-11
-                      h-11
-                      rounded-full
-                      bg-[var(--forest)]/20
-                      flex
-                      items-center
-                      justify-center
-                      flex-shrink-0
-                    "
-                  >
-                    <Plus
-                      size={20}
-                      className={`
-                        text-[#31572c]
-                        transition-all
-                        duration-300
-                        ${
-                          active === index
-                            ? "rotate-45"
-                            : ""
-                        }
-                      `}
-                    />
-                  </div>
-                </button>
+                <h3
+                  className="
+                    text-xl
+                    font-semibold
+                    text-[var(--forest)]
+                    leading-snug
+                    transition
+                    duration-300
+                    group-hover:text-[var(--grass)]
+                  "
+                >
+                  {item.question}
+                </h3>
+              </div>
 
-                <div
+              <div
+                className="
+                  flex
+                  items-center
+                  justify-center
+                  flex-shrink-0
+                  mt-1
+                "
+              >
+                <Plus
+                  size={22}
+                  strokeWidth={2}
                   className={`
-                    overflow-hidden
+                    text-[var(--grass)]
                     transition-all
                     duration-500
                     ${
                       active === index
-                        ? "max-h-60"
-                        : "max-h-0"
+                        ? "rotate-45"
+                        : ""
                     }
                   `}
-                >
-                  <div className="px-6 pb-6">
-                    <div className="w-16 h-[2px] bg-[var(--forest)]/20 rounded-full mb-5"></div>
-
-                    <p
-                      className="
-                        text-gray-600
-                        leading-8
-                      "
-                    >
-                      {item.answer}
-                    </p>
-                  </div>
-                </div>
+                />
               </div>
-            ))}
+            </button>
+
+            <div
+              className={`
+                overflow-hidden
+                transition-all
+                duration-500
+                ease-in-out
+                ${
+                  active === index
+                    ? "max-h-60 opacity-100 mt-5"
+                    : "max-h-0 opacity-0"
+                }
+              `}
+            >
+              <div className="pl-[54px] pr-10">
+                <p className="text-gray-600 leading-8 text-[16px]">
+                  {item.answer}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   );
 };
 

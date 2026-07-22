@@ -24,6 +24,9 @@ import AboutRoutes from "./components/AboutComponents/AboutRoutes";
 import RandDRoutes from "./components/R&D-components/RandDRoutes";
 import EducationPage from "./pages/EducationPage";
 import PharmacyPage from './pages/PharmacyPage'
+import AdmissionRoutes from './components/Admission-components/AdmissionRoutes'
+import TPRoutes from './components/T&P-components/TPRoutes'
+import StudentsRoutes from "./components/student-components/StudentsRoutes";
 
 
 const App = () => {
@@ -48,6 +51,18 @@ const App = () => {
     path="/innovation/*" 
     element={<RandDRoutes />} 
   />
+  <Route
+  path="/admission/*" element={<AdmissionRoutes/>}
+
+  />
+  <Route
+  path="/training-placement/*" element={<TPRoutes/>}
+
+  />
+  <Route
+  path="/students-zone/*"
+  element={<StudentsRoutes />}
+/>
 
 
   <Route path="/page5" element={<CTMLayout />}>
@@ -74,7 +89,7 @@ const App = () => {
 
 
       {/* Separate Route Group */}
-   y
+   
 
     </>
   );

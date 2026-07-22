@@ -10,6 +10,7 @@ import RecruitersSection from "../components/ctm-component/RecruitersSection";
 import AboutSection from "../components/ctm-component/AboutSection2";
 import Footer from "../components/Footer";
 import Chatbot from "../components/ChatBot";
+import AdmissionContact from "../components/ctm-component/AdmissionContect3";
 
 
  const coursesData = {
@@ -118,6 +119,7 @@ const CtmMainPage = () => {
      
       <TestimonialsSection />
       <RecruitersSection />
+      <AdmissionContact/>
 
     
       {/* <Chatbot/> */}

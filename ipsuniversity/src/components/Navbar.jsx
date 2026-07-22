@@ -460,6 +460,7 @@ const Navbar5 = () => {
   const [active, setActive] = useState("schools");
   const [selectedSchool, setSelectedSchool] = useState(schools[0]);
   const [selectedProgram, setSelectedProgram] = useState(schools[0].programs[0]);
+    const [lockedProgram, setLockedProgram] = useState(false);
 
   const studentZoneLinks = [
     { title: "Student's Council", path: "/students-zone/students-council" },
@@ -684,246 +685,267 @@ const Navbar5 = () => {
 
                 {/* ========================= SCHOOLS MENU ========================= */}
                 <li className="relative group">
-                  <a
-                    href="#academics"
-                    onClick={() => setActive("academics")}
-                    className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-                      active === "academics"
-                        ? "bg-white text-[var(--forest)]"
-                        : "text-[var(--forest)] hover:bg-white/15"
-                    }`}
-                  >
-                    Academics
-                    <ChevronDown size={15} className="ml-1" />
-                  </a>
-
-                  <div
-                    className="
-                      absolute
-                      top-full
-                      left-20
-                      -translate-x-1/2
-                      mt-5
-                      w-[1100px]
-                      max-h-[80vh]
-                      bg-white
-                      rounded-[20px]
-                      shadow-[0_25px_70px_rgba(0,0,0,.15)]
-                      border
-                      border-gray-100
-                      opacity-0
-                      invisible
-                      translate-y-4
-                      group-hover:opacity-100
-                      group-hover:visible
-                      group-hover:translate-y-0
-                      transition-all
-                      duration-300
-                      overflow-y-auto max-h-[450px]
-                      z-50
-                    "
-                  >
-                    <div className="grid grid-cols-[280px_1fr_320px] min-h-[520px]">
-                      {/* LEFT COLUMN — all 13 schools, scrollable */}
-                      <div className="border-r border-gray-100 bg-gray-50/70 p-6 overflow-y-auto max-h-[520px]">
-                        <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
-                          Academic Schools
-                        </h2>
-
-                        <div className="space-y-2">
-                          {schools.map((school) => (
-                            <button
-                              key={school.title}
-                              onMouseEnter={() => {
-                                setSelectedSchool(school);
-                                setSelectedProgram(school.programs[0]);
-                              }}
-                              className={`
-                                w-full
-                                flex
-                                items-center
-                                justify-between
-                                text-left
-                                rounded-2xl
-                                px-4
-                                py-3
-                                transition-all
-                                duration-300
-                                ${
-                                  selectedSchool.title === school.title
-                                    ? "bg-[var(--forest)] text-white shadow-lg"
-                                    : "bg-white text-gray-700 hover:bg-green-50 hover:shadow-md"
-                                }
-                              `}
-                            >
-                              <div className="flex flex-col">
-                                <span className="font-semibold text-[14px]">
-                                  {school.title}
-                                </span>
-                                <span
-                                  className={`text-xs mt-1 ${
-                                    selectedSchool.title === school.title
-                                      ? "text-white/80"
-                                      : "text-gray-500"
-                                  }`}
-                                >
-                                  {school.programs.length} Programs
-                                </span>
-                              </div>
-
-                              <ChevronRight
-                                size={18}
-                                className={`transition-all duration-300 ${
-                                  selectedSchool.title === school.title
-                                    ? "translate-x-1"
-                                    : ""
-                                }`}
-                              />
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* CENTER COLUMN — Programs + Courses */}
-                      <div className="p-6 flex flex-col overflow-y-auto max-h-[520px]">
-                        <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
-                          Programs
-                        </h2>
-
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {selectedSchool.programs.map((program) => (
-                            <button
-                              key={program.title}
-                              onMouseEnter={() => setSelectedProgram(program)}
-                              className={`
-                                px-4
-                                py-2
-                                rounded-xl
-                                text-sm
-                                font-medium
-                                transition-all
-                                duration-300
-                                ${
-                                  selectedProgram.title === program.title
-                                    ? "bg-[var(--forest)] text-white shadow-md"
-                                    : "bg-gray-100 text-gray-700 hover:bg-green-50"
-                                }
-                              `}
-                            >
-                              {program.title}
-                            </button>
-                          ))}
-                        </div>
-
-                        <div className="flex-1 overflow-y-auto max-h-[520px]">
-                          <h3 className="text-[15px] font-semibold text-gray-800 mb-4">
-                            Courses
-                          </h3>
-
-                          <div className="grid grid-cols-2 gap-3">
-                            {selectedProgram.courses.map((course) => (
-                              <a
-                                key={course}
-                                href="#"
-                                className="
-                                  group
-                                  flex
-                                  items-center
-                                  justify-between
-                                  rounded-xl
-                                  border
-                                  border-gray-200
-                                  bg-white
-                                  px-4
-                                  py-3
-                                  text-sm
-                                  text-gray-700
-                                  transition-all
-                                  duration-300
-                                  hover:border-[var(--forest)]
-                                  hover:bg-green-50
-                                "
-                              >
-                                <span>{course}</span>
-
-                                <ChevronRight
-                                  size={16}
-                                  className="
-                                    text-gray-400
-                                    transition-transform
-                                    duration-300
-                                    group-hover:translate-x-1
-                                    group-hover:text-white
-                                  "
-                                />
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* RIGHT COLUMN — school summary */}
-                      <div className="border-l border-gray-100 bg-gray-50/60 p-6 flex flex-col ">
-                        <div className="rounded-3xl">
-                          <img
-                            src={selectedSchool.image}
-                            alt={selectedSchool.title}
-                            className="w-full h-[220px] object-cover transition-transform duration-500 hover:scale-105"
-                          />
-                        </div>
-{/*                       
-                        <h2 className="mt-6 text-2xl font-bold text-[var(--forest)] leading-snug">
-                          {selectedSchool.title}
-                        </h2>
-
-                        <p className="mt-3 text-sm leading-7 text-gray-600">
-                          {selectedSchool.description}
-                        </p> */}
-
-                        <div className="grid grid-cols-2 gap-4 mt-3">
-                          <div className="rounded-2xl bg-white border border-gray-200 p-4">
-                            <p className="text-xs uppercase tracking-wide text-gray-500">
-                              Programs
-                            </p>
-                            <h3 className="mt-2 text-2xl font-bold text-[var(--forest)]">
-                              {selectedSchool.programs.length}
-                            </h3>
-                          </div>
-
-                          <div className="rounded-2xl bg-white border border-gray-200 p-4">
-                            <p className="text-xs uppercase tracking-wide text-gray-500">
-                              Courses
-                            </p>
-                            <h3 className="mt-2 text-2xl font-bold text-[var(--forest)]">
-                              {selectedProgram.courses.length}
-                            </h3>
-                          </div>
-                        </div>
-
-                        <a
-                          href="http://localhost:5173/ipsctm"
-                          className="
-                            mt-auto
-                            w-full
-                            rounded-2xl
-                            bg-[var(--forest)]
-                            py-3
-                            text-center
-                            text-white
-                            font-semibold
-                            transition-all
-                            duration-300
-                            hover:shadow-xl
-                            hover:scale-[1.02]
-                          "
-                        >
-                          Explore School
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                 
+                                  <a
+                                    href="#academics"
+                                    onClick={() => setActive("academics")}
+                                    className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                                      active === "academics"
+                                         ? "bg-white text-[var(--forest)]"
+                                         : "text-[var(--forest)] hover:bg-white/15"
+                                    }`}
+                                  >
+                                    Academics
+                                    <ChevronDown size={15} className="ml-1" />
+                                  </a>
+                
+                                  <div
+                                    className="
+                                      absolute
+                                      top-full
+                                      left-20
+                                      -translate-x-1/2
+                                      mt-5
+                                      w-[1100px]
+                                      max-h-[80vh]
+                                      bg-white
+                                      rounded-[20px]
+                                      shadow-[0_25px_70px_rgba(0,0,0,.15)]
+                                      border
+                                      border-gray-100
+                                      opacity-0
+                                      invisible
+                                      translate-y-4
+                                      group-hover:opacity-100
+                                      group-hover:visible
+                                      group-hover:translate-y-0
+                                      transition-all
+                                      duration-300
+                                       max-h-[450px]
+                                       overflow-y-hidden
+                                      z-50
+                                    "
+                                  >
+                                    <div className="grid grid-cols-[280px_1fr_320px] min-h-[520px]">
+                                      {/* LEFT COLUMN — all 13 schools, scrollable */}
+                                      <div className="border-r border-gray-100 bg-gray-50/70 p-6 overflow-y-auto max-h-[520px]">
+                                        <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
+                                          Academic Schools
+                                        </h2>
+                
+                                        <div className="space-y-2">
+                                          {schools.map((school) => (
+                                            <button
+                                              key={school.title}
+                                              onMouseEnter={() => {
+                                                setSelectedSchool(school);
+                                                setSelectedProgram(school.programs[0]);
+                                              }}
+                                              className={`
+                                                w-full
+                                                flex
+                                                items-center
+                                                justify-between
+                                                text-left
+                                                rounded-2xl
+                                                px-4
+                                                py-3
+                                                transition-all
+                                                duration-300
+                                                ${
+                                                  selectedSchool.title === school.title
+                                                    ? "bg-[var(--forest)] text-white shadow-lg"
+                                                    : "bg-white text-gray-700 hover:bg-green-50 hover:shadow-md"
+                                                }
+                                              `}
+                                            >
+                                              <div className="flex flex-col">
+                                                <span className="font-semibold text-[14px]">
+                                                  {school.title}
+                                                </span>
+                                                <span
+                                                  className={`text-xs mt-1 ${
+                                                    selectedSchool.title === school.title
+                                                      ? "text-white/80"
+                                                      : "text-gray-500"
+                                                  }`}
+                                                >
+                                                  {school.programs.length} Programs
+                                                </span>
+                                              </div>
+                
+                                              <ChevronRight
+                                                size={18}
+                                                className={`transition-all duration-300 ${
+                                                  selectedSchool.title === school.title
+                                                    ? "translate-x-1"
+                                                    : ""
+                                                }`}
+                                              />
+                                            </button>
+                                          ))}
+                                        </div>
+                                      </div>
+                
+                                      {/* CENTER COLUMN — Programs + Courses */}
+                                      <div className="p-6 flex flex-col overflow-y-auto max-h-[400px]">
+                                        <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
+                                          Programs
+                                        </h2>
+                
+                                        <div className="flex flex-wrap gap-2 mb-6">
+                                          {selectedSchool.programs.map((program) => {
+                  const isActive = selectedProgram.title === program.title;
+                
+                  return (
+                    <button
+                      key={program.title}
+                      onMouseEnter={() => {
+                        // Sirf jab koi lock nahi hai tab hover se change hoga
+                        if (!lockedProgram) {
+                          setSelectedProgram(program);
+                        }
+                      }}
+                      onClick={() => {
+                        // Click hamesha work karega
+                        setSelectedProgram(program);
+                        setLockedProgram(true);
+                      }}
+                      className={`
+                        px-4
+                        py-2
+                        rounded-xl
+                        text-sm
+                        font-medium
+                        transition-all
+                        duration-300
+                
+                        ${
+                          isActive
+                            ? "bg-[var(--forest)] text-white shadow-md"
+                            : "bg-gray-100 text-gray-700"
+                        }
+                
+                        ${
+                          !lockedProgram
+                            ? "hover:bg-green-50 hover:text-[var(--forest)] cursor-pointer"
+                            : "cursor-pointer"
+                        }
+                      `}
+                    >
+                      {program.title}
+                    </button>
+                  );
+                })}
+                                        </div>
+                
+                                        <div className="flex-1 overflow-y-auto max-h-[520px]">
+                                          <h3 className="text-[15px] font-semibold text-gray-800 mb-4">
+                                            Courses
+                                          </h3>
+                
+                                          <div className="grid grid-cols-2 gap-3">
+                                            {selectedProgram.courses.map((course) => (
+                                              <a
+                                                key={course}
+                                                href="#"
+                                                className="
+                                                  group
+                                                  flex
+                                                  items-center
+                                                  justify-between
+                                                  rounded-xl
+                                                  border
+                                                  border-gray-200
+                                                  bg-white
+                                                  px-4
+                                                  py-3
+                                                  text-sm
+                                                  text-gray-700
+                                                  transition-all
+                                                  duration-300
+                                                  hover:border-[var(--forest)]
+                                                  hover:bg-green-50
+                                                "
+                                              >
+                                                <span>{course}</span>
+                
+                                                <ChevronRight
+                                                  size={16}
+                                                  className="
+                                                    text-gray-400
+                                                    transition-transform
+                                                    duration-300
+                                                    group-hover:translate-x-1
+                                                    group-hover:text-[var(--forest)]
+                                                  "
+                                                />
+                                              </a>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      </div>
+                
+                                      {/* RIGHT COLUMN — school summary */}
+                                      <div className="border-l border-gray-100 bg-gray-50/60 p-6 flex flex-col max-h-[450px]">
+                                        <div className="rounded-3xl">
+                                          <img
+                                            src={selectedSchool.image}
+                                            alt={selectedSchool.title}
+                                            className="w-full h-[220px] object-cover transition-transform duration-500 hover:scale-105"
+                                          />
+                                        </div>
+                {/*                       
+                                        <h2 className="mt-6 text-2xl font-bold text-[var(--forest)] leading-snug">
+                                          {selectedSchool.title}
+                                        </h2>
+                
+                                        <p className="mt-3 text-sm leading-7 text-gray-600">
+                                          {selectedSchool.description}
+                                        </p> */}
+                
+                                        <div className="grid grid-cols-2 gap-4 mt-3">
+                                          <div className="rounded-2xl bg-white border border-gray-200 p-4">
+                                            <p className="text-xs uppercase tracking-wide text-gray-500">
+                                              Programs
+                                            </p>
+                                            <h3 className="mt-2 text-2xl font-bold text-[var(--forest)]">
+                                              {selectedSchool.programs.length}
+                                            </h3>
+                                          </div>
+                
+                                          <div className="rounded-2xl bg-white border border-gray-200 p-4">
+                                            <p className="text-xs uppercase tracking-wide text-gray-500">
+                                              Courses
+                                            </p>
+                                            <h3 className="mt-2 text-2xl font-bold text-[var(--forest)]">
+                                              {selectedProgram.courses.length}
+                                            </h3>
+                                          </div>
+                                        </div>
+                
+                                        <a
+                                          href="http://localhost:5173/ipsctm"
+                                          className="
+                                            mt-auto
+                                            w-full
+                                            rounded-2xl
+                                            bg-[var(--forest)]
+                                            py-3
+                                            text-center
+                                            text-white
+                                            font-semibold
+                                            transition-all
+                                            duration-300
+                                            hover:shadow-xl
+                                            hover:scale-[1.02]
+                                          "
+                                        >
+                                          Explore School
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
                  {/* T&P Cell */}
                 <li className="relative group">
                   <a

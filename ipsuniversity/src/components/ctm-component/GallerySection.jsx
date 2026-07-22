@@ -18,30 +18,7 @@ const images = [
       "https://images.unsplash.com/photo-1562774053-701939374585",
     ],
   },
-  {
-    src: rajusir,
-    caption: "Industry Visits",
-    subImages: [
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216",
-    ],
-  },
-  {
-    src: skmic,
-    caption: "Smart Classrooms",
-    subImages: [
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7",
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-    ],
-  },
-  {
-    src: directersir,
-    caption: "Modern Infrastructure",
-    subImages: [
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72",
-      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2",
-    ],
-  },
+ 
   {
     src: mrfr,
     caption: "Library Facilities",
@@ -58,14 +35,15 @@ const images = [
       "https://images.unsplash.com/photo-1552664730-d307ca884978",
     ],
   },
-  {
-    src: neeraj,
-    caption: "Student Achievements",
+   {
+    src: skmic,
+    caption: "Smart Classrooms",
     subImages: [
-      "https://images.unsplash.com/photo-1522204502588-8f39b3b3b16f",
-      "https://images.unsplash.com/photo-1513258496099-48168024aec0",
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
     ],
   },
+ 
   {
     src: directersir,
     caption: "Cultural Events",
@@ -74,6 +52,7 @@ const images = [
       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30",
     ],
   },
+  
 
    {
     src: dj,
@@ -83,6 +62,34 @@ const images = [
       "https://images.unsplash.com/photo-1552664730-d307ca884978",
     ],
   },
+   
+
+   {
+    src: rajusir,
+    caption: "Industry Visits",
+    subImages: [
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216",
+    ],
+  },
+  {
+    src: neeraj,
+    caption: "Student Achievements",
+    subImages: [
+      "https://images.unsplash.com/photo-1522204502588-8f39b3b3b16f",
+      "https://images.unsplash.com/photo-1513258496099-48168024aec0",
+    ],
+  },
+ 
+  {
+    src: directersir,
+    caption: "Modern Infrastructure",
+    subImages: [
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72",
+      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2",
+    ],
+  },
+  
 ];
 
 const GallerySection = () => {
@@ -211,149 +218,149 @@ const prevSubImage = () => {
 
     <div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[180px] gap-6 mt-16">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[140px] gap-4 mt-16 px-10">
 
-    {(showAll ? images : images.slice(0, 8)).map((item, index) => {
+  {(showAll ? images : images.slice(0, 8)).map((item, index) => {
 
-      const pattern = index % 6;
+    const pattern = index % 6;
 
-      const classes = [
-        "lg:col-span-2 lg:row-span-2",
-        "",
-        "",
-        "lg:row-span-2 ",
-        "",
-        ""
-      ][pattern];
+    const classes = [
+      "lg:col-span-2 lg:row-span-2",
+      "",
+      "",
+      "lg:row-span-2",
+      "",
+      ""
+    ][pattern];
 
-      return (
+    return (
+      <div
+        key={index}
+        onClick={() => {
+          setSelectedIndex(index);
+          setCurrentSubIndex(0);
+        }}
+        className={`
+          relative
+          overflow-hidden
+          rounded-[22px]
+          cursor-pointer
+          group
+          shadow-lg
+          hover:shadow-xl
+          transition-all
+          duration-500
+          border-4
+          border-white
+          ${classes}
+        `}
+      >
+
+        {/* Image */}
+        <img
+          src={item.src}
+          alt={item.caption}
+          className="
+            w-full
+            h-full
+            object-cover
+            transition-transform
+            duration-700
+            group-hover:scale-110
+          "
+        />
+
+        {/* Overlay */}
         <div
-          key={index}
-          onClick={() => {
-            setSelectedIndex(index);
-            setCurrentSubIndex(0);
-          }}
-          className={`
-            relative
-            overflow-hidden
-            rounded-[30px]
-            cursor-pointer
-            group
-            shadow-lg
-            hover:shadow-2xl
+          className="
+            absolute
+            inset-0
+            bg-gradient-to-t
+            from-black/80
+            via-black/20
+            to-transparent
+            opacity-0
+            group-hover:opacity-100
             transition-all
             duration-500
-            border-5
-            border-white
-            ${classes}
-          `}
+          "
+        />
+
+        {/* Hover Content */}
+        <div
+          className="
+            absolute
+            inset-x-0
+            bottom-0
+            p-4
+            translate-y-6
+            opacity-0
+            group-hover:translate-y-0
+            group-hover:opacity-100
+            transition-all
+            duration-500
+          "
         >
+          <div className="flex items-center justify-between">
 
-          {/* Image */}
-          <img
-            src={item.src}
-            alt={item.caption}
-            className="
-              w-full
-              h-full
-              object-cover
-              transition-transform
-              duration-700
-              group-hover:scale-110
-            "
-          />
+            <div>
+              <h3 className="text-white text-lg md:text-xl font-semibold">
+                {item.caption}
+              </h3>
 
-          {/* Overlay */}
-          <div
-            className="
-              absolute
-              inset-0
-              bg-gradient-to-t
-              from-black/80
-              via-black/20
-              to-transparent
-              opacity-0
-              group-hover:opacity-100
-              transition-all
-              duration-500
-            "
-          />
-
-          {/* Hover Content */}
-          <div
-            className="
-              absolute
-              inset-x-0
-              bottom-0
-              p-6
-              translate-y-8
-              opacity-0
-              group-hover:translate-y-0
-              group-hover:opacity-100
-              transition-all
-              duration-500
-            "
-          >
-            <div className="flex items-center justify-between">
-
-              <div>
-                <h3 className="text-white text-2xl font-semibold">
-                  {item.caption}
-                </h3>
-
-                <p className="text-white/80 text-sm mt-1">
-                  {item.subImages.length} Photos
-                </p>
-              </div>
-
-              <div
-                className="
-                  w-12
-                  h-12
-                  rounded-full
-                  bg-white/20
-                  backdrop-blur-md
-                  flex
-                  items-center
-                  justify-center
-                  text-white
-                  text-xl
-                  transition-all
-                  duration-500
-                  group-hover:rotate-45
-                "
-              >
-                +
-              </div>
-
+              <p className="text-white/80 text-xs md:text-sm mt-1">
+                {item.subImages.length} Photos
+              </p>
             </div>
-          </div>
 
-          {/* Badge */}
-          <div
-            className="
-              absolute
-              top-5
-              right-5
-              bg-black/55
-              backdrop-blur-md
-              text-white
-              text-xs
-              font-medium
-              px-3
-              py-1.5
-              rounded-full
-            "
-          >
-            {item.subImages.length} Photos
-          </div>
+            <div
+              className="
+                w-10
+                h-10
+                rounded-full
+                bg-white/20
+                backdrop-blur-md
+                flex
+                items-center
+                justify-center
+                text-white
+                text-lg
+                transition-all
+                duration-500
+                group-hover:rotate-45
+              "
+            >
+              +
+            </div>
 
+          </div>
         </div>
-      );
 
-    })}
+        {/* Badge */}
+        <div
+          className="
+            absolute
+            top-4
+            right-4
+            bg-black/55
+            backdrop-blur-md
+            text-white
+            text-xs
+            font-medium
+            px-2.5
+            py-1
+            rounded-full
+          "
+        >
+          {item.subImages.length} Photos
+        </div>
 
-  </div>
+      </div>
+    );
+
+  })}
+
+</div>
 
   {/* View All Button */}
 

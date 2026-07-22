@@ -180,19 +180,19 @@ const CompanySection2 = () => {
 
   return (
     <section
-      className="max-w-[100vw] w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0 flex  flex-col items-center gap-10"
-      style={{
-        backgroundImage: `url(${pharma})`,
-        backgroundSize: "cover",
-        backgroundPosition:
-          "center",
-          backgroundRepeat:"no-repeat"
-      }}
+      className="max-w-[100vw] w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0 flex  flex-col items-center gap-10 bg-transparent"
+      // style={{
+      //   backgroundImage: `url(${pharma})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition:
+      //     "center",
+      //     backgroundRepeat:"no-repeat"
+      // }}
     >
       {/* Dark Overlay */}
       {/* <div className="absolute inset-0 bg-[var(--moss)]/90 z-0"></div> */}
 
-       <div
+       {/* <div
         className="absolute -bottom-2 left-0 w-full h-[70%] z-0"
         style={{
           background:
@@ -206,7 +206,7 @@ const CompanySection2 = () => {
             "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
       />
-      <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] z-0"></div>
+      <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] z-0"></div> */}
 
 
       {/* Heading */}

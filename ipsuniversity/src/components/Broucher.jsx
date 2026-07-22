@@ -14,13 +14,13 @@ const IMG1 =
   "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=700&q=80";
 
 const IMG2 =
-  "https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=700&q=80";
+  "https://content.jdmagicbox.com/v2/comp/gwalior/v1/9999px751.x751.221112144736.d7v1/catalogue/ips-collage-gwalior-lashkar-gwalior-colleges-qiDwEgYNYb-250.jpg";
 
 const IMG3 =
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80";
+  "https://i.pinimg.com/1200x/02/1f/18/021f18172ec935dba2eabff461371457.jpg";
 const BrochureSection = () => {
   return (
-    <section className="relative py-28 overflow-hidden  mt-20 bg-[#f8fbf6]">
+    <section className="relative py-28 overflow-hidden  mt-20 bg-transparent ">
 
       {/* Decorative Circle */}
       <div className="absolute -left-44 top-28 w-[520px] h-[520px] rounded-full border border-[#578B07]/30"></div>
@@ -96,7 +96,7 @@ const BrochureSection = () => {
               Ready To Plant
               <br />
               your
-              <span className="text-[#578B07]"> Future !!</span>
+              <span className="text-[var(--forest)]"> Future !!</span>
             </h2>
 
             <p className="mt-6 text-gray-600 text-md leading-8 max-w-xl">

@@ -19,13 +19,13 @@ const aboutLinks = [
 ];
 
 const admissionLinks = [
-  { title: "Apply online & e-payment", path: "/about/overview" },
-  { title: "Important dates", path: "/about/vision-mission" },
-  { title: "Scholarship policy", path: "/about/leadership" },
-  { title: "Downloads Brochure 2026-27", path: "/about/officials" },
-  { title: "Fee refund policy 2026-27", path: "/about/governance-administration" },
-  { title: "Hostel fee", path: "/about/governance-framework" },
-  { title: "Fee structure 2026-27", path: "/about/governance-framework" },
+  { title: "Apply online & e-payment", path: "/admission/apply-online-payment" },
+  { title: "Important dates", path: "/admission/important-dates" },
+  { title: "Scholarship policy", path: "/admission/scholarship-policy" },
+  { title: "Downloads Brochure 2026-27", path: "/admission/download-brochure" },
+  { title: "Fee refund policy 2026-27", path: "/admission/fee-refund-policy" },
+  { title: "Hostel fee", path: "/admission/hostel-fee" },
+  { title: "Fee structure 2026-27", path: "/admission/fee-structure" },
 ];
 
 // ==========================================================================
@@ -460,6 +460,7 @@ const Navbar5 = () => {
   const [active, setActive] = useState("schools");
   const [selectedSchool, setSelectedSchool] = useState(schools[0]);
   const [selectedProgram, setSelectedProgram] = useState(schools[0].programs[0]);
+  const [lockedProgram, setLockedProgram] = useState(false);
 
   const studentZoneLinks = [
     { title: "Student's Council", path: "/students-zone/students-council" },
@@ -487,26 +488,49 @@ const Navbar5 = () => {
     {
       title: "Fest",
       children: [
-        { title: "Photos", path: "/students-zone/fest/photos" },
-        { title: "Videos", path: "/students-zone/fest/videos" },
+        { title: "Techno Parv", path: "/students-zone/fest/photos" },
+        { title: "Villay", path: "/students-zone/fest/videos" },
       ],
     },
   ];
 
-  const TPCellLinks = [
-    { title: "About T&P Cell", path: "/training-placement/about" },
-    { title: "Leading Recruiters", path: "/training-placement/leading-recruiters" },
-    {
-      title: "Placements",
-      children: [
-        { title: "Placement Statistics", path: "/training-placement/placements/statistics" },
-        { title: "Placement Records", path: "/training-placement/placements/records" },
-      ],
-    },
-    { title: "Prominent Alumni", path: "/training-placement/prominent-alumni" },
-    { title: "Contact Info", path: "/training-placement/contact" },
-    { title: "Industrial Training / Internship", path: "/training-placement/industrial-training-internship" },
-  ];
+// T&P Cell
+const TPCellLinks = [
+  {
+    title: "About TP",
+    path: "/training-placement/about-tp",
+  },
+  {
+    title: "Leading Recruiters",
+    path: "/training-placement/leading-recruiters",
+  },
+  {
+    title: "Placements",
+    children: [
+      {
+        title: "Placement Statistics",
+        path: "/training-placement/placements/statistics",
+      },
+      {
+        title: "Placement Records",
+        path: "/training-placement/placements/records",
+      },
+    ],
+  },
+  {
+    title: "Prominent Alumni",
+    path: "/training-placement/prominent-alumni",
+  },
+  {
+    title: "Contact Info",
+    path: "/training-placement/contact",
+  },
+  {
+    title: "Industrial Training / Internship",
+    path: "/training-placement/industrial-training",
+  },
+];
+// T&P Cell
 
   return (
     <nav className="fixed top-0 left-0 w-full z-[9998]  ">
@@ -723,7 +747,8 @@ const Navbar5 = () => {
                       group-hover:translate-y-0
                       transition-all
                       duration-300
-                      overflow-y-auto max-h-[450px]
+                       max-h-[450px]
+                       overflow-y-hidden
                       z-50
                     "
                   >
@@ -789,34 +814,55 @@ const Navbar5 = () => {
                       </div>
 
                       {/* CENTER COLUMN — Programs + Courses */}
-                      <div className="p-6 flex flex-col overflow-y-auto max-h-[520px]">
+                      <div className="p-6 flex flex-col overflow-y-auto max-h-[400px]">
                         <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
                           Programs
                         </h2>
 
                         <div className="flex flex-wrap gap-2 mb-6">
-                          {selectedSchool.programs.map((program) => (
-                            <button
-                              key={program.title}
-                              onMouseEnter={() => setSelectedProgram(program)}
-                              className={`
-                                px-4
-                                py-2
-                                rounded-xl
-                                text-sm
-                                font-medium
-                                transition-all
-                                duration-300
-                                ${
-                                  selectedProgram.title === program.title
-                                    ? "bg-[var(--forest)] text-white shadow-md"
-                                    : "bg-gray-100 text-gray-700 hover:bg-green-50"
-                                }
-                              `}
-                            >
-                              {program.title}
-                            </button>
-                          ))}
+                          {selectedSchool.programs.map((program) => {
+  const isActive = selectedProgram.title === program.title;
+
+  return (
+    <button
+      key={program.title}
+      onMouseEnter={() => {
+        // Sirf jab koi lock nahi hai tab hover se change hoga
+        if (!lockedProgram) {
+          setSelectedProgram(program);
+        }
+      }}
+      onClick={() => {
+        // Click hamesha work karega
+        setSelectedProgram(program);
+        setLockedProgram(true);
+      }}
+      className={`
+        px-4
+        py-2
+        rounded-xl
+        text-sm
+        font-medium
+        transition-all
+        duration-300
+
+        ${
+          isActive
+            ? "bg-[var(--forest)] text-white shadow-md"
+            : "bg-gray-100 text-gray-700"
+        }
+
+        ${
+          !lockedProgram
+            ? "hover:bg-green-50 hover:text-[var(--forest)] cursor-pointer"
+            : "cursor-pointer"
+        }
+      `}
+    >
+      {program.title}
+    </button>
+  );
+})}
                         </div>
 
                         <div className="flex-1 overflow-y-auto max-h-[520px]">
@@ -867,7 +913,7 @@ const Navbar5 = () => {
                       </div>
 
                       {/* RIGHT COLUMN — school summary */}
-                      <div className="border-l border-gray-100 bg-gray-50/60 p-6 flex flex-col ">
+                      <div className="border-l border-gray-100 bg-gray-50/60 p-6 flex flex-col max-h-[450px]">
                         <div className="rounded-3xl">
                           <img
                             src={selectedSchool.image}

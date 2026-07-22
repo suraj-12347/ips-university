@@ -1,17 +1,17 @@
 import React from "react";
 import ctmdashboard from "../../images1/ctmlongpng3.png";
-import educationbg from "../../images1/pharma2.png";
+import educationbg from "../../images1/pharma3.png";
 
 
 const HeroSection = () => {
   return (
-  <section className="relative group h-[55vh] sm:h-[65vh] lg:h-[110vh] overflow-hidden mt-10">
+  <section className="relative group h-[55vh] sm:h-[65vh] lg:h-[85vh] overflow-hidden mt-10">
 
   {/* Background Image */}
   <img
     src={educationbg}
     alt="School of Engineering & Technology"
-    className="w-full h-full object-cover object-left md:object-center transition-transform duration-700 lg:group-hover:scale-105"
+    className="w-full h-full object-cover object-left md:object-center transition-transform duration-700  lg:group-hover:scale-105"
   />
 
   {/* <div

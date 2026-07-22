@@ -3,11 +3,11 @@ import studentImg from "../../images1/studentspng.png"; // Google se transparent
 export default function AdmissionContact() {
   return (
    <section
-  className="py-10 overflow-visible mt-70"
-  style={{ background: "var(--forest)" }}
+  className=" overflow-visible mt-20"
+//   style={{ background: "var(--forest)" }}
 >
   <div className="max-w-7xl mx-auto px-6">
-    <div className="grid lg:grid-cols-2 gap-10 items-center max-h-[300px]">
+    <div className="grid lg:grid-cols-2 gap-10 items-center max-h-full">
 
       {/* Left Image */}
      <div className="relative flex flex-col items-center overflow-visible w-full">
@@ -18,36 +18,38 @@ export default function AdmissionContact() {
     className="
       relative
       z-10
-      h-[420px]
+      h-full
    
       object-contain
-      -mt-85
+
+      
+      
 
     "
   />
 
-  <div className="text-center  max-w-md ">
-    <h2 className="text-3xl font-bold text-white">
+  {/* <div className="text-center  max-w-md ">
+    <h2 className="text-3xl font-bold text-[var(--forest)]">
       Your Journey Begins Here
     </h2>
 
-    <p className="text-white/80 mt-2 leading-relaxed text-md">
+    <p className="text-gray-700 mt-2 leading-relaxed text-md">
       Connect with our admission team for personalized guidance on
       programs, eligibility, scholarships, and the admission process.
     </p>
-  </div>
+  </div> */}
 
 </div>
 
       {/* Right Contact */}
-     <div className="bg-white rounded-2xl h-[250px] max-w-md p-6 shadow-xl flex flex-col justify-between">
+     <div className="bg-white rounded-2xl h-[250px] max-w-md p-6 shadow-xl flex flex-col justify-between md:mt-20 md:ml-10">
 
   <div>
     <span
       className="uppercase tracking-[3px] text-[11px] font-semibold"
       style={{ color: "var(--grass)" }}
     >
-      Admissions
+      Admission open
     </span>
 
     <h2

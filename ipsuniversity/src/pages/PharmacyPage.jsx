@@ -8,12 +8,13 @@ import PrincipalDesk from '../components/Pharmacy-components/PrincipalDeskPharma
 import AcademicsSection from '../components/ctm-component/AcademicsSection'
 import EducationGallery from '../components/Education-components/EducationGallery'
 import PlacementsSection from '../components/ctm-component/PlacementsSection'
-import AdmissionContact from '../components/Education-components/AddmissionContect'
+import AdmissionContact from '../components/Pharmacy-components/AdmissionContect2'
 import TestimonialsSection from '../components/ctm-component/TestimonialsSection'
 import RecruitersSection from '../components/ctm-component/RecruitersSection'
 import About5 from '../components/Aboute5'
 import PharmacyHero from '../components/Pharmacy-components/PharmacyHero'
 import PharmaGallery from '../components/Pharmacy-components/PharmaGallery'
+import StudentsCouncil from '../components/student-components/StudentsCounsil'
 
 
 export const coursesData = {
@@ -136,17 +137,26 @@ const EducationPage = () => {
 <PharmaGallery/>
 
 {/* <EducationGallery/>
+
+
+
+ */}
+
 <PlacementsSection/>
 
 <TestimonialsSection/>
-<RecruitersSection/> */}
+<RecruitersSection/>
       
     </div>
 
     {/* <ApprovalRecognition/> */}
     <AdmissionContact/>
+    
     <Footer/>
-    <About5/>
+
+   
+    
+   
     
     </>
   )

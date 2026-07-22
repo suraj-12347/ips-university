@@ -27,6 +27,8 @@ import Navbar5 from '../components/Navbar'
 import { useEffect, useState } from "react";
 import FAQ from '../components/FAQ'
 
+import multiFlower from '../images1/treepng2.png'
+
 const Page2 = () => {
 
    const [showNavbar5, setShowNavbar5] = useState(false);
@@ -132,12 +134,32 @@ const Page2 = () => {
     <StudentReviews/>
       
    
-    <Brochure2/>
+   
   
     {/* <SocialMedia2/> */}
 
     <EnquiryPopup2/>
-     <CompanySection2/>
+    
+
+     <div
+  className="relative w-full "
+  style={{
+    backgroundImage: `url(${multiFlower})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-white/70 backdrop-blur-[4px] z-0"></div>
+
+  {/* Content */}
+  <div className="relative z-10">
+     <Brochure2/>
+    <CompanySection2/>
+   
+  </div>
+</div>
 
    
 

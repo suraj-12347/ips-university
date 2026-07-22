@@ -97,21 +97,21 @@ const AcademicsSection = ({ coursesData, courseImages }) => {
     backgroundPosition: "right",
   }}
 >
-        <div
+        {/* <div
         className="absolute -bottom-2 left-0 w-full h-[70%] z-[2]"
         style={{
           background:
             "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
         }}
-      />
-       <div
+      /> */}
+       {/* <div
         className="absolute -top-2 left-0 w-full h-[70%] z-[2]"
         style={{
           background:
             "linear-gradient(to bottom, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
         }}
-      />
-      <div className="absolute inset-0 bg-white/20 backdrop-blur-[4px] h-full"></div>
+      /> */}
+      <div className="absolute inset-0 bg-white/40 backdrop-blur-[4px] h-full"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
        <div className="text-center mb-10">

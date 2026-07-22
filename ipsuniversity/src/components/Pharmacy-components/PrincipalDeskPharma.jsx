@@ -5,7 +5,7 @@ const About5 = () => {
 
   return (
     <section
-      className="w-full flex flex-col items-center justify-center bg-cover bg-center relative px-4 py-30  h-[100vh] bg-[#f8fbf6] "
+      className="w-full flex flex-col items-center justify-center bg-cover bg-center relative px-4 py-30  h-full bg-[#f8fbf6] "
       // style={{
       //   backgroundImage:
       //     "url('https://i.pinimg.com/1200x/6b/4c/6c/6b4c6c54c206b50db450e93d3d2b0cd1.jpg')",
@@ -17,17 +17,17 @@ const About5 = () => {
 
 
       {/* Card */}
-      <div className="relative w-[75%] max-w-6xl bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden h-[450px]">
+      <div className="relative md:w-[75%] w-full max-w-6xl bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden  h-full md:h-[450px]">
 
         {/* LEFT SIDE */}
-       <div className="flex-1 p-6 md:p-8 overflow-hidden flex flex-col justify-center">
+       <div className="flex-1 px-6 md:px-8  py-2 flex flex-col justify-center h-full">
 
   <span className="uppercase tracking-[3px] text-[13px] font-semibold text-[var(--grass)]">
    School Of Pharmacy
   </span>
 
   <h2
-    className="text-4xl font-bold text-[var(--forest)] mt-2"
+    className=" text-2xl md:text-4xl font-bold text-[var(--forest)] mt-2"
     style={{ fontFamily: "Fraunces, serif" }}
   >
      Principal's Desk
@@ -44,10 +44,10 @@ const About5 = () => {
   <div className="mt-8 flex items-center gap-4">
 
     {/* Principal Image */}
-     <div className="mt-4 flex items-start gap-4 mb-4 group">
+     <div className="mt-4  items-start gap-4 mb-4 group hidden md:flex">
   
   {/* IMAGE WRAPPER */}
-  <div className="w-25 h-25 rounded-lg overflow-hidden">
+  <div className="w-25 h-25 rounded-lg overflow-hidden hidden md:block" >
     <img
       src="https://i.pinimg.com/736x/07/30/63/07306357a3cc2af19c63f1979e9334b8.jpg"
       alt="gardener"
@@ -63,7 +63,7 @@ const About5 = () => {
   </div>
 
   {/* FEATURES RIGHT SIDE */}
-  <div className="space-y-1">
+  <div className="space-y-1 hidden md:block">
     {[
       "Industry-Oriented Curriculum",
       "Advanced Pharmaceutical Labs",
@@ -89,14 +89,53 @@ const About5 = () => {
 </div>
 
         {/* RIGHT SIDE IMAGE */}
-       <div className="flex-1 p-6 rounded-2xl group ">
-          <img
-            src="https://i.pinimg.com/1200x/de/2f/50/de2f5019f280f57e3de8dde27a56f848.jpg"
-            alt="gardening"
-            className="w-full h-full object-cover  rounded-2xl  transition-transform
-            "
-          />
-        </div>
+      <div className="flex-1 p-6">
+  <div className="relative h-full rounded-2xl  group">
+
+    <img
+      src="https://i.pinimg.com/1200x/de/2f/50/de2f5019f280f57e3de8dde27a56f848.jpg"
+      alt="Principal"
+      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-xl"
+    />
+
+    {/* Floating Card */}
+    <div
+  className="
+    absolute
+    bottom-4
+    md:left-6
+    left-2
+
+    bg-white
+    rounded-2xl
+    shadow-xl
+    px-5
+    py-3
+    flex
+    items-center
+    gap-4
+    z-40
+  "
+>
+  {/* Green Accent */}
+  <div className="w-1 h-12 rounded-full bg-[var(--forest)]"></div>
+
+  <div>
+    <h3
+      className="text-[17px] font-bold text-[var(--forest)] leading-none"
+      style={{ fontFamily: "Fraunces, serif" }}
+    >
+      Dr. ABC XYZ
+    </h3>
+
+    <p className="text-xs text-gray-500 mt-1">
+      Principal, School of Pharmacy
+    </p>
+  </div>
+</div>
+
+  </div>
+</div>
 
       </div>
     </section>

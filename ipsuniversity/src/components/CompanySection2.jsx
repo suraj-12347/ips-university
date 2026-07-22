@@ -183,9 +183,9 @@ const CompanySection2 = () => {
       className="max-w-[100vw] w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0 flex  flex-col items-center gap-10"
       style={{
         backgroundImage: `url(${pharma})`,
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundPosition:
-          "right",
+          "center",
           backgroundRepeat:"no-repeat"
       }}
     >

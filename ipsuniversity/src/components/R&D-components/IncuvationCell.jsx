@@ -408,7 +408,7 @@ const IncuvationCell = () => {
               max-w-2xl
             "
           >
-            Incubation Cell
+            Innovation Cell
 
             <span className="block mt-2 text-[#cde8a3]">
               Empowering Ideas Into Successful Ventures

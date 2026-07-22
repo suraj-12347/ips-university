@@ -50,30 +50,30 @@ const TestimonialsSection = () => {
       className="relative py-15 overflow-hidden mt-20 bg-center"
       style={{
         backgroundImage: `url(${tree})`,
-        backgroundSize: "contain",
-        backgroundPosition:"right",
+        backgroundSize: "cover",
+        backgroundPosition:"center",
         backgroundRepeat:"no-repeat"
       
        
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/10 backdrop-blur-[1px] z-0 "></div>
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-[4px] z-0 "></div>
        {/* Bottom White Gradient */}
-      <div
+      {/* <div
         className="absolute -bottom-3 left-0 w-full h-[80%] z-[2]"
         style={{
           background:
             "linear-gradient(to top, #fff 1.74%, rgba(255,255,255,0) 60.44%)",
         }}
-      />
-       <div
+      /> */}
+       {/* <div
         className="absolute -top-3 left-0 w-full h-[80%] z-[2]"
         style={{
           background:
             "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
-      />
+      /> */}
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-5">

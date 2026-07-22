@@ -49,7 +49,7 @@ const schools = [
     name: "School of Pharmacy",
     quote:
       "Advancing healthcare through pharmaceutical excellence, research, and patient care.",
-    icon: BookOpen,
+    icon: BookOpen, route: "/pharmacy",
   },
   {
     image: mgmt,

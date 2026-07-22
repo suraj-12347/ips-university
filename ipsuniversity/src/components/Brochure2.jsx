@@ -85,8 +85,8 @@ const Brochure2 = () => {
         "
         style={{
           backgroundImage: `url(${pharma})`,
-          backgroundSize: "contain",
-          backgroundPosition: "left",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           backgroundRepeat:"no-repeat"
         }}
       >
