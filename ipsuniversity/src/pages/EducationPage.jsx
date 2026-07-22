@@ -106,7 +106,7 @@ const EducationPage = () => {
     {/* <ApprovalRecognition/> */}
     <AdmissionContact/>
     <Footer/>
-    <About5/>
+    
     
     </>
   )
