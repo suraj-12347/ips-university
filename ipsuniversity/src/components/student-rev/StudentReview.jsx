@@ -133,7 +133,7 @@ const swiperRef = useRef(null);
       {/* heading */}
       <div className="relative z-20 text-center max-w-xl mx-auto">
   <p className="text-[var(--forest)]/80 tracking-[5px] uppercase text-xs md:text-sm font-medium">
-     Student Testimonials
+     Student's Testimonial
   </p>
 
   <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
