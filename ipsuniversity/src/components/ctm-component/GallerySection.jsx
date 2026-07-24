@@ -8,6 +8,7 @@ import skmic from '../../images1/skmic.jpeg'
 import neeraj from '../../images1/neeraj2.jpeg'
 import { ArrowRightToLine } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import tree from "../../images1/ctm1900.png";
 
 const images = [
   {
@@ -142,9 +143,23 @@ const prevSubImage = () => {
 }, [selectedIndex, currentSubIndex]);
 
   return (
-   <section className="py-24 bg-[#f8fbf6]">
+   <section className="py-14 bg-[#f8fbf6] relative "
+   
+   
+    style={{
+        backgroundImage: `url(${tree})`,
+        backgroundSize: "cover",
+        backgroundPosition:"center",
+        backgroundRepeat:"no-repeat"
+      
+       
+      }}
+   
+   >
 
-  <div className="max-w-7xl mx-auto px-6 lg:px-10">
+     <div className="absolute inset-0 bg-green-900/80 z-0"></div>
+
+  <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
 
     {/* Heading */}
 
@@ -156,7 +171,9 @@ const prevSubImage = () => {
           tracking-[4px]
           text-sm
           font-semibold
-          text-[#578B07]
+          text- [#578B07]
+
+          text-[var(--leaf)]
         "
       >
         Campus Gallery
@@ -166,7 +183,8 @@ const prevSubImage = () => {
         className="
           text-4xl
           lg:text-5xl
-          text-[#31572c]
+          text- [#31572c]
+          text-gray-200
           mt-5
           relative
         "
@@ -179,7 +197,7 @@ const prevSubImage = () => {
         Campus Moments
       
       
-      <span
+      {/* <span
       className="
         absolute
         left-1/2
@@ -187,26 +205,27 @@ const prevSubImage = () => {
         -translate-x-1/2
         w-24
         h-[3px]
-        bg-[var(--grass)]
+        bg-[var(--leaf)]
         rounded-full
       "
-    />
+    /> */}
       </h2>
        
 
-      <p
+      {/* <p
         className="
           mt-6
-          text-gray-600
+          text-white
           leading-8
           max-w-2xl
           mx-auto
+          z-10
         "
       >
         Explore memorable moments, achievements,
         academic activities and vibrant campus life
         through our gallery.
-      </p>
+      </p> */}
 
     </div>
 
@@ -218,15 +237,15 @@ const prevSubImage = () => {
 
     <div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[140px] gap-4 mt-16 px-10">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[180px] gap-8 mt-16 px-10">
 
-  {(showAll ? images : images.slice(0, 8)).map((item, index) => {
+  {(showAll ? images : images.slice(0, 5)).map((item, index) => {
 
     const pattern = index % 6;
 
     const classes = [
       "lg:col-span-2 lg:row-span-2",
-      "",
+     
       "",
       "lg:row-span-2",
       "",

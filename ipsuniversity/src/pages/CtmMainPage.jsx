@@ -11,6 +11,7 @@ import AboutSection from "../components/ctm-component/AboutSection2";
 import Footer from "../components/Footer";
 import Chatbot from "../components/ChatBot";
 import AdmissionContact from "../components/ctm-component/AdmissionContect3";
+import ctmImg from '../images1/ctmlongpng4.png'
 
 
  const coursesData = {
@@ -117,7 +118,7 @@ const CtmMainPage = () => {
       
       <PlacementsSection />
      
-      <TestimonialsSection />
+      <TestimonialsSection GalleryBg={ctmImg} />
       <RecruitersSection />
       <AdmissionContact/>
 

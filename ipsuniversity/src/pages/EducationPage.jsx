@@ -12,6 +12,7 @@ import AdmissionContact from '../components/Education-components/AddmissionConte
 import TestimonialsSection from '../components/ctm-component/TestimonialsSection'
 import RecruitersSection from '../components/ctm-component/RecruitersSection'
 import About5 from '../components/Aboute5'
+import EducationImg from '../images1/edubuild8.png'
 
 
 export const coursesData = {
@@ -98,7 +99,7 @@ const EducationPage = () => {
 <EducationGallery/>
 <PlacementsSection/>
 
-<TestimonialsSection/>
+<TestimonialsSection GalleryBg={EducationImg} />
 <RecruitersSection/>
       
     </div>

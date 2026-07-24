@@ -97,12 +97,12 @@ const [expandedReview, setExpandedReview] = useState(null);
     <section
       ref={sectionRef}
       className="w-full   md:py-30 px-4 lg:px-10 overflow-hidden relative mt-10 "
-         style={{
-              backgroundImage: `url(${pharma})`,
-              backgroundSize: "contain",
-              backgroundPosition: "left",
-              backgroundRepeat: "no-repeat",
-            }}
+        //  style={{
+        //       backgroundImage: `url(${pharma})`,
+        //       backgroundSize: "contain",
+        //       backgroundPosition: "left",
+        //       backgroundRepeat: "no-repeat",
+        //     }}
     >
 
        {/* <div className="absolute inset-0 bg-[var(--moss)] -z-1"></div> */}
@@ -121,7 +121,7 @@ const [expandedReview, setExpandedReview] = useState(null);
             "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
       /> */}
-      <div className="absolute inset-0 bg-white/40 backdrop-blur-[3px] z-0"></div>
+      {/* <div className="absolute inset-0 bg-white/40 backdrop-blur-[3px] z-0"></div> */}
 
          {/* <div className="absolute -right-20 lg:right-60 -top-80 opacity-40 lg:opacity-100">
           <DotedRing height={600} width={600} />

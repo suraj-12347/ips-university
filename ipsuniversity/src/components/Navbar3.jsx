@@ -484,7 +484,7 @@ const Navbar5 = () => {
         { title: "pahal", path: "/students-zone/social-committee/pahal" },
       ],
     },
-    { title: "Airboys Club", path: "/students-zone/airboys-club" },
+    // { title: "Airboys Club", path: "/students-zone/airboys-club" },
     {
       title: "Fest",
       children: [
@@ -568,7 +568,7 @@ const TPCellLinks = [
                 backgroundPosition: "right",
               }}
             >
-              <div className="absolute inset-0 bg-black/40 rounded-full backdrop-blur-[1px] w-full"></div>
+              <div className="absolute inset-0 bg-black/30 rounded-full backdrop-blur-[1px] w-full"></div>
 
               <ul className="relative z-10 flex items-center justify-center w-full mt-15">
                 {/* ABOUT */}

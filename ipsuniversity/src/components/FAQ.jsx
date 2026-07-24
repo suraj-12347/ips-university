@@ -45,11 +45,11 @@ const FAQ = () => {
     
     
     
-    style={{
-                  backgroundImage:`url(${pharma})`,
-                  backgroundSize:"cover",
-                  backgroundPosition:"center"
-                }}
+    // style={{
+    //               backgroundImage:`url(${pharma})`,
+    //               backgroundSize:"cover",
+    //               backgroundPosition:"center"
+    //             }}
     
     >
 

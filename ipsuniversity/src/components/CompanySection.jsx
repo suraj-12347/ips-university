@@ -180,7 +180,7 @@ const CompanySection2 = () => {
 
   return (
     <section
-      className="max-w-[100vw] w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0 flex  flex-col items-center gap-10 bg-transparent"
+      className="max-w-[100vw] w-full py-10 px-6 md:px-16 relative overflow-hidden mt-10 z-0 flex  flex-col items-center gap-10 bg-transparent mb-20"
       // style={{
       //   backgroundImage: `url(${pharma})`,
       //   backgroundSize: "cover",
@@ -221,7 +221,7 @@ const CompanySection2 = () => {
       py-2
       rounded-full
       
-      text-[var(--forest)]
+      text-[var(--forest)]/80
       font-semibold
       tracking-[3px]
       uppercase
@@ -244,7 +244,7 @@ const CompanySection2 = () => {
     "
     style={{ fontFamily: "Fraunces, serif" }}
   >
-    Our <span className="text-[var(--grass)]">Collaborators</span>
+    Our <span className="text-[var(--forest)]">Collaborators</span>
   </h2>
 
   <p

@@ -11,61 +11,73 @@ import { Link } from "react-router-dom";
 import ctm1900 from "../../images1/ctm1900.png";
 
 const Advisors = () => {
-  const advisors = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
-      name: "Prof. (Dr.) ABC XYZ",
-      designation: "Chief Advisor",
-      organization: "Former Vice Chancellor",
-      expertise: "Higher Education Policy",
-    },
+ const advisors = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
+    name: "Prof. (Dr.) ABC XYZ",
+    designation: "Chief Advisor",
+    organization: "Former Vice Chancellor",
+    expertise: "Higher Education Policy",
+    message:
+      "Providing strategic guidance and leadership support to strengthen academic excellence and institutional growth.",
+  },
 
-    {
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
-      name: "Dr. ABC XYZ",
-      designation: "Academic Advisor",
-      organization: "IIT Delhi",
-      expertise: "Artificial Intelligence",
-    },
+  {
+    image:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+    name: "Dr. ABC XYZ",
+    designation: "Academic Advisor",
+    organization: "IIT Delhi",
+    expertise: "Artificial Intelligence",
+    message:
+      "Supporting innovation-driven education and encouraging advanced research in emerging technologies.",
+  },
 
-    {
-      image:
-        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
-      name: "Prof. ABC XYZ",
-      designation: "Industry Advisor",
-      organization: "TCS Research",
-      expertise: "Digital Transformation",
-    },
+  {
+    image:
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+    name: "Prof. ABC XYZ",
+    designation: "Industry Advisor",
+    organization: "TCS Research",
+    expertise: "Digital Transformation",
+    message:
+      "Bridging the gap between industry and academia through technology, collaboration, and innovation.",
+  },
 
-    {
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
-      name: "Dr. ABC XYZ",
-      designation: "Research Advisor",
-      organization: "DRDO",
-      expertise: "Innovation & Research",
-    },
+  {
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
+    name: "Dr. ABC XYZ",
+    designation: "Research Advisor",
+    organization: "DRDO",
+    expertise: "Innovation & Research",
+    message:
+      "Promoting research excellence and guiding initiatives focused on innovation and impactful solutions.",
+  },
 
-    {
-      image:
-        "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80",
-      name: "Prof. ABC XYZ",
-      designation: "International Advisor",
-      organization: "University of London",
-      expertise: "Global Education",
-    },
+  {
+    image:
+      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80",
+    name: "Prof. ABC XYZ",
+    designation: "International Advisor",
+    organization: "University of London",
+    expertise: "Global Education",
+    message:
+      "Helping develop global academic collaborations and international learning opportunities.",
+  },
 
-    {
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80",
-      name: "Dr. ABC XYZ",
-      designation: "Corporate Advisor",
-      organization: "Infosys",
-      expertise: "Technology Strategy",
-    },
-  ];
+  {
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80",
+    name: "Dr. ABC XYZ",
+    designation: "Corporate Advisor",
+    organization: "Infosys",
+    expertise: "Technology Strategy",
+    message:
+      "Guiding technology strategies and preparing students for future industry requirements.",
+  },
+];
 
   return (
     <div>
@@ -410,110 +422,142 @@ const Advisors = () => {
 
             {advisors.map((advisor, index) => (
 
-              <div
-                key={index}
-                className="
-                  group
-                  bg-white
-                  rounded-[34px]
-                  overflow-hidden
-                  shadow-md
-                  hover:shadow-2xl
-                  hover:-translate-y-2
-                  transition
-                  duration-500
-                "
-              >
+  <div
+    key={index}
+    className="
+      group
+      bg-white
+      rounded-[34px]
+      overflow-hidden
+      shadow-md
+      hover:shadow-2xl
+      hover:-translate-y-2
+      transition-all
+      duration-500
+    "
+  >
 
-                {/* Image */}
+    {/* Image */}
 
-                <div className="relative h-[360px] overflow-hidden">
+    <div className="relative h-[360px] overflow-hidden">
 
-                  <img
-                    src={advisor.image}
-                    alt={advisor.name}
-                    className="
-                      w-full
-                      h-full
-                      object-cover
-                      group-hover:scale-110
-                      transition
-                      duration-700
-                    "
-                  />
+      <img
+        src={advisor.image}
+        alt={advisor.name}
+        className="
+          w-full
+          h-full
+          object-cover
+          group-hover:scale-110
+          transition-transform
+          duration-700
+        "
+      />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-
-                  <span
-                    className="
-                      absolute
-                      top-5
-                      left-5
-                      bg-[#ecf39e]
-                      text-[#31572c]
-                      text-xs
-                      font-bold
-                      px-4
-                      py-2
-                      rounded-full
-                    "
-                  >
-                    Advisor
-                  </span>
-
-                </div>
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-t
+          from-black/70
+          via-transparent
+          to-transparent
+        "
+      />
 
 
+      <span
+        className="
+          absolute
+          top-5
+          left-5
+          bg-[#ecf39e]
+          text-[#31572c]
+          text-xs
+          font-bold
+          px-4
+          py-2
+          rounded-full
+        "
+      >
+        Advisor
+      </span>
 
-                {/* Details */}
+    </div>
 
-                <div className="p-8">
 
-                  <h3
-                    className="
-                      text-2xl
-                      font-bold
-                      text-[#31572c]
-                    "
-                  >
-                    {advisor.name}
-                  </h3>
+    {/* Details */}
 
-                  <p
-                    className="
-                      mt-2
-                      text-[#578B07]
-                      font-semibold
-                    "
-                  >
-                    {advisor.designation}
-                  </p>
+    <div className="p-8">
 
-                  <p className="mt-5 text-gray-600">
-                    {advisor.organization}
-                  </p>
+      <h3
+        className="
+          text-2xl
+          font-bold
+          text-[#31572c]
+        "
+      >
+        {advisor.name}
+      </h3>
 
-                  <div
-                    className="
-                      inline-flex
-                      mt-6
-                      px-4
-                      py-2
-                      rounded-full
-                      bg-[#f7f9f3]
-                      text-[#31572c]
-                      font-semibold
-                      text-sm
-                    "
-                  >
-                    {advisor.expertise}
-                  </div>
 
-                </div>
+      <p
+        className="
+          mt-2
+          text-[#578B07]
+          font-semibold
+        "
+      >
+        {advisor.designation}
+      </p>
 
-              </div>
 
-            ))}
+      <p
+        className="
+          mt-3
+          text-gray-600
+        "
+      >
+        {advisor.organization}
+      </p>
+
+
+      {/* Message */}
+
+      <p
+        className="
+          mt-5
+          text-sm
+          leading-6
+          text-gray-600
+          line-clamp-3
+        "
+      >
+        "{advisor.message}"
+      </p>
+
+
+      <div
+        className="
+          inline-flex
+          mt-6
+          px-4
+          py-2
+          rounded-full
+          bg-[#f7f9f3]
+          text-[#31572c]
+          font-semibold
+          text-sm
+        "
+      >
+        {advisor.expertise}
+      </div>
+
+    </div>
+
+  </div>
+
+))}
 
           </div>
 

@@ -377,162 +377,215 @@ academic excellence, and smooth functioning of IPS University.
 
     {/* Officials Data */}
 
+   <div
+  className="
+    grid
+    sm:grid-cols-2
+    lg:grid-cols-4
+    gap-8
+  "
+>
+  {[
+    {
+      name: "Prof. (Dr.) ABC XYZ",
+      role: "Registrar",
+      message:
+        "Ensuring smooth administration and creating an efficient academic environment for institutional growth.",
+      image:
+        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80",
+    },
+
+    {
+      name: "Dr. ABC XYZ",
+      role: "Dean Academics",
+      message:
+        "Committed to academic excellence, innovative learning methods, and continuous improvement in education.",
+      image:
+        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+    },
+
+    {
+      name: "Dr. ABC XYZ",
+      role: "Dean Student Welfare",
+      message:
+        "Focused on student development, welfare initiatives, and building a supportive campus community.",
+      image:
+        "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=600&q=80",
+    },
+
+    {
+      name: "Prof. ABC XYZ",
+      role: "Director Admissions",
+      message:
+        "Guiding students through transparent admission processes and helping them begin their academic journey.",
+      image:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+    },
+
+    {
+      name: "Dr. ABC XYZ",
+      role: "Controller of Examination",
+      message:
+        "Maintaining fairness, accuracy, and transparency in examination and evaluation systems.",
+      image:
+        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+    },
+
+    {
+      name: "Dr. ABC XYZ",
+      role: "Dean Research",
+      message:
+        "Promoting innovation, research excellence, and collaboration for impactful discoveries.",
+      image:
+        "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=600&q=80",
+    },
+
+    {
+      name: "Prof. ABC XYZ",
+      role: "Director Training & Placement",
+      message:
+        "Preparing students for professional success through industry exposure and career opportunities.",
+      image:
+        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80",
+    },
+
+    {
+      name: "Dr. ABC XYZ",
+      role: "Finance Officer",
+      message:
+        "Managing financial operations with transparency, efficiency, and responsible planning.",
+      image:
+        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80",
+    },
+  ].map((official, index) => (
     <div
+      key={index}
       className="
-        grid
-        sm:grid-cols-2
-        lg:grid-cols-4
-        gap-8
+        group
+        bg-[#f7f9f3]
+        rounded-[28px]
+        overflow-hidden
+        shadow-md
+        hover:shadow-xl
+        hover:-translate-y-2
+        transition-all
+        duration-500
       "
     >
 
-      {[
-        {
-          name: "Prof. (Dr.) ABC XYZ",
-          role: "Registrar",
-          image:
-            "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
-        },
+      {/* Image */}
 
-        {
-          name: "Dr. ABC XYZ",
-          role: "Dean Academics",
-          image:
-            "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
-        },
+      <div
+        className="
+          h-[280px]
+          overflow-hidden
+          relative
+        "
+      >
+        <img
+          src={official.image}
+          alt={official.name}
+          className="
+            w-full
+            h-full
+            object-cover
+            group-hover:scale-105
+            transition-transform
+            duration-500
+          "
+        />
 
-        {
-          name: "Dr. ABC XYZ",
-          role: "Dean Student Welfare",
-          image:
-            "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=600&q=80"
-        },
+        {/* Bottom Gradient */}
 
-        {
-          name: "Prof. ABC XYZ",
-          role: "Director Admissions",
-          image:
-            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
-        },
+        <div
+          className="
+            absolute
+            inset-x-0
+            bottom-0
+            h-24
+            bg-gradient-to-t
+            from-black/40
+            to-transparent
+          "
+        ></div>
 
-
-        {
-          name: "Dr. ABC XYZ",
-          role: "Controller of Examination",
-          image:
-            "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80"
-        },
-
-
-        {
-          name: "Dr. ABC XYZ",
-          role: "Dean Research",
-          image:
-            "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=600&q=80"
-        },
+      </div>
 
 
-        {
-          name: "Prof. ABC XYZ",
-          role: "Director Training & Placement",
-          image:
-            "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80"
-        },
+      {/* Details */}
+
+      <div
+        className="
+          p-6
+          text-center
+        "
+      >
+
+        <h3
+          className="
+            text-xl
+            font-bold
+            text-[#31572c]
+          "
+        >
+          {official.name}
+        </h3>
 
 
-        {
-          name: "Dr. ABC XYZ",
-          role: "Finance Officer",
-          image:
-            "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
-        }
-
-      ].map((official,index)=>(
+        <p
+          className="
+            mt-2
+            text-[#578B07]
+            font-medium
+            text-sm
+          "
+        >
+          {official.role}
+        </p>
 
 
         <div
-          key={index}
           className="
-            group
-            bg-[#f7f9f3]
-            rounded-[28px]
-            overflow-hidden
-            shadow-md
-            hover:shadow-xl
-            transition
-            duration-300
+            w-10
+            h-[2px]
+            bg-[#d4a14d]
+            mx-auto
+            my-4
+          "
+        ></div>
+
+
+        <p
+          className="
+            text-sm
+            text-gray-600
+            leading-6
+            line-clamp-3
           "
         >
+          "{official.message}"
+        </p>
 
 
-          {/* Image */}
+        <button
+          className="
+            mt-5
+            text-sm
+            font-semibold
+            text-[#578B07]
+            hover:text-[#31572c]
+            transition
+          "
+        >
+          Read More
+        </button>
 
-          <div
-            className="
-              h-[280px]
-              overflow-hidden
-            "
-          >
-
-            <img
-              src={official.image}
-              alt={official.name}
-              className="
-                w-full
-                h-full
-                object-cover
-                group-hover:scale-105
-                transition
-                duration-500
-              "
-            />
-
-          </div>
-
-
-
-          {/* Details */}
-
-          <div
-            className="
-              p-6
-              text-center
-            "
-          >
-
-            <h3
-              className="
-                text-xl
-                font-bold
-                text-[#31572c]
-              "
-            >
-              {official.name}
-            </h3>
-
-
-            <p
-              className="
-                mt-2
-                text-[#578B07]
-                font-medium
-                text-sm
-              "
-            >
-              {official.role}
-            </p>
-
-
-          </div>
-
-
-        </div>
-
-
-      ))}
-
+      </div>
 
     </div>
+  ))}
+
+</div>
 
 
   </div>
@@ -542,221 +595,7 @@ academic excellence, and smooth functioning of IPS University.
 
 {/* // ================= UNIVERSITY OFFICIALS SECTION ================= */}
 
-<section className="py-24 bg-white">
 
-  <div className="max-w-7xl mx-auto px-6 lg:px-10">
-
-
-    {/* Section Heading */}
-    <div className="text-center mb-16">
-
-      <span
-        className="
-          text-[#578B07]
-          uppercase
-          tracking-[3px]
-          text-sm
-          font-semibold
-        "
-      >
-        Administration
-      </span>
-
-
-      <h2
-        className="
-          text-4xl
-          font-bold
-          text-[#31572c]
-          mt-3
-        "
-      >
-        University Officials
-      </h2>
-
-
-      <p
-        className="
-          text-gray-600
-          mt-4
-          max-w-2xl
-          mx-auto
-          leading-7
-        "
-      >
-        Meet the dedicated officials responsible for academic,
-        administrative and student affairs at IPS University.
-      </p>
-
-    </div>
-
-
-
-
-    {/* Officials Data */}
-
-    <div
-      className="
-        grid
-        sm:grid-cols-2
-        lg:grid-cols-4
-        gap-8
-      "
-    >
-
-      {[
-        {
-          name: "Prof. (Dr.) ABC XYZ",
-          role: "Registrar",
-          image:
-            "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
-        },
-
-        {
-          name: "Dr. ABC XYZ",
-          role: "Dean Academics",
-          image:
-            "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
-        },
-
-        {
-          name: "Dr. ABC XYZ",
-          role: "Dean Student Welfare",
-          image:
-            "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=600&q=80"
-        },
-
-        {
-          name: "Prof. ABC XYZ",
-          role: "Director Admissions",
-          image:
-            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
-        },
-
-
-        {
-          name: "Dr. ABC XYZ",
-          role: "Controller of Examination",
-          image:
-            "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80"
-        },
-
-
-        {
-          name: "Dr. ABC XYZ",
-          role: "Dean Research",
-          image:
-            "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=600&q=80"
-        },
-
-
-        {
-          name: "Prof. ABC XYZ",
-          role: "Director Training & Placement",
-          image:
-            "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80"
-        },
-
-
-        {
-          name: "Dr. ABC XYZ",
-          role: "Finance Officer",
-          image:
-            "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
-        }
-
-      ].map((official,index)=>(
-
-
-        <div
-          key={index}
-          className="
-            group
-            bg-[#f7f9f3]
-            rounded-[28px]
-            overflow-hidden
-            shadow-md
-            hover:shadow-xl
-            transition
-            duration-300
-          "
-        >
-
-
-          {/* Image */}
-
-          <div
-            className="
-              h-[280px]
-              overflow-hidden
-            "
-          >
-
-            <img
-              src={official.image}
-              alt={official.name}
-              className="
-                w-full
-                h-full
-                object-cover
-                group-hover:scale-105
-                transition
-                duration-500
-              "
-            />
-
-          </div>
-
-
-
-          {/* Details */}
-
-          <div
-            className="
-              p-6
-              text-center
-            "
-          >
-
-            <h3
-              className="
-                text-xl
-                font-bold
-                text-[#31572c]
-              "
-            >
-              {official.name}
-            </h3>
-
-
-            <p
-              className="
-                mt-2
-                text-[#578B07]
-                font-medium
-                text-sm
-              "
-            >
-              {official.role}
-            </p>
-
-
-          </div>
-
-
-        </div>
-
-
-      ))}
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
 
 {/* // ================= ACADEMIC LEADERSHIP SECTION ================= */}
 

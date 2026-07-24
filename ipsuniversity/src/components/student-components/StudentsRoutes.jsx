@@ -13,18 +13,19 @@ import StudentFeedback from "./StudentFeedback";
 // // Professional Clubs
 import CSI from "./CSI";
 import ISTE from "./ISTE";
-// import StandardClub from "./professional-clubs/StandardClub";
-// import AdministrativeClub from "./professional-clubs/AdministrativeClub";
+import StandardClub from "./StandardClub";
+ import AdministrativeClub from "./AdministrativeClub";
 
 // // Social Committee
-// import NSS from "./social-committee/NSS";
-// import NCC from "./social-committee/NCC";
-// import Pahal from "./social-committee/Pahal";
+ import NSS from "./NSS";
+import NCC from "./NCC";
+ import Pahal from "./Pahal";
 
 // // Other Pages
 // import AirboysClub from "./AirboysClub";
-// import TechnoParv from "./fest/TechnoParv";
-// import Villay from "./fest/Villay";
+import TechnoParv from "./TechnoParv";
+
+import Villay from "./Villay";
 
 const StudentsRoutes = () => {
   return (
@@ -33,10 +34,10 @@ const StudentsRoutes = () => {
 
       <Routes>
         {/* Default Route */}
-        <Route
+        {/* <Route
           index
           element={<Navigate to="students-council" replace />}
-        />
+        /> */}
 
         {/* Student's Council */}
         <Route
@@ -73,31 +74,31 @@ const StudentsRoutes = () => {
           element={<ISTE />}
         />
 
-        {/* <Route
+        <Route
           path="professional-clubs/standard-club"
           element={<StandardClub />}
-        /> */}
+        />
 
-        {/* <Route
+        <Route
           path="professional-clubs/administrative-club"
           element={<AdministrativeClub />}
-        /> */}
+        />
 
         {/* Social Committee */}
-        {/* <Route
+        <Route
           path="social-committee/nss"
           element={<NSS />}
-        /> */}
+        />
 
-        {/* <Route
+        <Route
           path="social-committee/ncc"
           element={<NCC />}
-        /> */}
+        />
 
-        {/* <Route
+        <Route
           path="social-committee/pahal"
           element={<Pahal />}
-        /> */}
+        />
 
         {/* Airboys Club */}
         {/* <Route
@@ -106,20 +107,20 @@ const StudentsRoutes = () => {
         /> */}
 
         {/* Fest */}
-        {/* <Route
+        <Route
           path="fest/photos"
           element={<TechnoParv />}
-        /> */}
+        />
 
-        {/* <Route
+        <Route
           path="fest/videos"
           element={<Villay />}
-        /> */}
+        />
 
         {/* Invalid Route */}
         <Route
           path="*"
-          element={<Navigate to="students-council" replace />}
+          element={<Navigate to="/" replace />}
         />
       </Routes>
 

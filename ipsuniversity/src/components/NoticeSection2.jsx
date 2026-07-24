@@ -116,7 +116,7 @@ const NewsNoticeSection = () => {
 
   return (
     <section
-      className="w-full py-14 px-3 md:px-10 relative overflow-hidden bg-transparent  "
+      className="w-full py-14 px-3 md:px-10 relative overflow-hidden bg-transparent pb-30  "
       // style={{
       //         backgroundImage: `url(${pharma})`,
       //         backgroundSize: "contain",
@@ -149,11 +149,12 @@ const NewsNoticeSection = () => {
       <div className="absolute -left-40 bottom-0  pointer-events-none">
         <DotedRing height={500} width={500} />
       </div> */}
-
-    
+ <h1 className="relative z-50 text-center text-2xl sm:text-3xl md:text-5xl font-extrabold text-[white] mt-10 leading-tight mb-10">
+  News & Events
+</h1>
 
       {/* Main Container */}
-      <div className="max-w-[100vw] mx-auto flex flex-col lg:flex-row  gap-8 justify-center items-stretch relative z-40 mt-20">
+      <div className="max-w-[100vw] mx-auto flex flex-col lg:flex-row  gap-20 justify-center items-stretch relative z-40 mt-20">
 
         {/* LEFT CARD */}
         <div
@@ -373,9 +374,9 @@ const NewsNoticeSection = () => {
         </div>
 
         {/* middle div */}
-          <h1 className="relative z-50 text-center text-2xl sm:text-3xl md:text-5xl font-extrabold text-[var(--forest)] mt-10 leading-tight mb-10">
+          {/* <h1 className="relative z-50 text-center text-2xl sm:text-3xl md:text-5xl font-extrabold text-[var(--forest)] mt-10 leading-tight mb-10">
   <br />News <br />& <br />Events
-</h1>
+</h1> */}
 
         {/* RIGHT CARD */}
    <div

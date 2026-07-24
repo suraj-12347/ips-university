@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import tree from "../../images1/whiteflowerpng.png";
+import tree from "../../images1/edubuild8.png";
 import suraj from "../../images1/suraj.jpeg";
 import neeraj from "../../images1/neeraj.jpeg";
 import prasansha from "../../images1/prasansha.jpeg";
@@ -34,7 +34,7 @@ const testimonials = [
  
 ];
 
-const TestimonialsSection = () => {
+const TestimonialsSection = ({GalleryBg}) => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -49,16 +49,19 @@ const TestimonialsSection = () => {
     <section
       className="relative py-15 overflow-hidden mt-20 bg-center"
       style={{
-        backgroundImage: `url(${tree})`,
+        backgroundImage: `url(${GalleryBg})`,
         backgroundSize: "cover",
         backgroundPosition:"center",
         backgroundRepeat:"no-repeat"
       
        
       }}
+       
+     
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/60 backdrop-blur-[4px] z-0 "></div>
+      {/* <div className="absolute inset-0 bg-white/60 backdrop-blur-[4px] z-0 "></div> */}
+      <div className="absolute inset-0 bg-green-900/80 z-0"></div>
        {/* Bottom White Gradient */}
       {/* <div
         className="absolute -bottom-3 left-0 w-full h-[80%] z-[2]"
@@ -85,7 +88,7 @@ const TestimonialsSection = () => {
       tracking-[4px]
       text-sm
       font-semibold
-      text-[var(--grass)]
+      text-white/80
       mb-3
     "
     style={{
@@ -100,7 +103,7 @@ const TestimonialsSection = () => {
     className="
       text-4xl
       md:text-6xl
-      text-[var(--forest)]
+      text-white
       relative
       inline-block
     "
@@ -133,7 +136,7 @@ const TestimonialsSection = () => {
       max-w-3xl
       mx-auto
       mt-8
-      text-gray-600
+       text-white/70
       leading-8
       text-base
       md:text-lg
@@ -274,7 +277,7 @@ const TestimonialsSection = () => {
               onClick={() => setCurrent(index)}
               className={`rounded-full transition-all duration-300 ${
                 current === index
-                  ? "w-8 h-3 bg-[var(--forest)]"
+                  ? "w-8 h-3 bg-[var(--white)]"
                   : "w-3 h-3 bg-gray-400"
               }`}
             />

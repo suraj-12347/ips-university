@@ -15,6 +15,7 @@ import About5 from '../components/Aboute5'
 import PharmacyHero from '../components/Pharmacy-components/PharmacyHero'
 import PharmaGallery from '../components/Pharmacy-components/PharmaGallery'
 import StudentsCouncil from '../components/student-components/StudentsCounsil'
+import PharmaImg from '../images1/pharma2.png'
 
 
 export const coursesData = {
@@ -144,7 +145,7 @@ const EducationPage = () => {
 
 <PlacementsSection/>
 
-<TestimonialsSection/>
+<TestimonialsSection GalleryBg={PharmaImg} />
 <RecruitersSection/>
       
     </div>

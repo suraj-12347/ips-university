@@ -484,7 +484,7 @@ const Navbar5 = () => {
         { title: "pahal", path: "/students-zone/social-committee/pahal" },
       ],
     },
-    { title: "Airboys Club", path: "/students-zone/airboys-club" },
+    // { title: "Airboys Club", path: "/students-zone/airboys-club" },
     {
       title: "Fest",
       children: [

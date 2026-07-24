@@ -14,24 +14,32 @@ const leaders = [
   {
     name: "Prof. (Dr.) ABC XYZ",
     designation: "Chairperson",
+    message:
+      "Our vision is to create an environment of excellence, innovation, and leadership where students are inspired to achieve their highest potential.",
     image:
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "Prof. (Dr.) XYZ Sharma",
     designation: "Vice Chancellor",
+    message:
+      "We are committed to providing quality education, research opportunities, and a platform that prepares students for future challenges.",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "Dr. Rajesh Gupta",
     designation: "Registrar",
+    message:
+      "Through effective administration and continuous improvement, we aim to support academic growth and institutional excellence.",
     image:
       "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "Dr. Neha Singh",
     designation: "Dean Academics",
+    message:
+      "Our focus remains on innovation-driven learning, student development, and creating globally competent professionals.",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
   },
@@ -251,171 +259,12 @@ const Leadership = () => {
       {/* UNIVERSITY STATS */}
       {/* ========================================================= */}
 
-      <section className="pb-24">
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            {/* CARD */}
-
-            <div className="bg-white rounded-3xl border border-gray-200 p-10 hover:shadow-xl transition duration-300">
-
-              <div className="w-16 h-16 rounded-2xl bg-[#ecf39e] flex items-center justify-center">
-
-                <Users className="text-[#31572c]" size={30} />
-
-              </div>
-
-              <h2 className="text-4xl font-bold mt-8 text-[#31572c]">
-                10K+
-              </h2>
-
-              <p className="mt-3 text-gray-600">
-                Students Empowered
-              </p>
-
-            </div>
-
-            {/* CARD */}
-
-            <div className="bg-white rounded-3xl border border-gray-200 p-10 hover:shadow-xl transition duration-300">
-
-              <div className="w-16 h-16 rounded-2xl bg-[#ecf39e] flex items-center justify-center">
-
-                <GraduationCap className="text-[#31572c]" size={30} />
-
-              </div>
-
-              <h2 className="text-4xl font-bold mt-8 text-[#31572c]">
-                250+
-              </h2>
-
-              <p className="mt-3 text-gray-600">
-                Experienced Faculty
-              </p>
-
-            </div>
-
-            {/* CARD */}
-
-            <div className="bg-white rounded-3xl border border-gray-200 p-10 hover:shadow-xl transition duration-300">
-
-              <div className="w-16 h-16 rounded-2xl bg-[#ecf39e] flex items-center justify-center">
-
-                <Award className="text-[#31572c]" size={30} />
-
-              </div>
-
-              <h2 className="text-4xl font-bold mt-8 text-[#31572c]">
-                20+
-              </h2>
-
-              <p className="mt-3 text-gray-600">
-                Years of Academic Excellence
-              </p>
-
-            </div>
-
-            {/* CARD */}
-
-            <div className="bg-white rounded-3xl border border-gray-200 p-10 hover:shadow-xl transition duration-300">
-
-              <div className="w-16 h-16 rounded-2xl bg-[#ecf39e] flex items-center justify-center">
-
-                <BookOpen className="text-[#31572c]" size={30} />
-
-              </div>
-
-              <h2 className="text-4xl font-bold mt-8 text-[#31572c]">
-                100+
-              </h2>
-
-              <p className="mt-3 text-gray-600">
-                Academic Programs
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
+     
 
       {/* ========================================================= */}
       {/* PART 2 YAHAN SE START HOGA */}
       {/* ========================================================= */}
-<section className="py-24 bg-[#f8faf7]">
-  <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-    <div className="text-center mb-14">
-      <span className="uppercase tracking-[4px] text-[#8BAE45] font-semibold">
-        Leadership Approach
-      </span>
-
-      <h2 className="text-4xl font-bold text-[#31572c] mt-3">
-        Committed to Academic Excellence
-      </h2>
-
-      <p className="max-w-3xl mx-auto mt-5 text-gray-600 leading-8">
-        The leadership at IPS University works collaboratively to strengthen
-        academic quality, promote innovation, support research, and ensure an
-        inclusive environment where every student can achieve their full
-        potential.
-      </p>
-    </div>
-
-    <div className="grid md:grid-cols-2 gap-8">
-
-      <div className="bg-white rounded-3xl p-8 shadow-md border border-gray-100">
-        <h3 className="text-2xl font-semibold text-[#31572c]">
-          Academic Leadership
-        </h3>
-
-        <p className="text-gray-600 mt-4 leading-8">
-          Ensuring quality education through curriculum development, faculty
-          excellence, and continuous academic improvement.
-        </p>
-      </div>
-
-      <div className="bg-white rounded-3xl p-8 shadow-md border border-gray-100">
-        <h3 className="text-2xl font-semibold text-[#31572c]">
-          Student Development
-        </h3>
-
-        <p className="text-gray-600 mt-4 leading-8">
-          Creating opportunities for innovation, leadership, placements,
-          entrepreneurship, and holistic student growth.
-        </p>
-      </div>
-
-      <div className="bg-white rounded-3xl p-8 shadow-md border border-gray-100">
-        <h3 className="text-2xl font-semibold text-[#31572c]">
-          Research & Innovation
-        </h3>
-
-        <p className="text-gray-600 mt-4 leading-8">
-          Encouraging interdisciplinary research, industry collaboration,
-          patents, publications, and innovative thinking.
-        </p>
-      </div>
-
-      <div className="bg-white rounded-3xl p-8 shadow-md border border-gray-100">
-        <h3 className="text-2xl font-semibold text-[#31572c]">
-          Good Governance
-        </h3>
-
-        <p className="text-gray-600 mt-4 leading-8">
-          Promoting transparency, accountability, ethical practices, and
-          responsible decision-making across the University.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
 {/* ========================================================= */}
 {/* LEADERSHIP QUOTE */}
@@ -480,19 +329,43 @@ const Leadership = () => {
           </div>
 
           {/* Content */}
-          <div className="px-6 py-6 text-center">
+          {/* Content */}
+<div className="px-6 py-6 text-center">
 
-            <h3 className="text-xl font-bold text-[#1d3d20]">
-              {leader.name}
-            </h3>
+  <h3 className="text-xl font-bold text-[#1d3d20]">
+    {leader.name}
+  </h3>
 
-            <div className="w-10 h-[2px] bg-[#d4a14d] mx-auto my-3"></div>
+  <div className="w-10 h-[2px] bg-[#d4a14d] mx-auto my-3"></div>
 
-            <p className="text-[#31572c] font-medium">
-              {leader.designation}
-            </p>
+  <p className="text-[#31572c] font-medium">
+    {leader.designation}
+  </p>
 
-          </div>
+  <p className="
+    mt-4
+    text-sm
+    leading-6
+    text-gray-600
+    line-clamp-3
+  ">
+    "{leader.message}"
+  </p>
+
+  <button
+    className="
+      mt-5
+      text-sm
+      font-semibold
+      text-[#578B07]
+      hover:text-[#31572c]
+      transition
+    "
+  >
+    Read More
+  </button>
+
+</div>
 
         </div>
       ))}

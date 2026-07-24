@@ -88,18 +88,18 @@ const BrochureSection = () => {
 
           <div>
 
-            <span className="text-[#578B07] font-semibold uppercase tracking-[3px]">
+            <span className="text- [#578B07]  text-white/80 font-semibold uppercase tracking-[3px]">
               Download Brochure
             </span>
 
-            <h2 className="mt-4 text-4xl lg:text-6xl font-bold text-[var(--forest)] leading-tight">
+            <h2 className="mt-4 text-4xl lg:text-6xl font-bold text-[var(--white)] leading-tight">
               Ready To Plant
               <br />
               your
-              <span className="text-[var(--forest)]"> Future !!</span>
+              <span className="text-[var(--white)]"> Future !!</span>
             </h2>
 
-            <p className="mt-6 text-gray-600 text-md leading-8 max-w-xl">
+            <p className="mt-6 text-gray-200 text-md leading-8 max-w-xl">
                Transform your future with world-class education, industry-focused learning, and endless opportunities at IPS University, Gwalior.
          
             </p>
@@ -116,14 +116,14 @@ const BrochureSection = () => {
                   key={item}
                   className="flex items-center gap-4"
                 >
-                  <div className="w-10 h-10 rounded-full bg-[#578B07]/10 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg- [#578B07]/10 bg-[var(--leaf)] flex items-center justify-center">
                     <CheckCircle
                       size={20}
                       className="text-[#578B07]"
                     />
                   </div>
 
-                  <span className="text-lg text-gray-700">
+                  <span className="text-lg text-gray-100">
                     {item}
                   </span>
                 </div>
@@ -137,11 +137,13 @@ const BrochureSection = () => {
               inline-flex
               items-center
               gap-3
-              bg-[#31572c]
-              hover:bg-[#578B07]
+              bg- [#31572c]
+
+              bg-[var(--white)]
+              hover:bg-[var(--leaf)]
               transition
               duration-300
-              text-white
+              text-[var(--forest)]
               px-8
               py-4
               rounded-xl

@@ -27,7 +27,7 @@ import Navbar5 from '../components/Navbar'
 import { useEffect, useState } from "react";
 import FAQ from '../components/FAQ'
 
-import multiFlower from '../images1/treepng2.png'
+import multiFlower from '../images1/treepng4.png'
 
 const Page2 = () => {
 
@@ -110,7 +110,7 @@ const Page2 = () => {
     
     
     {/* <ThemeSwitcher/> */}
-
+<SchoolsSection/>
    <div
   className="relative w-full "
   style={{
@@ -121,17 +121,18 @@ const Page2 = () => {
   }}
 >
   {/* Overlay */}
-  <div className="absolute inset-0 bg-white/50 backdrop-blur-[4px] z-0"></div>
+ <div className="absolute inset-0 bg-green-900/80 z-0"></div>
 
   {/* Content */}
   <div className="relative z-10">
-    <SchoolsSection/>
+    
     <NoticeSection2 />
-    <GalleryCarousel2 />
+  
   </div>
 </div>
+  <GalleryCarousel2 />
 <FAQ/>
-    <StudentReviews/>
+    
       
    
    
@@ -151,20 +152,22 @@ const Page2 = () => {
   }}
 >
   {/* Overlay */}
-  <div className="absolute inset-0 bg-white/70 backdrop-blur-[4px] z-0"></div>
+  <div className="absolute inset-0 bg-green-900/80 z-0"></div>
 
   {/* Content */}
   <div className="relative z-10">
      <Brochure2/>
-    <CompanySection2/>
+   
+   
    
   </div>
 </div>
+ <StudentReviews/>
 
    
 
 
-
+     <CompanySection2/>
     <ApprovalRecognition/>
     <Footer/>
 

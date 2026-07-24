@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GalleryPopup from "./GalleryPopup";
+import tree from "../../images1/edubuild8.png";
 
 
 const images = [
@@ -131,15 +132,27 @@ const EducationGallery = () => {
 
   return (
     <>
-      <section className="py-20 bg-[#f8fbf6] overflow-hidden">
-        <div className="max-w-[1700px] mx-auto">
+      <section className="py-20 relative overflow-hidden mt-20"
+      
+      style={{
+              backgroundImage: `url(${tree})`,
+              backgroundSize: "cover",
+              backgroundPosition:"center",
+              backgroundRepeat:"no-repeat"
+            
+             
+            }}
+      >
 
-          <div className="mb-12 text-center">
-            <span className="uppercase tracking-[4px] text-xs font-semibold text-[var(--grass)]">
+        <div className="absolute inset-0 bg-green-900/80 z-0"></div>
+      <div className="relative z-10 max-w-[1700px] mx-auto">
+
+          <div className="mb-12 text-center z-10">
+            <span className="uppercase tracking-[4px] text-xs font-semibold text-[var(--leaf)]">
               Gallery
             </span>
 
-            <h2 className="text-4xl lg:text-5xl font-bold text-[var(--forest)] mt-3">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[var(--white)] mt-3">
               Life at School of Education
             </h2>
           </div>
@@ -231,8 +244,8 @@ const EducationGallery = () => {
         className="
           px-8
           py-3
-          bg-[var(--forest)]
-          text-white
+          bg-[var(--white)]
+          text-[var(--forest)]
           font-medium
           tracking-wide
           rounded-full
