@@ -58,33 +58,33 @@ const rings = [
 const features = [
   {
     icon: Sprout,
-    title: "Holistic Growth",
-    desc: "Guided by the belief that emotional, intellectual and physical lives are interconnected — spirit, mind and body together.",
+    title: "Comprehensive Development",
+    desc: "Driven by the conviction that emotional, cognitive, and physical aspects are interrelated — spirit, intellect, and corporeal existence united.",
   },
   {
     icon: HeartHandshake,
-    title: "Equal Opportunity",
-    desc: "Every student carries tremendous potential, regardless of caste, religion, background or upbringing.",
+    title: "Equitable Access",
+    desc: "Each student possesses immense potential, irrespective of caste, religion, heritage, or upbringing.",
   },
   {
     icon: Brain,
-    title: "Critical Thinking",
-    desc: "Students are prepared to think critically and recognize how their work contributes to society and the nation.",
+    title: "Analytical Reasoning",
+    desc: "Learners are equipped to engage in critical thinking and acknowledge the impact of their efforts on society and the nation.",
   },
   {
     icon: GraduationCap,
-    title: "Value-Based Education",
-    desc: "Not just an institution imparting academics — an experience where everyone shares one mission.",
+    title: "Education Centered on Values",
+    desc: "Not merely an educational establishment — a collective journey united by a common purpose.",
   },
   {
     icon: FlaskConical,
-    title: "Research & Industry Exposure",
-    desc: "Research and teaching go hand-in-hand, giving students the chance to work alongside professionals in their field.",
+    title: "Investigation and Sector Familiarity",
+    desc: "Research and instruction are interconnected, providing students with the opportunity to collaborate with experts in their discipline.",
   },
   {
     icon: HandHeart,
-    title: "Commitment & Sincerity",
-    desc: "Each student is taught, by example, the spirit of commitment, loyalty, sincerity and values.",
+    title: "Dedication & Authenticity",
+    desc: "Every student is instructed, through demonstration, in the essence of dedication, allegiance, authenticity, and principles.",
   },
 ];
 
@@ -115,17 +115,15 @@ const Overview = () => {
         <div className="relative max-w-7xl  px-6 lg:px-10 text-white">
 
           <div className="text-sm uppercase tracking-[3px] text-[#cde8a3] mb-5">
-             About The Sansthan
+             About The Institute
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold leading-tight">
              Overview
           </h1>
 
-          <p className="mt-6 text-lg text-gray-200 max-w-3xl leading-8">
-             Registered in 1973, and home to the IPS Group of Colleges since 2005 —
-      grown, season by season, into one of Madhya Pradesh's premier
-      non-governmental educational institutions.
+          <p className="mt-6 text-lg text-gray-200 max-w-3xl leading-8  ">
+              A collective of charitable-minded persons came together to form the Deendayal Krishi Avam Gramin Proudyogiki Vikas Sansthan, which was officially incorporated under the Madhya Pradesh Society Registration Act (SN. 44 of 1973). As time went on, it gained praise and admiration from all corners as a leading educational institution.
           </p>
 
           <div className="flex items-center gap-2 mt-8 text-sm">
@@ -192,7 +190,7 @@ const Overview = () => {
         "
         style={{ color:"#578B07" }}
       >
-        About IPS University
+        About IPS Group Of Colleges
       </span>
 
 
@@ -221,33 +219,21 @@ const Overview = () => {
           space-y-5
           text-[15px]
           sm:text-base
-          leading-8
+          leading-8 text-justify
         "
         style={{
           color:"#444",
           fontFamily:"Outfit, sans-serif"
+
         }}
       >
 
         <p>
-          The Institute of Professional Studies (IPS), established in 2005,
-          was founded with a vision to transform young minds into skilled,
-          responsible and confident professionals.
+          The Institute of Professional Studies (IPS) has historically asserted that the emotional, intellectual, and physical aspects of individuals are mutually reliant, similar to how lives are interlinked in society. Founded in 2005, its mission was to cultivate today's youth into effective human assets for the community. The guiding tenet of the Group is "the comprehensive education of the individual in spirit, cognition, and physicality. The fundamental doctrine asserts that all individuals, without exception to their background, religion, caste, or upbringing, possess considerable potential. The school facilitates the achievement of students' full potential by offering diverse programs that enrich their experiences. Recognizing the value of their efforts for the collective benefit of society and the nation, they are poised to contemplate critically.
         </p>
 
 
-        <p>
-          Driven by quality education, innovation and values, IPS has grown
-          into a multidisciplinary educational institution creating
-          opportunities for learning, research and growth.
-        </p>
-
-
-        <p>
-          With experienced faculty, modern infrastructure and industry
-          focused programs, IPS prepares students to achieve excellence
-          in their professional journey.
-        </p>
+        
 
 
       </div>
@@ -273,7 +259,8 @@ const Overview = () => {
       h-40
       rounded-full
       bg-[#ecf39e]
-      blur-2xl
+      blur-2xl 
+      
     "
   />
 
@@ -373,14 +360,14 @@ const Overview = () => {
             80+
           </h3>
           <p className="text-xs text-white/70">
-            Acres Campus
+            Acre Campus
           </p>
         </div>
 
 
         <div>
           <h3 className="text-3xl font-bold text-white">
-            20+
+            35+
           </h3>
           <p className="text-xs text-white/70">
             Programs
@@ -419,7 +406,7 @@ const Overview = () => {
         >
           What We Try To Inculcate
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto text-justify">
           {features.map((item, index) => {
             const Icon = item.icon;
             const tinted = index % 3 === 1;

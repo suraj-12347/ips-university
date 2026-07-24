@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "Does IPS University provide placement opportunities?",
     answer:
-      "Yes. The University has a dedicated Training & Placement Cell that conducts campus recruitment drives, internships, industrial training, career guidance and skill development programmes.",
+      "Yes. The University has a dedicated Training & Placement Cell that conducts regular campus recruitment drives, internships, industrial training, career guidance and skill development programmes.",
   },
   {
     question: "Are hostel facilities available for students?",
@@ -27,12 +27,12 @@ const faqs = [
   {
     question: "What facilities are available on campus?",
     answer:
-      "The campus includes smart classrooms, modern laboratories, a central library, sports facilities, transportation, cafeteria, Wi-Fi, innovation centres and a vibrant student activity ecosystem.",
+      "The campus includes smart classrooms, modern laboratories,  libraries for all streams, sports facilities, transportation, cafeteria, Wi-Fi, innovation centre and a vibrant student activity ecosystem.",
   },
   {
     question: "Does the university support research and innovation?",
     answer:
-      "Absolutely. IPS University encourages research through funded projects, publications, patents, innovation centres, startup incubation, industry collaborations and multidisciplinary research initiatives.",
+      "Absolutely. IPS University encourages research through funded projects, publications, patents, innovation centre, startup incubation, industries collaboration and multidisciplinary research initiatives.",
   },
 ];
 
@@ -114,7 +114,7 @@ const FAQ = () => {
         <p className="mt-8 text-gray-600 leading-8 text-lg max-w-xl">
           Find quick answers to common questions about admissions,
           academics, scholarships, placements, campus facilities,
-          student life, and support services at IPS University.
+          student life at IPS University.
         </p>
 
         {/* <div className="mt-12 overflow-hidden rounded-[32px] shadow-xl">
