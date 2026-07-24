@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Plus } from "lucide-react";
-import ctmStudents from '../images1/ctmstudents.jpeg'
-import pharma from '../images1/treepng.png'
+// import ctmStudents from '../images1/.jpeg'
+import pharma from '../images1/friends.jpeg'
+
+
 
 const faqs = [
   {
@@ -37,7 +39,7 @@ const faqs = [
 ];
 
 const FAQ = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(null);
 
   return (
     <section className="relative py-24 mt-20  overflow-hidden"
@@ -45,30 +47,30 @@ const FAQ = () => {
     
     
     
-    // style={{
-    //               backgroundImage:`url(${pharma})`,
-    //               backgroundSize:"cover",
-    //               backgroundPosition:"center"
-    //             }}
+    style={{
+                  backgroundImage:`url(${pharma})`,
+                  backgroundSize:"cover",
+                  backgroundPosition:"center"
+                }}
     
     >
 
-      <div
+      {/* <div
               className="
               absolute
               inset-0
               bg-white/60
               backdrop-blur-[3px]
               "
-            />
-
-            <div
+            /> */}
+ <div className="absolute inset-0 bg-green-900/75 z-0"></div>
+            {/* <div
         className="absolute -top-2 left-0 w-full h-[70%] z-0"
         style={{
           background:
             "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
         }}
-      />
+      /> */}
   {/* Background Blur */}
   {/* <div className="absolute top-20 -left-24 w-72 h-72 bg-[var(--leaf)]/30 rounded-full blur-3xl"></div>
   <div className="absolute bottom-0 right-0 w-80 h-80 bg-[var(--grass)]/10 rounded-full blur-3xl"></div> */}
@@ -83,7 +85,7 @@ const FAQ = () => {
             tracking-[4px]
             text-sm
             font-semibold
-            text-[var(--grass)]
+            text-[var(--leaf)]
           "
         >
           Frequently Asked Questions
@@ -96,7 +98,7 @@ const FAQ = () => {
             lg:text-[56px]
             leading-[1.08]
             tracking-[-1px]
-            text-[var(--forest)]
+            text-[var(--white)]
           "
           style={{
             fontFamily: "Fraunces, serif",
@@ -111,7 +113,7 @@ const FAQ = () => {
           University
         </h2>
 
-        <p className="mt-8 text-gray-600 leading-8 text-lg max-w-xl">
+        <p className="mt-8 text-gray-200 leading-8 text-lg max-w-xl">
           Find quick answers to common questions about admissions,
           academics, scholarships, placements, campus facilities,
           student life at IPS University.
@@ -158,7 +160,7 @@ const FAQ = () => {
                   className="
                     text-sm
                     font-semibold
-                    text-[var(--grass)]
+                    text-[var(--leaf)]
                     mt-1
                     min-w-[34px]
                   "
@@ -170,11 +172,11 @@ const FAQ = () => {
                   className="
                     text-xl
                     font-semibold
-                    text-[var(--forest)]
+                    text-[var(--white)]
                     leading-snug
                     transition
                     duration-300
-                    group-hover:text-[var(--grass)]
+                    
                   "
                 >
                   {item.question}
@@ -194,7 +196,7 @@ const FAQ = () => {
                   size={22}
                   strokeWidth={2}
                   className={`
-                    text-[var(--grass)]
+                    text-[var(--leaf)]
                     transition-all
                     duration-500
                     ${
@@ -221,7 +223,7 @@ const FAQ = () => {
               `}
             >
               <div className="pl-[54px] pr-10">
-                <p className="text-gray-600 leading-8 text-[16px]">
+                <p className="text-gray-200 leading-8 text-[16px]">
                   {item.answer}
                 </p>
               </div>

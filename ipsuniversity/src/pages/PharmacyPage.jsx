@@ -24,10 +24,7 @@ export const coursesData = {
       name: "B.Pharm. (Bachelor of Pharmacy)",
       route: "/school-of-pharmacy/b-pharm",
     },
-    {
-      name: "D.Pharm. (Diploma in Pharmacy)",
-      route: "/school-of-pharmacy/d-pharm",
-    },
+   
   ],
 
   PG: [
@@ -57,8 +54,8 @@ export const coursesData = {
   ],
 
   Diploma: [
-    {
-      name: "Diploma in Pharmacy (D.Pharm.)",
+     {
+      name: "D.Pharm. (Diploma in Pharmacy)",
       route: "/school-of-pharmacy/d-pharm",
     },
   ],

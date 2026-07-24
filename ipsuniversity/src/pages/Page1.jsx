@@ -27,7 +27,9 @@ import Navbar5 from '../components/Navbar'
 import { useEffect, useState } from "react";
 import FAQ from '../components/FAQ'
 
-import multiFlower from '../images1/treepng4.png'
+// import multiFlower from '../images1/friends2.jpeg'
+
+const multiFlower = "https://i.pinimg.com/1200x/7c/fd/44/7cfd4412fca5ac25b98e808e96ea016c.jpg"
 
 const Page2 = () => {
 
@@ -140,14 +142,14 @@ const Page2 = () => {
     {/* <SocialMedia2/> */}
 
     <EnquiryPopup2/>
-    
+     <StudentReviews/>
 
      <div
   className="relative w-full "
   style={{
     backgroundImage: `url(${multiFlower})`,
     backgroundSize: "cover",
-    backgroundPosition: "center",
+    backgroundPosition: "bottom",
     backgroundRepeat: "no-repeat",
   }}
 >
@@ -162,7 +164,7 @@ const Page2 = () => {
    
   </div>
 </div>
- <StudentReviews/>
+
 
    
 
