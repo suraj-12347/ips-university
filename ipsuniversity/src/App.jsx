@@ -8,6 +8,7 @@ import Page3 from "./pages/Page3";
 import CTMLayout from "./components/CTMLayout";
 import Overview from "./pages/CTM";
 
+
 import HodMessage from "./components/ctm-component/HodMessage";
 import FacultyCse from "./components/ctm-component/FacultyCse";
 import Scope from "./components/ctm-component/Scope";
@@ -27,6 +28,7 @@ import PharmacyPage from './pages/PharmacyPage'
 import AdmissionRoutes from './components/Admission-components/AdmissionRoutes'
 import TPRoutes from './components/T&P-components/TPRoutes'
 import StudentsRoutes from "./components/student-components/StudentsRoutes";
+import Bpharm from "./components/b-pharm-compnents/Bpharm";
 
 
 const App = () => {
@@ -44,6 +46,8 @@ const App = () => {
         <Route path="/education" element={<EducationPage/>} />
          <Route path="/pharmacy" element={<PharmacyPage/>} />
         <Route path="/about/*" element={<AboutRoutes />} />
+
+         <Route path="/pharmacy/b-pharm" element={<Bpharm />} />
 
 
   {/* R&D Routes */}
