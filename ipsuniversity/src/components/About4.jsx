@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState} from "react";
 import bgImage from "../images1/aboutbg5.png"; // Building + students image
 import chairman from "../images1/chairmanimage3.jpeg";
 
@@ -44,6 +44,11 @@ const features = [
 const About3 = () => {
   const { language } = useLanguage();
 
+  const [expanded, setExpanded] = useState(false);
+  
+
+const limit = 300; // jitne characters dikhane hain
+
   const content = {
     en: {
       about: "ABOUT IPS",
@@ -53,7 +58,11 @@ const About3 = () => {
     },
   };
 
+
+
   const t = content[language] || content.en;
+
+  const text = t.para
 
   return (
     <section
@@ -189,18 +198,18 @@ const About3 = () => {
     {t.subtitle}
   </p>
 
-  <p
-    className="
-      mt-3
-      text-[13px]
-      sm:text-[14px]
-      leading-6
-      text-gray-700
-      text-justify
-    "
-  >
-    {t.para}
-  </p>
+ <p className="text-gray-600 mt-5 text-[14px] leading-7">
+  {expanded ? text : `${text.slice(0, limit)}...`}
+
+  {text.length > limit && (
+    <span
+      onClick={() => setExpanded(!expanded)}
+      className="ml-2 text-[var(--forest)] font-semibold cursor-pointer hover:underline"
+    >
+      {expanded ? "Read Less ←" : "Read More →"}
+    </span>
+  )}
+</p>
 
   <button
     className="

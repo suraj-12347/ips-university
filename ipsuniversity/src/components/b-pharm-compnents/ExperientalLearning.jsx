@@ -10,7 +10,7 @@ export default function Curriculum() {
 
   return (
 
-<section className="pt-16 mt-10  " id="curriculum">
+<section className="mb-20 " id="curriculum">
 
 <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
@@ -48,7 +48,7 @@ text-[var(--forest)]
 font-black
 ml-3
 ">
-Curriculum
+Experiental Learning
 </h2>
 </button>
 

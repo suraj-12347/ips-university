@@ -37,31 +37,36 @@ export default function Labs() {
 
 {/* Heading */}
 
-<div className="mb-12">
+<div className="mb-16 text-center">
 
-<h2 className="
-text-4xl
-font-black
-text-[var(--forest)]
-flex
-items-center
-gap-3
-">
+  <h2
+    className="
+    text-4xl
+    font-black
+    text-[var(--forest)]
+    flex
+    justify-center
+    items-center
+    gap-3
+    "
+  >
+    {/* <FlaskConical size={36} /> */}
 
-<FlaskConical size={36}/>
+    Laboratories
+  </h2>
 
-Laboratories
-
-</h2>
-
-<p className="
-mt-3
-text-gray-600
-max-w-2xl
-">
-Our advanced laboratories provide students with practical exposure,
-research opportunities and industry-oriented learning.
-</p>
+  <p
+    className="
+    mt-5
+    text-gray-600
+    max-w-3xl
+    mx-auto
+    leading-relaxed
+    "
+  >
+    Our advanced laboratories provide students with practical exposure,
+    research opportunities and industry-oriented learning.
+  </p>
 
 </div>
 

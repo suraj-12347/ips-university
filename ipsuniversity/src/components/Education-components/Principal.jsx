@@ -51,7 +51,7 @@ const PrincipalDesk = () => {
 
     <div className="w-20 h-[3px] bg-[var(--leaf)] mt-2"></div>
 
-    <p className="mt-5 text-white/90 leading-7 text-[15px]">
+    <p className="mt-5 text-white/90 leading-7 text-[15px] text-justify">
       Welcome to the School of Education. We are committed to preparing
       future educators through academic excellence, practical learning,
       innovation, and strong ethical values in a supportive environment.

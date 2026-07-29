@@ -45,7 +45,7 @@ py-16
 bg-cover
 bg-center
 relative
-mt-10
+
 "
 style={{
 backgroundImage:

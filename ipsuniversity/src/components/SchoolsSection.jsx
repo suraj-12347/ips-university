@@ -243,7 +243,7 @@ const SchoolsSection = () => {
           relative
           w-full
           max-w-[340px]
-          h-[440px]
+          h-[400px]
           mx-auto
           bg-white
           rounded-[28px]
@@ -337,7 +337,7 @@ const SchoolsSection = () => {
           </p>
 
           {/* Pills */}
-          <div className="flex gap-2 mb-2 w-full">
+          {/* <div className="flex gap-2 mb-2 w-full">
   <div className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-full bg-[#F5F6F7] min-w-0">
     <BookOpen size={16} className="text-[var(--forest)] flex-shrink-0" />
     <span className="text-[13px] font-medium truncate">
@@ -358,7 +358,7 @@ const SchoolsSection = () => {
       Campus
     </span>
   </div>
-</div>
+</div> */}
           {/* Button */}
           <button
             onClick={(e) => {
@@ -366,7 +366,7 @@ const SchoolsSection = () => {
               handleCardClick(school);
             }}
             className="
-              mt-auto
+              mt-3
               w-full
               py-3
               rounded-xl

@@ -7,13 +7,15 @@ import { Swiper, SwiperSlide ,} from "swiper/react";
 import { Link } from "react-router-dom";
 
 import { Navigation, Pagination, Autoplay,EffectFade  } from "swiper/modules";
+import "swiper/css/effect-fade"; 
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 export default function HeroSection() {
+  console.log(heroSlides);
   return (
-    <section className="relative h-[90vh] overflow-hidden ">
+    <section className="relative h-[90vh] overflow-hidden mt-25 ">
 
 
   {/* ================= BACKGROUND CAROUSEL ================= */}
@@ -21,16 +23,18 @@ export default function HeroSection() {
   <div className="absolute inset-0 z-0">
 
     <Swiper
-      modules={[Autoplay, EffectFade]}
-      effect="fade"
-      loop
-      speed={1500}
-      autoplay={{
-        delay: 4000,
-        disableOnInteraction:false
-      }}
-      className="h-full w-full"
-    >
+  modules={[Autoplay, EffectFade]}
+  effect="fade"
+  fadeEffect={{ crossFade: true }}
+  loop={true}
+  speed={1500}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+  }}
+  className="h-full w-full"
+>
 
       {
         heroSlides.map((slide)=>(
@@ -223,7 +227,7 @@ export default function HeroSection() {
 
 
       </div>
-      <div className="flex items-center gap-2 text-sm text-white/70 mb-6 mt-5">
+      {/* <div className="flex items-center gap-2 text-sm text-white/70 mb-6 mt-5">
 
   <Link
     to="/"
@@ -249,7 +253,7 @@ export default function HeroSection() {
     B.Pharm
   </span>
 
-</div>
+</div> */}
 
 
     </motion.div>

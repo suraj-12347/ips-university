@@ -52,36 +52,36 @@ lg:px-12
 
 {/* Heading */}
 
-<div className="mb-10">
+<div className="mb-12 text-center">
 
-<h2 className="
-flex
-items-center
-gap-3
-text-4xl
-font-black
-text-white
-">
+  <h2
+    className="
+    flex
+    justify-center
+    items-center
+    gap-3
+    text-4xl
+    font-black
+    text-white
+    "
+  >
+    Career Opportunities
+  </h2>
 
-{/* <Briefcase
-size={34}
-className="text-white"
-/> */}
-
-Career Opportunities
-
-</h2>
-<p className="
-text-white
-text-lg
-leading-relaxed
-mt-8
-">
-B.Pharm graduates have diverse career opportunities in
-healthcare, pharmaceutical industries,<br /> research organizations
-and regulatory sectors.
-</p>
-
+  <p
+    className="
+    text-white
+    text-lg
+    leading-relaxed
+    mt-6
+    max-w-3xl
+    mx-auto
+    "
+  >
+    B.Pharm graduates have diverse career opportunities in
+    healthcare, pharmaceutical industries, research organizations
+    and regulatory sectors.
+  </p>
 
 </div>
 
@@ -93,7 +93,7 @@ and regulatory sectors.
 bg-transparent
 
 rounded-3xl
-p-8
+py-8
 
 
 
@@ -107,7 +107,7 @@ p-8
 grid
 grid-cols-1
 md:grid-cols-2
-gap-5
+gap-8
 ">
 
 

@@ -104,37 +104,43 @@ lg:px-12
 
 {/* Heading */}
 
-<div className="mb-14">
+<div className="mb-16 text-center">
 
-<p className="
-uppercase
-tracking-[4px]
-text-sm
-text-[var(--grass)]
-font-semibold
-">
-Campus Life
-</p>
+  <p
+    className="
+    uppercase
+    tracking-[4px]
+    text-sm
+    text-[var(--grass)]
+    font-semibold
+    "
+  >
+    Campus Life
+  </p>
 
+  <h2
+    className="
+    text-4xl
+    font-black
+    text-[var(--forest)]
+    mt-3
+    "
+  >
+    Events & Gallery
+  </h2>
 
-<h2 className="
-text-4xl
-font-black
-text-[var(--forest)]
-mt-3
-">
-Events & Gallery
-</h2>
-
-
-<p className="
-text-gray-600
-mt-4
-max-w-2xl
-">
-Explore memorable moments, academic events, research activities
-and vibrant student life at the School of Pharmacy.
-</p>
+  <p
+    className="
+    text-gray-600
+    mt-5
+    max-w-3xl
+    mx-auto
+    leading-relaxed
+    "
+  >
+    Explore memorable moments, academic events, research activities
+    and vibrant student life at the School of Pharmacy.
+  </p>
 
 </div>
 

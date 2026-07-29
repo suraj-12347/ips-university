@@ -18,7 +18,7 @@ import SocialMedia2 from '../components/SocialMedia'
 import Brochure2 from '../components/Broucher'
 import Footer from '../components/Footer'
 import Topbar3 from '../components/Topbar3'
-import pharma from "../images1/pharmaflowertree4.png";
+import pharma from "../images1/tp2k25.jpg";
 
 import About from '../components/About'
 import ApprovalRecognition from '../components/ApprovalRecognition'
@@ -30,6 +30,7 @@ import FAQ from '../components/FAQ'
 // import multiFlower from '../images1/friends2.jpeg'
 
 const multiFlower = "https://i.pinimg.com/1200x/7c/fd/44/7cfd4412fca5ac25b98e808e96ea016c.jpg"
+// import multiFlower from '../images1/tp2k25.jpg'
 
 const Page2 = () => {
 
@@ -115,12 +116,19 @@ const Page2 = () => {
 <SchoolsSection/>
    <div
   className="relative w-full "
+  // style={{
+  //   backgroundImage: `url(${pharma})`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  //   backgroundRepeat: "no-repeat",
+  // }}
+
   style={{
-    backgroundImage: `url(${pharma})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
+backgroundImage:
+"url('https://plus.unsplash.com/premium_photo-1661767783605-e9b12336fafc?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+ backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+}}
 >
   {/* Overlay */}
  <div className="absolute inset-0 bg-green-900/80 z-0"></div>

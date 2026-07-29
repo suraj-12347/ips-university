@@ -10,7 +10,7 @@ export default function Curriculum() {
 
   return (
 
-<section className="pt-16 mt-10  " id="curriculum">
+<section className=" " id="curriculum">
 
 <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
@@ -48,7 +48,7 @@ text-[var(--forest)]
 font-black
 ml-3
 ">
-Curriculum
+Course Cluster
 </h2>
 </button>
 

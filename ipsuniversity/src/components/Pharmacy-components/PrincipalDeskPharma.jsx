@@ -3,6 +3,12 @@ import React, { useState } from "react";
 const About5 = () => {
   const [activeTab, setActiveTab] = useState("since");
 
+  const [expanded, setExpanded] = useState(false);
+
+const text = `At the School of Pharmacy, we believe that excellence in education, research, and professional ethics creates future-ready healthcare professionals. Together, let us learn, innovate, and serve society with dedication and compassion. Our commitment extends beyond the classroom through innovation, research, industry collaboration, and community healthcare initiatives, empowering students to become competent, ethical, and globally responsible pharmacists.`;
+
+const limit = 170; // jitne characters dikhane hain
+
   return (
     <section
       className="w-full flex flex-col items-center justify-center bg-cover bg-center relative px-4 py-30  h-full bg-[#f8fbf6] "
@@ -33,12 +39,18 @@ const About5 = () => {
      Principal's Desk
   </h2>
 
-  <p className="text-gray-600 mt-5 text-[14px] leading-7">
-    At the School of Pharmacy, we believe that excellence in education,
-    research, and professional ethics creates future-ready healthcare
-    professionals. Together, let us learn, innovate, and serve society with
-    dedication and compassion. <span className="text-[var(--forest)] text-md font-bold cursor-pointer">Read More →</span>
-  </p>
+ <p className="text-gray-600 mt-5 text-[14px] leading-7 text-justify">
+  {expanded ? text : `${text.slice(0, limit)}...`}
+
+  {text.length > limit && (
+    <span
+      onClick={() => setExpanded(!expanded)}
+      className="ml-2 text-[var(--forest)] font-semibold cursor-pointer hover:underline"
+    >
+      {expanded ? "Read Less ←" : "Read More →"}
+    </span>
+  )}
+</p>
 
   {/* Principal Info */}
   <div className="mt-8 flex items-center gap-4">

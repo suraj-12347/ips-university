@@ -22,7 +22,7 @@ export const coursesData = {
   UG: [
     {
       name: "B.Pharm. (Bachelor of Pharmacy)",
-      route: "/school-of-pharmacy/b-pharm",
+      route: "/pharmacy/b-pharm",
     },
    
   ],

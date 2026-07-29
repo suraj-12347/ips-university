@@ -5,7 +5,8 @@ export default function AboutSection() {
 
   return (
 
-    <section className="py-24 bg-[#F8FCF8] overflow-hidden">
+    <section className="py-24 mt-5 overflow-hidden" id="overview">
+      {/* bg-[#F8FCF8]  */}
 
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
