@@ -88,7 +88,7 @@ const openGallery=(imgs)=>{
 
 return (
 
-<section className="
+<section id="events" className="
 py-20
 bg-[#F8FCF8]
 ">

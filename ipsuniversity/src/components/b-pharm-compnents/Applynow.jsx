@@ -13,6 +13,7 @@ relative
 bg-cover
 bg-center
 overflow-hidden
+mb-10
 "
 style={{
 backgroundImage:

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { curriculumTabs } from "./BpharmData";
-import { FileText, Plus, Minus } from "lucide-react";
+import { FileText, Plus, Minus,BookOpen } from "lucide-react";
 
 export default function Curriculum() {
 
@@ -19,45 +19,96 @@ export default function Curriculum() {
 
 {/* Heading */}
 
-<div className=" flex items-center justify-start gap-3 border-b border-[var(--forest)]/30">
-<button
-onClick={()=>setOpen(!open)}
-className="
-
-text-[var(--forest)]
-flex
-items-center
-justify-center
-hover:scale-110
-transition
-mb-4
-
-"
+<div
+  className="
+    bg-white
+    rounded-2xl
+    border border-[var(--forest)]/15
+    shadow-sm
+    hover:shadow-md
+    transition-all
+    duration-300
+    overflow-hidden
+  "
 >
-{
-open 
-?
-<Minus size={32}/>
-:
-<Plus size={32}/>
-}
+  <button
+    onClick={() => setOpen(!open)}
+    className="
+      w-full
+      flex
+      items-center
+      justify-between
+      px-8
+      py-6
+      text-left
+    "
+  >
+    {/* Left */}
+    <div className="flex items-center gap-5">
+      <div
+        className="
+          w-14 h-14
+          rounded-full
+          bg-[var(--forest)]/10
+          flex
+          items-center
+          justify-center
+        "
+      >
+        <BookOpen
+          size={28}
+          className="text-[var(--forest)]"
+        />
+      </div>
 
-<h2 className="
-text-3xl
-text-[var(--forest)]
-font-black
-ml-3
-">
-Curriculum
-</h2>
-</button>
+      <div>
+        <h2
+          className="
+            text-3xl
+            font-black
+            text-[var(--forest)]
+          "
+        >
+          Curriculum
+        </h2>
 
+        <p className="text-gray-500 mt-1">
+          Comprehensive curriculum with practical exposure.
+        </p>
+      </div>
+    </div>
 
+    {/* Right */}
+    <div
+      className="
+        w-12 h-12
+        rounded-full
+        border border-[var(--forest)]/20
+        flex
+        items-center
+        justify-center
+        transition-all
+      "
+    >
+      {open ? (
+        <Minus
+          size={28}
+          className="text-[var(--forest)]"
+        />
+      ) : (
+        <Plus
+          size={28}
+          className="text-[var(--forest)]"
+        />
+      )}
+    </div>
+  </button>
 
-{/* Toggle Button */}
-
-
-
+  {open && (
+    <div className="px-8 pb-8 text-gray-600 leading-7 border-t border-[var(--forest)]/10">
+      {/* Content */}
+    </div>
+  )}
 </div>
 
 

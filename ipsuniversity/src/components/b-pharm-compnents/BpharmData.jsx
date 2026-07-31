@@ -44,6 +44,13 @@ export const heroContent = {
   },
 };
 
+import {
+  Clock3,
+  UserCheck,
+  BadgeCheck,
+  Monitor,
+} from "lucide-react";
+
 export const aboutData = {
   title: "About B.Pharmacy",
 
@@ -56,22 +63,25 @@ export const aboutData = {
   highlights: [
     {
       title: "Duration",
-      value: "4 Years"
+      value: "4 Years",
+      icon: Clock3,
     },
     {
       title: "Eligibility",
-      value: "10+2 PCB/PCM"
+      value: "10+2 PCB/PCM",
+      icon: UserCheck,
     },
     {
       title: "Approval",
-      value: "PCI Approved"
+      value: "PCI Approved",
+      icon: BadgeCheck,
     },
     {
       title: "Mode",
-      value: "Regular"
+      value: "Regular",
+      icon: Monitor,
     }
   ],
-
 
   hod: {
     name: "Dr. ABC Sharma",
@@ -84,9 +94,8 @@ export const aboutData = {
       "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80"
   },
 
-
   image:
-    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80"
+    "https://i.pinimg.com/736x/d7/c5/8e/d7c58e620c0668ecd9c6ce45b93dc797.jpg"
 };
 
 

@@ -13,6 +13,7 @@ import BpharmNav from './BpharmNav'
 import CourceCluster from './CourceCluster'
 import ExperientalLearning from './ExperientalLearning'
 import BpharmFaculty from './BpharmFaculty'
+import BpharmPlacements from './BpharmPlacements'
 
 const Bpharm = () => {
   return (
@@ -33,6 +34,7 @@ const Bpharm = () => {
         <BpharmFaq/>
             
             <BpharmGallery/>
+            <BpharmPlacements/>
             <ApplyNow/>
             <Footer/>
       

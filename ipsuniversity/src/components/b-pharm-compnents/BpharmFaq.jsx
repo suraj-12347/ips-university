@@ -39,7 +39,7 @@ export default function FAQPage() {
 
   return (
 
-<section
+<section id="faq"
 className="
 py-16
 bg-cover

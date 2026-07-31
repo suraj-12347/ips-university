@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { aboutData } from "./BpharmData";
+import { GraduationCap } from "lucide-react";
 
 export default function AboutSection() {
 
@@ -74,8 +75,11 @@ export default function AboutSection() {
             w-64
             "
             >
-
-              <p className="text-sm text-gray-500">
+              
+            <div className="flex gap-2">
+              <GraduationCap size={42} className="text-[var(--forest)]"/>
+               <div>
+               <p className="text-sm text-gray-500">
                 Pharmacy Education
               </p>
 
@@ -84,10 +88,12 @@ export default function AboutSection() {
               text-3xl
               font-black
               text-[var(--forest)]
-              mt-2
+              
               ">
                 Excellence
               </h3>
+             </div>
+            </div>
 
 
               <p className="text-gray-600 text-sm mt-2">
@@ -166,7 +172,7 @@ export default function AboutSection() {
                 className="
                 mt-5
                 text-gray-600
-                leading-8
+                leading-8 text-justify
                 "
                 >
 
@@ -194,38 +200,62 @@ export default function AboutSection() {
               {
                 aboutData.highlights.map((item)=>(
 
-                  <div
-                  key={item.title}
-                  className="
-                  bg-white
-                  rounded-2xl
-                  p-5
-                  shadow-md
-                  border
-                  border-gray-100
-                  "
-                  >
+                 <div
+  key={item.title}
+  className="
+    bg-white
+    rounded-2xl
+    border
+    border-[var(--forest)]/10
+    shadow-sm
+    hover:shadow-lg
+    hover:-translate-y-1
+    transition-all
+    duration-300
+    p-6
+    flex
+    items-center
+    gap-4
+  "
+>
+  {/* Icon */}
+  <div
+    className="
+      w-14
+      h-14
+      rounded-xl
+      bg-[var(--forest)]/10
+      flex
+      items-center
+      justify-center
+      shrink-0
+    "
+  >
+    <item.icon
+      size={28}
+      className="text-[var(--forest)]"
+    />
+  </div>
 
-                    <p className="text-sm text-gray-500">
-                      {item.title}
-                    </p>
+  {/* Text */}
+  <div>
+    <p className="text-xs uppercase tracking-wider text-gray-500 font-medium">
+      {item.title}
+    </p>
 
-
-                    <h4
-                    className="
-                    mt-2
-                    font-bold
-                    text-xl
-                    text-[var(--forest)]
-                    "
-                    >
-
-                      {item.value}
-
-                    </h4>
-
-
-                  </div>
+    <h4
+      className="
+        mt-1
+        text-2xl
+        font-black
+        text-[var(--forest)]
+        leading-tight
+      "
+    >
+      {item.value}
+    </h4>
+  </div>
+</div>
 
                 ))
               }
@@ -248,7 +278,7 @@ export default function AboutSection() {
 
 
 
-        <motion.div
+        {/* <motion.div
 
         initial={{
           opacity:0,
@@ -357,7 +387,7 @@ export default function AboutSection() {
 
 
 
-        </motion.div>
+        </motion.div> */}
 
 
 

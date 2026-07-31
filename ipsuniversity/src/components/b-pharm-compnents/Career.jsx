@@ -16,7 +16,7 @@ export default function CareerOpportunities() {
 
   return (
 
-    <section
+    <section id="careers"
   className="
   py-16
   bg-cover

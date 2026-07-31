@@ -20,12 +20,15 @@ const aboutLinks = [
 
 const admissionLinks = [
   { title: "Apply online & e-payment", path: "/admission/apply-online-payment" },
-  { title: "Important dates", path: "/admission/important-dates" },
+   { title: "Fee structure", path: "/admission/fee-structure" },
+ 
   { title: "Scholarship policy", path: "/admission/scholarship-policy" },
-  { title: "Downloads Brochure 2026-27", path: "/admission/download-brochure" },
-  { title: "Fee refund policy 2026-27", path: "/admission/fee-refund-policy" },
-  { title: "Hostel fee", path: "/admission/hostel-fee" },
-  { title: "Fee structure 2026-27", path: "/admission/fee-structure" },
+ 
+  // { title: "Fee refund policy 2026-27", path: "/admission/fee-refund-policy" },
+  // { title: "Hostel fee", path: "/admission/hostel-fee" },
+   { title: "Important dates", path: "/admission/important-dates" },
+    { title: " Brochure", path: "/admission/download-brochure" },
+ 
 ];
 
 // ==========================================================================
@@ -463,10 +466,10 @@ const Navbar5 = () => {
   const [lockedProgram, setLockedProgram] = useState(false);
 
   const studentZoneLinks = [
-    { title: "Student's Council", path: "/students-zone/students-council" },
-    { title: "Duplicate Identity Card Request", path: "/students-zone/duplicate-id-card-request" },
+    // { title: "Student's Council", path: "/students-zone/students-council" },
+    // { title: "Duplicate Identity Card Request", path: "/students-zone/duplicate-id-card-request" },
     { title: "Facilities for Differently-Abled", path: "/students-zone/facilities-for-differently-abled" },
-    { title: "Student Feedback", path: "/students-zone/student-feedback" },
+    // { title: "Student Feedback", path: "/students-zone/student-feedback" },
     {
       title: "Professional Clubs",
       children: [
@@ -489,7 +492,7 @@ const Navbar5 = () => {
       title: "Fest",
       children: [
         { title: "Techno Parv", path: "/students-zone/fest/photos" },
-        { title: "Villay", path: "/students-zone/fest/videos" },
+        { title: "Vilay", path: "/students-zone/fest/videos" },
       ],
     },
   ];
@@ -613,105 +616,7 @@ const TPCellLinks = [
                     ))}
                   </div>
                 </li>
-
-                {/* ADMISSIONS */}
-                <li className="relative group">
-                  <a
-                    href="#admissions"
-                    onClick={() => setActive("admissions")}
-                    className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-                      active === "admissions"
-                        ? "bg-white text-[var(--forest)]"
-                        : "text-white hover:bg-white/15"
-                    }`}
-                  >
-                    Admissions
-                    <ChevronDown size={14} />
-                  </a>
-
-                  <div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    {admissionLinks.map((item) => (
-                      <Link
-                        key={item.path}
-                        to={item.path}
-                        className="
-                          flex items-center
-                          gap-3
-                          px-4
-                          py-1
-                          border-b border-[var(--forest)]/80 last:border-b-0
-                          text-[14px]
-                          font-medium
-                          text-gray-700
-                          hover:bg-[var(--forest)]
-                          hover:text-white
-                          transition-all
-                          duration-200
-                        "
-                      >
-                        
-                        {item.title}
-                      </Link>
-                    ))}
-                  </div>
-                </li>
-
-                {/* R&D */}
-                <li className="relative group">
-                  <a
-                    href="#about"
-                    onClick={() => setActive("R&D")}
-                    className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-                      active === "R&D"
-                        ? "bg-white text-[var(--forest)]"
-                        : "text-white hover:bg-white/15"
-                    }`}
-                  >
-                    R&D
-                    <ChevronDown size={14} />
-                  </a>
-
-                  <div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    {RDLinks.map((item) =>
-                      item.children ? (
-                        <div key={item.title} className="group/sub relative">
-                          <div className="flex items-center justify-between px-4 py-1  hover:bg-[var(--forest)] hover:text-white cursor-pointer text-[14px]  border-b border-[var(--forest)]/80 last:border-b-0">
-                            <span className="flex items-center gap-3 ">
-                             
-                              {item.title}
-                            </span>
-                            <ChevronRight size={16} />
-                          </div>
-
-                          <div className="absolute left-full top-0 ml-2 w-64 bg-white rounded-2xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all p-2">
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.path}
-                                to={child.path}
-                                className="flex items-center gap-3 px-4 py-1 text-[14px]  border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white"
-                              >
-                                
-                                {child.title}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ) : (
-                        <Link
-                          key={item.path}
-                          to={item.path}
-                          className="flex items-center gap-3 px-4 py-1 text-[14px] border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white"
-                        >
-                          
-                          {item.title}
-                        </Link>
-                      )
-                    )}
-                  </div>
-                </li>
-
-                {/* ========================= SCHOOLS MENU ========================= */}
-                <li className="relative group">
+<li className="relative group">
                   <a
                     href="#academics"
                     onClick={() => setActive("academics")}
@@ -973,6 +878,104 @@ const TPCellLinks = [
                     </div>
                   </div>
                 </li>
+                {/* ADMISSIONS */}
+                <li className="relative group">
+                  <a
+                    href="#admissions"
+                    onClick={() => setActive("admissions")}
+                    className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                      active === "admissions"
+                        ? "bg-white text-[var(--forest)]"
+                        : "text-white hover:bg-white/15"
+                    }`}
+                  >
+                    Admissions
+                    <ChevronDown size={14} />
+                  </a>
+
+                  <div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    {admissionLinks.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className="
+                          flex items-center
+                          gap-3
+                          px-4
+                          py-1
+                          border-b border-[var(--forest)]/80 last:border-b-0
+                          text-[14px]
+                          font-medium
+                          text-gray-700
+                          hover:bg-[var(--forest)]
+                          hover:text-white
+                          transition-all
+                          duration-200
+                        "
+                      >
+                        
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                </li>
+
+                {/* R&D */}
+                <li className="relative group">
+                  <a
+                    href="#about"
+                    onClick={() => setActive("R&D")}
+                    className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                      active === "R&D"
+                        ? "bg-white text-[var(--forest)]"
+                        : "text-white hover:bg-white/15"
+                    }`}
+                  >
+                    R&D
+                    <ChevronDown size={14} />
+                  </a>
+
+                  <div className="flex flex-col p-2 bg-white rounded-xl shadow-lg mt-2 absolute top-full left-1/2 -translate-x-1/2 w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    {RDLinks.map((item) =>
+                      item.children ? (
+                        <div key={item.title} className="group/sub relative">
+                          <div className="flex items-center justify-between px-4 py-1  hover:bg-[var(--forest)] hover:text-white cursor-pointer text-[14px]  border-b border-[var(--forest)]/80 last:border-b-0">
+                            <span className="flex items-center gap-3 ">
+                             
+                              {item.title}
+                            </span>
+                            <ChevronRight size={16} />
+                          </div>
+
+                          <div className="absolute left-full top-0 ml-2 w-64 bg-white rounded-2xl shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all p-2">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.path}
+                                to={child.path}
+                                className="flex items-center gap-3 px-4 py-1 text-[14px]  border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white"
+                              >
+                                
+                                {child.title}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className="flex items-center gap-3 px-4 py-1 text-[14px] border-b border-[var(--forest)]/80 last:border-b-0 hover:bg-[var(--forest)] hover:text-white"
+                        >
+                          
+                          {item.title}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                </li>
+
+                {/* ========================= SCHOOLS MENU ========================= */}
+                
                  
                  {/* T&P Cell */}
                 <li className="relative group">

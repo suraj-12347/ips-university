@@ -7,11 +7,15 @@ export default function CourseNavbar() {
 
   const links = [
     { name: "Overview", id: "overview" },
-    { name: "Faculty", id: "faculty" },
+  
     { name: "Curriculum", id: "curriculum" },
-    { name: "Admissions", id: "admissions" },
+    { name: "Careers ", id: "careers" },
+    {name:"Labs", id:"labs"},
+      { name: "Faculty", id: "faculty" },
+      { name: "FAQ", id: "faq" }, 
+       { name: "Events", id: "events" }, 
     { name: "Placements", id: "placements" },
-    { name: "Contact", id: "contact" },
+   
   ];
 
 const smoothScrollTo = (targetY, duration = 1500) => {
@@ -63,7 +67,7 @@ const handleClick = (link) => {
       className="
         absolute
         left-1/2
-        lg:-bottom-18
+        lg:-bottom-17
         -bottom-25
         -translate-x-1/2
         w-[95%]
@@ -79,7 +83,7 @@ const handleClick = (link) => {
             {links.map((link) => (
               <div
                 key={link.id}
-                className="bg-white flex items-center justify-center pt-3 pb-4 rounded-2xl min-w-[130px]"
+                className="bg-white flex items-center justify-center pt-1.5 pb-4 rounded-2xl min-w-[110px]"
               >
                 <button
                   onClick={() => handleClick(link)}
@@ -95,7 +99,7 @@ const handleClick = (link) => {
                     {link.name}
 
                     <span
-                      className={`absolute left-0 bottom-0 h-[2.5px] rounded-full bg-[var(--grass)] transition-all duration-300 ${
+                      className={`absolute left-0 bottom-2 h-[2.5px] rounded-full bg-[var(--grass)] transition-all duration-300 ${
                         active === link.name
                           ? "w-full"
                           : "w-0 group-hover:w-full"

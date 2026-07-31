@@ -30,7 +30,7 @@ export default function Labs() {
 
   return (
 
-<section className="py-16 ">
+<section className="py-16 " id="labs">
 
 <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
