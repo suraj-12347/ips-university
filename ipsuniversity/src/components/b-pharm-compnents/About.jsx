@@ -80,7 +80,7 @@ export default function AboutSection() {
               <GraduationCap size={42} className="text-[var(--forest)]"/>
                <div>
                <p className="text-sm text-gray-500">
-                Pharmacy Education
+                School Of Pharmaceutical Sciences
               </p>
 
 
@@ -143,7 +143,7 @@ export default function AboutSection() {
             tracking-wider
             "
             >
-              School of Pharmacy
+              School Of Pharmaceutical Sciences
             </span>
 
 

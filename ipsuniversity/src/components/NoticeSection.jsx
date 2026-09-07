@@ -1,8 +1,11 @@
-// NewsNoticeSection.jsx
-
 import React, { useState } from "react";
-import DotedRing from "./DotedRing";
-import DotedRing2 from "./DotedRing2";
+import noticesecbg from "../images1/noticesecbg3.png";
+
+import {
+  Bell,
+  CalendarDays,
+  ArrowRight,
+} from "lucide-react";
 
 const newsData = [
   {
@@ -103,268 +106,334 @@ const NewsNoticeSection = () => {
       : newsData.filter((item) => item.tab === activeTab);
 
   return (
-   <section
-  className="w-full h-[450px] py-8 px-3 md:px-5 relative overflow-hidden"
-  style={{
-    background:
-      "linear-gradient(135deg,var(--forest),var(--grass))",
-  }}
->
-
-  {/* Rings */}
-  <div className="absolute -right-20 lg:right-60 -top-72 opacity-30">
-    <DotedRing height={500} width={500} />
-  </div>
-
-  <div className="absolute -left-32 bottom-0 opacity-20">
-    <DotedRing height={450} width={450} />
-  </div>
-
-  {/* Main Wrapper */}
-  <div className="max-w-[1150px] h-full mx-auto flex flex-col lg:flex-row gap-6 justify-center items-center relative z-10">
-
-    {/* LEFT CARD */}
-    <div
-      className="
-        bg-white
-        rounded-3xl
-        shadow-xl
-        p-4
-        w-full
-        lg:w-1/2
-        h-[350px]
-        overflow-hidden
-        flex
-        flex-col
-        hover:-translate-y-2
-        transition-all
-        duration-300
-      "
+    <section
+      className="relative w-full overflow-hidden px-4 py-20 md:px-10 lg:px-16"
+      style={{
+        backgroundImage:"url('https://plus.unsplash.com/premium_photo-1661767783605-e9b12336fafc?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
+      {/* Dark Green Overlay */}
+      <div className="absolute inset-0 bg-[#063b25]/75" />
 
-      {/* Header */}
-      <div className="flex items-center justify-between flex-wrap gap-3">
+      {/* Soft Glass Glow */}
+      <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-emerald-300/10 blur-3xl" />
+      <div className="absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-lime-200/10 blur-3xl" />
 
-        <h2 className="text-xl md:text-2xl font-bold text-[var(--forest)]">
-          News & Events
-        </h2>
+      <div className="relative z-10 mx-auto max-w-7xl">
 
-        {/* Tabs */}
-        <div className="flex flex-wrap gap-2">
+        {/* Section Heading */}
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-lime-300">
+            Campus Updates
+          </p>
 
-          {tabs.map((tab, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveTab(tab)}
-              className={`
-                px-3
-                py-1.5
-                rounded-full
-                text-[12px]
-                font-semibold
-                capitalize
-                transition-all
-                duration-300
-                cursor-pointer
-                ${
-                  activeTab === tab
-                    ? "bg-[var(--forest)] text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                }
-              `}
-            >
-              {tab}
-            </button>
-          ))}
+          <h2 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
+            News & Events
+          </h2>
 
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white/65 md:text-base">
+            Stay updated with the latest announcements, academic activities,
+            events and opportunities at IPS University.
+          </p>
         </div>
-      </div>
 
-      {/* News List */}
-      <div className="mt-4 flex flex-col gap-3 overflow-y-auto pr-1 scrollb flex-1">
+        {/* Main Grid */}
+        <div className="grid gap-6 lg:grid-cols-2">
 
-        {filteredNews.map((item, index) => (
+          {/* ================= NEWS & EVENTS ================= */}
           <div
-            key={index}
             className="
-              flex
-              gap-3
-              items-start
-              border-b
-              border-gray-200
-              pb-3
+              overflow-hidden rounded-[28px]
+              border border-white/20
+              bg-white/[0.10]
+              shadow-[0_20px_60px_rgba(0,0,0,0.18)]
+              backdrop-blur-xl
             "
           >
+            {/* Card Header */}
+            <div className="border-b border-white/15 px-6 py-6 md:px-8">
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
 
-            {/* Date */}
-            <div
-              className="
-                min-w-[52px]
-                h-[58px]
-                rounded-xl
-                bg-[var(--forest)]
-                text-white
-                flex
-                flex-col
-                items-center
-                justify-center
-              "
-            >
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-[0.25em] text-lime-300">
+                    Latest
+                  </p>
 
-              <span className="text-[10px] font-medium">
-                {item.month}
-              </span>
+                  <h3 className="mt-1 text-2xl font-semibold text-white">
+                    News & Events
+                  </h3>
+                </div>
 
-              <span className="text-base font-bold leading-none">
-                {item.day}
-              </span>
-
+                {/* Tabs */}
+                <div className="flex flex-wrap gap-2">
+                  {tabs.map((tab) => (
+                    <button
+                      key={tab}
+                      onClick={() => setActiveTab(tab)}
+                      className={`
+                        rounded-full px-3.5 py-1.5
+                        text-xs font-medium capitalize
+                        transition-all duration-300
+                        ${
+                          activeTab === tab
+                            ? "bg-white text-[#14532d] shadow-sm"
+                            : "border border-white/15 bg-white/5 text-white/65 hover:bg-white/10 hover:text-white"
+                        }
+                      `}
+                    >
+                      {tab}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            {/* Text */}
-            <div className="flex-1">
+            {/* News List */}
+            <div className="max-h-[430px] overflow-y-auto px-5 py-4 md:px-7 scrollb">
 
-              <p className="text-gray-700 leading-5 text-[13px]">
-                {item.text}
-              </p>
-
-            </div>
-
-          </div>
-        ))}
-
-      </div>
-
-      {/* Button */}
-      <div className="pt-4">
-
-        <button
-          className="
-            px-4
-            py-2
-            rounded-xl
-            bg-[var(--forest)]
-            text-white
-            text-sm
-            font-semibold
-            hover:scale-105
-            transition-all
-            cursor-pointer
-          "
-        >
-          View All News →
-        </button>
-
-      </div>
-    </div>
-
-    {/* RIGHT CARD */}
-    <div
-      className="
-        bg-white
-        rounded-3xl
-        shadow-xl
-        p-4
-        w-full
-        lg:w-1/2
-        h-[350px]
-        overflow-hidden
-        flex
-        flex-col
-        hover:translate-y-2
-        transition-all
-        duration-300
-      "
-    >
-
-      {/* Header */}
-      <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
-
-        <h2 className="text-xl md:text-2xl font-bold text-[var(--forest)]">
-          Notice Board
-        </h2>
-
-        <button className="text-[var(--forest)] text-sm font-semibold hover:underline">
-          View All →
-        </button>
-
-      </div>
-
-      {/* Notices */}
-      <div className="flex flex-col gap-3 overflow-y-auto scrollb flex-1 pr-1">
-
-        {notices.map((item, index) => (
-          <div
-            key={index}
-            className="
-              flex
-              gap-3
-              items-start
-              border-b
-              border-gray-200
-              pb-3
-            "
-          >
-
-            {/* Icon */}
-            <div
-              className="
-                w-8
-                h-8
-                rounded-full
-                bg-[var(--grass)]/20
-                flex
-                items-center
-                justify-center
-                text-[var(--forest)]
-                text-sm
-                shrink-0
-              "
-            >
-              ✅
-            </div>
-
-            {/* Content */}
-            <div className="flex-1">
-
-              <p className="text-gray-700 leading-5 text-[13px]">
-                {item.title}
-              </p>
-
-              <div className="flex items-center gap-2 mt-2 flex-wrap">
-
-                <span className="text-[11px] text-gray-500">
-                  {item.date}
-                </span>
-
-                {item.isNew && (
-                  <span
+              <div className="space-y-1">
+                {filteredNews.map((item, index) => (
+                  <div
+                    key={index}
                     className="
-                      px-2
-                      py-[3px]
-                      rounded-full
-                      text-[10px]
-                      font-bold
-                      bg-red-500
-                      text-white
+                      group flex gap-4
+                      border-b border-white/10
+                      py-5
+                      last:border-none
                     "
                   >
-                    NEW
-                  </span>
-                )}
+                    {/* Date */}
+                    <div
+                      className="
+                        flex h-[62px] w-[58px]
+                        shrink-0 flex-col items-center justify-center
+                        rounded-2xl
+                        border border-white/20
+                        bg-white/10
+                        backdrop-blur-md
+                        transition-all duration-300
+                        group-hover:bg-white/15
+                      "
+                    >
+                      <span className="text-[10px] font-medium uppercase tracking-wider text-lime-300">
+                        {item.month}
+                      </span>
 
+                      <span className="mt-0.5 text-xl font-bold leading-none text-white">
+                        {item.day}
+                      </span>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex min-w-0 flex-1 items-center justify-between gap-4">
+                      <p className="text-sm leading-6 text-white/80 transition-colors duration-300 group-hover:text-white">
+                        {item.text}
+                      </p>
+
+                      <button
+                        className="
+                          hidden h-9 w-9 shrink-0
+                          items-center justify-center
+                          rounded-full
+                          border border-white/15
+                          bg-white/5
+                          text-white/60
+                          transition-all duration-300
+                          hover:bg-white
+                          hover:text-[#14532d]
+                          sm:flex
+                        "
+                      >
+                        <ArrowRight size={16} />
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
 
             </div>
 
+            {/* Footer */}
+            <div className="border-t border-white/10 px-6 py-5 md:px-7">
+              <button
+                className="
+                  group flex items-center gap-2
+                  text-sm font-semibold text-white
+                  transition-all duration-300
+                "
+              >
+                View All News
+
+                <ArrowRight
+                  size={16}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
           </div>
-        ))}
 
+          {/* ================= NOTICE BOARD ================= */}
+          <div
+            className="
+              overflow-hidden rounded-[28px]
+              border border-white/20
+              bg-white/[0.10]
+              shadow-[0_20px_60px_rgba(0,0,0,0.18)]
+              backdrop-blur-xl
+            "
+          >
+
+            {/* Notice Header */}
+            <div className="border-b border-white/15 px-6 py-6 md:px-8">
+              <div className="flex items-center justify-between gap-4">
+
+                <div className="flex items-center gap-4">
+
+                  <div
+                    className="
+                      flex h-12 w-12 shrink-0
+                      items-center justify-center
+                      rounded-2xl
+                      border border-white/20
+                      bg-white/10
+                      backdrop-blur-md
+                    "
+                  >
+                    <Bell
+                      size={21}
+                      strokeWidth={1.8}
+                      className="text-lime-300"
+                    />
+                  </div>
+
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-[0.25em] text-lime-300">
+                      Announcements
+                    </p>
+
+                    <h3 className="mt-1 text-2xl font-semibold text-white">
+                      Notice Board
+                    </h3>
+                  </div>
+
+                </div>
+
+                <button
+                  className="
+                    hidden items-center gap-2
+                    text-xs font-semibold
+                    text-white/70
+                    transition-all duration-300
+                    hover:text-white
+                    sm:flex
+                  "
+                >
+                  View All
+                  <ArrowRight size={15} />
+                </button>
+
+              </div>
+            </div>
+
+            {/* Notices */}
+            <div className="max-h-[430px] overflow-y-auto px-5 py-3 md:px-7 scrollb">
+
+              <div>
+                {notices.map((item, index) => (
+                  <div
+                    key={index}
+                    className="
+                      group relative
+                      flex gap-4
+                      border-b border-white/10
+                      py-5
+                      last:border-none
+                    "
+                  >
+
+                    {/* Number */}
+                    <div
+                      className="
+                        flex h-9 w-9 shrink-0
+                        items-center justify-center
+                        rounded-full
+                        border border-white/15
+                        bg-white/5
+                        text-xs font-semibold
+                        text-lime-300
+                        transition-all duration-300
+                        group-hover:bg-white
+                        group-hover:text-[#14532d]
+                      "
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+
+                    {/* Content */}
+                    <div className="min-w-0 flex-1">
+
+                      <p className="text-sm font-medium leading-6 text-white/85 transition-colors duration-300 group-hover:text-white">
+                        {item.title}
+                      </p>
+
+                      <div className="mt-2 flex flex-wrap items-center gap-3">
+
+                        <span className="flex items-center gap-1.5 text-[11px] text-white/45">
+                          <CalendarDays size={12} />
+                          {item.date}
+                        </span>
+
+                        {item.isNew && (
+                          <span
+                            className="
+                              rounded-full
+                              border border-lime-300/20
+                              bg-lime-300/10
+                              px-2 py-0.5
+                              text-[9px] font-semibold
+                              tracking-wider
+                              text-lime-300
+                            "
+                          >
+                            NEW
+                          </span>
+                        )}
+
+                      </div>
+                    </div>
+
+                    {/* Arrow */}
+                    <ArrowRight
+                      size={16}
+                      className="
+                        mt-1 shrink-0
+                        text-white/20
+                        transition-all duration-300
+                        group-hover:translate-x-1
+                        group-hover:text-lime-300
+                      "
+                    />
+
+                  </div>
+                ))}
+              </div>
+
+            </div>
+
+            {/* Mobile Footer */}
+            <div className="border-t border-white/10 px-6 py-5 sm:hidden">
+              <button className="flex items-center gap-2 text-sm font-semibold text-white">
+                View All
+                <ArrowRight size={16} />
+              </button>
+            </div>
+
+          </div>
+        </div>
       </div>
-    </div>
-
-  </div>
-</section>
+    </section>
   );
 };
 

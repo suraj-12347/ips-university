@@ -20,21 +20,23 @@ const Bpharm = () => {
     <div>
       <Navbar3/>
         <HeroSection/>
-        <BpharmNav/>
+        {/* <BpharmNav/> */}
         <About/>
         <div>
-          <Curriculum/>
-            <CourceCluster/>
-            <ExperientalLearning/>
+          {/* <Curriculum/> */}
+            {/* <CourceCluster/> */}
+            {/* <ExperientalLearning/> */}
         </div>
           <CareerOpportunities/>
     
-        <Labs/>
+        {/* <Labs/>
         <BpharmFaculty/>
-        <BpharmFaq/>
+        <BpharmFaq/> */}
             
-            <BpharmGallery/>
-            <BpharmPlacements/>
+            {/* <BpharmGallery/> */}
+            {/* <BpharmPlacements/> */}
+            <Curriculum/>
+              <ExperientalLearning/>
             <ApplyNow/>
             <Footer/>
       

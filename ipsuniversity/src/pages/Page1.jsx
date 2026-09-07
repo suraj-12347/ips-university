@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar3 from '../components/Navbar3'
+import Navbar3 from '../components/Navbar4'
 import Herosec from '../components/Herosec'
 import ChatBot from '../components/ChatBot'
 import About3 from '../components/About4'
@@ -8,14 +8,14 @@ import StatsBar from '../components/StatusBar2'
 import AboutUs from '../components/AboutUs'
 import SchoolsSection from '../components/SchoolSecction2'
 import LatestBanner from '../components/LatestBanner2'
-import NoticeSection2 from '../components/NoticeSection2'
+import NoticeSection2 from '../components/NoticeSection4'
 import EnquiryPopup2 from '../components/EnquiryPopup2'
 import GalleryCarousel2 from '../components/GalleryCrousel'
 import StudentReviews from '../components/student-rev/StudentReview2'
 import About5 from '../components/Aboute5'
 import CompanySection2 from '../components/CompanySection'
 import SocialMedia2 from '../components/SocialMedia'
-import Brochure2 from '../components/Broucher'
+import Brochure2 from '../components/Brochure3'
 import Footer from '../components/Footer'
 import Topbar3 from '../components/Topbar3'
 import pharma from "../images1/tp2k25.jpg";
@@ -26,6 +26,7 @@ import Leadership from '../components/AboutComponents/Leadership'
 import Navbar5 from '../components/Navbar'
 import { useEffect, useState } from "react";
 import FAQ from '../components/FAQ'
+import Navbar4 from '../components/Navbar4'
 
 // import multiFlower from '../images1/friends2.jpeg'
 
@@ -137,6 +138,7 @@ backgroundImage:
   <div className="relative z-10">
     
     <NoticeSection2 />
+   
   
   </div>
 </div>
@@ -178,6 +180,7 @@ backgroundImage:
 
 
      <CompanySection2/>
+     {/* <Navbar4/> */}
     <ApprovalRecognition/>
     <Footer/>
 

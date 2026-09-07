@@ -96,7 +96,7 @@ const [expandedReview, setExpandedReview] = useState(null);
   return (
     <section
       ref={sectionRef}
-      className="w-full   md:py-30 px-4 lg:px-10 overflow-hidden relative mt-10 "
+      className="w-full bg--[#eef5ee] py-10  md:py-20 px-4 lg:px-10 overflow-hidden relative  "
         //  style={{
         //       backgroundImage: `url(${pharma})`,
         //       backgroundSize: "contain",
@@ -132,11 +132,11 @@ const [expandedReview, setExpandedReview] = useState(null);
          
       {/* heading */}
       <div className="relative z-20 text-center max-w-xl mx-auto">
-  <p className="text-[var(--forest)]/80 tracking-[5px] uppercase text-xs md:text-sm font-medium">
+  <p className="text-[var(--grass)] tracking-[5px] uppercase text-xs  font-semibold">
      Student Testimonials
   </p>
 
-  <h1 className="text-center text-2xl sm:text-3xl md:text-5xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
+  <h1 className="text-center text-2xl sm:text-3xl md:text-3xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
      Inspiring Minds and Enriching Life
   </h1>
 </div>
@@ -179,94 +179,116 @@ const [expandedReview, setExpandedReview] = useState(null);
   
 >   {reviews.map((item) => (
       <SwiperSlide key={item.id} className="py-5   px-2">
+<div
+  className="
+    bg-white 
+    rounded-xl 
+    shadow-md 
+    hover:shadow-xl 
+    hover:-translate-y-[5px] 
+    transition-all 
+    duration-300
+    h-[410px]
+    flex 
+    flex-col 
+    overflow-hidden 
+    max-w-[270px] 
+    w-full 
+    group 
+    ml-12 
+    lg:ml-0
+  "
+>
+  {/* IMAGE */}
   <div
     className="
-      bg-white
-      rounded-xl
-      shadow-md
-      hover:shadow-xl
-      hover:translate-y-[-5px]
-      
-      duration-300
-      transition
-      duration-300
-     
-      h-[430px]
-      flex
-      flex-col
+      relative
+      w-full
+      h-[350px]
+      min-h-[320px]
+      shrink-0
       overflow-hidden
-      max-w-[270px]
-      group
-      ml-12
-      lg:ml-0
-      
+      rounded-xl
+      border-[6px]
+      border-white
     "
   >
-    {/* Image */}
-    <div className="w-[270px] min-h-[320px] rounded-xl overflow-hidden border-[6px] border-white object-cover group overflow-hidden">
-      <img
-        src={item.image}
-        alt={item.name}
-        className="w-full h-full object-cover transition-transform
-                duration-700
-                group-hover:scale-105"
-      />
-    </div>
+    <img
+      src={item.image}
+      alt={item.name}
+      className="
+        absolute
+        inset-0
+        w-full
+        h-full
+        object-cover
+        object-center
+        transition-transform
+        duration-700
+        group-hover:scale-105
+      "
+    />
 
-    {/* Review */}
-    <div className="flex-1 flex flex-col justify-between  ">
-     <div>
-      
- <p className="text-gray-800 text-[13px] leading-5 px-3 ">
-  {expandedReview === item.id
-    ? item.review
-    : item.review.length > 60
-      ? item.review.slice(0, 60) + ".."
-      : item.review} {item.review.length >60 && (
-    <button
-      onClick={() =>
-        setExpandedReview(
-          expandedReview === item.id ? null : item.id
-        )
-      }
-      className="text-[var(--forest)] text-xs font-medium mt-1"
+    {/* FLOATING SIGNATURE */}
+    {/* <div
+      className="
+        absolute
+        bottom-3
+        left-0
+        z-10
+      "
     >
-      {expandedReview === item.id ? "See less" : "See more"}
-    </button>
-  )}
-</p>
+      <span
+        className="
+          inline-block
+          bg-white
+          text-[var(--forest)]
+          font-serif
+          text-sm
+          font-medium
+          px-4
+          py-2
+          -rounded-tl-xl
+          rounded-r-xl
+          shadow-[0_-3px_12px_rgba(0,0,0,0.12)]
+        "
+      >
+        {item.signature || item.name}
+      </span>
+    </div> */}
+  </div>
 
- 
-</div>
+  {/* REVIEW */}
+  <div className="flex-1 flex flex-col justify-between min-h-0">
+    <div className="pt-2">
+      <p className="text-gray-800 text-[13px] leading-5 px-3">
+        {expandedReview === item.id
+          ? item.review
+          : item.review.length > 60
+            ? item.review.slice(0, 60) + ".."
+            : item.review}
 
-      <div className="">
-        {/* <h3 className="font-semibold text-lg text-[var(--forest)]">
-          {item.name}
-        </h3>
-
-        <p className="text-gray-400 text-sm">
-          {item.course}
-        </p> */}
-
-        <div className="flex justify-end  mt-3">
-          <span
+        {item.review.length > 60 && (
+          <button
+            onClick={() =>
+              setExpandedReview(
+                expandedReview === item.id ? null : item.id
+              )
+            }
             className="
-              bg-[var(--forest)]
-              text-md
-              font-serif
-              text-white
-              rounded-tl-lg px-2 py-1
+              text-[var(--forest)]
+              text-xs
+              font-medium
+              ml-1
             "
           >
-           <p> {item.signature || item.name}</p>
-          
-
-          </span>
-          
-        </div>
-      </div>
+            {expandedReview === item.id ? "See less" : "See more"}
+          </button>
+        )}
+      </p>
     </div>
   </div>
+</div>
 </SwiperSlide>
     ))}
   </Swiper>

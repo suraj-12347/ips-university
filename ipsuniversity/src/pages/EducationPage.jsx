@@ -1,7 +1,7 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 
 import EducationHero from '../components/Education-components/EducationHero'
-import Navbar2 from '../components/Navbar3'
+import Navbar3 from '../components/Navbar3'
 import ApprovalRecognition from '../components/ApprovalRecognition'
 import Footer from '../components/Footer'
 import PrincipalDesk from '../components/Education-components/Principal'
@@ -13,6 +13,7 @@ import TestimonialsSection from '../components/ctm-component/TestimonialsSection
 import RecruitersSection from '../components/ctm-component/RecruitersSection'
 import About5 from '../components/Aboute5'
 import EducationImg from '../images1/edubuild8.png'
+import Navbar5 from '../components/Navbar'
 
 
 export const coursesData = {
@@ -83,10 +84,76 @@ export const courseImages = {
 };
 
 const EducationPage = () => {
+
+     const [showNavbar5, setShowNavbar5] = useState(false);
+
+ useEffect(() => {
+
+    const handleScroll = () => {
+
+      if (window.scrollY > 100) {
+        setShowNavbar5(true);
+      } else {
+        setShowNavbar5(false);
+      }
+
+    };
+
+
+    window.addEventListener("scroll", handleScroll);
+
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+  }, []);
+
+
   return (
     <>
     
-    <Navbar2/>
+      
+   <div
+  className={`
+    fixed
+    top-0
+    left-0
+    w-full
+    z-40
+    transition-all
+    duration-700
+    ease-[cubic-bezier(0.4,0,0.2,1)]
+    ${
+      showNavbar5
+      ? "opacity-0 -translate-y-5 pointer-events-none"
+      : "opacity-100 translate-y-0"
+    }
+  `}
+>
+  <Navbar3/>
+</div>
+
+
+<div
+  className={`
+    fixed
+    top-0
+    left-0
+    w-full
+    z-50
+    transition-all
+    duration-700
+    ease-[cubic-bezier(0.4,0,0.2,1)]
+    ${
+      showNavbar5
+      ? "opacity-100 translate-y-0"
+      : "opacity-0 -translate-y-5 pointer-events-none"
+    }
+  `}
+>
+  <Navbar5/>
+</div>
     <div className='mt-30'>
 
         <EducationHero/>

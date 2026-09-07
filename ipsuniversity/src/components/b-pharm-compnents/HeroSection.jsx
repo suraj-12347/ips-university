@@ -132,7 +132,7 @@ export default function HeroSection() {
       "
       >
 
-        School of Pharmacy
+        School Of Pharmaceutical Sciences
 
       </span>
 

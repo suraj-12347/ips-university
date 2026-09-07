@@ -42,7 +42,7 @@ const FAQ = () => {
   const [active, setActive] = useState(null);
 
   return (
-    <section className="relative py-24 mt-20  overflow-hidden"
+    <section className="relative py-24 overflow-hidden"
     
     
     
@@ -63,7 +63,7 @@ const FAQ = () => {
               backdrop-blur-[3px]
               "
             /> */}
- <div className="absolute inset-0 bg-green-900/75 z-0"></div>
+ <div className="absolute inset-0 bg-green-900/80 z-0"></div>
             {/* <div
         className="absolute -top-2 left-0 w-full h-[70%] z-0"
         style={{
@@ -78,7 +78,7 @@ const FAQ = () => {
   <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
     <div className="grid lg:grid-cols-2 gap-20 items-start">
       {/* LEFT */}
-      <div className="lg:sticky lg:top-28">
+      <div className="lg:sticky lg:top-15">
         <span
           className="
             uppercase
@@ -95,7 +95,7 @@ const FAQ = () => {
           className="
             mt-5
             text-4xl
-            lg:text-[56px]
+            lg:text-[48px]
             leading-[1.08]
             tracking-[-1px]
             text-[var(--white)]
@@ -113,7 +113,7 @@ const FAQ = () => {
           University
         </h2>
 
-        <p className="mt-8 text-gray-200 leading-8 text-lg max-w-xl">
+        <p className="mt-3 text-gray-200 leading-8 text-md max-w-xl">
           Find quick answers to common questions about admissions,
           academics, scholarships, placements, campus facilities,
           student life at IPS University.
@@ -140,7 +140,7 @@ const FAQ = () => {
         {faqs.map((item, index) => (
           <div
             key={index}
-            className="group py-7 transition-all duration-300"
+            className="group py-5 transition-all duration-300"
           >
             <button
               onClick={() =>
@@ -170,7 +170,7 @@ const FAQ = () => {
 
                 <h3
                   className="
-                    text-xl
+                    text-lg
                     font-semibold
                     text-[var(--white)]
                     leading-snug

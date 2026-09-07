@@ -1,5 +1,5 @@
 import React ,{useState} from "react";
-import bgImage from "../images1/aboutbg5.png"; // Building + students image
+import bgImage from "../images1/aboutbg8.png"; // Building + students image
 import chairman from "../images1/chairmanimage3.jpeg";
 
 import { useLanguage } from "../context/LanguageContext";
@@ -66,8 +66,8 @@ const limit = 300; // jitne characters dikhane hain
 
   return (
     <section
-    id="about"
-      className="relative  h-full  pb-35 pt-80 mt-20 bg-[#f8faf7] overflow-hidden "
+    
+      className="relative  h-full  pb-35 pt-80  bg-[#f8faf7] overflow-hidden max-w-[1400px] "
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
@@ -76,7 +76,7 @@ const limit = 300; // jitne characters dikhane hain
       }}
     >
 
-      <div
+      {/* <div
     className="
       absolute
       inset-0
@@ -89,7 +89,9 @@ const limit = 300; // jitne characters dikhane hain
       h-full
       
     "
-  />
+  /> */}
+
+  
       <div className="max-w-full mx-auto h-full ">
         {/* MAIN HERO */}
 
@@ -137,7 +139,7 @@ const limit = 300; // jitne characters dikhane hain
           <div className="relative z-20 h-full flex  flex-col md:flex-row">
             {/* LEFT */}
 
-            <div className="w-full flex items-start justify-start   mr-10 " >
+            <div className="w-full flex items-start justify-start   mr-10 " id="about" >
               <div className="   max-w-[720px] h-full">
                 {/* About */}
 

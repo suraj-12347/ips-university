@@ -140,251 +140,258 @@ const prevImage = () => {
 
   return (
   <>
-    <section className="w-full  py-5  mt-40 relative overflow-hidden rounded-xl bg-transparent flex justify-center items-center flex-col gap-10"
-    // style={{
-    //           backgroundImage: `url(${pharma})`,
-    //           backgroundSize: "cover",
-    //           backgroundPosition: "center",
-    //         }}
+  
+    <section
+        id="campus-life"
+        className="w-full py-20 mt-10 relative overflow-hidden bg-white"
     >
+        {/* ================= HEADER ================= */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-       {/* <div className="absolute inset-0 bg-[var(--moss)] "></div> */}
+            <div className="text-center max-w-2xl mx-auto mb-14">
+                <span
+                    className="font-bold text-xs uppercase tracking-widest"
+                    style={{ color: "var(--grass)" }}
+                >
+                    Campus Life
+                </span>
+
+                <h2
+                    className="text-3xl font-extrabold mt-1"
+                    style={{ color: "var(--forest)" }}
+                >
+                    Explore IPS Moments
+                </h2>
+
+                <p className="text-gray-600 text-sm mt-2">
+                    Discover the vibrant campus life, events, activities,
+                    and memorable moments at IPS University.
+                </p>
+            </div>
 
 
-       
-       
-    
-
-
-      {/* Rings */}
-      {/* <div className="absolute right-25 -top-80 rotate-180">
-        <DotedRing2 height={550} width={550} />
-      </div>
-
-      <div className="absolute left-10 -bottom-80">
-        <DotedRing2 height={550} width={550} />
-      </div> */}
-
-      {/* Header */}
-      <div className="flex items-center justify-between px-6 md:px-12 mb-10 relative z-4">
-
-        <div className="flex flex-col items-center">
-          <p className="text-[var(--forest)]/80 text-md font-semibold tracking-[3px] uppercase">
-            Campus Life
-          </p>
-
-          <h2 className="text-center text-2xl sm:text-3xl md:text-5xl font-extrabold text-[var(--forest)] mt-2 leading-tight">
-            Explore IPS Moments
-          </h2>
-        </div>
-
-        {/* Navigation */}
-        {/* <div className="flex items-center gap-3 ml-10">
-
-          <button
-            ref={prevRef}
-            className="w-14 h-14 border text-[var(--forest)] border-[var(--forest)] flex items-center justify-center hover:bg-[var(--forest)] hover:text-white transition-all duration-300 mt-8"
-          >
-            <ChevronLeft size={24} />
-          </button>
-
-          <button
-            ref={nextRef}
-            className="w-14 h-14 border border-[var(--forest)] text-[var(--forest)] flex items-center justify-center hover:bg-[var(--forest)] hover:text-white transition-all duration-300 mt-8"
-          >
-            <ChevronRight size={24} />
-          </button>
-
-        </div> */}
-      </div>
-
-      {/* Main Slider */}
-     {/* Main Slider */}
-<div className="flex flex-col lg:flex-row lg:flex-wrap justify-center gap-2 items-stretch w-full px-1">
-
-  {/* Big Square */}
-  <div
-    onClick={() => openPopup(galleryImages[0].subImages)}
-    className="relative group w-full sm:w-[48%] lg:w-[260px] h-[260px] overflow-hidden rounded-xl cursor-pointer"
-  >
-    <img
-      src={galleryImages[0].src}
-      alt={galleryImages[0].caption}
-      className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-    />
-
-    {/* Photos Count */}
-    <div className="absolute top-4 right-4 bg-[var(--forest)]/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
-      {galleryImages[0].subImages.length} Photos
-    </div>
-
-    <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest)] via-[var(--forest)]/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
-
-    <h3 className="absolute bottom-5 left-5 right-5 text-white font-semibold text-lg opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-      {galleryImages[0].caption}
-    </h3>
-  </div>
-
-  {/* Middle */}
-  <div className="flex flex-col gap-2 w-full sm:w-[48%] lg:w-auto">
-
-    <div className="flex gap-2">
-
-      {[1, 2].map((i) => (
-        <div
-          key={i}
-          onClick={() => openPopup(galleryImages[i].subImages)}
-          className="relative group flex-1 lg:w-[120px] h-[130px] overflow-hidden rounded-xl cursor-pointer"
-        >
-
-          <img
-            src={galleryImages[i].src}
-            alt={galleryImages[i].caption}
-            className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-          />
-
-          {/* Photos Count */}
-          <div className="absolute top-2 right-2 bg-[var(--forest)]/90 backdrop-blur-md text-white px-2 py-1 rounded-full text-[10px] font-semibold z-10">
-            {galleryImages[i].subImages.length}
-          </div>
-
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest)] via-[var(--forest)]/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
-
-          <p className="absolute bottom-3 left-3 right-3 text-white text-xs font-semibold opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-            {galleryImages[i].caption}
-          </p>
-
-        </div>
-      ))}
-
-    </div>
-
-    {/* Bottom Small */}
+            {/* ================= GALLERY ================= */}
+{/* ================= GALLERY ================= */}
+<div className="w-full overflow-hidden">
     <div
-      onClick={() => openPopup(galleryImages[3].subImages)}
-      className="relative group h-[120px] overflow-hidden rounded-xl cursor-pointer"
+        className="
+            grid
+            grid-cols-1
+            lg:grid-cols-[0.8fr_1fr]
+            gap-3
+            w-full
+            h-auto
+            lg:h-[400px]
+            lg:max-h-[400px]
+            overflow-hidden
+        "
     >
 
-      <img
-        src={galleryImages[3].src}
-        alt={galleryImages[3].caption}
-        className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-      />
+        {/* =========================================
+            LEFT LARGE IMAGE
+        ========================================= */}
+        <div
+            onClick={() =>
+                openPopup(galleryImages[0].subImages)
+            }
+            className="
+                relative
+                group
+                overflow-hidden
+                rounded-2xl
+                cursor-pointer
+                w-full
+                h-[260px]
+                sm:h-[300px]
+                lg:h-[400px]
+                lg:max-h-[400px]
+            "
+        >
+            <img
+                src={galleryImages[0].src}
+                alt={galleryImages[0].caption}
+                className="
+                    block
+                    w-full
+                    h-full
+                    object-cover
+                    transition-transform
+                    duration-700
+                    group-hover:scale-105
+                "
+            />
 
-      {/* Photos Count */}
-      <div className="absolute top-2 right-2 bg-[var(--forest)]/90 backdrop-blur-md text-white px-2 py-1 rounded-full text-xs font-semibold z-10">
-        {galleryImages[3].subImages.length} Photos
-      </div>
+            {/* Overlay */}
+            <div
+                className="
+                    absolute
+                    inset-0
+                    bg-gradient-to-t
+                    from-[var(--forest)]
+                    via-[var(--forest)]/30
+                    to-transparent
+                    opacity-0
+                    group-hover:opacity-100
+                    transition-opacity
+                    duration-500
+                "
+            />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest)] via-[var(--forest)]/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+            {/* Photos Count */}
+            <div
+                className="
+                    absolute
+                    top-3
+                    right-3
+                    bg-[var(--forest)]/90
+                    backdrop-blur-md
+                    text-white
+                    px-2.5
+                    py-1
+                    rounded-full
+                    text-[10px]
+                    font-semibold
+                "
+            >
+                {galleryImages[0].subImages.length} Photos
+            </div>
 
-      <p className="absolute bottom-3 left-3 right-3 text-white text-sm font-semibold opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-        {galleryImages[3].caption}
-      </p>
-
-    </div>
-
-  </div>
-
-  {/* Big Rectangle */}
-  <div
-    onClick={() => openPopup(galleryImages[4].subImages)}
-    className="relative group w-full lg:w-[420px] h-[260px] overflow-hidden rounded-xl cursor-pointer"
-  >
-
-    <img
-      src={galleryImages[4].src}
-      alt={galleryImages[4].caption}
-      className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-    />
-
-    {/* Photos Count */}
-    <div className="absolute top-4 right-4 bg-[var(--forest)]/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
-      {galleryImages[4].subImages.length} Photos
-    </div>
-
-    <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest)] via-[var(--forest)]/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
-
-    <h3 className="absolute bottom-5 left-5 right-5 text-white font-semibold text-lg opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-      {galleryImages[4].caption}
-    </h3>
-
-  </div>
-
-  {/* Right Small */}
-  <div className="flex flex-row lg:flex-col gap-2 w-full lg:w-auto">
-
-    {[5, 6].map((i) => (
-      <div
-        key={i}
-        onClick={() => openPopup(galleryImages[i].subImages)}
-        className="relative group flex-1 lg:w-[120px] h-[130px] overflow-hidden rounded-xl cursor-pointer"
-      >
-
-        <img
-          src={galleryImages[i].src}
-          alt={galleryImages[i].caption}
-          className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-        />
-
-        {/* Photos Count */}
-        <div className="absolute top-2 right-2 bg-[var(--forest)]/90 backdrop-blur-md text-white px-2 py-1 rounded-full text-[10px] font-semibold z-10">
-          {galleryImages[i].subImages.length}
+            {/* Caption */}
+            <h3
+                className="
+                    absolute
+                    bottom-4
+                    left-4
+                    right-4
+                    text-white
+                    text-lg
+                    font-semibold
+                    opacity-0
+                    translate-y-4
+                    group-hover:opacity-100
+                    group-hover:translate-y-0
+                    transition-all
+                    duration-500
+                "
+            >
+                {galleryImages[0].caption}
+            </h3>
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest)] via-[var(--forest)]/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
-        <p className="absolute bottom-3 left-3 right-3 text-white text-xs font-semibold opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-          {galleryImages[i].caption}
-        </p>
+        {/* =========================================
+            RIGHT SIDE - 4 IMAGES
+            EXACTLY 400px HEIGHT
+        ========================================= */}
+        <div
+            className="
+                grid
+                grid-cols-2
+                grid-rows-2
+                gap-3
+                w-full
+                h-[260px]
+                sm:h-[300px]
+                lg:h-[400px]
+                lg:max-h-[400px]
+                overflow-hidden
+            "
+        >
+            {[1, 2, 3, 4].map((i) => (
+                <div
+                    key={i}
+                    onClick={() =>
+                        openPopup(galleryImages[i].subImages)
+                    }
+                    className="
+                        relative
+                        group
+                        overflow-hidden
+                        rounded-2xl
+                        cursor-pointer
+                        w-full
+                        h-full
+                        min-h-0
+                    "
+                >
+                    <img
+                        src={galleryImages[i].src}
+                        alt={galleryImages[i].caption}
+                        className="
+                            block
+                            w-full
+                            h-full
+                            object-cover
+                            transition-transform
+                            duration-700
+                            group-hover:scale-105
+                        "
+                    />
 
-      </div>
-    ))}
+                    {/* Hover Overlay */}
+                    <div
+                        className="
+                            absolute
+                            inset-0
+                            bg-gradient-to-t
+                            from-[var(--forest)]
+                            via-[var(--forest)]/20
+                            to-transparent
+                            opacity-0
+                            group-hover:opacity-100
+                            transition-opacity
+                            duration-500
+                        "
+                    />
 
-  </div>
+                    {/* Photos Count */}
+                    <div
+                        className="
+                            absolute
+                            top-2
+                            right-2
+                            bg-[var(--forest)]/90
+                            backdrop-blur-md
+                            text-white
+                            px-2
+                            py-1
+                            rounded-full
+                            text-[10px]
+                            font-semibold
+                        "
+                    >
+                        {galleryImages[i].subImages.length}
+                    </div>
 
-  {/* Last Vertical */}
-  <div
-    onClick={() => openPopup(galleryImages[7].subImages)}
-    className="relative group w-full sm:w-[48%] lg:w-[150px] h-[260px] overflow-hidden rounded-xl cursor-pointer"
-  >
+                    {/* Caption */}
+                    <p
+                        className="
+                            absolute
+                            bottom-2
+                            left-3
+                            right-3
+                            text-white
+                            text-xs
+                            font-semibold
+                            opacity-0
+                            translate-y-3
+                            group-hover:opacity-100
+                            group-hover:translate-y-0
+                            transition-all
+                            duration-500
+                        "
+                    >
+                        {galleryImages[i].caption}
+                    </p>
+                </div>
+            ))}
+        </div>
 
-    <img
-      src={galleryImages[7].src}
-      alt={galleryImages[7].caption}
-      className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-    />
-
-    {/* Photos Count */}
-    <div className="absolute top-4 right-4 bg-[var(--forest)]/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
-      {galleryImages[7].subImages.length} Photos
     </div>
-
-    <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest)] via-[var(--forest)]/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
-
-    <h3 className="absolute bottom-5 left-4 right-4 text-white font-semibold text-sm opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-      {galleryImages[7].caption}
-    </h3>
-
-  </div>
-
 </div>
-
-   {/* Pagination */}
-    {/* <div className="flex justify-center items-center gap-2 mt-6">
-  {slidesData.map((_, index) => (
-    <button
-      key={index}
-      onClick={() => swiperRef.current?.slideToLoop(index)}
-      className={`transition-all duration-300 rounded-full ${
-        activeIndex === index
-          ? "w-8 h-2 bg-[var(--forest)]"
-          : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
-      }`}
-    />
-  ))}
-</div> */}
+        </div>
     </section>
+
 
     {/* Popup */}
    {popupImages.length > 0 && (

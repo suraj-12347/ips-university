@@ -37,7 +37,7 @@ import { Link } from "react-router-dom";
 const quickStats = [
   { icon: Users, value: "5,000+", label: "Students Trained" },
   { icon: Building2, value: "100+", label: "Industry Partners" },
-  { icon: CalendarClock, value: "6-24", label: "Weeks Duration" },
+  { icon: CalendarClock, value: "6-8", label: "Weeks Duration" },
   { icon: Award, value: "90%+", label: "Successful Completion" },
 ];
 
@@ -72,7 +72,7 @@ const trainingList = [
   },
   {
     icon: Cpu,
-    badge: "12 Weeks Internship",
+    badge: "6-8 Weeks Internship",
     title: "Software Development Internship",
     desc: "Live project-based internship with technology companies, working alongside engineering teams on real products.",
     category: "IT",
@@ -86,21 +86,21 @@ const trainingList = [
   },
   {
     icon: PenTool,
-    badge: "10 Weeks Internship",
+    badge: "6 Weeks Internship",
     title: "Product Design Internship",
     desc: "Students work with design studios on user research, prototyping and product design for real client briefs.",
     category: "Design",
   },
   {
     icon: ClipboardList,
-    badge: "8 Weeks Programme",
+    badge: "6 Weeks Programme",
     title: "Operations & Supply Chain Training",
     desc: "Practical exposure to logistics, inventory management and supply chain planning within partner organisations.",
     category: "Engineering",
   },
   {
     icon: Building2,
-    badge: "16 Weeks Internship",
+    badge: "6-8 Weeks Internship",
     title: "Data & Analytics Internship",
     desc: "Internship focused on data collection, analysis and dashboarding for business decision-making in live environments.",
     category: "IT",
@@ -114,7 +114,7 @@ const trainingList = [
   },
   {
     icon: GraduationCap,
-    badge: "12 Weeks Internship",
+    badge: "6-8 Weeks Internship",
     title: "Research & Development Internship",
     desc: "Students contribute to ongoing R&D projects at partner labs and innovation centres, working on applied research.",
     category: "Design",
@@ -269,10 +269,10 @@ const IndustrialTraining = () => {
             mt-5
           ">
 
-            Software Development Internship
+            Technical Development Internship
 
             <span className="block text-[#7ea33d] italic font-medium">
-              12 Weeks, Industry Mentored
+              6-8 Weeks, Industry Mentored
             </span>
 
           </h2>

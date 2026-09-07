@@ -24,11 +24,11 @@ const About3 = () => {
       title: "IPS UNIVERSITY",
 
       para1:
-        "The Deendayal Krishi Avam Gramin Proudyogiki Vikas Sansthan was registered under the MP Society Registration Act by a group of philanthropically inclined individuals who decided to work together for the betterment of society.",
+        "A group of philan thropicially indivisuals teamed togather to work for the cause of the community. Thus organization titled Deendayal Krishi Avam Gramin Proudyogiki Vikas Sansthan came into being in 2003. one of the major venture of this organization was to estabilished institute of professional studies in 2005",
 
       para2:
-        "The Institute of Professional Studies (IPS), founded in 2005, has always promoted the belief that emotional, intellectual, and physical lives are interconnected.",
-
+        "Institute of Professional Studies  having spent 22 years in the field of higher education stepped in the arena of university. To enter in the arena of university has been a natural and logical step for IPS. IPS University thus appeared in the landscape of the Royal city of Gwalior in the state of Madhya Pradesh in 2027",
+      
       feature1: "80 Acre Campus",
       feature2: "9 Schools",
       feature3: "UGC Approved",

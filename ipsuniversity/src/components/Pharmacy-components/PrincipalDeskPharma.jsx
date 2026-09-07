@@ -29,7 +29,7 @@ const limit = 170; // jitne characters dikhane hain
        <div className="flex-1 px-6 md:px-8  py-2 flex flex-col justify-center h-full">
 
   <span className="uppercase tracking-[3px] text-[13px] font-semibold text-[var(--grass)]">
-   School Of Pharmacy
+   School Of Pharmaceutical Sciences
   </span>
 
   <h2

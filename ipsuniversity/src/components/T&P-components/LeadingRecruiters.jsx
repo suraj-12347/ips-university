@@ -27,10 +27,10 @@ import { Link } from "react-router-dom";
 
 // Quick-glance headline figures shown as stat cards
 const quickStats = [
-  { icon: Briefcase, value: "180+", label: "Recruiting Partners" },
+  { icon: Briefcase, value: "100+", label: "Recruiting Partners" },
   { icon: Award, value: "12 LPA", label: "Highest Package Offered" },
-  { icon: TrendingUp, value: "5.2 LPA", label: "Average Package" },
-  { icon: Users, value: "1000+", label: "Offers Rolled Out Yearly" },
+  { icon: TrendingUp, value: "5 LPA", label: "Average Package" },
+  { icon: Users, value: "200+", label: "Offers Rolled Out Yearly" },
 ];
 
 // Broad sector categories our recruiters come from
@@ -312,7 +312,7 @@ const LeadingRecruiters = () => {
             <div>
 
               <h3 className="font-bold text-lg text-[#31572c]">
-                180+ Companies On Campus
+                100+ Companies On Campus
               </h3>
 
               <p className="text-sm text-[#578B07]">

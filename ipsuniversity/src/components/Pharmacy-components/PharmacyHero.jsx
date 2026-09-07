@@ -1,6 +1,6 @@
 import React from "react";
 import ctmdashboard from "../../images1/ctmlongpng3.png";
-import educationbg from "../../images1/pharma3.png";
+import educationbg from "../../images1/pharma4.png";
 
 
 const HeroSection = () => {

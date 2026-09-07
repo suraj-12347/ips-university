@@ -46,7 +46,7 @@ const schools = [
   },
   {
     image: pharmacy,
-    name: "School of Pharmacy",
+    name: "School Of Pharmaceutical Sciences",
     quote:
       "Advancing healthcare through pharmaceutical excellence, research, and patient care.",
     icon: BookOpen,

@@ -27,10 +27,10 @@ import { Link } from "react-router-dom";
 
 // Quick-glance headline figures shown as stat cards
 const quickStats = [
-  { icon: Briefcase, value: "150+", label: "Recruiting Companies" },
+  { icon: Briefcase, value: "100+", label: "Recruiting Companies" },
   { icon: Award, value: "12 LPA", label: "Highest Package Offered" },
-  { icon: Users, value: "1000+", label: "Students Placed Yearly" },
-  { icon: Target, value: "92%", label: "Placement Assistance Rate" },
+  { icon: Users, value: "200+", label: "Students Placed Yearly" },
+  { icon: Target, value: "100%", label: "Placement Assistance " },
 ];
 
 // Broad categories of T&P activities offered
@@ -261,7 +261,7 @@ const AboutTP = () => {
             mt-5
           ">
 
-            Career Readiness
+            Industry Readiness
 
             <span className="block text-[#7ea33d] italic font-medium">
               From Classroom To Corporate
@@ -312,7 +312,7 @@ const AboutTP = () => {
             <div>
 
               <h3 className="font-bold text-lg text-[#31572c]">
-                150+ Companies On Campus
+                100+ Companies On Campus
               </h3>
 
               <p className="text-sm text-[#578B07]">
@@ -388,7 +388,7 @@ const AboutTP = () => {
       </span>
 
       <h2 className="text-4xl font-bold text-[#31572c] mt-3">
-        A Complete Career Development Ecosystem
+        A Complete Career Development Ecosystem ( With The Help of Finishing School)
       </h2>
 
       <p className="max-w-3xl mx-auto mt-5 text-gray-600 leading-8">
@@ -434,7 +434,7 @@ const AboutTP = () => {
       </span>
 
       <h2 className="text-4xl lg:text-5xl font-bold text-[#1d3d20] mt-4">
-        How The T&P Cell Supports You
+        How The T&P Cell(Finishing School) Supports You
       </h2>
 
       <div className="w-24 h-1 bg-[#d4a14d] mx-auto mt-5 rounded-full"></div>

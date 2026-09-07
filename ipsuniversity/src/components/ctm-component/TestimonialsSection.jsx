@@ -114,7 +114,7 @@ const TestimonialsSection = ({GalleryBg}) => {
     Testimonials
 
 
-    <span
+    {/* <span
       className="
         absolute
         left-1/2
@@ -122,10 +122,10 @@ const TestimonialsSection = ({GalleryBg}) => {
         -translate-x-1/2
         w-24
         h-[3px]
-        bg-[var(--grass)]
+        bg-[var(--leaf)]
         rounded-full
-      "
-    />
+      " */}
+    
 
   </h2>
 

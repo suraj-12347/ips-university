@@ -58,27 +58,31 @@ import { ArrowUpRight } from "lucide-react";
 // };
 
 const AcademicsSection = ({ coursesData, courseImages }) => {
-  const {
-    UG: ugCourses,
-    PG: pgCourses,
-    PhD: phdCourses,
-    Diploma: diplomaCourses,
-    Certificate: certificateCourses,
-  } = coursesData;
+ const {
+  UG: ugCourses = [],
+  PG: pgCourses = [],
+  PhD: phdCourses = [],
+  Diploma: diplomaCourses = [],
+  Certificate: certificateCourses = [],
+} = coursesData;
 
-  // baaki code...
+const navigate = useNavigate();
+const [activeTab, setActiveTab] = useState("ug");
 
-  const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState("ug");
+// Sab courses ko ek object me rakho
+const tabData = {
+  ug: ugCourses,
+  pg: pgCourses,
+  phd: phdCourses,
+  diploma: diplomaCourses,
+  certificate: certificateCourses,
+};
 
-  const courses =
-    activeTab === "ug" ? ugCourses :
-    activeTab === "pg" ? pgCourses :
-    activeTab === "phd" ? phdCourses :
-    activeTab === "diploma" ? diplomaCourses :
-    certificateCourses;
+// Agar active tab me data nahi hai to empty array
+const courses = tabData[activeTab] || [];
 
- const handleNavigation = (course) => {
+// Navigation
+const handleNavigation = (course) => {
   if (course.route) {
     navigate(course.route);
 
@@ -87,7 +91,7 @@ const AcademicsSection = ({ coursesData, courseImages }) => {
       behavior: "smooth",
     });
   }
-};
+};;
   return (
    <section
   className="relative py-8 md:py-10 md:min-h-screen md:mt-10 "
@@ -187,27 +191,29 @@ const AcademicsSection = ({ coursesData, courseImages }) => {
 
 </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-6">
-          {[
-            { key: "ug", label: "Undergraduate" },
-            { key: "pg", label: "Postgraduate" },
-            { key: "phd", label: "Doctoral" },
-            { key: "diploma", label: "Diploma" },
-            { key: "certificate", label: "Certificate" },
-          ].map((tab) => (
-            <button
-              key={tab.key}
-              onClick={() => setActiveTab(tab.key)}
-              className={`px-4 py-2 rounded-xl transition-all duration-300 ${
-                activeTab === tab.key
-                  ? "bg-[var(--forest)] text-white"
-                  : "bg-white text-gray-700 shadow"
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
+      <div className="flex flex-wrap justify-center gap-3 mb-6">
+  {[
+    { key: "ug", label: "Undergraduate", data: ugCourses },
+    { key: "pg", label: "Postgraduate", data: pgCourses },
+    { key: "phd", label: "Doctoral", data: phdCourses },
+    { key: "diploma", label: "Diploma", data: diplomaCourses },
+    { key: "certificate", label: "Certificate", data: certificateCourses },
+  ]
+    .filter((tab) => tab.data.length > 0)
+    .map((tab) => (
+      <button
+        key={tab.key}
+        onClick={() => setActiveTab(tab.key)}
+        className={`px-4 py-2 rounded-xl transition-all duration-300 ${
+          activeTab === tab.key
+            ? "bg-[var(--forest)] text-white"
+            : "bg-white text-gray-700 shadow"
+        }`}
+      >
+        {tab.label}
+      </button>
+    ))}
+</div>
 
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
   {courses.map((course, index) => (

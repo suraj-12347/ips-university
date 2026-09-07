@@ -156,7 +156,7 @@ const EducationGallery = () => {
         className="text-4xl lg:text-5xl font-bold text-white mt-3"
         style={{ fontFamily: "Fraunces, serif" }}
       >
-        Life at School of Pharmacy
+        Life at School Of Pharmaceutical Sciences
       </h2>
     </div>
 

@@ -16,7 +16,9 @@ import PharmacyHero from '../components/Pharmacy-components/PharmacyHero'
 import PharmaGallery from '../components/Pharmacy-components/PharmaGallery'
 import StudentsCouncil from '../components/student-components/StudentsCounsil'
 import PharmaImg from '../images1/pharma2.png'
-
+import Labs from '../components/b-pharm-compnents/Labs'
+import BpharmFaculty from '../components/b-pharm-compnents/BpharmFaculty'
+import BpharFaq from '../components/b-pharm-compnents/BpharmFaq'
 
 export const coursesData = {
   UG: [
@@ -40,10 +42,10 @@ export const coursesData = {
       name: "M.Pharm. (Pharmaceutical Chemistry)",
       route: "/school-of-pharmacy/m-pharm-pharmaceutical-chemistry",
     },
-    {
-      name: "M.Pharm. (Quality Assurance)",
-      route: "/school-of-pharmacy/m-pharm-quality-assurance",
-    },
+    // {
+    //   name: "M.Pharm. (Quality Assurance)",
+    //   route: "/school-of-pharmacy/m-pharm-quality-assurance",
+    // },
   ],
 
   PhD: [
@@ -60,24 +62,24 @@ export const coursesData = {
     },
   ],
 
-  Certificate: [
-    {
-      name: "Certificate in Clinical Pharmacy",
-      route: "/school-of-pharmacy/clinical-pharmacy",
-    },
-    {
-      name: "Certificate in Pharmacovigilance",
-      route: "/school-of-pharmacy/pharmacovigilance",
-    },
-    {
-      name: "Certificate in Drug Regulatory Affairs",
-      route: "/school-of-pharmacy/drug-regulatory-affairs",
-    },
-    {
-      name: "Certificate in Pharmaceutical Quality Control",
-      route: "/school-of-pharmacy/quality-control",
-    },
-  ],
+  // Certificate: [
+  //   {
+  //     name: "Certificate in Clinical Pharmacy",
+  //     route: "/school-of-pharmacy/clinical-pharmacy",
+  //   },
+  //   {
+  //     name: "Certificate in Pharmacovigilance",
+  //     route: "/school-of-pharmacy/pharmacovigilance",
+  //   },
+  //   {
+  //     name: "Certificate in Drug Regulatory Affairs",
+  //     route: "/school-of-pharmacy/drug-regulatory-affairs",
+  //   },
+  //   {
+  //     name: "Certificate in Pharmaceutical Quality Control",
+  //     route: "/school-of-pharmacy/quality-control",
+  //   },
+  // ],
 };
 
 export const courseImages = {
@@ -143,6 +145,9 @@ const EducationPage = () => {
 <PlacementsSection/>
 
 <TestimonialsSection GalleryBg={PharmaImg} />
+<Labs/>
+<BpharmFaculty/>
+<BpharFaq/>
 <RecruitersSection/>
       
     </div>

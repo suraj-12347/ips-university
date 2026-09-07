@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar3 from '../components/Navbar3'
+import Navbar3 from '../components/Navbar4'
 import Herosec from '../components/Herosec'
 import ChatBot from '../components/ChatBot'
 import About3 from '../components/About3'

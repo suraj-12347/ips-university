@@ -221,11 +221,11 @@ const CompanySection2 = () => {
       py-2
       rounded-full
       
-      text-[var(--forest)]/80
-      font-semibold
+      text-[var(--grass)]
+      font-bold
       tracking-[3px]
       uppercase
-      text-sm
+      text-xs
       
     "
   >
@@ -234,26 +234,25 @@ const CompanySection2 = () => {
 
   <h2
     className="
-      mt-4
-      text-4xl
-      md:text-5xl
-      lg:text-6xl
+      mt-1
+      text-3xl
+    
       font-bold
       text-[var(--forest)]
       leading-tight
     "
-    style={{ fontFamily: "Fraunces, serif" }}
+    
   >
     Our <span className="text-[var(--forest)]">Collaborators</span>
   </h2>
 
   <p
     className="
-      mt-5
+      mt-2
       max-w-xl
       mx-auto
-      text-lg
-      leading-8
+      text-sm
+      leading-6
       text-gray-600
     "
   >

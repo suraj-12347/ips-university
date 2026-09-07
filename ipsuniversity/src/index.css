@@ -6,7 +6,7 @@
 
 
 :root {
-  --forest: #3a6d33;
+  --forest: #16452a;
   --grass: #578B07;
   --leaf: #ecf39e;
   --moss:rgba(20, 83, 45, 0.7);
@@ -15,10 +15,10 @@
 }
 /*--inset:rgba(20, 83, 45, 0.5);
 --inset:rgba(0, 0, 0, 0.45);
-*/
+*/#3a6d33
 
 :root {
-  --forest: #3a6d33;
+  --forest:#16452a ;
   --grass: #31573a;
   --leaf: #ecf39e;
   --moss:rgba(0, 0,0, 0.7);

@@ -4,6 +4,10 @@ import edubuild3 from "../images1/navbarimage2.png";
 import Logo from "./Logo2";
 import Topbar3 from "./Topbar3";
 import { Link } from "react-router-dom";
+import ctm from "../images1/ctmlongpng4.png";
+import pharmacy from "../images1/pharma4.png";
+import education from "../images1/edubuild8.png";
+import education1 from "../images1/edubuild2.png";
 
 const aboutLinks = [
   { title: "Overview", path: "/about/overview" },
@@ -36,9 +40,9 @@ const admissionLinks = [
 // ==========================================================================
 const schools = [
   {
-    title: "School of Engineering & Technology",
+    title: "Faculty of Engineering & Technology",
     image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+      ctm,
     description:
       "Empowering future engineers through innovation, research, and industry-oriented technical education.",
     programs: [
@@ -84,9 +88,9 @@ const schools = [
   },
 
    {
-    title: "School of Pharmaceutical Sciences",
+    title: "Faculty of Pharmaceutical Sciences",
     image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80",
+      pharmacy,
     description:
       "Advancing healthcare through excellence in pharmaceutical education, research, and innovation.",
     programs: [
@@ -119,15 +123,18 @@ const schools = [
   },
 
   {
-    title: "School of Business Studies",
+    title: "Faculty of Business Studies & Commerce",
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+      education,
     description:
       "Developing future business leaders and entrepreneurs through quality management education.",
     programs: [
       {
         title: "Undergraduate",
-        courses: ["Bachelor of Business Administration (BBA)"],
+        courses: ["Bachelor of Business Administration (BBA)",
+                   "Bachelor of Commerce (Plain)",
+                   "Bachelor of Commerce (Computer Application)",
+        ],
       },
       {
         title: "Postgraduate",
@@ -139,38 +146,16 @@ const schools = [
           "MBA - Data Science",
           "MBA - Pharmaceutical Management",
           "MBA - Sports Management",
+          "Master of Commerce (M.Com)"
         ],
       },
       {
         title: "Doctorate",
-        courses: ["Ph.D. in Business Studies"],
-      },
-      {
-        title: "Certificate",
-        courses: ["Certificate in Digital Marketing", "Certificate in Entrepreneurship Development"],
-      },
-    ],
-  },
-
-  {
-    title: "School of Commerce",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Building commerce and finance professionals through industry-relevant academic programs.",
-    programs: [
-      {
-        title: "Undergraduate",
-        courses: [
-          "Bachelor of Commerce (Plain)",
-          "Bachelor of Commerce (Computer Application)",
+        courses: ["Ph.D. in Business Studies",
+                  "Ph.D. in Commerce"
         ],
       },
-      {
-        title: "Postgraduate",
-        courses: ["Master of Commerce (M.Com)"],
-      },
-      {
+       {
         title: "Diploma",
         courses: [
           "Diploma in Business Management",
@@ -180,20 +165,58 @@ const schools = [
         ],
       },
       {
-        title: "Doctorate",
-        courses: ["Ph.D. in Commerce"],
-      },
-      {
         title: "Certificate",
-        courses: ["Certificate in Taxation & GST", "Certificate in Tally & Accounting"],
+        courses: ["Certificate in Digital Marketing",
+           "Certificate in Entrepreneurship Development",
+           "Certificate in Taxation & GST", 
+           "Certificate in Tally & Accounting"
+          ],
       },
     ],
   },
 
+  // {
+  //   title: "School of Commerce",
+  //   image:
+  //     "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
+  //   description:
+  //     "Building commerce and finance professionals through industry-relevant academic programs.",
+  //   programs: [
+  //     {
+  //       title: "Undergraduate",
+  //       courses: [
+  //         "Bachelor of Commerce (Plain)",
+  //         "Bachelor of Commerce (Computer Application)",
+  //       ],
+  //     },
+  //     {
+  //       title: "Postgraduate",
+  //       courses: ["Master of Commerce (M.Com)"],
+  //     },
+  //     {
+  //       title: "Diploma",
+  //       courses: [
+  //         "Diploma in Business Management",
+  //         "Diploma in Retail Management",
+  //         "Diploma in Floor Management",
+  //         "Diploma in Hospital Management",
+  //       ],
+  //     },
+  //     {
+  //       title: "Doctorate",
+  //       courses: ["Ph.D. in Commerce"],
+  //     },
+  //     {
+  //       title: "Certificate",
+  //       courses: ["Certificate in Taxation & GST", "Certificate in Tally & Accounting"],
+  //     },
+  //   ],
+  // },
+
   {
-    title: "School of Science",
+    title: "Faculty of Science & Computer Application",
     image:
-      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80",
+      education1,
     description:
       "Providing quality education in pure and applied sciences with a strong focus on research and innovation.",
     programs: [
@@ -203,51 +226,61 @@ const schools = [
           "B.Sc. Physics, Chemistry & Mathematics (PCM)",
           "B.Sc. Physics, Chemistry & Biology (PCB)",
           "B.Sc. Computer Science",
+          "Bachelor of Computer Applications (BCA)"
         ],
       },
       {
         title: "Postgraduate",
-        courses: ["M.Sc. Mathematics", "M.Sc. Chemistry", "M.Sc. Physics", "M.Sc. Computer Science"],
+        courses: ["M.Sc. Mathematics",
+                  "M.Sc. Chemistry",
+                  "M.Sc. Physics",
+                  "M.Sc. Computer Science",
+                  "Master of Computer Applications (MCA)"
+                ],
       },
       {
         title: "Doctorate",
-        courses: ["Ph.D. in Science (All Disciplines)"],
+        courses: ["Ph.D. in Science (All Disciplines)",
+                  "Ph.D. in Computer Applications"
+        ],
       },
       {
         title: "Certificate",
-        courses: ["Certificate in Data Analysis using Python", "Certificate in Basic Laboratory Techniques"],
+        courses: ["Certificate in Data Analysis using Python", "Certificate in Basic Laboratory Techniques",
+                  "Certificate in Web Development", "Certificate in Cloud Computing Fundamentals"
+        ],
       },
     ],
   },
 
-  {
-    title: "School of Computer Applications",
-    image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Shaping future IT professionals through hands-on computer applications education and emerging technologies.",
-    programs: [
-      {
-        title: "Undergraduate",
-        courses: ["Bachelor of Computer Applications (BCA)"],
-      },
-      {
-        title: "Postgraduate",
-        courses: ["Master of Computer Applications (MCA)"],
-      },
-      {
-        title: "Doctorate",
-        courses: ["Ph.D. in Computer Applications"],
-      },
-      {
-        title: "Certificate",
-        courses: ["Certificate in Web Development", "Certificate in Cloud Computing Fundamentals"],
-      },
-    ],
-  },
+  // {
+  //   title: "School of Computer Applications",
+  //   image:
+  //     "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80",
+  //   description:
+  //     "Shaping future IT professionals through hands-on computer applications education and emerging technologies.",
+  //   programs: [
+  //     {
+  //       title: "Undergraduate",
+  //       courses: ["Bachelor of Computer Applications (BCA)"],
+  //     },
+  //     {
+  //       title: "Postgraduate",
+  //       courses: ["Master of Computer Applications (MCA)"],
+  //     },
+  //     {
+  //       title: "Doctorate",
+  //       courses: ["Ph.D. in Computer Applications"],
+  //     },
+  //     {
+  //       title: "Certificate",
+  //       courses: ["Certificate in Web Development", "Certificate in Cloud Computing Fundamentals"],
+  //     },
+  //   ],
+  // },
 
   {
-    title: "School of Education",
+    title: "Faculty of Education & Physical Education",
     image:
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
     description:
@@ -255,39 +288,23 @@ const schools = [
     programs: [
       {
         title: "Undergraduate",
-        courses: ["Bachelor of Education (B.Ed.)"],
+        courses: ["Bachelor of Education (B.Ed.)",
+                  "Bachelor of Physical Education (B.P.Ed.)"
+        ],
       },
       {
         title: "Postgraduate",
-        courses: ["Master of Education (M.Ed.)"],
+        courses: ["Master of Education (M.Ed.)",
+                 "Master of Physical Education (M.P.Ed.)"
+        ],
       },
       {
         title: "Doctorate",
-        courses: ["Ph.D. in Education"],
+        courses: ["Ph.D. in Education",
+                 "Ph.D. in Physical Education"
+        ],
       },
-      {
-        title: "Certificate",
-        courses: ["Certificate in Early Childhood Education", "Certificate in Educational Technology"],
-      },
-    ],
-  },
-
-  {
-    title: "School of Physical Education",
-    image:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Training sports and fitness professionals through quality physical education, coaching, and research.",
-    programs: [
-      {
-        title: "Undergraduate",
-        courses: ["Bachelor of Physical Education (B.P.Ed.)"],
-      },
-      {
-        title: "Postgraduate",
-        courses: ["Master of Physical Education (M.P.Ed.)"],
-      },
-      {
+       {
         title: "Diploma",
         courses: [
           "Diploma in Yoga & Naturopathy",
@@ -297,18 +314,51 @@ const schools = [
         ],
       },
       {
-        title: "Doctorate",
-        courses: ["Ph.D. in Physical Education"],
-      },
-      {
         title: "Certificate",
-        courses: ["Certificate in Sports Nutrition", "Certificate in Yoga Instructor Training"],
+        courses: ["Certificate in Early Childhood Education", "Certificate in Educational Technology",
+                  "Certificate in Sports Nutrition", "Certificate in Yoga Instructor Training"
+        ],
       },
     ],
   },
 
+  // {
+  //   title: "School of Physical Education",
+  //   image:
+  //     "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80",
+  //   description:
+  //     "Training sports and fitness professionals through quality physical education, coaching, and research.",
+  //   programs: [
+  //     {
+  //       title: "Undergraduate",
+  //       courses: ["Bachelor of Physical Education (B.P.Ed.)"],
+  //     },
+  //     {
+  //       title: "Postgraduate",
+  //       courses: ["Master of Physical Education (M.P.Ed.)"],
+  //     },
+  //     {
+  //       title: "Diploma",
+  //       courses: [
+  //         "Diploma in Yoga & Naturopathy",
+  //         "Diploma in Fitness Center Management",
+  //         "Diploma in Strength Training & Conditioning",
+  //         "Diploma in Sports Journalism",
+  //       ],
+  //     },
+  //     {
+  //       title: "Doctorate",
+  //       courses: ["Ph.D. in Physical Education"],
+  //     },
+  //     {
+  //       title: "Certificate",
+  //       courses: ["Certificate in Sports Nutrition", "Certificate in Yoga Instructor Training"],
+  //     },
+  //   ],
+  // },
+
   {
-    title: "School of Law",
+    title: "Faculty of Law",
     image:
       "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80",
     description:
@@ -345,7 +395,7 @@ const schools = [
   },
 
   {
-    title: "School of Fine Arts",
+    title: "Faculty of Fine Arts",
     image:
       "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80",
     description:
@@ -367,7 +417,7 @@ const schools = [
   },
 
   {
-    title: "School of Languages",
+    title: "Faculty of Languages",
     image:
       "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
     description:
@@ -393,7 +443,7 @@ const schools = [
   },
 
   {
-    title: "School of Agriculture",
+    title: "Faculty of Agriculture, Horticulture & Forestry",
     image:
       "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80",
     description:
@@ -401,7 +451,7 @@ const schools = [
     programs: [
       {
         title: "Undergraduate",
-        courses: ["B.Sc. Agriculture"],
+        courses: ["B.Sc. Agriculture","B.Sc. Horticulture", "B.Sc. Forestry"],
       },
       {
         title: "Postgraduate",
@@ -413,30 +463,31 @@ const schools = [
       },
       {
         title: "Certificate",
-        courses: ["Certificate in Organic Farming", "Certificate in Precision Agriculture"],
+        courses: ["Certificate in Organic Farming", "Certificate in Precision Agriculture",
+                  "Certificate in Nursery Management", "Certificate in Landscape Gardening"
+        ],
       },
     ],
   },
 
-  {
-    title: "School of Horticulture & Forestry",
-    image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Advancing horticultural and forestry education through hands-on training in gardens, nurseries, and forests.",
-    programs: [
-      {
-        title: "Undergraduate",
-        courses: ["B.Sc. Horticulture", "B.Sc. Forestry"],
-      },
-      {
-        title: "Certificate",
-        courses: ["Certificate in Nursery Management", "Certificate in Landscape Gardening"],
-      },
-    ],
-  },
+  // {
+  //   title: "School of Horticulture & Forestry",
+  //   image:
+  //     "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80",
+  //   description:
+  //     "Advancing horticultural and forestry education through hands-on training in gardens, nurseries, and forests.",
+  //   programs: [
+  //     {
+  //       title: "Undergraduate",
+  //       courses: ["B.Sc. Horticulture", "B.Sc. Forestry"],
+  //     },
+  //     {
+  //       title: "Certificate",
+  //       courses: ["Certificate in Nursery Management", "Certificate in Landscape Gardening"],
+  //     },
+  //   ],
+  // },
 ];
-
 const RDLinks = [
   { title: "Innovation Cell", path: "/innovation/innovation-cell" },
   { title: "Startup / Innovation / Incubation Cell", path: "/innovation/startup-incubation" },
@@ -684,268 +735,268 @@ const Navbar5 = () => {
                 </li>
 
                 {/* ========================= SCHOOLS MENU ========================= */}
-                <li className="relative group">
-                                  <a
-                                    href="#academics"
-                                    onClick={() => setActive("academics")}
-                                    className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-                                      active === "academics"
-                                         ? "bg-white text-[var(--forest)]"
-                                         : "text-[var(--forest)] hover:bg-white/15"
-                                    }`}
-                                  >
-                                    Academics
-                                    <ChevronDown size={15} className="ml-1" />
-                                  </a>
-                
-                                  <div
-                                    className="
-                                      absolute
-                                      top-full
-                                      left-20
-                                      -translate-x-1/2
-                                      mt-5
-                                      w-[1100px]
-                                      max-h-[80vh]
-                                      bg-white
-                                      rounded-[20px]
-                                      shadow-[0_25px_70px_rgba(0,0,0,.15)]
-                                      border
-                                      border-gray-100
-                                      opacity-0
-                                      invisible
-                                      translate-y-4
-                                      group-hover:opacity-100
-                                      group-hover:visible
-                                      group-hover:translate-y-0
-                                      transition-all
-                                      duration-300
-                                       max-h-[450px]
-                                       overflow-y-hidden
-                                      z-50
-                                    "
-                                  >
-                                    <div className="grid grid-cols-[280px_1fr_320px] min-h-[520px]">
-                                      {/* LEFT COLUMN — all 13 schools, scrollable */}
-                                      <div className="border-r border-gray-100 bg-gray-50/70 p-6 overflow-y-auto max-h-[520px]">
-                                        <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
-                                          Academic Schools
-                                        </h2>
-                
-                                        <div className="space-y-2">
-                                          {schools.map((school) => (
-                                            <button
-                                              key={school.title}
-                                              onMouseEnter={() => {
-                                                setSelectedSchool(school);
-                                                setSelectedProgram(school.programs[0]);
-                                              }}
-                                              className={`
-                                                w-full
-                                                flex
-                                                items-center
-                                                justify-between
-                                                text-left
-                                                rounded-2xl
-                                                px-4
-                                                py-3
-                                                transition-all
-                                                duration-300
-                                                ${
-                                                  selectedSchool.title === school.title
-                                                    ? "bg-[var(--forest)] text-white shadow-lg"
-                                                    : "bg-white text-gray-700 hover:bg-green-50 hover:shadow-md"
-                                                }
-                                              `}
-                                            >
-                                              <div className="flex flex-col">
-                                                <span className="font-semibold text-[14px]">
-                                                  {school.title}
-                                                </span>
-                                                <span
-                                                  className={`text-xs mt-1 ${
-                                                    selectedSchool.title === school.title
-                                                      ? "text-white/80"
-                                                      : "text-gray-500"
-                                                  }`}
-                                                >
-                                                  {school.programs.length} Programs
-                                                </span>
-                                              </div>
-                
-                                              <ChevronRight
-                                                size={18}
-                                                className={`transition-all duration-300 ${
-                                                  selectedSchool.title === school.title
-                                                    ? "translate-x-1"
-                                                    : ""
-                                                }`}
-                                              />
-                                            </button>
-                                          ))}
-                                        </div>
-                                      </div>
-                
-                                      {/* CENTER COLUMN — Programs + Courses */}
-                                      <div className="p-6 flex flex-col overflow-y-auto max-h-[400px]">
-                                        <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
-                                          Programs
-                                        </h2>
-                
-                                        <div className="flex flex-wrap gap-2 mb-6">
-                                          {selectedSchool.programs.map((program) => {
-                  const isActive = selectedProgram.title === program.title;
-                
-                  return (
-                    <button
-                      key={program.title}
-                      onMouseEnter={() => {
-                        // Sirf jab koi lock nahi hai tab hover se change hoga
-                        if (!lockedProgram) {
-                          setSelectedProgram(program);
-                        }
-                      }}
-                      onClick={() => {
-                        // Click hamesha work karega
-                        setSelectedProgram(program);
-                        setLockedProgram(true);
-                      }}
-                      className={`
-                        px-4
-                        py-2
-                        rounded-xl
-                        text-sm
-                        font-medium
-                        transition-all
-                        duration-300
-                
-                        ${
-                          isActive
-                            ? "bg-[var(--forest)] text-white shadow-md"
-                            : "bg-gray-100 text-gray-700"
-                        }
-                
-                        ${
-                          !lockedProgram
-                            ? "hover:bg-green-50 hover:text-[var(--forest)] cursor-pointer"
-                            : "cursor-pointer"
-                        }
-                      `}
-                    >
-                      {program.title}
-                    </button>
-                  );
-                })}
-                                        </div>
-                
-                                        <div className="flex-1 overflow-y-auto max-h-[520px]">
-                                          <h3 className="text-[15px] font-semibold text-gray-800 mb-4">
-                                            Courses
-                                          </h3>
-                
-                                          <div className="grid grid-cols-2 gap-3">
-                                            {selectedProgram.courses.map((course) => (
-                                              <a
-                                                key={course}
-                                                href="#"
-                                                className="
-                                                  group
-                                                  flex
-                                                  items-center
-                                                  justify-between
-                                                  rounded-xl
-                                                  border
-                                                  border-gray-200
-                                                  bg-white
-                                                  px-4
-                                                  py-3
-                                                  text-sm
-                                                  text-gray-700
-                                                  transition-all
-                                                  duration-300
-                                                  hover:border-[var(--forest)]
-                                                  hover:bg-green-50
-                                                "
-                                              >
-                                                <span>{course}</span>
-                
-                                                <ChevronRight
-                                                  size={16}
-                                                  className="
-                                                    text-gray-400
-                                                    transition-transform
-                                                    duration-300
-                                                    group-hover:translate-x-1
-                                                    group-hover:text-[var(--forest)]
-                                                  "
-                                                />
-                                              </a>
-                                            ))}
-                                          </div>
-                                        </div>
-                                      </div>
-                
-                                      {/* RIGHT COLUMN — school summary */}
-                                      <div className="border-l border-gray-100 bg-gray-50/60 p-6 flex flex-col max-h-[450px]">
-                                        <div className="rounded-3xl">
-                                          <img
-                                            src={selectedSchool.image}
-                                            alt={selectedSchool.title}
-                                            className="w-full h-[220px] object-cover transition-transform duration-500 hover:scale-105"
-                                          />
-                                        </div>
-                {/*                       
-                                        <h2 className="mt-6 text-2xl font-bold text-[var(--forest)] leading-snug">
-                                          {selectedSchool.title}
-                                        </h2>
-                
-                                        <p className="mt-3 text-sm leading-7 text-gray-600">
-                                          {selectedSchool.description}
-                                        </p> */}
-                
-                                        <div className="grid grid-cols-2 gap-4 mt-3">
-                                          <div className="rounded-2xl bg-white border border-gray-200 p-4">
-                                            <p className="text-xs uppercase tracking-wide text-gray-500">
-                                              Programs
-                                            </p>
-                                            <h3 className="mt-2 text-2xl font-bold text-[var(--forest)]">
-                                              {selectedSchool.programs.length}
-                                            </h3>
-                                          </div>
-                
-                                          <div className="rounded-2xl bg-white border border-gray-200 p-4">
-                                            <p className="text-xs uppercase tracking-wide text-gray-500">
-                                              Courses
-                                            </p>
-                                            <h3 className="mt-2 text-2xl font-bold text-[var(--forest)]">
-                                              {selectedProgram.courses.length}
-                                            </h3>
-                                          </div>
-                                        </div>
-                
-                                        <a
-                                          href="http://localhost:5173/ipsctm"
-                                          className="
-                                            mt-auto
-                                            w-full
-                                            rounded-2xl
-                                            bg-[var(--forest)]
-                                            py-3
-                                            text-center
-                                            text-white
-                                            font-semibold
-                                            transition-all
-                                            duration-300
-                                            hover:shadow-xl
-                                            hover:scale-[1.02]
-                                          "
-                                        >
-                                          Explore School
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </li>
+               <li className="relative group">
+                                 <a
+                                   href="#academics"
+                                   onClick={() => setActive("academics")}
+                                   className={`flex items-center  xl:px-4 px-2 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                                     active === "academics"
+                                      ? "bg-white text-[var(--forest)]"
+                        : "text-[var(--forest)] hover:bg-white/15"
+                                   }`}
+                                 >
+                                   Academics
+                                   <ChevronDown size={15} className="ml-1" />
+                                 </a>
+               
+                                 <div
+                                   className="
+                                     absolute
+                                     top-full
+                                     left-10
+                                     -translate-x-1/2
+                                     mt-5
+                                     w-[1100px]
+                                     max-h-[80vh]
+                                     bg-white
+                                     rounded-[20px]
+                                     shadow-[0_25px_70px_rgba(0,0,0,.15)]
+                                     border
+                                     border-gray-100
+                                     opacity-0
+                                     invisible
+                                     translate-y-4
+                                     group-hover:opacity-100
+                                     group-hover:visible
+                                     group-hover:translate-y-0
+                                     transition-all
+                                     duration-300
+                                      max-h-[450px]
+                                      overflow-y-hidden
+                                     z-50
+                                   "
+                                 >
+                                   <div className="grid grid-cols-[280px_1fr_320px] min-h-[520px]">
+                                     {/* LEFT COLUMN — all 13 schools, scrollable */}
+                                     <div className="border-r border-gray-100 bg-gray-50/70 p-6 overflow-y-auto max-h-[400px]">
+                                       <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
+                                         Academic Faculties
+                                       </h2>
+               
+                                       <div className="space-y-2">
+                                         {schools.map((school) => (
+                                           <button
+                                             key={school.title}
+                                             onMouseEnter={() => {
+                                               setSelectedSchool(school);
+                                               setSelectedProgram(school.programs[0]);
+                                             }}
+                                             className={`
+                                               w-full
+                                               flex
+                                               items-center
+                                               justify-between
+                                               text-left
+                                               rounded-2xl
+                                               px-4
+                                               py-3
+                                               transition-all
+                                               duration-300
+                                               ${
+                                                 selectedSchool.title === school.title
+                                                   ? "bg-[var(--forest)] text-white shadow-lg"
+                                                   : "bg-white text-gray-700 hover:bg-green-50 hover:shadow-md"
+                                               }
+                                             `}
+                                           >
+                                             <div className="flex flex-col">
+                                               <span className="font-semibold text-[14px]">
+                                                 {school.title}
+                                               </span>
+                                               <span
+                                                 className={`text-xs mt-1 ${
+                                                   selectedSchool.title === school.title
+                                                     ? "text-white/80"
+                                                     : "text-gray-500"
+                                                 }`}
+                                               >
+                                                 {school.programs.length} Programs
+                                               </span>
+                                             </div>
+               
+                                             <ChevronRight
+                                               size={18}
+                                               className={`transition-all duration-300 ${
+                                                 selectedSchool.title === school.title
+                                                   ? "translate-x-1"
+                                                   : ""
+                                               }`}
+                                             />
+                                           </button>
+                                         ))}
+                                       </div>
+                                     </div>
+               
+                                     {/* CENTER COLUMN — Programs + Courses */}
+                                     <div className="p-6 flex flex-col overflow-y-auto max-h-[400px]">
+                                       <h2 className="text-xl font-bold text-[var(--forest)] mb-6">
+                                         Programs
+                                       </h2>
+               
+                                       <div className="flex flex-wrap gap-2 mb-6">
+                                         {selectedSchool.programs.map((program) => {
+                 const isActive = selectedProgram.title === program.title;
+               
+                 return (
+                   <button
+                     key={program.title}
+                     onMouseEnter={() => {
+                       // Sirf jab koi lock nahi hai tab hover se change hoga
+                       if (!lockedProgram) {
+                         setSelectedProgram(program);
+                       }
+                     }}
+                     onClick={() => {
+                       // Click hamesha work karega
+                       setSelectedProgram(program);
+                       setLockedProgram(true);
+                     }}
+                     className={`
+                       px-4
+                       py-2
+                       rounded-xl
+                       text-sm
+                       font-medium
+                       transition-all
+                       duration-300
+               
+                       ${
+                         isActive
+                           ? "bg-[var(--forest)] text-white shadow-md"
+                           : "bg-gray-100 text-gray-700"
+                       }
+               
+                       ${
+                         !lockedProgram
+                           ? "hover:bg-green-50 hover:text-[var(--forest)] cursor-pointer"
+                           : "cursor-pointer"
+                       }
+                     `}
+                   >
+                     {program.title}
+                   </button>
+                 );
+               })}
+                                       </div>
+               
+                                       <div className="flex-1 overflow-y-auto max-h-[520px]">
+                                         <h3 className="text-[15px] font-semibold text-gray-800 mb-4">
+                                           Courses
+                                         </h3>
+               
+                                         <div className="grid grid-cols-2 gap-3">
+                                           {selectedProgram.courses.map((course) => (
+                                             <a
+                                               key={course}
+                                               href="#"
+                                               className="
+                                                 group
+                                                 flex
+                                                 items-center
+                                                 justify-between
+                                                 rounded-xl
+                                                 border
+                                                 border-gray-200
+                                                 bg-white
+                                                 px-4
+                                                 py-3
+                                                 text-sm
+                                                 text-gray-700
+                                                 transition-all
+                                                 duration-300
+                                                 hover:border-[var(--forest)]
+                                                 hover:bg-green-50
+                                               "
+                                             >
+                                               <span>{course}</span>
+               
+                                               <ChevronRight
+                                                 size={16}
+                                                 className="
+                                                   text-gray-400
+                                                   transition-transform
+                                                   duration-300
+                                                   group-hover:translate-x-1
+                                                   group-hover:text-[var(--forest)]
+                                                 "
+                                               />
+                                             </a>
+                                           ))}
+                                         </div>
+                                       </div>
+                                     </div>
+               
+                                     {/* RIGHT COLUMN — school summary */}
+                                     <div className="border-l border-gray-100 bg-gray-50/60 p-6 flex flex-col max-h-[450px]">
+                                       <div className="rounded-3xl">
+                                         <img
+                                           src={selectedSchool.image}
+                                           alt={selectedSchool.title}
+                                           className="w-full h-[220px] object-cover transition-transform duration-500 hover:scale-105"
+                                         />
+                                       </div>
+               {/*                       
+                                       <h2 className="mt-6 text-2xl font-bold text-[var(--forest)] leading-snug">
+                                         {selectedSchool.title}
+                                       </h2>
+               
+                                       <p className="mt-3 text-sm leading-7 text-gray-600">
+                                         {selectedSchool.description}
+                                       </p> */}
+               
+                                       <div className="grid grid-cols-2 gap-4 mt-3">
+                                         <div className="rounded-2xl bg-white border border-gray-200 p-2">
+                                           <p className="text-xs uppercase tracking-wide text-gray-500">
+                                             Programs
+                                           </p>
+                                           <h3 className="mt-2 text-2xl font-bold text-[var(--forest)]">
+                                             {selectedSchool.programs.length}
+                                           </h3>
+                                         </div>
+               
+                                         <div className="rounded-2xl bg-white border border-gray-200 p-2">
+                                           <p className="text-xs uppercase tracking-wide text-gray-500">
+                                             Courses
+                                           </p>
+                                           <h3 className="mt-2 text-2xl font-bold text-[var(--forest)]">
+                                             {selectedProgram.courses.length}
+                                           </h3>
+                                         </div>
+                                       </div>
+               
+                                       <a
+                                         href="http://localhost:5173/ipsctm"
+                                         className="
+                                           mt-5
+                                           w-full
+                                           rounded-2xl
+                                           bg-[var(--forest)]
+                                           py-3
+                                           text-center
+                                           text-white
+                                           font-semibold
+                                           transition-all
+                                           duration-300
+                                           hover:shadow-xl
+                                           hover:scale-[1.02]
+                                         "
+                                       >
+                                         Explore School
+                                       </a>
+                                     </div>
+                                   </div>
+                                 </div>
+                               </li>
                  {/* T&P Cell */}
                 <li className="relative group">
                   <a

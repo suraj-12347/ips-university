@@ -42,7 +42,7 @@ export default function AdmissionContact() {
 </div>
 
       {/* Right Contact */}
-     <div className="bg-white rounded-2xl h-[250px] max-w-md p-6 shadow-xl flex flex-col justify-between md:mt-20 md:ml-10">
+     {/* <div className="bg-white rounded-2xl h-[250px] max-w-md p-6 shadow-xl flex flex-col justify-between md:mt-20 md:ml-10">
 
   <div>
     <span
@@ -91,7 +91,7 @@ export default function AdmissionContact() {
 
   </div>
 
-</div>
+</div> */}
 
     </div>
   </div>
