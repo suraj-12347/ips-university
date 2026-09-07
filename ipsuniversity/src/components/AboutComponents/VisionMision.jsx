@@ -1,4 +1,4 @@
-import { Target, Eye, Lightbulb,ArrowRight } from "lucide-react";
+import { Target, Eye, Lightbulb,ArrowRight,ListCheck, School,Dot } from "lucide-react";
 import { Link } from "react-router-dom";
 import ctm1900 from '../../images1/ctm1900.png'
 
@@ -16,16 +16,51 @@ const VisionMissionObjective = () => {
       icon: <Target size={32} />,
       title: "Our Mission",
       text:
-        "To provide a transformative learning environment through excellence in teaching, industry-oriented education, research opportunities, and holistic development of students."
+        "To provide a transformative learning environment through excellence  in teaching , industry - oriented education , research opportunities and holistic development of students ."
     },
 
     {
       icon: <Lightbulb size={32} />,
       title: "Our Objectives",
       text:
-        "To promote academic excellence, encourage creativity and innovation, develop leadership qualities, and create skilled professionals ready to face global challenges."
-    }
+        "To promote  academic excellence , encourage creativity and innovation , develop leadership  qualities and create skilled professionals ready to face global challenge"
+    },
+
+    
   ];
+
+  const data2 = [
+    {
+      icon: <Dot size={32} />,
+      
+      text:
+        "IPS University aims to provide opportunity to young talents for manifestation of their potential ."
+    },
+
+     {
+      icon: <Dot size={32} />,
+     
+      text:
+        " The University committed to dedicate itself to offer a congenial atmosphere for intellectual , physical and emotional development of every individuals student."
+    },
+     {
+      icon: <Dot size={32} />,
+      
+      text:
+        "The focus will be on transforming the individuals fully equipped which updated knowledge , skill and appropriate attitude ."
+    },
+
+     {
+      icon: <Dot size={32} />,
+      
+      text:
+        "At IPS fundamental doctoring asserts that all individuals without exception to their background , religion , caste , or up-bringing posses considerable potential."
+    }
+  
+  
+  
+  
+  ]
 
 
   return (
@@ -250,7 +285,116 @@ const VisionMissionObjective = () => {
       </div>
 
 
-    </section></>
+<div className="max-w-7xl w-[90%] mx-auto px-6 lg:px-10 flex flex-col items-start gap-5 justify-start py-5 mt-10
+     
+     
+     
+                 group
+                bg-white
+                rounded-[30px]
+               
+                shadow-md
+                hover:shadow-xl
+                transition
+                duration-300
+                border
+                border-[#ecf39e]
+                mb-6
+     
+     
+     
+     
+     ">
+
+
+        {/* Heading */}
+       
+
+
+  <div className="flex items-center justify-center gap-4">
+    <div className="  w-16
+                  h-16
+                  rounded-2xl
+                  bg-[#31572c]
+                  text-[#ecf39e]
+                  flex
+                  items-center
+                  justify-center
+                 
+                  group-hover:scale-110
+                  transition"><ListCheck size={32}/></div><h2 className="text-2xl font-bold text-[#31572c]">Core Values</h2>
+
+
+  </div>
+
+        {/* Cards */}
+
+       
+
+          {data2.map((item,index)=>(
+
+
+            <div
+              key={index}
+              className=" flex items-center justify-start gap-2
+              
+              
+              "
+            >
+
+
+              {/* Icon */}
+
+           
+             <div className="text-[var(--forest)]">
+                {item.icon}
+             </div>
+              <p
+                className="
+                  text-gray-600
+                  leading-7
+                  text-sm
+                "
+              >
+                {item.text}
+              </p>
+
+             
+
+
+
+              
+
+
+
+            </div>
+
+            
+
+
+          ))}
+
+
+        </div>
+    </section>
+    
+    
+    
+    
+    <section>
+
+
+      
+     
+
+        
+        
+
+
+    </section>
+    
+    
+    </>
 
   );
 };

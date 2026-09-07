@@ -185,9 +185,10 @@ export default function CampusFeed() {
         backgroundSize: "cover",
         backgroundPosition: "center bottom",
         backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
     }}
 >
-    {/* BACKGROUND OVERLAY */}
+    {/* BACKGROUND OVERLAY — SAME */}
     <div
         className="
             absolute
@@ -197,7 +198,15 @@ export default function CampusFeed() {
         "
     />
 
-    {/* OPTIONAL SOFT GRADIENT */}
+     {/* <div
+        className="absolute top-0 left-0 w-full h-[50%] z-[2]"
+        style={{
+            background:
+                "linear-gradient(to bottom, #fff 2.74%, rgba(255,255,255,0) 60.44%)",
+        }}
+    /> */}
+
+    {/* SOFT GRADIENT — SAME */}
     <div
         className="
             absolute
@@ -223,7 +232,7 @@ export default function CampusFeed() {
         "
     >
 
-        {/* ================= HEADER ================= */}
+        {/* HEADER */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
 
             <div>
@@ -253,7 +262,7 @@ export default function CampusFeed() {
                 </h2>
             </div>
 
-            {/* ================= TAB BUTTONS ================= */}
+            {/* TAB BUTTONS */}
             <div className="flex bg-white/20 backdrop-blur-md p-1 rounded-xl w-fit border border-white/20">
 
                 <button
@@ -297,9 +306,7 @@ export default function CampusFeed() {
             </div>
         </div>
 
-        {/* =====================================================
-            TAB 1 — NEWS & EVENTS
-        ===================================================== */}
+        {/* NEWS & EVENTS */}
         {activeTab === "news" && (
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -321,7 +328,6 @@ export default function CampusFeed() {
                         "
                     >
 
-                        {/* IMAGE */}
                         {item.image && (
                             <div className="h-36 rounded-xl overflow-hidden mb-4">
 
@@ -341,7 +347,6 @@ export default function CampusFeed() {
                             </div>
                         )}
 
-                        {/* TYPE */}
                         <span
                             className={`
                                 text-[10px]
@@ -355,7 +360,6 @@ export default function CampusFeed() {
                             {getTypeLabel(item.type)}
                         </span>
 
-                        {/* TITLE */}
                         <h4
                             className="
                                 font-bold
@@ -367,7 +371,6 @@ export default function CampusFeed() {
                             {item.title}
                         </h4>
 
-                        {/* SUBTITLE */}
                         <p
                             className="
                                 text-xs
@@ -379,7 +382,6 @@ export default function CampusFeed() {
                             {item.subtitle}
                         </p>
 
-                        {/* DATE */}
                         {item.starting_date && (
                             <p
                                 className="
@@ -405,9 +407,7 @@ export default function CampusFeed() {
 
         )}
 
-        {/* =====================================================
-            TAB 2 — OFFICIAL NOTICES
-        ===================================================== */}
+        {/* OFFICIAL NOTICES */}
         {activeTab === "notices" && (
 
             <div className="space-y-3">
@@ -436,7 +436,6 @@ export default function CampusFeed() {
 
                         <div className="flex items-center gap-3">
 
-                            {/* NOTICE TYPE */}
                             <span
                                 className="
                                     px-2
@@ -453,7 +452,6 @@ export default function CampusFeed() {
                                 {getTypeLabel(item.type)}
                             </span>
 
-                            {/* TITLE */}
                             <span
                                 className="
                                     font-semibold
@@ -466,7 +464,6 @@ export default function CampusFeed() {
 
                         </div>
 
-                        {/* DOWNLOAD */}
                         <button
                             onClick={() =>
                                 openBrochureModal(item)
@@ -485,7 +482,6 @@ export default function CampusFeed() {
                             Download PDF
 
                             <Download className="w-3.5 h-3.5" />
-
                         </button>
 
                     </div>

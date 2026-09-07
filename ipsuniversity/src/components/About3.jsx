@@ -132,18 +132,11 @@ const About3 = () => {
     </h2>
 
     <p className="mt-2 text-[13px] xl:text-[15px] leading-6 text-gray-600 text-justify">
-      IPS University is established under the aegis of Deendayal Krishi Avam
-      Gramin Proudyogiki Vikas Sansthan, a society registered under the
-      Madhya Pradesh Society Registration Act by visionary philanthropists
-      dedicated to quality education and social development.
+      A group of Philon tropically individuals teamed together to work for the cause of the community. Thus organization titled Deendayal Krishi Avam Gramin Proudyogiki Vikas Sansthan came into being in 2003. one of the major venture of this organization was to established institute of professional studies in 2005.
     </p>
 
     <p className="mt-2  text-[13px] xl:text-[15px]  leading-6 text-gray-600 text-justify">
-      Since the establishment of the Institute of Professional Studies (IPS)
-      in 2005, the institution has remained committed to academic excellence,
-      innovation, multidisciplinary education, research, industry
-      collaboration and value-based learning to prepare future-ready
-      professionals.
+      Institute of Professional Studies  having spent 22 years in the field of higher education stepped in the arena of university. To enter in the arena of university has been a natural and logical step for IPS. IPS University thus appeared in the landscape of the Royal city of Gwalior in the state of Madhya Pradesh in 2027.
     </p>
   </div>
 
